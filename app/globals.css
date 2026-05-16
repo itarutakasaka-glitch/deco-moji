@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+/* テーマトークン（Tailwind v4 のCSS-firstアプローチ） */
+@theme {
+  --color-pink-1: #ffe9f0;
+  --color-pink-2: #ffc6dc;
+  --color-pink-3: #ff8bb5;
+  --color-pink-4: #e85ba0;
+  --color-lav: #e8d5ff;
+  --color-lav-2: #c8a8ff;
+  --color-cream: #fff8ee;
+  --color-mint: #c8f5e2;
+  --color-yellow-soft: #fff2a8;
+  --color-ink: #3a2438;
+
+  --font-sans: "Klee One", "Hiragino Maru Gothic ProN", sans-serif;
+  --font-display: "RocknRoll One", sans-serif;
+  --font-script: "Caveat", cursive;
+  --font-mono-cute: "DotGothic16", monospace;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-ink);
+  line-height: 1.6;
+  background:
+    radial-gradient(circle at 10% 10%, var(--color-lav) 0%, transparent 35%),
+    radial-gradient(circle at 90% 20%, var(--color-mint) 0%, transparent 30%),
+    radial-gradient(circle at 50% 90%, var(--color-yellow-soft) 0%, transparent 35%),
+    var(--color-pink-1);
+  min-height: 100vh;
+  position: relative;
+}
+
+/* ドット模様の背景レイヤー */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.5) 1px,
+    transparent 1.5px
+  );
+  background-size: 18px 18px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* スピンアニメーション */
+@keyframes spin-cute {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-sparkle {
+  display: inline-block;
+  animation: spin-cute 4s linear infinite;
+}
+
+/* ユーティリティ追加 */
+.shadow-cute {
+  box-shadow: 6px 6px 0 var(--color-pink-3);
+}
+
+.shadow-cute-lav {
+  box-shadow: 5px 5px 0 var(--color-lav-2);
+}
+
+.shadow-cute-hover {
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.shadow-cute-hover:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 4px 4px 0 var(--color-lav-2);
+}
