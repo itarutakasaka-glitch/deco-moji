@@ -19,8 +19,17 @@ export default function SiteFooter() {
         <Link href="/x" className="underline-offset-4 hover:underline">
           X
         </Link>
+        <Link href="/blog" className="underline-offset-4 hover:underline">
+          ブログ
+        </Link>
         <Link href="/howto" className="underline-offset-4 hover:underline">
           使い方
+        </Link>
+        <Link href="/about" className="underline-offset-4 hover:underline">
+          運営者情報
+        </Link>
+        <Link href="/contact" className="underline-offset-4 hover:underline">
+          お問い合わせ
         </Link>
         <Link href="/privacy" className="underline-offset-4 hover:underline">
           プライバシー

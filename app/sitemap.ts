@@ -1,11 +1,13 @@
 import type { MetadataRoute } from "next";
 import { siteConfig } from "@/lib/site-config";
+import { blogPosts } from "@/lib/blog-posts";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = siteConfig.url;
   const lastModified = new Date();
 
-  return [
+  // 固定ページ
+  const staticPages: MetadataRoute.Sitemap = [
     { url: `${base}/`, lastModified, priority: 1.0, changeFrequency: "weekly" },
     {
       url: `${base}/instagram`,
@@ -26,9 +28,27 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
     },
     {
+      url: `${base}/blog`,
+      lastModified,
+      priority: 0.8,
+      changeFrequency: "weekly",
+    },
+    {
       url: `${base}/howto`,
       lastModified,
       priority: 0.7,
+      changeFrequency: "monthly",
+    },
+    {
+      url: `${base}/about`,
+      lastModified,
+      priority: 0.5,
+      changeFrequency: "monthly",
+    },
+    {
+      url: `${base}/contact`,
+      lastModified,
+      priority: 0.5,
       changeFrequency: "monthly",
     },
     {
@@ -38,4 +58,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "yearly",
     },
   ];
+
+  // ブログ記事
+  const blogPages: MetadataRoute.Sitemap = blogPosts.map((post) => ({
+    url: `${base}/blog/${post.slug}`,
+    lastModified: new Date(post.publishedAt),
+    priority: 0.7,
+    changeFrequency: "monthly" as const,
+  }));
+
+  return [...staticPages, ...blogPages];
 }
