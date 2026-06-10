@@ -43,7 +43,7 @@ export default function HomePage() {
       {/* SNSパワー診断への導線 */}
       <Link
         href="/shindan"
-        className="block rounded-2xl px-5 py-4 mb-6 text-center font-bold text-white"
+        className="block rounded-2xl px-5 py-4 mb-4 text-center font-bold text-white"
         style={{
           background: "linear-gradient(135deg, #1d1040, #0a0618 60%, #33205e)",
           border: "2px solid var(--color-ink)",
@@ -53,6 +53,21 @@ export default function HomePage() {
         ⚡ 新コンテンツ「SNSパワー診断」⚡
         <span className="block text-sm font-normal mt-1" style={{ color: "#B8AEE0", textShadow: "none" }}>
           名前を入れるだけ。あなたのSNS戦闘力と称号を測定 →
+        </span>
+      </Link>
+
+      {/* 壁紙メーカーへの導線 */}
+      <Link
+        href="/kabegami"
+        className="block rounded-2xl px-5 py-4 mb-6 text-center font-bold text-white"
+        style={{
+          background: "linear-gradient(135deg, #FF5C8A, #B66BFF)",
+          border: "2px solid var(--color-ink)",
+        }}
+      >
+        ⊹ 推しメンカラ壁紙メーカー ⊹
+        <span className="block text-sm font-normal mt-1" style={{ color: "#FFE3EE" }}>
+          メンバーをチェックで選ぶだけ。推し単も箱推しも →
         </span>
       </Link>
 

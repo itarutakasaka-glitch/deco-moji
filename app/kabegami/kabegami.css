@@ -1,0 +1,277 @@
+/* ===== 推しメンカラ壁紙メーカー（.kb- プレフィックスでスコープ） ===== */
+
+.kb-root {
+  --kb-pink: #ff5c8a;
+  --kb-bg: #fff5f8;
+  --kb-ink: #4a2b36;
+  --kb-line: #f3c6d4;
+  --kb-accent: #b66bff;
+  --kb-dim: #a66b80;
+  --kb-faint: #c98fa5;
+  font-family: "Zen Maru Gothic", "Hiragino Maru Gothic ProN", sans-serif;
+  color: var(--kb-ink);
+}
+
+.kb-main {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 22px;
+  margin-bottom: 26px;
+}
+@media (max-width: 880px) {
+  .kb-main { grid-template-columns: 1fr; }
+}
+
+.kb-panel {
+  background: #fff;
+  border: 2px solid var(--kb-line);
+  border-radius: 20px;
+  padding: 18px;
+  margin-bottom: 18px;
+}
+.kb-panel h2 {
+  font-size: 1rem;
+  font-weight: 900;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.kb-panel h2 .kb-hint { font-size: 0.75rem; color: var(--kb-faint); font-weight: 500; }
+
+/* チップ */
+.kb-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.kb-chip {
+  padding: 9px 16px;
+  border-radius: 99px;
+  border: 2px solid var(--kb-line);
+  background: #fff;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--kb-dim);
+  transition: 0.15s;
+}
+.kb-chip.kb-on {
+  background: linear-gradient(135deg, var(--kb-pink), var(--kb-accent));
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 4px 14px rgba(255, 92, 138, 0.35);
+}
+
+/* メンバーリスト */
+.kb-selinfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  color: var(--kb-dim);
+  margin-bottom: 6px;
+}
+.kb-selinfo button {
+  background: none;
+  border: none;
+  color: var(--kb-accent);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.8rem;
+  text-decoration: underline;
+}
+.kb-mrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: 12px;
+  transition: 0.15s;
+  cursor: pointer;
+  user-select: none;
+}
+.kb-mrow:hover { background: var(--kb-bg); }
+.kb-mrow input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: var(--kb-pink);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.kb-swatch {
+  width: 28px;
+  height: 28px;
+  border: none;
+  padding: 0;
+  background: none;
+  cursor: pointer;
+  flex-shrink: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.kb-swatch::-webkit-color-swatch-wrapper { padding: 0; }
+.kb-swatch::-webkit-color-swatch {
+  border: 2px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.08);
+}
+.kb-swatch::-moz-color-swatch {
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+.kb-mname { flex: 1; font-weight: 700; }
+.kb-mrow.kb-off .kb-mname { color: #c9a8b5; text-decoration: line-through; }
+.kb-del {
+  background: none;
+  border: none;
+  color: #d9a8ba;
+  font-size: 1.05rem;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 8px;
+}
+.kb-del:hover { background: #ffe3ec; color: var(--kb-pink); }
+.kb-addrow {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+  padding-top: 14px;
+  border-top: 1.5px dashed var(--kb-line);
+}
+.kb-addrow input[type="text"] {
+  flex: 1;
+  min-width: 0;
+  padding: 10px 14px;
+  border: 2px solid var(--kb-line);
+  border-radius: 12px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  outline: none;
+}
+.kb-addrow input[type="text"]:focus { border-color: var(--kb-pink); }
+.kb-addcolor {
+  width: 46px;
+  height: 44px;
+  border: 2px solid var(--kb-line);
+  border-radius: 12px;
+  background: #fff;
+  cursor: pointer;
+  padding: 4px;
+  flex-shrink: 0;
+}
+.kb-addbtn {
+  padding: 0 18px;
+  border: none;
+  border-radius: 12px;
+  background: var(--kb-pink);
+  color: #fff;
+  font-family: inherit;
+  font-weight: 900;
+  cursor: pointer;
+  font-size: 0.95rem;
+  flex-shrink: 0;
+}
+.kb-addbtn:hover { filter: brightness(1.08); }
+
+/* オプション */
+.kb-optrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+  font-size: 0.9rem;
+  flex-wrap: wrap;
+}
+.kb-optrow label { display: flex; align-items: center; gap: 6px; cursor: pointer; }
+.kb-optrow input[type="checkbox"] { accent-color: var(--kb-pink); width: 17px; height: 17px; }
+.kb-frame-sel {
+  padding: 6px 10px;
+  border: 2px solid var(--kb-line);
+  border-radius: 10px;
+  font-family: inherit;
+  background: #fff;
+}
+
+/* プレビュー */
+.kb-preview { position: sticky; top: 14px; align-self: start; }
+.kb-phone {
+  position: relative;
+  width: 280px;
+  margin: 0 auto;
+  border-radius: 36px;
+  padding: 10px;
+  background: #2b2330;
+  box-shadow: 0 18px 50px rgba(120, 40, 70, 0.25);
+}
+.kb-notch {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 96px;
+  height: 22px;
+  background: #2b2330;
+  border-radius: 0 0 14px 14px;
+  z-index: 3;
+}
+.kb-cv { display: block; width: 100%; border-radius: 26px; }
+.kb-dlbtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  margin-top: 16px;
+  padding: 15px;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 900;
+  font-size: 1rem;
+  color: #fff;
+  background: linear-gradient(135deg, var(--kb-pink), var(--kb-accent));
+  box-shadow: 0 8px 22px rgba(255, 92, 138, 0.4);
+  transition: transform 0.15s;
+}
+.kb-dlbtn:hover { transform: translateY(-2px); }
+.kb-capbtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  margin-top: 10px;
+  padding: 13px;
+  border: 2px solid var(--kb-pink);
+  border-radius: 14px;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--kb-pink);
+  background: #fff;
+}
+.kb-note {
+  text-align: center;
+  font-size: 0.72rem;
+  color: var(--kb-faint);
+  margin-top: 10px;
+}
+
+/* トースト */
+.kb-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 30px;
+  transform: translateX(-50%) translateY(16px);
+  background: var(--kb-ink);
+  color: #fff;
+  padding: 11px 22px;
+  border-radius: 99px;
+  font-size: 0.88rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+  z-index: 99;
+}
+.kb-toast.kb-show { opacity: 1; transform: translateX(-50%); }

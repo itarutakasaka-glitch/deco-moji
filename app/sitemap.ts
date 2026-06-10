@@ -34,6 +34,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
     },
     {
+      url: `${base}/kabegami`,
+      lastModified,
+      priority: 0.9,
+      changeFrequency: "monthly",
+    },
+    {
       url: `${base}/blog`,
       lastModified,
       priority: 0.8,

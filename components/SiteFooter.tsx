@@ -22,6 +22,9 @@ export default function SiteFooter() {
         <Link href="/shindan" className="underline-offset-4 hover:underline">
           SNSパワー診断
         </Link>
+        <Link href="/kabegami" className="underline-offset-4 hover:underline">
+          壁紙メーカー
+        </Link>
         <Link href="/blog" className="underline-offset-4 hover:underline">
           ブログ
         </Link>
