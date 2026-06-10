@@ -19,6 +19,9 @@ export default function SiteFooter() {
         <Link href="/x" className="underline-offset-4 hover:underline">
           X
         </Link>
+        <Link href="/shindan" className="underline-offset-4 hover:underline">
+          SNSパワー診断
+        </Link>
         <Link href="/blog" className="underline-offset-4 hover:underline">
           ブログ
         </Link>

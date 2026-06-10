@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import Generator from "@/components/Generator";
@@ -38,6 +39,22 @@ export default function HomePage() {
       <SiteHeader />
 
       <Generator />
+
+      {/* SNSパワー診断への導線 */}
+      <Link
+        href="/shindan"
+        className="block rounded-2xl px-5 py-4 mb-6 text-center font-bold text-white"
+        style={{
+          background: "linear-gradient(135deg, #1d1040, #0a0618 60%, #33205e)",
+          border: "2px solid var(--color-ink)",
+          textShadow: "0 0 12px rgba(255,46,151,.8)",
+        }}
+      >
+        ⚡ 新コンテンツ「SNSパワー診断」⚡
+        <span className="block text-sm font-normal mt-1" style={{ color: "#B8AEE0", textShadow: "none" }}>
+          名前を入れるだけ。あなたのSNS戦闘力と称号を測定 →
+        </span>
+      </Link>
 
       <AdSlot />
 

@@ -28,6 +28,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
     },
     {
+      url: `${base}/shindan`,
+      lastModified,
+      priority: 0.9,
+      changeFrequency: "monthly",
+    },
+    {
       url: `${base}/blog`,
       lastModified,
       priority: 0.8,
