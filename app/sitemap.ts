@@ -47,6 +47,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
     },
     {
+      url: `${base}/mojibake`,
+      lastModified,
+      priority: 0.8,
+      changeFrequency: "monthly",
+    },
+    {
       url: `${base}/howto`,
       lastModified,
       priority: 0.7,

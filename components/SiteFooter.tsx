@@ -28,6 +28,9 @@ export default function SiteFooter() {
         <Link href="/copy" className="underline-offset-4 hover:underline">
           コピペ素材集
         </Link>
+        <Link href="/mojibake" className="underline-offset-4 hover:underline">
+          文字化け早見表
+        </Link>
         <Link href="/blog" className="underline-offset-4 hover:underline">
           ブログ
         </Link>
