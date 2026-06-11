@@ -25,6 +25,9 @@ export default function SiteFooter() {
         <Link href="/kabegami" className="underline-offset-4 hover:underline">
           壁紙メーカー
         </Link>
+        <Link href="/copy" className="underline-offset-4 hover:underline">
+          コピペ素材集
+        </Link>
         <Link href="/blog" className="underline-offset-4 hover:underline">
           ブログ
         </Link>

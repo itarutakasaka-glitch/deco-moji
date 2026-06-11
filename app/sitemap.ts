@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { siteConfig } from "@/lib/site-config";
 import { blogPosts } from "@/lib/blog-posts";
+import { COPY_CATEGORIES } from "@/lib/copy-data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = siteConfig.url;
@@ -71,6 +72,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
+  // コピペ素材集
+  const copyPages: MetadataRoute.Sitemap = [
+    {
+      url: `${base}/copy`,
+      lastModified,
+      priority: 0.9,
+      changeFrequency: "weekly" as const,
+    },
+    ...COPY_CATEGORIES.map((c) => ({
+      url: `${base}/copy/${c.slug}`,
+      lastModified,
+      priority: 0.8,
+      changeFrequency: "monthly" as const,
+    })),
+  ];
+
   // ブログ記事
   const blogPages: MetadataRoute.Sitemap = blogPosts.map((post) => ({
     url: `${base}/blog/${post.slug}`,
@@ -79,5 +96,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: "monthly" as const,
   }));
 
-  return [...staticPages, ...blogPages];
+  return [...staticPages, ...copyPages, ...blogPages];
 }
