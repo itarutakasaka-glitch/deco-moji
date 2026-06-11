@@ -84,6 +84,31 @@ export default function HomePage() {
 
       <AdSlot />
 
+      {/* コンテンツハブ（ガイド・素材集への内部導線） */}
+      <SectionTitle>⊹ 使い方ガイド＆素材集</SectionTitle>
+      <div className="grid gap-3 sm:grid-cols-2 mb-6 text-[0.95rem]">
+        {[
+          { href: "/copy", t: "コピペ素材集", d: "推し活・かわいい・区切り線など10カテゴリ" },
+          { href: "/mojibake", t: "文字化け早見表", d: "化けやすい文字・化けにくい文字がわかる" },
+          { href: "/instagram", t: "インスタ完全ガイド", d: "名前変更の14日ルールと使える場所" },
+          { href: "/tiktok", t: "TikTokガイド", d: "ニックネームの7日ルールと文字化け対策" },
+          { href: "/x", t: "X（旧Twitter）ガイド", d: "検索に出なくなる問題と対策" },
+          { href: "/blog", t: "ブログ", d: "特殊文字の仕組みや活用テクニック" },
+        ].map((l) => (
+          <Link
+            key={l.href}
+            href={l.href}
+            className="block rounded-2xl bg-white px-4 py-3 transition hover:-translate-y-0.5"
+            style={{ border: "2px solid var(--color-ink)" }}
+          >
+            <span className="font-bold">{l.t}</span>
+            <span className="block text-sm mt-0.5" style={{ color: "var(--color-pink-4)" }}>
+              {l.d}
+            </span>
+          </Link>
+        ))}
+      </div>
+
       <TipsBox
         title="SNSで使うときのコツ"
         tips={[

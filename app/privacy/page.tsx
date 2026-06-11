@@ -64,7 +64,25 @@ export default function PrivacyPage() {
           >
             Google広告のポリシー
           </a>
-          をご覧ください。
+          をご覧ください。パーソナライズ広告は{" "}
+          <a
+            href="https://adssettings.google.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline"
+          >
+            広告設定
+          </a>
+          または{" "}
+          <a
+            href="https://www.aboutads.info/choices/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline"
+          >
+            www.aboutads.info
+          </a>
+          で無効にできます。
         </p>
 
         <SectionTitle>免責事項</SectionTitle>

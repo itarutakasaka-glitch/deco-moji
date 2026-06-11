@@ -4,7 +4,8 @@ export const siteConfig = {
   name: "デコ文字メーカー",
   description:
     "Instagram・TikTok・Xのプロフィールやネームを盛れる特殊文字・デコ文字を無料で作成。コピペで即使える可愛いフォント23種類以上＆装飾フレーム集。",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://decomoji.example.com",
+  // 本番ホストは www（apex はリダイレクト）。env 未設定でも正しいドメインに落ちるよう実URLをデフォルトにする
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.decomoji.xyz",
   ogImage: "/og.png",
   keywords: [
     "デコ文字",
