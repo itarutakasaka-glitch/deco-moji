@@ -1,0 +1,225 @@
+/* ===== ゴミ出し占い 専用スタイル（.gf- プレフィックスでスコープ） ===== */
+
+/* 全幅ブレイクアウト時の横スクロール抑止 */
+body:has(.gf-root) {
+  overflow-x: hidden;
+}
+
+.gf-root {
+  --gf-bg: #0a0618;
+  --gf-pink: #ff2e97;
+  --gf-cyan: #00e5ff;
+  --gf-purple: #9d4edd;
+  --gf-gold: #ffd700;
+  --gf-green: #3ddc84;
+  --gf-ink: #f4f0ff;
+  --gf-dim: #8e86b8;
+  --gf-t-burn: #ff7a45;
+  --gf-t-recy: #00e5ff;
+  --gf-t-paper: #3ddc84;
+  --gf-t-non: #b0bec5;
+  --gf-t-merc: #ffd700;
+
+  /* サイトの中央カラム(max-w-920)から全幅へブレイクアウト */
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  min-height: 100svh;
+  position: relative;
+  overflow: hidden;
+  color: var(--gf-ink);
+  font-family: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+  background: radial-gradient(1200px 800px at 50% -10%, #1d1040 0%, var(--gf-bg) 55%), var(--gf-bg);
+}
+
+/* 背景 */
+.gf-stars { position: absolute; inset: 0; pointer-events: none; z-index: 0; }
+.gf-star { position: absolute; border-radius: 50%; background: #fff; opacity: 0.7; animation: gfTw linear infinite; }
+@keyframes gfTw { 0%, 100% { opacity: 0.15; transform: scale(0.7); } 50% { opacity: 0.9; transform: scale(1.2); } }
+.gf-orb { position: absolute; border-radius: 50%; filter: blur(90px); opacity: 0.22; pointer-events: none; z-index: 0; }
+.gf-orb-p { width: 420px; height: 420px; background: var(--gf-purple); top: -120px; left: -120px; animation: gfFloat1 14s ease-in-out infinite; }
+.gf-orb-c { width: 380px; height: 380px; background: var(--gf-cyan); bottom: -140px; right: -100px; animation: gfFloat2 18s ease-in-out infinite; }
+@keyframes gfFloat1 { 50% { transform: translate(60px, 40px); } }
+@keyframes gfFloat2 { 50% { transform: translate(-50px, -60px); } }
+
+.gf-main { position: relative; z-index: 2; max-width: 480px; margin: 0 auto; padding: 22px 16px 60px; min-height: 100svh; }
+.gf-screen { animation: gfFadeUp 0.5s ease both; }
+@keyframes gfFadeUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+
+/* ===== タイトル ===== */
+.gf-brand { font-family: "DotGothic16"; color: var(--gf-dim); text-align: center; letter-spacing: 0.25em; font-size: 0.78rem; margin-bottom: 8px; }
+.gf-logo {
+  font-family: "RocknRoll One"; text-align: center; font-size: clamp(2rem, 8.5vw, 3rem); line-height: 1.18;
+  background: linear-gradient(135deg, var(--gf-green) 0%, var(--gf-cyan) 35%, var(--gf-pink) 75%, var(--gf-gold) 100%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  filter: drop-shadow(0 0 22px rgba(157, 78, 221, 0.5));
+}
+.gf-logo .gf-deco { filter: none; -webkit-text-fill-color: initial; }
+.gf-logoSub { font-size: 0.34em; letter-spacing: 0.45em; font-family: "DotGothic16"; -webkit-text-fill-color: var(--gf-dim); color: var(--gf-dim); }
+.gf-areaPillWrap { text-align: center; margin: 14px 0 18px; }
+.gf-areaPill {
+  display: inline-flex; align-items: center; gap: 6px; padding: 7px 16px; border-radius: 999px;
+  background: linear-gradient(135deg, rgba(61, 220, 132, 0.18), rgba(0, 229, 255, 0.18));
+  border: 1px solid rgba(61, 220, 132, 0.4); font-weight: 700; font-size: 0.9rem; letter-spacing: 0.06em;
+}
+
+.gf-panel {
+  background: rgba(20, 11, 46, 0.72); border: 1px solid rgba(157, 78, 221, 0.32); border-radius: 22px;
+  padding: 22px 18px; backdrop-filter: blur(8px); box-shadow: 0 0 40px rgba(157, 78, 221, 0.13) inset;
+}
+.gf-secLabel { font-family: "DotGothic16"; font-size: 0.7rem; letter-spacing: 0.2em; color: var(--gf-dim); margin-bottom: 9px; display: flex; align-items: center; gap: 6px; }
+.gf-secLabel::before { content: ""; width: 4px; height: 4px; border-radius: 50%; background: var(--gf-cyan); box-shadow: 0 0 8px var(--gf-cyan); }
+.gf-secLabel.gf-tight { margin-bottom: 7px; }
+
+/* 定例スケジュール表 */
+.gf-weekTable { display: flex; flex-direction: column; gap: 7px; margin-top: 6px; }
+.gf-wRow { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 9px 12px; border-radius: 12px; background: rgba(0, 0, 0, 0.25); border: 1px solid rgba(255, 255, 255, 0.07); }
+.gf-wName { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 0.9rem; }
+.gf-wName .gf-em { font-size: 1.05rem; }
+.gf-wWhen { font-family: "DotGothic16"; font-size: 0.82rem; color: var(--gf-cyan); letter-spacing: 0.04em; text-align: right; }
+.gf-wRow.t-burn .gf-wName { color: var(--gf-t-burn); }
+.gf-wRow.t-recy .gf-wName { color: var(--gf-t-recy); }
+.gf-wRow.t-paper .gf-wName { color: var(--gf-t-paper); }
+.gf-wRow.t-non .gf-wName { color: var(--gf-t-non); }
+.gf-wRow.t-merc .gf-wName { color: var(--gf-t-merc); }
+
+.gf-divider { height: 1px; background: linear-gradient(90deg, transparent, rgba(157, 78, 221, 0.5), transparent); margin: 18px 0 14px; }
+
+.gf-dateRow { display: flex; gap: 8px; align-items: center; margin: 6px 0 16px; }
+.gf-dateRow label { font-size: 0.78rem; color: var(--gf-dim); letter-spacing: 0.1em; white-space: nowrap; }
+.gf-dateRow input { flex: 1; padding: 11px 12px; font-size: 1rem; font-family: inherit; color: var(--gf-ink); background: rgba(10, 6, 24, 0.9); border: 2px solid rgba(142, 134, 184, 0.4); border-radius: 12px; outline: none; color-scheme: dark; }
+.gf-dateRow input:focus { border-color: var(--gf-cyan); box-shadow: 0 0 0 4px rgba(0, 229, 255, 0.15); }
+.gf-quickRow { display: flex; gap: 8px; margin-bottom: 18px; }
+.gf-qbtn { flex: 1; padding: 9px 0; text-align: center; border-radius: 11px; border: 1px solid rgba(142, 134, 184, 0.35); color: var(--gf-dim); font-weight: 700; cursor: pointer; font-size: 0.85rem; background: rgba(10, 6, 24, 0.5); transition: 0.2s; font-family: inherit; }
+.gf-qbtn:hover { border-color: var(--gf-cyan); color: var(--gf-ink); }
+
+.gf-warn { background: rgba(255, 196, 0, 0.1); border: 1px solid rgba(255, 196, 0, 0.4); border-radius: 12px; padding: 11px 13px; margin-bottom: 16px; font-size: 0.82rem; line-height: 1.7; color: #ffe08a; }
+.gf-warn a { color: var(--gf-cyan); }
+
+.gf-schedBlock { margin-bottom: 14px; }
+.gf-schedBlock.gf-last { margin-bottom: 0; }
+
+.gf-gomiBadges { display: flex; flex-wrap: wrap; gap: 8px; }
+.gf-gBadge { display: inline-flex; align-items: center; gap: 7px; padding: 8px 13px; border-radius: 12px; font-weight: 700; font-size: 0.92rem; border: 1.5px solid currentColor; background: rgba(255, 255, 255, 0.04); }
+.gf-gBadge .gf-em { font-size: 1.15rem; }
+.gf-gBadge.t-burn { color: var(--gf-t-burn); }
+.gf-gBadge.t-recy { color: var(--gf-t-recy); }
+.gf-gBadge.t-paper { color: var(--gf-t-paper); }
+.gf-gBadge.t-non { color: var(--gf-t-non); }
+.gf-gBadge.t-merc { color: var(--gf-t-merc); }
+.gf-noCollect { color: var(--gf-dim); font-size: 0.88rem; font-weight: 500; line-height: 1.7; }
+
+.gf-nextList { display: flex; flex-direction: column; gap: 6px; }
+.gf-nextRow { display: flex; justify-content: space-between; align-items: center; font-size: 0.82rem; }
+.gf-nm { display: flex; align-items: center; gap: 7px; color: var(--gf-ink); }
+.gf-nm .gf-em { font-size: 0.95rem; }
+.gf-dt { font-family: "DotGothic16"; color: var(--gf-dim); letter-spacing: 0.05em; }
+.gf-dt.soon { color: var(--gf-cyan); }
+
+.gf-goBtn {
+  width: 100%; margin-top: 16px; padding: 17px; border: none; border-radius: 16px; cursor: pointer;
+  font-family: "RocknRoll One"; font-size: 1.2rem; color: #fff; letter-spacing: 0.08em;
+  background: linear-gradient(135deg, var(--gf-pink), var(--gf-purple) 55%, var(--gf-cyan)); background-size: 200% 200%;
+  animation: gfGrad 4s ease infinite; box-shadow: 0 8px 30px rgba(255, 46, 151, 0.4); transition: transform 0.15s;
+}
+.gf-goBtn:hover { transform: translateY(-2px) scale(1.01); }
+.gf-goBtn:active { transform: scale(0.97); }
+.gf-goBtn:disabled { opacity: 0.6; cursor: default; animation: none; }
+@keyframes gfGrad { 50% { background-position: 100% 100%; } }
+.gf-note { text-align: center; color: var(--gf-dim); font-size: 0.72rem; margin-top: 14px; letter-spacing: 0.02em; line-height: 1.8; }
+.gf-note a { color: var(--gf-cyan); }
+
+/* ===== 結果カード ===== */
+.gf-cardWrap { perspective: 1200px; }
+.gf-card { position: relative; border-radius: 26px; padding: 3px; margin: 0 auto; max-width: 430px; animation: gfCardIn 0.7s cubic-bezier(0.2, 1.6, 0.35, 1) both; }
+@keyframes gfCardIn { from { transform: translateY(50px) rotateX(28deg) scale(0.85); opacity: 0; } to { transform: none; opacity: 1; } }
+.gf-card.r-UR { background: linear-gradient(135deg, #ffd700, #ff8a00, #ff2e97, #ffd700); background-size: 300% 300%; animation: gfCardIn 0.7s cubic-bezier(0.2, 1.6, 0.35, 1) both, gfHolo 6s linear infinite; }
+.gf-card.r-SSR { background: linear-gradient(135deg, #ff2e97, #9d4edd, #00e5ff); background-size: 300% 300%; animation: gfCardIn 0.7s cubic-bezier(0.2, 1.6, 0.35, 1) both, gfHolo 7s linear infinite; }
+.gf-card.r-SR { background: linear-gradient(135deg, #9d4edd, #00e5ff, #3ddc84); background-size: 300% 300%; animation: gfCardIn 0.7s cubic-bezier(0.2, 1.6, 0.35, 1) both, gfHolo 8s linear infinite; }
+.gf-card.r-R { background: linear-gradient(135deg, #4fc3f7, #9d4edd); }
+.gf-card.r-N { background: linear-gradient(135deg, #5a5a78, #8e86b8); }
+@keyframes gfHolo { 50% { background-position: 100% 50%; } }
+.gf-cardInner { position: relative; border-radius: 23px; background: linear-gradient(165deg, #170d33 0%, #0d0722 60%, #1a0f2e 100%); padding: 22px 20px 20px; overflow: hidden; }
+.gf-sheen { position: absolute; top: 0; left: -150%; width: 55%; height: 100%; z-index: 5; pointer-events: none; background: linear-gradient(115deg, transparent, rgba(255, 255, 255, 0.16) 50%, transparent); animation: gfSheen 3.4s ease-in-out 1.1s infinite; }
+@keyframes gfSheen { 0% { left: -150%; } 45%, 100% { left: 165%; } }
+
+.gf-cHead { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
+.gf-cBrand { font-family: "DotGothic16"; font-size: 0.66rem; color: var(--gf-dim); letter-spacing: 0.22em; }
+.gf-rBadge { font-family: "Orbitron"; font-weight: 900; font-size: 0.82rem; padding: 4px 12px; border-radius: 999px; letter-spacing: 0.16em; }
+.gf-rBadge.ur { background: linear-gradient(135deg, #ffd700, #ff8a00); color: #3a2600; }
+.gf-rBadge.ssr { background: linear-gradient(135deg, #ff2e97, #9d4edd); color: #fff; }
+.gf-rBadge.sr { background: linear-gradient(135deg, #9d4edd, #00e5ff); color: #0a0618; }
+.gf-rBadge.r { background: #4fc3f7; color: #06121a; }
+.gf-rBadge.n { background: #6b6b86; color: #fff; }
+.gf-cDate { text-align: center; font-family: "DotGothic16"; color: var(--gf-cyan); font-size: 0.92rem; letter-spacing: 0.08em; margin: 4px 0 2px; }
+.gf-cArea { text-align: center; color: var(--gf-dim); font-size: 0.78rem; letter-spacing: 0.12em; margin-bottom: 12px; }
+
+.gf-rankBox { text-align: center; margin: 6px 0 16px; }
+.gf-rankT { font-family: "RocknRoll One"; font-size: clamp(2.4rem, 11vw, 3.2rem); line-height: 1; animation: gfStamp 0.55s cubic-bezier(0.2, 2.2, 0.4, 1) both; }
+@keyframes gfStamp { from { transform: scale(2.8) rotate(-12deg); opacity: 0; } to { transform: scale(1) rotate(-3deg); opacity: 1; } }
+.gf-rank-gold { color: var(--gf-gold); }
+.gf-rank-pink { color: var(--gf-pink); }
+.gf-rank-cyan { color: var(--gf-cyan); }
+.gf-rank-purple { color: var(--gf-purple); }
+.gf-rank-ur { color: var(--gf-gold); }
+.gf-rank-n { color: var(--gf-dim); }
+.gf-rankS { display: block; font-family: "DotGothic16"; font-size: 0.82rem; letter-spacing: 0.18em; color: var(--gf-gold); margin-top: 8px; }
+
+.gf-todayWrap { background: rgba(0, 0, 0, 0.28); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 16px; padding: 13px 14px; margin-bottom: 14px; }
+.gf-yearEndMini { margin-top: 10px; font-size: 0.76rem; line-height: 1.6; color: #ffe08a; }
+.gf-yearEndMini a { color: var(--gf-cyan); }
+
+.gf-action { position: relative; border-radius: 16px; padding: 16px 16px 17px; margin-bottom: 14px; background: linear-gradient(135deg, rgba(255, 46, 151, 0.14), rgba(157, 78, 221, 0.14)); border: 1px solid rgba(255, 46, 151, 0.3); }
+.gf-action .gf-secLabel::before { background: var(--gf-pink); box-shadow: 0 0 8px var(--gf-pink); }
+.gf-actionTxt { font-size: 1.02rem; line-height: 1.75; font-weight: 500; }
+
+.gf-fsGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 9px; margin-bottom: 14px; }
+.gf-fsCell { background: rgba(0, 0, 0, 0.28); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 14px; padding: 13px 6px; text-align: center; }
+.gf-fsCap { font-family: "DotGothic16"; font-size: 0.62rem; letter-spacing: 0.14em; color: var(--gf-dim); margin-bottom: 7px; }
+.gf-fsIcon { font-size: 1.5rem; line-height: 1; margin-bottom: 6px; }
+.gf-fsVal { font-weight: 700; font-size: 0.84rem; line-height: 1.3; }
+.gf-swatch { width: 30px; height: 30px; border-radius: 50%; margin: 0 auto 6px; box-shadow: 0 0 12px currentColor; border: 2px solid rgba(255, 255, 255, 0.6); }
+
+.gf-ng { display: flex; gap: 10px; align-items: flex-start; background: rgba(255, 80, 80, 0.08); border: 1px solid rgba(255, 80, 80, 0.28); border-radius: 14px; padding: 12px 13px; margin-bottom: 14px; }
+.gf-ng .gf-ico { font-size: 1.1rem; line-height: 1.6; }
+.gf-ngTxt { font-size: 0.88rem; line-height: 1.65; }
+.gf-ngTxt b { color: #ff8a8a; }
+
+.gf-luck { display: flex; justify-content: space-around; gap: 8px; margin-bottom: 14px; text-align: center; }
+.gf-li { flex: 1; }
+.gf-lcap { font-family: "DotGothic16"; font-size: 0.6rem; color: var(--gf-dim); letter-spacing: 0.1em; margin-bottom: 3px; }
+.gf-lval { font-family: "Orbitron"; font-weight: 900; font-size: 1.25rem; color: var(--gf-cyan); text-shadow: 0 0 12px rgba(0, 229, 255, 0.5); }
+
+.gf-neta { text-align: center; font-family: "RocknRoll One"; font-size: 1.02rem; line-height: 1.7; color: var(--gf-gold); text-shadow: 0 0 16px rgba(255, 215, 0, 0.4); margin: 4px 4px 14px; padding-top: 10px; border-top: 1px dashed rgba(255, 255, 255, 0.12); }
+
+.gf-nextWrap { background: rgba(0, 0, 0, 0.28); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 14px; padding: 12px 14px; }
+.gf-cFoot { text-align: center; font-family: "DotGothic16"; font-size: 0.62rem; color: var(--gf-dim); letter-spacing: 0.12em; margin-top: 14px; line-height: 1.7; }
+
+/* ===== ボタン群 ===== */
+.gf-btns { max-width: 430px; margin: 18px auto 0; display: flex; flex-direction: column; gap: 10px; }
+.gf-btn { padding: 14px; border: none; border-radius: 14px; font-family: "RocknRoll One"; font-size: 1rem; cursor: pointer; letter-spacing: 0.06em; transition: transform 0.15s; }
+.gf-btn:active { transform: scale(0.97); }
+.gf-btn.x { background: #000; color: #fff; border: 1px solid #333; }
+.gf-btn.copy { background: rgba(157, 78, 221, 0.2); color: var(--gf-ink); border: 1px solid rgba(157, 78, 221, 0.45); }
+.gf-btn.again { background: transparent; color: var(--gf-dim); border: 1px solid rgba(142, 134, 184, 0.35); font-family: "Zen Kaku Gothic New"; font-weight: 700; }
+.gf-siteLink { display: block; text-align: center; margin: 22px auto 0; color: var(--gf-dim); font-size: 0.78rem; text-decoration: none; letter-spacing: 0.08em; }
+.gf-siteLink b { color: var(--gf-cyan); }
+
+.gf-toast { position: fixed; left: 50%; bottom: 30px; transform: translateX(-50%) translateY(20px); opacity: 0; background: rgba(0, 0, 0, 0.9); color: #fff; padding: 11px 22px; border-radius: 999px; font-size: 0.85rem; z-index: 80; transition: 0.3s; pointer-events: none; border: 1px solid rgba(157, 78, 221, 0.5); }
+.gf-toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+/* 紙吹雪 */
+.gf-confettiWrap { position: fixed; inset: 0; overflow: hidden; pointer-events: none; z-index: 60; }
+.gf-confetti { position: absolute; top: -20px; animation: gfFall linear forwards; }
+@keyframes gfFall { to { transform: translateY(105vh) rotate(540deg); opacity: 0.9; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .gf-star, .gf-orb, .gf-sheen, .gf-goBtn, .gf-rankT, .gf-card, .gf-confetti { animation: none !important; }
+}
+
+/* ===== SEO 解説セクション ===== */
+.gf-about { position: relative; z-index: 2; max-width: 680px; margin: 0 auto; padding: 10px 18px 60px; }
+.gf-about h2 { font-family: "RocknRoll One"; font-size: 1.15rem; color: var(--gf-ink); margin: 26px 0 10px; letter-spacing: 0.02em; }
+.gf-about p { color: var(--gf-dim); font-size: 0.92rem; line-height: 1.95; margin-bottom: 6px; }
+.gf-about a { color: var(--gf-cyan); }
+.gf-about-list { list-style: none; padding: 0; margin: 4px 0 10px; display: flex; flex-direction: column; gap: 6px; }
+.gf-about-list li { color: var(--gf-ink); font-size: 0.9rem; background: rgba(0, 0, 0, 0.25); border: 1px solid rgba(255, 255, 255, 0.07); border-radius: 10px; padding: 8px 12px; }

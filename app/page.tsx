@@ -56,6 +56,22 @@ export default function HomePage() {
         </span>
       </Link>
 
+      {/* ゴミ出し占いへの導線 */}
+      <Link
+        href="/trash-fortune"
+        className="block rounded-2xl px-5 py-4 mb-4 text-center font-bold text-white"
+        style={{
+          background: "linear-gradient(135deg, #0a0618, #1d1040 55%, #103a52)",
+          border: "2px solid var(--color-ink)",
+          textShadow: "0 0 12px rgba(0,229,255,.7)",
+        }}
+      >
+        🗑️ 新コンテンツ「ゴミ出し占い」✨
+        <span className="block text-sm font-normal mt-1" style={{ color: "#B8AEE0", textShadow: "none" }}>
+          目黒区・上目黒四丁目のごみ収集日＋今日の開運作法を占う →
+        </span>
+      </Link>
+
       {/* 壁紙メーカーへの導線 */}
       <Link
         href="/kabegami"
