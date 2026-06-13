@@ -50,7 +50,7 @@ export async function GET(
     : "今日は収集なし";
 
   const allText =
-    "ゴミ出し占い 目黒区 上目黒四丁目 今日のゴミ 運勢 開運作法 収集なし decomoji.xyz/trash-fortune #年月日()・/0123456789NRSU" +
+    "ゴミ出し占い 目黒区 上目黒四丁目 今日のゴミ 運勢 開運作法 収集なし decomoji.xyz/trash-day #年月日()・/0123456789NRSU" +
     f.dateLong +
     f.rank.t +
     f.rank.s +
@@ -140,7 +140,7 @@ export async function GET(
           }}
         >
           <div style={{ display: "flex", fontSize: 28, color: "#00E5FF" }}>
-            decomoji.xyz/trash-fortune
+            decomoji.xyz/trash-day
           </div>
           <div style={{ display: "flex", fontSize: 24, color: "#8E86B8" }}>#ゴミ出し占い</div>
         </div>

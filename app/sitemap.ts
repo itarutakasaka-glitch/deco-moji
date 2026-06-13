@@ -35,7 +35,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
     },
     {
-      url: `${base}/trash-fortune`,
+      url: `${base}/trash-day`,
       lastModified,
       priority: 0.9,
       changeFrequency: "daily",

@@ -56,9 +56,9 @@ export default function HomePage() {
         </span>
       </Link>
 
-      {/* ゴミ出し占いへの導線 */}
+      {/* ごみ収集日カレンダーへの導線 */}
       <Link
-        href="/trash-fortune"
+        href="/trash-day"
         className="block rounded-2xl px-5 py-4 mb-4 text-center font-bold text-white"
         style={{
           background: "linear-gradient(135deg, #0a0618, #1d1040 55%, #103a52)",
@@ -66,9 +66,9 @@ export default function HomePage() {
           textShadow: "0 0 12px rgba(0,229,255,.7)",
         }}
       >
-        🗑️ 新コンテンツ「ゴミ出し占い」✨
+        🗑️ 目黒区 ごみ収集日カレンダー ♻️
         <span className="block text-sm font-normal mt-1" style={{ color: "#B8AEE0", textShadow: "none" }}>
-          目黒区・上目黒四丁目のごみ収集日＋今日の開運作法を占う →
+          上目黒四丁目のゴミの日が一目でわかる（おまけにゴミ出し占いも）→
         </span>
       </Link>
 

@@ -174,7 +174,7 @@ export default function GomiFortune() {
     return `【ゴミ出し占い🗑️】${f.dateLong}\n${f.area}／今日のゴミ：${ts}\n運勢：${f.rank.t}「${f.rank.s}」\n${f.neta}`;
   }
   function resultUrl(f: Fortune) {
-    const path = `/trash-fortune/r/${encodeSlug(f.parts)}`;
+    const path = `/trash-day/r/${encodeSlug(f.parts)}`;
     if (typeof window !== "undefined") return window.location.origin + path;
     return "https://www.decomoji.xyz" + path;
   }
@@ -204,19 +204,22 @@ export default function GomiFortune() {
         {!fortune ? (
           /* ① 日程を調べる */
           <section className="gf-screen">
-            <div className="gf-brand">★ decomoji presents ★</div>
+            <div className="gf-brand">★ 目黒区 ごみ収集日チェッカー ★</div>
             <h1 className="gf-logo">
-              <span className="gf-deco">🗑️</span> ゴミ出し占い{" "}
-              <span className="gf-deco">✨</span>
+              <span className="gf-deco">🗑️</span> ゴミの日カレンダー{" "}
+              <span className="gf-deco">♻️</span>
               <br />
-              <span className="gf-logoSub">TRASH FORTUNE</span>
+              <span className="gf-logoSub">目黒区・上目黒四丁目</span>
             </h1>
+            <p className="gf-tagline">
+              いつ・何を出す？が<b>ひと目</b>でわかる。
+            </p>
             <div className="gf-areaPillWrap">
               <span className="gf-areaPill">📍 目黒区・上目黒四丁目</span>
             </div>
 
             <div className="gf-panel">
-              <div className="gf-secLabel">📅 ゴミ出しの日程を調べる</div>
+              <div className="gf-secLabel">📅 ごみ収集スケジュール</div>
               <div className="gf-weekTable">
                 {ORDER.map((k) => {
                   const t = TYPES[k];
@@ -292,11 +295,21 @@ export default function GomiFortune() {
                   })}
                 </div>
               </div>
+
+              {/* 調べた結果の下に現れる、占いへの導線 */}
+              <button
+                className="gf-fortuneCta"
+                onClick={openFortune}
+                disabled={!parts}
+              >
+                <span className="gf-fortuneCtaLabel">＼ ちょっと一息 ／</span>
+                <span className="gf-fortuneCtaTitle">🔮 今日のゴミ出し占い ✨</span>
+                <span className="gf-fortuneCtaSub">
+                  占いが「今日の正しいゴミの出し方＝開運作法」を授けます ▶
+                </span>
+              </button>
             </div>
 
-            <button className="gf-goBtn" onClick={openFortune} disabled={!parts}>
-              🔮 この日のごみ出し運勢をひらく ▶
-            </button>
             <p className="gf-note">
               ※ {SCHEDULE_SOURCE.municipality}公式「資源とごみの収集日」準拠（{SCHEDULE_SOURCE.fetchedAt}
               取得・上目黒四丁目検証済）。最新・正確な情報は

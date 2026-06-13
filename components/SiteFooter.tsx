@@ -22,8 +22,8 @@ export default function SiteFooter() {
         <Link href="/shindan" className="underline-offset-4 hover:underline">
           SNSパワー診断
         </Link>
-        <Link href="/trash-fortune" className="underline-offset-4 hover:underline">
-          ゴミ出し占い
+        <Link href="/trash-day" className="underline-offset-4 hover:underline">
+          ごみ収集日カレンダー
         </Link>
         <Link href="/kabegami" className="underline-offset-4 hover:underline">
           壁紙メーカー

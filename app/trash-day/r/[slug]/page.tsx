@@ -3,7 +3,7 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 import { buildFortune, decodeSlug, TYPES } from "@/lib/gomi/core";
 import FortuneCard from "@/components/FortuneCard";
-import "../../trash-fortune.css";
+import "../../trash-day.css";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -18,26 +18,26 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     : "収集なし";
   const title = `${f.dateLong} の運勢は【${f.rank.t}】｜ゴミ出し占い`;
   const description = `${f.area}・${ts}。${f.rank.s}。今日の開運作法をチェック🗑️✨`;
-  const ogImage = `/trash-fortune/og/${slug}`;
+  const ogImage = `/trash-day/og/${slug}`;
   return {
     title,
     description,
     robots: { index: false, follow: true },
-    alternates: { canonical: "/trash-fortune" },
+    alternates: { canonical: "/trash-day" },
     openGraph: {
       title,
       description,
-      url: `/trash-fortune/r/${slug}`,
+      url: `/trash-day/r/${slug}`,
       images: [{ url: ogImage, width: 1200, height: 630 }],
     },
     twitter: { card: "summary_large_image", title, description, images: [ogImage] },
   };
 }
 
-export default async function TrashFortuneResultPage({ params }: Props) {
+export default async function TrashDayResultPage({ params }: Props) {
   const { slug } = await params;
   const p = decodeSlug(slug);
-  if (!p) redirect("/trash-fortune");
+  if (!p) redirect("/trash-day");
   const f = buildFortune(p);
 
   return (
@@ -49,11 +49,11 @@ export default async function TrashFortuneResultPage({ params }: Props) {
           <FortuneCard fortune={f} />
           <div className="gf-btns">
             <Link
-              href="/trash-fortune"
+              href="/trash-day"
               className="gf-btn x"
               style={{ textDecoration: "none", textAlign: "center" }}
             >
-              🔮 自分の街のゴミ出し運勢を占う
+              📅 ごみ収集日カレンダーへ戻る
             </Link>
             <Link
               href="/"

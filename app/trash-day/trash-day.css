@@ -54,7 +54,9 @@ body:has(.gf-root) {
   filter: drop-shadow(0 0 22px rgba(157, 78, 221, 0.5));
 }
 .gf-logo .gf-deco { filter: none; -webkit-text-fill-color: initial; }
-.gf-logoSub { font-size: 0.34em; letter-spacing: 0.45em; font-family: "DotGothic16"; -webkit-text-fill-color: var(--gf-dim); color: var(--gf-dim); }
+.gf-logoSub { font-size: 0.32em; letter-spacing: 0.18em; font-family: "DotGothic16"; -webkit-text-fill-color: var(--gf-dim); color: var(--gf-dim); }
+.gf-tagline { text-align: center; color: var(--gf-dim); font-size: 0.92rem; margin: 12px 0 0; letter-spacing: 0.02em; }
+.gf-tagline b { color: var(--gf-ink); }
 .gf-areaPillWrap { text-align: center; margin: 14px 0 18px; }
 .gf-areaPill {
   display: inline-flex; align-items: center; gap: 6px; padding: 7px 16px; border-radius: 999px;
@@ -115,15 +117,22 @@ body:has(.gf-root) {
 .gf-dt { font-family: "DotGothic16"; color: var(--gf-dim); letter-spacing: 0.05em; }
 .gf-dt.soon { color: var(--gf-cyan); }
 
-.gf-goBtn {
-  width: 100%; margin-top: 16px; padding: 17px; border: none; border-radius: 16px; cursor: pointer;
-  font-family: "RocknRoll One"; font-size: 1.2rem; color: #fff; letter-spacing: 0.08em;
-  background: linear-gradient(135deg, var(--gf-pink), var(--gf-purple) 55%, var(--gf-cyan)); background-size: 200% 200%;
-  animation: gfGrad 4s ease infinite; box-shadow: 0 8px 30px rgba(255, 46, 151, 0.4); transition: transform 0.15s;
+/* 調べた結果の下に現れる、占いへの導線バナー */
+.gf-fortuneCta {
+  width: 100%; margin-top: 18px; padding: 16px 18px; border-radius: 16px; cursor: pointer;
+  display: flex; flex-direction: column; align-items: center; gap: 4px; text-align: center;
+  color: #fff; font-family: inherit;
+  background: linear-gradient(135deg, rgba(255, 46, 151, 0.92), rgba(157, 78, 221, 0.92) 55%, rgba(0, 229, 255, 0.9));
+  background-size: 200% 200%; animation: gfGrad 5s ease infinite;
+  border: 1px solid rgba(255, 255, 255, 0.25); box-shadow: 0 8px 28px rgba(157, 78, 221, 0.4);
+  transition: transform 0.15s;
 }
-.gf-goBtn:hover { transform: translateY(-2px) scale(1.01); }
-.gf-goBtn:active { transform: scale(0.97); }
-.gf-goBtn:disabled { opacity: 0.6; cursor: default; animation: none; }
+.gf-fortuneCta:hover { transform: translateY(-2px) scale(1.01); }
+.gf-fortuneCta:active { transform: scale(0.97); }
+.gf-fortuneCta:disabled { opacity: 0.6; cursor: default; animation: none; }
+.gf-fortuneCtaLabel { font-family: "DotGothic16"; font-size: 0.72rem; letter-spacing: 0.18em; opacity: 0.9; }
+.gf-fortuneCtaTitle { font-family: "RocknRoll One"; font-size: 1.28rem; letter-spacing: 0.04em; text-shadow: 0 0 14px rgba(255, 255, 255, 0.45); }
+.gf-fortuneCtaSub { font-size: 0.78rem; line-height: 1.6; opacity: 0.95; }
 @keyframes gfGrad { 50% { background-position: 100% 100%; } }
 .gf-note { text-align: center; color: var(--gf-dim); font-size: 0.72rem; margin-top: 14px; letter-spacing: 0.02em; line-height: 1.8; }
 .gf-note a { color: var(--gf-cyan); }
