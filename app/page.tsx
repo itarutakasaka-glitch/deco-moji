@@ -87,6 +87,16 @@ export default function HomePage() {
         </span>
       </Link>
 
+      <div className="text-center mb-6">
+        <Link
+          href="/play"
+          className="inline-block text-sm font-bold underline-offset-4 hover:underline"
+          style={{ color: "var(--color-pink-4)" }}
+        >
+          ▶ 診断・占いをまとめて見る
+        </Link>
+      </div>
+
       <AdSlot />
 
       <SectionTitle>⊹ 装飾フレーム集</SectionTitle>

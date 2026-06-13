@@ -19,6 +19,9 @@ export default function SiteFooter() {
         <Link href="/x" className="underline-offset-4 hover:underline">
           X
         </Link>
+        <Link href="/play" className="underline-offset-4 hover:underline">
+          診断・占い
+        </Link>
         <Link href="/shindan" className="underline-offset-4 hover:underline">
           SNSパワー診断
         </Link>
