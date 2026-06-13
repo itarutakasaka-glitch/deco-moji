@@ -1,5 +1,11 @@
 import { ImageResponse } from "next/og";
-import { buildFortune, decodeSlug, TYPES, type Rarity } from "@/lib/gomi/core";
+import {
+  buildFortune,
+  decodeSlug,
+  DEFAULT_CHOME_INDEX,
+  TYPES,
+  type Rarity,
+} from "@/lib/gomi/core";
 
 export const runtime = "edge";
 
@@ -40,17 +46,21 @@ export async function GET(
   { params }: { params: Promise<{ slug: string }> }
 ) {
   const { slug } = await params;
-  const p = decodeSlug(slug);
-  // 不正slugは今日扱いにせず固定の見本日に（フォントサブセットを安定させる）
-  const f = buildFortune(p ?? { y: 2026, m: 6, d: 10 });
+  const decoded = decodeSlug(slug);
+  // 不正slugは固定の見本（上目黒四丁目・見本日）に（フォントサブセットを安定させる）
+  const f = decoded
+    ? buildFortune(decoded.chomeIndex, decoded.parts)
+    : buildFortune(DEFAULT_CHOME_INDEX, { y: 2026, m: 6, d: 10 });
   const st = RARITY_STYLE[f.rarity];
 
   const gomiText = f.today.length
     ? f.today.map((k) => TYPES[k].label).join("・")
     : "今日は収集なし";
 
+  const areaText = `目黒区・${f.area}`;
   const allText =
-    "ゴミ出し占い 目黒区 上目黒四丁目 今日のゴミ 運勢 開運作法 収集なし decomoji.xyz/trash-day #年月日()・/0123456789NRSU" +
+    "ゴミ出し占い 目黒区 今日のゴミ 運勢 開運作法 収集なし decomoji.xyz/trash-day #年月日()・/0123456789NRSU" +
+    areaText +
     f.dateLong +
     f.rank.t +
     f.rank.s +
@@ -105,7 +115,7 @@ export async function GET(
         >
           <div style={{ display: "flex", fontSize: 30, color: "#00E5FF" }}>{f.dateLong}</div>
           <div style={{ display: "flex", fontSize: 24, color: "#8E86B8", marginTop: 6 }}>
-            目黒区・上目黒四丁目
+            {areaText}
           </div>
           <div style={{ display: "flex", fontSize: 132, lineHeight: 1.1, color: st.rankColor, marginTop: 10 }}>
             {f.rank.t}

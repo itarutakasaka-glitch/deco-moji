@@ -1,25 +1,32 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import GomiFortune from "@/components/GomiFortune";
-import { describeRule, ruleFor, TYPES, ORDER } from "@/lib/gomi/core";
+import {
+  describeRule,
+  ruleFor,
+  TYPES,
+  ORDER,
+  CHOME_LIST,
+  DEFAULT_CHOME_INDEX,
+} from "@/lib/gomi/core";
 import "./trash-day.css";
 
 export const metadata: Metadata = {
-  title: "目黒区 ごみ収集日カレンダー🗑️上目黒四丁目｜ゴミの日が一目でわかる",
+  title: "目黒区 ごみ収集日カレンダー🗑️全88丁目｜ゴミの日が一目でわかる",
   description:
-    "目黒区・上目黒四丁目のごみ収集日（燃やすごみ・びん缶ペットボトル・古紙・燃やさないごみ・水銀を含む製品）を曜日と次回予定で一目チェック。調べたあとは「今日のゴミ出し占い」で開運作法も占えます。",
+    "目黒区の各丁目（全88丁目）のごみ収集日（燃やすごみ・びん缶ペットボトル・古紙・燃やさないごみ・水銀を含む製品）を、丁目を選ぶだけで曜日と次回予定で一目チェック。調べたあとは「今日のゴミ出し占い」で開運作法も占えます。",
   alternates: { canonical: "/trash-day" },
   openGraph: {
-    title: "目黒区 ごみ収集日カレンダー🗑️上目黒四丁目",
+    title: "目黒区 ごみ収集日カレンダー🗑️全88丁目",
     description:
-      "上目黒四丁目のゴミの日（燃やすごみ・資源・古紙・燃やさないごみ・水銀製品）を一目でチェック。おまけに今日のゴミ出し占いも。",
+      "目黒区のゴミの日（燃やすごみ・資源・古紙・燃やさないごみ・水銀製品）を丁目を選んで一目チェック。おまけに今日のゴミ出し占いも。",
     url: "/trash-day",
   },
   twitter: {
     card: "summary_large_image",
-    title: "目黒区 ごみ収集日カレンダー🗑️上目黒四丁目",
+    title: "目黒区 ごみ収集日カレンダー🗑️全88丁目",
     description:
-      "上目黒四丁目のゴミの日を一目でチェック。おまけに今日のゴミ出し占いも。",
+      "目黒区のゴミの日を丁目を選んで一目チェック。おまけに今日のゴミ出し占いも。",
   },
 };
 
@@ -29,19 +36,22 @@ export default function TrashDayPage() {
       <GomiFortune />
       <div className="gf-root" style={{ minHeight: "auto" }}>
         <section className="gf-about">
-          <h2>目黒区・上目黒四丁目のごみ収集日</h2>
+          <h2>目黒区のごみ収集日（全88丁目対応）</h2>
           <p>
-            このページは、目黒区・上目黒四丁目のごみ収集日（ゴミの日）を
-            ひと目で確認できる無料カレンダーです。日付を選ぶと、その日に出せるゴミの種別と、
-            燃やすごみ・びん缶ペットボトル・古紙・燃やさないごみ・水銀を含む製品それぞれの
-            次の収集予定がわかります。「今日は何ゴミの日？」「次の資源回収はいつ？」を
-            朝サッと確認するのにどうぞ。
+            このページは、目黒区の各丁目（全88丁目）のごみ収集日（ゴミの日）を
+            ひと目で確認できる無料カレンダーです。お住まいの丁目を選んで日付を指定すると、
+            その日に出せるゴミの種別と、燃やすごみ・びん缶ペットボトル・古紙・燃やさないごみ・
+            水銀を含む製品それぞれの次の収集予定がわかります。「今日は何ゴミの日？」
+            「次の資源回収はいつ？」を朝サッと確認するのにどうぞ。対応エリアは
+            青葉台・上目黒・中目黒・自由が丘・八雲・目黒本町など目黒区全域（
+            {CHOME_LIST.length}丁目）です。
           </p>
-          <h2>上目黒四丁目のごみ収集スケジュール</h2>
+          <h2>ごみ収集スケジュールの例（上目黒四丁目）</h2>
           <ul className="gf-about-list">
             {ORDER.map((k) => (
               <li key={k}>
-                {TYPES[k].em} {TYPES[k].label}：{describeRule(ruleFor(k))}
+                {TYPES[k].em} {TYPES[k].label}：
+                {describeRule(ruleFor(DEFAULT_CHOME_INDEX, k))}
               </li>
             ))}
           </ul>

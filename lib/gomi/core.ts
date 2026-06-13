@@ -51,11 +51,32 @@ export const ORDER: GomiKey[] = ["burnable", "recyclable", "paper", "nonBurnable
 const PRIORITY: GomiKey[] = ["mercury", "nonBurnable", "paper", "recyclable", "burnable"];
 export const WEEK = ["日", "月", "火", "水", "木", "金", "土"];
 
-/* ===== MVP対象エリア：上目黒四丁目 ===== */
-export const MVP_CHOME = "上目黒四丁目";
+/* ===== 対象エリア：目黒区 全88丁目（丁目ごとに収集ルールを引く） ===== */
 const AREAS = schedule.areas as unknown as AreaRaw[];
-const MVP_AREA =
-  AREAS.find((a) => a.chome.includes(MVP_CHOME)) ?? AREAS[0];
+
+export type ChomeOption = { chome: string; areaIndex: number; group: string };
+// 全丁目をフラットに展開（同一グループ内は同じ収集ルールを共有）
+export const CHOME_LIST: ChomeOption[] = AREAS.flatMap((a, areaIndex) =>
+  a.chome.map((chome) => ({ chome, areaIndex, group: a.group }))
+);
+
+export const MVP_CHOME = "上目黒四丁目";
+export const DEFAULT_CHOME_INDEX = Math.max(
+  0,
+  CHOME_LIST.findIndex((c) => c.chome === MVP_CHOME)
+);
+
+function clampChome(i: number): number {
+  return Number.isInteger(i) && i >= 0 && i < CHOME_LIST.length
+    ? i
+    : DEFAULT_CHOME_INDEX;
+}
+function rulesOf(chomeIndex: number): AreaRaw {
+  return AREAS[CHOME_LIST[clampChome(chomeIndex)].areaIndex];
+}
+export function chomeLabel(chomeIndex: number): string {
+  return CHOME_LIST[clampChome(chomeIndex)].chome;
+}
 
 export const SCHEDULE_SOURCE = {
   municipality: schedule.municipality as string,
@@ -97,13 +118,19 @@ export function matchesRule(rule: Rule | undefined, p: DateParts): boolean {
   // nthWeekday: 第5週は nths に含めないため自動的に除外される（区注記どおり）
   return dowOf(p) === rule.weekday && rule.nths.includes(nthOf(p));
 }
-export function typesOn(p: DateParts): GomiKey[] {
-  return ORDER.filter((k) => matchesRule(MVP_AREA[k], p));
+export function typesOn(chomeIndex: number, p: DateParts): GomiKey[] {
+  const area = rulesOf(chomeIndex);
+  return ORDER.filter((k) => matchesRule(area[k], p));
 }
-export function nextOccurrence(key: GomiKey, from: DateParts): DateParts | null {
+export function nextOccurrence(
+  chomeIndex: number,
+  key: GomiKey,
+  from: DateParts
+): DateParts | null {
+  const area = rulesOf(chomeIndex);
   let p = from;
   for (let i = 0; i < 70; i++) {
-    if (matchesRule(MVP_AREA[key], p)) return p;
+    if (matchesRule(area[key], p)) return p;
     p = addDays(p, 1);
   }
   return null;
@@ -114,8 +141,8 @@ export function describeRule(rule: Rule | undefined): string {
     return "毎週 " + rule.weekdays.map((w) => WEEK[w]).join("・") + "曜";
   return "第" + rule.nths.join("・") + " " + WEEK[rule.weekday] + "曜";
 }
-export function ruleFor(key: GomiKey): Rule | undefined {
-  return MVP_AREA[key];
+export function ruleFor(chomeIndex: number, key: GomiKey): Rule | undefined {
+  return rulesOf(chomeIndex)[key];
 }
 
 // 年末年始（12/29〜1/3）は特別日程＝通常ルールが当てにならないので警告を出す
@@ -124,9 +151,9 @@ export function isYearEndPeriod(p: DateParts): boolean {
 }
 
 export type NextItem = { key: GomiKey; date: DateParts | null; days: number | null };
-export function nextSchedule(p: DateParts): NextItem[] {
+export function nextSchedule(chomeIndex: number, p: DateParts): NextItem[] {
   return ORDER.map((key) => {
-    const date = nextOccurrence(key, p);
+    const date = nextOccurrence(chomeIndex, key, p);
     const days = date
       ? Math.round((utc(date) - utc(p)) / 86400000)
       : null;
@@ -245,6 +272,7 @@ export type Fortune = {
   parts: DateParts;
   dateLong: string;
   area: string;
+  chomeIndex: number;
   today: GomiKey[];
   themeKey: GomiKey | null;
   element: Element;
@@ -262,13 +290,15 @@ export type Fortune = {
   yearEnd: boolean;
 };
 
-export function buildFortune(p: DateParts): Fortune {
-  const today = typesOn(p);
+export function buildFortune(chomeIndex: number, p: DateParts): Fortune {
+  const area = chomeLabel(chomeIndex);
+  const today = typesOn(chomeIndex, p);
   const themeKey = PRIORITY.find((k) => today.includes(k)) ?? null;
   const element: Element = themeKey ? TYPES[themeKey].element : "無";
   const rarity: Rarity = themeKey ? TYPES[themeKey].rarity : "N";
   const iso = isoOf(p);
-  const r = rng(hash(iso + "|kamimeguro4|" + (themeKey ?? "none")));
+  // シードに丁目を含める＝丁目ごとに違う占いに（同一日でもエリアで変わる）
+  const r = rng(hash(iso + "|" + area + "|" + (themeKey ?? "none")));
 
   let rank: Rank;
   if (themeKey === "mercury") rank = RANKS[0];
@@ -289,7 +319,8 @@ export function buildFortune(p: DateParts): Fortune {
     iso,
     parts: p,
     dateLong: fmtLong(p),
-    area: MVP_CHOME,
+    area,
+    chomeIndex: clampChome(chomeIndex),
     today,
     themeKey,
     element,
@@ -303,24 +334,27 @@ export function buildFortune(p: DateParts): Fortune {
     neta,
     luckyNum,
     luckyHour,
-    next: nextSchedule(p),
+    next: nextSchedule(chomeIndex, p),
     yearEnd: isYearEndPeriod(p),
   };
 }
 
-/* ===== シェアURL用 slug（日付 yyyymmdd をURLセーフに） ===== */
-export function encodeSlug(p: DateParts): string {
-  return `${p.y}${pad(p.m)}${pad(p.d)}`;
+/* ===== シェアURL用 slug（yyyymmdd[-丁目index]） ===== */
+// 丁目index省略時は既定の丁目（上目黒四丁目）= 旧・日付のみslugとの後方互換
+export function encodeSlug(chomeIndex: number, p: DateParts): string {
+  return `${p.y}${pad(p.m)}${pad(p.d)}-${clampChome(chomeIndex)}`;
 }
-export function decodeSlug(slug: string): DateParts | null {
-  const m = /^(\d{4})(\d{2})(\d{2})$/.exec(slug);
+export type DecodedSlug = { parts: DateParts; chomeIndex: number };
+export function decodeSlug(slug: string): DecodedSlug | null {
+  const m = /^(\d{4})(\d{2})(\d{2})(?:-(\d{1,3}))?$/.exec(slug);
   if (!m) return null;
   const p = { y: +m[1], m: +m[2], d: +m[3] };
   if (p.m < 1 || p.m > 12 || p.d < 1 || p.d > 31) return null;
   // 往復で一致しない値（2月30日など）は弾く
   const dt = new Date(Date.UTC(p.y, p.m - 1, p.d));
   if (dt.getUTCMonth() + 1 !== p.m || dt.getUTCDate() !== p.d) return null;
-  return p;
+  const chomeIndex = m[4] != null ? clampChome(+m[4]) : DEFAULT_CHOME_INDEX;
+  return { parts: p, chomeIndex };
 }
 
 export const RARITY_LABEL: Record<Rarity, string> = {

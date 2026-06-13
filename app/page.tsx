@@ -68,7 +68,7 @@ export default function HomePage() {
       >
         🗑️ 目黒区 ごみ収集日カレンダー ♻️
         <span className="block text-sm font-normal mt-1" style={{ color: "#B8AEE0", textShadow: "none" }}>
-          上目黒四丁目のゴミの日が一目でわかる（おまけにゴミ出し占いも）→
+          全88丁目対応・丁目を選んでゴミの日が一目でわかる（おまけに占いも）→
         </span>
       </Link>
 

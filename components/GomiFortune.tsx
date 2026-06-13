@@ -8,6 +8,9 @@ import {
   type GomiKey,
   TYPES,
   ORDER,
+  CHOME_LIST,
+  DEFAULT_CHOME_INDEX,
+  chomeLabel,
   describeRule,
   ruleFor,
   typesOn,
@@ -130,6 +133,7 @@ function Confetti() {
 
 export default function GomiFortune() {
   const [iso, setIso] = useState<string>("");
+  const [chomeIndex, setChomeIndex] = useState<number>(DEFAULT_CHOME_INDEX);
   const [fortune, setFortune] = useState<Fortune | null>(null);
   const [toast, setToast] = useState<string>("");
 
@@ -139,8 +143,8 @@ export default function GomiFortune() {
   }, []);
 
   const parts: DateParts | null = iso ? partsFromIso(iso) : null;
-  const today = parts ? typesOn(parts) : [];
-  const next = parts ? nextSchedule(parts) : [];
+  const today = parts ? typesOn(chomeIndex, parts) : [];
+  const next = parts ? nextSchedule(chomeIndex, parts) : [];
   const yearEnd = parts ? isYearEndPeriod(parts) : false;
 
   const todayIso = isoOf(partsFromDate(new Date()));
@@ -155,7 +159,7 @@ export default function GomiFortune() {
   }
   function openFortune() {
     if (!parts) return;
-    setFortune(buildFortune(parts));
+    setFortune(buildFortune(chomeIndex, parts));
     if (typeof window !== "undefined") window.scrollTo(0, 0);
   }
   function back() {
@@ -174,7 +178,7 @@ export default function GomiFortune() {
     return `【ゴミ出し占い🗑️】${f.dateLong}\n${f.area}／今日のゴミ：${ts}\n運勢：${f.rank.t}「${f.rank.s}」\n${f.neta}`;
   }
   function resultUrl(f: Fortune) {
-    const path = `/trash-day/r/${encodeSlug(f.parts)}`;
+    const path = `/trash-day/r/${encodeSlug(f.chomeIndex, f.parts)}`;
     if (typeof window !== "undefined") return window.location.origin + path;
     return "https://www.decomoji.xyz" + path;
   }
@@ -209,16 +213,32 @@ export default function GomiFortune() {
               <span className="gf-deco">🗑️</span> ゴミの日カレンダー{" "}
               <span className="gf-deco">♻️</span>
               <br />
-              <span className="gf-logoSub">目黒区・上目黒四丁目</span>
+              <span className="gf-logoSub">目黒区版</span>
             </h1>
             <p className="gf-tagline">
               いつ・何を出す？が<b>ひと目</b>でわかる。
             </p>
             <div className="gf-areaPillWrap">
-              <span className="gf-areaPill">📍 目黒区・上目黒四丁目</span>
+              <span className="gf-areaPill">📍 目黒区・{chomeLabel(chomeIndex)}</span>
             </div>
 
             <div className="gf-panel">
+              <div className="gf-secLabel">📍 お住まいの丁目を選ぶ</div>
+              <select
+                className="gf-chomeSelect"
+                value={chomeIndex}
+                onChange={(e) => setChomeIndex(Number(e.target.value))}
+                aria-label="丁目を選択"
+              >
+                {CHOME_LIST.map((c, i) => (
+                  <option key={i} value={i}>
+                    {c.chome}
+                  </option>
+                ))}
+              </select>
+
+              <div className="gf-divider" />
+
               <div className="gf-secLabel">📅 ごみ収集スケジュール</div>
               <div className="gf-weekTable">
                 {ORDER.map((k) => {
@@ -229,7 +249,9 @@ export default function GomiFortune() {
                         <span className="gf-em">{t.em}</span>
                         {t.label}
                       </span>
-                      <span className="gf-wWhen">{describeRule(ruleFor(k))}</span>
+                      <span className="gf-wWhen">
+                        {describeRule(ruleFor(chomeIndex, k))}
+                      </span>
                     </div>
                   );
                 })}

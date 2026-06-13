@@ -10,9 +10,9 @@ type Props = { params: Promise<{ slug: string }> };
 // 日付ごとに無限に生成されうるので noindex（薄いページの量産を防ぐ）
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const p = decodeSlug(slug);
-  if (!p) return { robots: { index: false, follow: true } };
-  const f = buildFortune(p);
+  const decoded = decodeSlug(slug);
+  if (!decoded) return { robots: { index: false, follow: true } };
+  const f = buildFortune(decoded.chomeIndex, decoded.parts);
   const ts = f.today.length
     ? f.today.map((k) => TYPES[k].label).join("・")
     : "収集なし";
@@ -36,9 +36,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function TrashDayResultPage({ params }: Props) {
   const { slug } = await params;
-  const p = decodeSlug(slug);
-  if (!p) redirect("/trash-day");
-  const f = buildFortune(p);
+  const decoded = decodeSlug(slug);
+  if (!decoded) redirect("/trash-day");
+  const f = buildFortune(decoded.chomeIndex, decoded.parts);
 
   return (
     <div className="gf-root">

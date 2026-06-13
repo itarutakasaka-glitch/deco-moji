@@ -86,6 +86,16 @@ body:has(.gf-root) {
 
 .gf-divider { height: 1px; background: linear-gradient(90deg, transparent, rgba(157, 78, 221, 0.5), transparent); margin: 18px 0 14px; }
 
+.gf-chomeSelect {
+  width: 100%; margin-top: 4px; padding: 12px 14px; font-size: 1.02rem; font-family: inherit; font-weight: 700;
+  color: var(--gf-ink); background: rgba(10, 6, 24, 0.9); border: 2px solid rgba(0, 229, 255, 0.4);
+  border-radius: 12px; outline: none; color-scheme: dark; cursor: pointer;
+  appearance: none; -webkit-appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, var(--gf-cyan) 50%), linear-gradient(135deg, var(--gf-cyan) 50%, transparent 50%);
+  background-position: right 18px center, right 13px center; background-size: 5px 5px, 5px 5px; background-repeat: no-repeat;
+}
+.gf-chomeSelect:focus { border-color: var(--gf-cyan); box-shadow: 0 0 0 4px rgba(0, 229, 255, 0.15); }
+
 .gf-dateRow { display: flex; gap: 8px; align-items: center; margin: 6px 0 16px; }
 .gf-dateRow label { font-size: 0.78rem; color: var(--gf-dim); letter-spacing: 0.1em; white-space: nowrap; }
 .gf-dateRow input { flex: 1; padding: 11px 12px; font-size: 1rem; font-family: inherit; color: var(--gf-ink); background: rgba(10, 6, 24, 0.9); border: 2px solid rgba(142, 134, 184, 0.4); border-radius: 12px; outline: none; color-scheme: dark; }
