@@ -44,19 +44,27 @@ const ITEMS: PlayItem[] = [
     badge: "人気",
   },
   {
+    title: "デコ文字相性診断",
+    emoji: "💞",
+    href: "/compatibility",
+    tag: "診断",
+    desc: "ふたりの名前で相性％を診断。コピペできるデコ文字メッセージ付き。",
+    accent: "linear-gradient(135deg, #ffd700, #ff5ca0 55%, #ff2e97)",
+    badge: "NEW",
+  },
+  {
     title: "ゴミ出し占い",
     emoji: "🗑️",
     href: "/trash-day",
     tag: "占い",
     desc: "目黒区のゴミの日を丁目で調べて、今日の“正しいゴミの出し方（開運作法）”を占う。",
     accent: "linear-gradient(135deg, #0a0618, #1d1040 55%, #00E5FF)",
-    badge: "NEW",
   },
 ];
 
 const COMING: { title: string; emoji: string }[] = [
   { title: "推しメンカラ診断", emoji: "🎤" },
-  { title: "デコ文字相性診断", emoji: "💞" },
+  { title: "今日のラッキーデコ文字", emoji: "🔮" },
 ];
 
 export default function PlayIndexPage() {

@@ -41,6 +41,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
     },
     {
+      url: `${base}/compatibility`,
+      lastModified,
+      priority: 0.9,
+      changeFrequency: "monthly",
+    },
+    {
       url: `${base}/trash-day`,
       lastModified,
       priority: 0.9,

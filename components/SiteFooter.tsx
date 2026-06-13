@@ -25,6 +25,9 @@ export default function SiteFooter() {
         <Link href="/shindan" className="underline-offset-4 hover:underline">
           SNSパワー診断
         </Link>
+        <Link href="/compatibility" className="underline-offset-4 hover:underline">
+          デコ文字相性診断
+        </Link>
         <Link href="/trash-day" className="underline-offset-4 hover:underline">
           ごみ収集日カレンダー
         </Link>
