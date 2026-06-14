@@ -10,7 +10,7 @@ export default function CompatCard({ result }: { result: CompatResult }) {
         <div className="cp-inner">
           <div className="cp-sheen" />
           <div className="cp-head">
-            <span className="cp-brand">デコ文字相性診断 ・ Compatibility</span>
+            <span className="cp-brand">💞 デコ文字相性診断</span>
           </div>
           <div className="cp-names">
             {d.nameA}

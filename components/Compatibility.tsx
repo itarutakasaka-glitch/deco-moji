@@ -68,13 +68,13 @@ export default function Compatibility() {
       <main className="cp-main">
         {!result ? (
           <section className="cp-screen">
-            <div className="cp-titlebrand">decomoji ・ diagnosis</div>
+            <div className="cp-titlebrand">★ decomoji presents ★</div>
             <h1 className="cp-logo">
-              デコ文字相性診断
-              <span className="cp-logosub">Compatibility Report</span>
+              💞 デコ文字相性診断 💞
+              <span className="cp-logosub">COMPATIBILITY</span>
             </h1>
             <p className="cp-lead">
-              ふたりの名前を入れるだけ。<b>相性スコア</b>と、そのまま貼れる
+              ふたりの名前を入れるだけ。<b>相性％</b>と、そのまま貼れる
               <b>デコ文字メッセージ</b>が出る無料診断。
             </p>
             <div className="cp-panel">
@@ -97,7 +97,7 @@ export default function Compatibility() {
                 onKeyDown={(e) => e.key === "Enter" && go()}
               />
               <button className="cp-go" onClick={go}>
-                相性を診断する
+                相性を診断する 💞
               </button>
               <p className="cp-note">
                 ※ エンタメ目的の診断です。同じ組み合わせなら何度でも同じ結果（順番は不問）。

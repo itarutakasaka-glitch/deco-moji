@@ -22,14 +22,13 @@ async function loadGoogleFont(text: string): Promise<ArrayBuffer> {
   return await (await fetch(match[1])).arrayBuffer();
 }
 
-// JARTAN調：くすみアクセント
-const TIER_STYLE: Record<Tier, { accent: string }> = {
-  destiny: { accent: "#c2a24e" },
-  love: { accent: "#c98aa0" },
-  good: { accent: "#a98ca6" },
-  growing: { accent: "#9bbf93" },
-  trial: { accent: "#93bdb6" },
-  training: { accent: "#b3a899" },
+const TIER_STYLE: Record<Tier, { border: string; score: string }> = {
+  destiny: { border: "#FFD700", score: "#ffe45c" },
+  love: { border: "#FF2E97", score: "#ff7ab8" },
+  good: { border: "#FF5CA0", score: "#ff9cc4" },
+  growing: { border: "#7AD7FF", score: "#aee6ff" },
+  trial: { border: "#C79BB4", score: "#e0c4d4" },
+  training: { border: "#9a8aa0", score: "#c9bcd0" },
 };
 
 export async function GET(
@@ -61,35 +60,32 @@ export async function GET(
           height: "100%",
           display: "flex",
           flexDirection: "column",
-          background: "#f4f1ea",
-          borderTop: `16px solid ${st.accent}`,
-          padding: "54px 70px 44px",
+          background: "linear-gradient(165deg, #3a0d2a 0%, #1a0612 60%, #2a0a22 100%)",
+          border: `14px solid ${st.border}`,
+          padding: "44px 60px",
           fontFamily: "ZenKaku",
-          color: "#2b2a27",
+          color: "#fff0f6",
         }}
       >
-        <div style={{ display: "flex", fontSize: 26, color: "#a39c90", letterSpacing: "0.28em" }}>
-          デコ文字相性診断 ・ COMPATIBILITY
+        <div style={{ display: "flex", justifyContent: "center", fontSize: 30, color: "#c79bb4", letterSpacing: "0.18em" }}>
+          💞 デコ文字相性診断
         </div>
         <div
           style={{
             display: "flex",
             flexDirection: "column",
-            alignItems: "flex-start",
+            alignItems: "center",
             flexGrow: 1,
             justifyContent: "center",
           }}
         >
-          <div style={{ display: "flex", fontSize: 56, fontWeight: 900, marginBottom: 18 }}>{namesLine}</div>
-          <div style={{ display: "flex", alignItems: "flex-end", color: "#2b2a27" }}>
-            <div style={{ display: "flex", fontSize: 230, lineHeight: 0.9, fontWeight: 900, letterSpacing: "-0.02em" }}>{d.score}</div>
-            <div style={{ display: "flex", fontSize: 64, paddingBottom: 34, color: "#6f6a61" }}>%</div>
+          <div style={{ display: "flex", fontSize: 52, marginBottom: 4 }}>{namesLine}</div>
+          <div style={{ display: "flex", alignItems: "flex-end", color: st.score }}>
+            <div style={{ display: "flex", fontSize: 190, lineHeight: 1 }}>{d.score}</div>
+            <div style={{ display: "flex", fontSize: 70, paddingBottom: 24 }}>%</div>
           </div>
-          <div style={{ display: "flex", width: 540, height: 8, background: "#e4ded2", marginTop: 6 }}>
-            <div style={{ display: "flex", width: (540 * d.score) / 100, height: 8, background: st.accent }} />
-          </div>
-          <div style={{ display: "flex", fontSize: 50, fontWeight: 900, marginTop: 22 }}>
-            {d.tierLabel}
+          <div style={{ display: "flex", fontSize: 48, color: "#ffd700", marginTop: 4 }}>
+            {d.tierEmoji} {d.tierLabel}
           </div>
         </div>
         <div
@@ -97,15 +93,16 @@ export async function GET(
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
-            borderTop: "1px solid #d8d1c4",
-            paddingTop: 22,
-            fontSize: 24,
-            color: "#a39c90",
-            letterSpacing: "0.12em",
+            borderTop: "2px dashed #6a4a5e",
+            paddingTop: 20,
           }}
         >
-          <div style={{ display: "flex" }}>decomoji.xyz/compatibility</div>
-          <div style={{ display: "flex" }}>#デコ文字相性診断</div>
+          <div style={{ display: "flex", fontSize: 28, color: "#ff9cc4" }}>
+            decomoji.xyz/compatibility
+          </div>
+          <div style={{ display: "flex", fontSize: 24, color: "#c79bb4" }}>
+            #デコ文字相性診断
+          </div>
         </div>
       </div>
     ),
