@@ -219,11 +219,11 @@ export default function GomiFortune() {
               いつ・何を出す？が<b>ひと目</b>でわかる。
             </p>
             <div className="gf-areaPillWrap">
-              <span className="gf-areaPill">📍 目黒区・{chomeLabel(chomeIndex)}</span>
+              <span className="gf-areaPill">目黒区 ・ {chomeLabel(chomeIndex)}</span>
             </div>
 
             <div className="gf-panel">
-              <div className="gf-secLabel">📍 お住まいの丁目を選ぶ</div>
+              <div className="gf-secLabel">お住まいの丁目を選ぶ</div>
               <select
                 className="gf-chomeSelect"
                 value={chomeIndex}
@@ -239,7 +239,7 @@ export default function GomiFortune() {
 
               <div className="gf-divider" />
 
-              <div className="gf-secLabel">📅 ごみ収集スケジュール</div>
+              <div className="gf-secLabel">ごみ収集スケジュール</div>
               <div className="gf-weekTable">
                 {ORDER.map((k) => {
                   const t = TYPES[k];
@@ -324,10 +324,10 @@ export default function GomiFortune() {
                 onClick={openFortune}
                 disabled={!parts}
               >
-                <span className="gf-fortuneCtaLabel">＼ ちょっと一息 ／</span>
-                <span className="gf-fortuneCtaTitle">🔮 今日のゴミ出し占い ✨</span>
+                <span className="gf-fortuneCtaLabel">ちょっと一息</span>
+                <span className="gf-fortuneCtaTitle">今日のゴミ出し占い</span>
                 <span className="gf-fortuneCtaSub">
-                  占いが「今日の正しいゴミの出し方＝開運作法」を授けます ▶
+                  占いが「今日の正しいゴミの出し方＝開運作法」を授けます →
                 </span>
               </button>
             </div>

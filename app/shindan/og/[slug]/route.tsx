@@ -30,15 +30,13 @@ async function loadGoogleFont(text: string): Promise<ArrayBuffer> {
   return await (await fetch(match[1])).arrayBuffer();
 }
 
-const RARITY_STYLE: Record<
-  Rarity,
-  { border: string; badgeBg: string; badgeColor: string; powerColor: string }
-> = {
-  N: { border: "#9aa0b4", badgeBg: "#3a3f52", badgeColor: "#cfd4e6", powerColor: "#cfd4e6" },
-  R: { border: "#4FC3F7", badgeBg: "#103a52", badgeColor: "#4FC3F7", powerColor: "#7fd8ff" },
-  SR: { border: "#B388FF", badgeBg: "#33205e", badgeColor: "#B388FF", powerColor: "#cdb1ff" },
-  SSR: { border: "#FF2E97", badgeBg: "#FF2E97", badgeColor: "#ffffff", powerColor: "#ff7ab8" },
-  UR: { border: "#FFD700", badgeBg: "#FFD700", badgeColor: "#6b4a00", powerColor: "#ffe45c" },
+// JARTAN調：くすみアクセント
+const RARITY_STYLE: Record<Rarity, { accent: string }> = {
+  N: { accent: "#b3a899" },
+  R: { accent: "#7fa3b5" },
+  SR: { accent: "#a98ca6" },
+  SSR: { accent: "#c98aa0" },
+  UR: { accent: "#c2a24e" },
 };
 
 export async function GET(
@@ -72,36 +70,20 @@ export async function GET(
           height: "100%",
           display: "flex",
           flexDirection: "column",
-          background: "linear-gradient(165deg, #1d1040 0%, #0a0618 60%, #1a0f2e 100%)",
-          border: `14px solid ${st.border}`,
-          padding: "48px 64px",
+          background: "#f4f1ea",
+          borderTop: `16px solid ${st.accent}`,
+          padding: "54px 70px 44px",
           fontFamily: "ZenKaku",
-          color: "#F4F0FF",
+          color: "#2b2a27",
         }}
       >
         {/* ヘッダー行 */}
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-          }}
-        >
-          <div
-            style={{
-              display: "flex",
-              background: st.badgeBg,
-              color: st.badgeColor,
-              fontSize: 40,
-              padding: "8px 36px",
-              borderRadius: 999,
-              letterSpacing: "0.15em",
-            }}
-          >
-            {d.rarity}
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+          <div style={{ display: "flex", fontSize: 26, color: "#a39c90", letterSpacing: "0.28em" }}>
+            SNSパワー診断 ・ SNS POWER
           </div>
-          <div style={{ display: "flex", fontSize: 28, color: "#8E86B8", letterSpacing: "0.2em" }}>
-            ⚡SNSパワー診断
+          <div style={{ display: "flex", fontSize: 26, fontWeight: 900, color: st.accent }}>
+            {d.rarity}
           </div>
         </div>
 
@@ -110,32 +92,17 @@ export async function GET(
           style={{
             display: "flex",
             flexDirection: "column",
-            alignItems: "center",
+            alignItems: "flex-start",
             flexGrow: 1,
             justifyContent: "center",
           }}
         >
-          <div style={{ display: "flex", fontSize: 34, color: "#8E86B8" }}>{nameLine}</div>
-          <div style={{ display: "flex", fontSize: 56, marginTop: 10 }}>{titleLine}</div>
-          <div
-            style={{
-              display: "flex",
-              fontSize: 26,
-              color: "#8E86B8",
-              letterSpacing: "0.35em",
-              marginTop: 28,
-            }}
-          >
-            — SNS戦闘力 —
+          <div style={{ display: "flex", fontSize: 30, color: "#6f6a61" }}>{nameLine}</div>
+          <div style={{ display: "flex", fontSize: 54, fontWeight: 900, marginTop: 8 }}>{titleLine}</div>
+          <div style={{ display: "flex", fontSize: 24, color: "#a39c90", letterSpacing: "0.28em", marginTop: 30 }}>
+            SNS戦闘力
           </div>
-          <div
-            style={{
-              display: "flex",
-              fontSize: 150,
-              lineHeight: 1.1,
-              color: st.powerColor,
-            }}
-          >
+          <div style={{ display: "flex", fontSize: 150, lineHeight: 1.0, fontWeight: 900, color: "#2b2a27", letterSpacing: "-0.02em" }}>
             {powerText}
           </div>
         </div>
@@ -146,16 +113,15 @@ export async function GET(
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
-            borderTop: "2px dashed #4a4170",
+            borderTop: "1px solid #d8d1c4",
             paddingTop: 22,
+            fontSize: 24,
+            color: "#a39c90",
+            letterSpacing: "0.12em",
           }}
         >
-          <div style={{ display: "flex", fontSize: 30, color: "#00E5FF" }}>
-            decomoji.xyz/shindan
-          </div>
-          <div style={{ display: "flex", fontSize: 26, color: "#8E86B8" }}>
-            #SNSパワー診断
-          </div>
+          <div style={{ display: "flex" }}>decomoji.xyz/shindan</div>
+          <div style={{ display: "flex" }}>#SNSパワー診断</div>
         </div>
       </div>
     ),

@@ -30,15 +30,13 @@ async function loadGoogleFont(text: string): Promise<ArrayBuffer> {
   return await (await fetch(match[1])).arrayBuffer();
 }
 
-const RARITY_STYLE: Record<
-  Rarity,
-  { border: string; badgeBg: string; badgeColor: string; rankColor: string }
-> = {
-  N: { border: "#9aa0b4", badgeBg: "#3a3f52", badgeColor: "#cfd4e6", rankColor: "#cfd4e6" },
-  R: { border: "#4FC3F7", badgeBg: "#103a52", badgeColor: "#4FC3F7", rankColor: "#7fd8ff" },
-  SR: { border: "#B388FF", badgeBg: "#33205e", badgeColor: "#B388FF", rankColor: "#cdb1ff" },
-  SSR: { border: "#FF2E97", badgeBg: "#FF2E97", badgeColor: "#ffffff", rankColor: "#ff7ab8" },
-  UR: { border: "#FFD700", badgeBg: "#FFD700", badgeColor: "#6b4a00", rankColor: "#ffe45c" },
+// JARTAN調：くすみアクセント
+const RARITY_STYLE: Record<Rarity, { accent: string }> = {
+  N: { accent: "#b3a899" },
+  R: { accent: "#7fa3b5" },
+  SR: { accent: "#a98ca6" },
+  SSR: { accent: "#c98aa0" },
+  UR: { accent: "#c2a24e" },
 };
 
 export async function GET(
@@ -76,30 +74,20 @@ export async function GET(
           height: "100%",
           display: "flex",
           flexDirection: "column",
-          background: "linear-gradient(165deg, #1d1040 0%, #0a0618 60%, #1a0f2e 100%)",
-          border: `14px solid ${st.border}`,
-          padding: "44px 60px",
+          background: "#f4f1ea",
+          borderTop: `16px solid ${st.accent}`,
+          padding: "54px 70px 44px",
           fontFamily: "ZenKaku",
-          color: "#F4F0FF",
+          color: "#2b2a27",
         }}
       >
         {/* ヘッダー */}
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-          <div
-            style={{
-              display: "flex",
-              background: st.badgeBg,
-              color: st.badgeColor,
-              fontSize: 38,
-              padding: "8px 34px",
-              borderRadius: 999,
-              letterSpacing: "0.15em",
-            }}
-          >
-            {f.rarity}
+          <div style={{ display: "flex", fontSize: 26, color: "#a39c90", letterSpacing: "0.28em" }}>
+            ゴミ出し占い ・ GOMI FORTUNE
           </div>
-          <div style={{ display: "flex", fontSize: 30, color: "#8E86B8", letterSpacing: "0.18em" }}>
-            🗑️ ゴミ出し占い
+          <div style={{ display: "flex", fontSize: 26, fontWeight: 900, color: st.accent }}>
+            {f.rarity}
           </div>
         </div>
 
@@ -108,33 +96,21 @@ export async function GET(
           style={{
             display: "flex",
             flexDirection: "column",
-            alignItems: "center",
+            alignItems: "flex-start",
             flexGrow: 1,
             justifyContent: "center",
           }}
         >
-          <div style={{ display: "flex", fontSize: 30, color: "#00E5FF" }}>{f.dateLong}</div>
-          <div style={{ display: "flex", fontSize: 24, color: "#8E86B8", marginTop: 6 }}>
-            {areaText}
+          <div style={{ display: "flex", fontSize: 28, color: "#6f6a61" }}>
+            {f.dateLong}　{areaText}
           </div>
-          <div style={{ display: "flex", fontSize: 132, lineHeight: 1.1, color: st.rankColor, marginTop: 10 }}>
+          <div style={{ display: "flex", fontSize: 124, lineHeight: 1.05, fontWeight: 900, color: "#2b2a27", marginTop: 8 }}>
             {f.rank.t}
           </div>
-          <div style={{ display: "flex", fontSize: 30, color: "#8E86B8", letterSpacing: "0.1em" }}>
-            ― {f.rank.s} ―
+          <div style={{ display: "flex", fontSize: 30, color: st.accent, letterSpacing: "0.1em", marginTop: 6 }}>
+            {f.rank.s}
           </div>
-          <div
-            style={{
-              display: "flex",
-              fontSize: 30,
-              color: "#F4F0FF",
-              marginTop: 26,
-              padding: "10px 26px",
-              borderRadius: 14,
-              background: "rgba(255,255,255,0.06)",
-              border: "1px solid rgba(255,255,255,0.14)",
-            }}
-          >
+          <div style={{ display: "flex", fontSize: 28, color: "#2b2a27", marginTop: 30, paddingTop: 22, borderTop: "1px solid #e0d9cc", width: "100%" }}>
             今日のゴミ：{gomiText}
           </div>
         </div>
@@ -145,14 +121,15 @@ export async function GET(
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
-            borderTop: "2px dashed #4a4170",
-            paddingTop: 20,
+            borderTop: "1px solid #d8d1c4",
+            paddingTop: 22,
+            fontSize: 24,
+            color: "#a39c90",
+            letterSpacing: "0.12em",
           }}
         >
-          <div style={{ display: "flex", fontSize: 28, color: "#00E5FF" }}>
-            decomoji.xyz/trash-day
-          </div>
-          <div style={{ display: "flex", fontSize: 24, color: "#8E86B8" }}>#ゴミ出し占い</div>
+          <div style={{ display: "flex" }}>decomoji.xyz/trash-day</div>
+          <div style={{ display: "flex" }}>#ゴミ出し占い</div>
         </div>
       </div>
     ),

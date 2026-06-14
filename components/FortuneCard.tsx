@@ -63,7 +63,7 @@ export default function FortuneCard({ fortune }: { fortune: Fortune }) {
         <div className="gf-cardInner">
           <div className="gf-sheen" />
           <div className="gf-cHead">
-            <span className="gf-cBrand">🗑️ GOMI FORTUNE</span>
+            <span className="gf-cBrand">ゴミ出し占い ・ Gomi Fortune</span>
             <span className={`gf-rBadge ${f.rarity.toLowerCase()}`}>
               {RARITY_LABEL[f.rarity]}
             </span>
@@ -95,7 +95,7 @@ export default function FortuneCard({ fortune }: { fortune: Fortune }) {
           </div>
 
           <div className="gf-action">
-            <div className="gf-secLabel">⚡ 今日の開運作法</div>
+            <div className="gf-secLabel">今日の開運作法</div>
             <div className="gf-actionTxt">{f.command}</div>
           </div>
 
@@ -146,7 +146,7 @@ export default function FortuneCard({ fortune }: { fortune: Fortune }) {
           <div className="gf-neta">{f.neta}</div>
 
           <div className="gf-nextWrap">
-            <div className="gf-secLabel">📅 次の収集予定</div>
+            <div className="gf-secLabel">次の収集予定</div>
             <NextList fortune={f} />
           </div>
 
