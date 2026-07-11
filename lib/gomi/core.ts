@@ -5,6 +5,7 @@
 
 import meguro from "./meguro-schedule.json";
 import shinagawa from "./shinagawa-schedule.json";
+import taito from "./taito-schedule.json";
 
 /* ===== 型 ===== */
 export type WeeklyRule = { kind: "weekly"; weekdays: number[] };
@@ -74,11 +75,34 @@ const MG = meguro as unknown as {
   municipality: string; code?: string; source: string; sourceUrl?: string;
   license?: string; fetchedAt: string; areas: AreaRaw[];
 };
-const SG = shinagawa as unknown as {
+// 丁目単位（chome:string＋区ごとのcategories）の区データ共通型
+type SingleChomeMuni = {
   municipality: string; code: string; source: string; sourceUrl?: string;
   license?: string; fetchedAt: string; categories: MuniLabels;
   areas: ({ chome: string } & Partial<Record<GomiKey, Rule>>)[];
 };
+const SG = shinagawa as unknown as SingleChomeMuni;
+const TT = taito as unknown as SingleChomeMuni;
+
+// 丁目単位データ → 内部AreaRaw（chome:string[]）へ正規化して Municipality を作る
+function singleChomeMuni(
+  d: SingleChomeMuni,
+  officialUrl: string,
+  officialName: string
+): Municipality {
+  return {
+    name: d.municipality,
+    code: d.code,
+    source: d.source,
+    sourceUrl: d.sourceUrl,
+    license: d.license,
+    fetchedAt: d.fetchedAt,
+    officialUrl,
+    officialName,
+    labels: d.categories,
+    areas: d.areas.map(({ chome, ...rules }) => ({ group: chome, chome: [chome], ...rules })),
+  };
+}
 
 export const MUNICIPALITIES: Municipality[] = [
   {
@@ -94,20 +118,9 @@ export const MUNICIPALITIES: Municipality[] = [
     labels: {},
     areas: MG.areas,
   },
-  {
-    name: SG.municipality,
-    code: SG.code,
-    source: SG.source,
-    sourceUrl: SG.sourceUrl,
-    license: SG.license,
-    fetchedAt: SG.fetchedAt,
-    // 品川区の公式ごみ収集日ページは変動が多いため、確実に生きている区トップへ誘導
-    officialUrl: "https://www.city.shinagawa.tokyo.jp/",
-    officialName: "品川区公式",
-    labels: SG.categories,
-    // chome単体 → 共通AreaRaw（chome:string[]）へ正規化
-    areas: SG.areas.map(({ chome, ...rules }) => ({ group: chome, chome: [chome], ...rules })),
-  },
+  // 品川区・台東区の公式ごみページはURL変動が多いため、確実に生きている区トップへ誘導
+  singleChomeMuni(SG, "https://www.city.shinagawa.tokyo.jp/", "品川区公式"),
+  singleChomeMuni(TT, "https://www.city.taito.lg.jp/", "台東区公式"),
 ];
 
 export type ChomeOption = {
