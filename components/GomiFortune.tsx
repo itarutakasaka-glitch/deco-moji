@@ -258,7 +258,7 @@ export default function GomiFortune() {
               >
                 {MUNI_OPTIONS.map((m) => (
                   <option key={m.muniIndex} value={m.muniIndex}>
-                    {m.name}（{m.count}丁目）
+                    {m.name}
                   </option>
                 ))}
               </select>
