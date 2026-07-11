@@ -15,6 +15,9 @@ import {
   ruleFor,
   typesOn,
   nextSchedule,
+  weeklyGrid,
+  WEEK,
+  WEEK_ORDER,
   isYearEndPeriod,
   buildFortune,
   partsFromDate,
@@ -26,6 +29,7 @@ import {
   SCHEDULE_SOURCE,
 } from "@/lib/gomi/core";
 import FortuneCard from "@/components/FortuneCard";
+import { GomiIcon, HeroArt } from "@/components/GomiVisuals";
 
 const OFFICIAL_URL =
   "https://www.city.meguro.tokyo.jp/seisou/kurashi/gomi/youbiichiran.html";
@@ -83,7 +87,9 @@ function Badges({ list }: { list: GomiKey[] }) {
         const t = TYPES[k];
         return (
           <span className={`gf-gBadge ${t.cls}`} key={k}>
-            <span className="gf-em">{t.em}</span>
+            <span className="gf-tico">
+              <GomiIcon k={k} size={18} />
+            </span>
             {t.label}
           </span>
         );
@@ -210,9 +216,10 @@ export default function GomiFortune() {
           <section className="gf-screen">
             <div className="gf-brand">目黒区 ごみ収集日チェッカー</div>
             <h1 className="gf-logo">
-              <span className="gf-deco">🗑️</span> ゴミの日カレンダー{" "}
-              <span className="gf-deco">♻️</span>
-              <br />
+              <span className="gf-heroArt">
+                <HeroArt color="#7f4098" />
+              </span>
+              ゴミの日カレンダー
               <span className="gf-logoSub">目黒区版</span>
             </h1>
             <p className="gf-tagline">
@@ -246,7 +253,9 @@ export default function GomiFortune() {
                   return (
                     <div className={`gf-wRow ${t.cls}`} key={k}>
                       <span className="gf-wName">
-                        <span className="gf-em">{t.em}</span>
+                        <span className="gf-tico">
+                          <GomiIcon k={k} size={20} />
+                        </span>
                         {t.label}
                       </span>
                       <span className="gf-wWhen">
@@ -255,6 +264,48 @@ export default function GomiFortune() {
                     </div>
                   );
                 })}
+              </div>
+
+              {/* 週間カレンダー（月〜日で何ゴミの日か） */}
+              <div className="gf-secLabel gf-tight">週間カレンダー</div>
+              <div className="gf-weekGrid">
+                {WEEK_ORDER.map((w) => {
+                  const entries = weeklyGrid(chomeIndex)[w];
+                  return (
+                    <div
+                      className={`gf-wgCol${entries.length ? " has" : ""}`}
+                      key={w}
+                    >
+                      <div className="gf-wgHead">{WEEK[w]}</div>
+                      <div className="gf-wgBody">
+                        {entries.length === 0 ? (
+                          <span className="gf-wgNone">—</span>
+                        ) : (
+                          entries.map((e, i) => (
+                            <span
+                              className={`gf-wgDot ${TYPES[e.key].cls}`}
+                              key={i}
+                              title={TYPES[e.key].label + (e.note ? `（${e.note}）` : "")}
+                            >
+                              <GomiIcon k={e.key} size={15} />
+                              {e.note && <em className="gf-wgNote">{e.note}</em>}
+                            </span>
+                          ))
+                        )}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+              <div className="gf-wgLegend">
+                {ORDER.map((k) => (
+                  <span className={`gf-wgLg ${TYPES[k].cls}`} key={k}>
+                    <span className="gf-tico gf-tico-sm">
+                      <GomiIcon k={k} size={13} />
+                    </span>
+                    {TYPES[k].label}
+                  </span>
+                ))}
               </div>
 
               <div className="gf-divider" />
@@ -303,9 +354,11 @@ export default function GomiFortune() {
                     const t = TYPES[key];
                     const soon = days !== null && days <= 1;
                     return (
-                      <div className="gf-nextRow" key={key}>
+                      <div className={`gf-nextRow ${t.cls}`} key={key}>
                         <span className="gf-nm">
-                          <span className="gf-em">{t.em}</span>
+                          <span className="gf-tico">
+                            <GomiIcon k={key} size={18} />
+                          </span>
                           {t.label}
                         </span>
                         <span className={`gf-dt${soon ? " soon" : ""}`}>

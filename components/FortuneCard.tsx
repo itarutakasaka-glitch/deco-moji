@@ -6,6 +6,7 @@ import {
   fmtShort,
   RARITY_LABEL,
 } from "@/lib/gomi/core";
+import { GomiIcon } from "@/components/GomiVisuals";
 
 function Badges({ list }: { list: GomiKey[] }) {
   if (!list.length) {
@@ -23,7 +24,9 @@ function Badges({ list }: { list: GomiKey[] }) {
         const t = TYPES[k];
         return (
           <span className={`gf-gBadge ${t.cls}`} key={k}>
-            <span className="gf-em">{t.em}</span>
+            <span className="gf-tico">
+              <GomiIcon k={k} size={18} />
+            </span>
             {t.label}
           </span>
         );
@@ -39,9 +42,11 @@ function NextList({ fortune }: { fortune: Fortune }) {
         const t = TYPES[key];
         const soon = days !== null && days <= 1;
         return (
-          <div className="gf-nextRow" key={key}>
+          <div className={`gf-nextRow ${t.cls}`} key={key}>
             <span className="gf-nm">
-              <span className="gf-em">{t.em}</span>
+              <span className="gf-tico">
+                <GomiIcon k={key} size={18} />
+              </span>
               {t.label}
             </span>
             <span className={`gf-dt${soon ? " soon" : ""}`}>

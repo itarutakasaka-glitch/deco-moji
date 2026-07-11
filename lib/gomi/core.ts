@@ -161,6 +161,27 @@ export function nextSchedule(chomeIndex: number, p: DateParts): NextItem[] {
   });
 }
 
+/* ===== 週間グリッド（月〜日で「何ゴミの日か」を可視化） ===== */
+export type WeekdayEntry = { key: GomiKey; note: string };
+// 返り値は weekday 0(日)〜6(土) のインデックスで、その曜日に出せる種別。
+// weekly は note="" 、nthWeekday は note="第2・4" のように格納。
+export function weeklyGrid(chomeIndex: number): WeekdayEntry[][] {
+  const area = rulesOf(chomeIndex);
+  const grid: WeekdayEntry[][] = [[], [], [], [], [], [], []];
+  for (const key of ORDER) {
+    const r = area[key];
+    if (!r) continue;
+    if (r.kind === "weekly") {
+      for (const w of r.weekdays) grid[w].push({ key, note: "" });
+    } else {
+      grid[r.weekday].push({ key, note: "第" + r.nths.join("・") });
+    }
+  }
+  return grid;
+}
+// 表示順（月火水木金土日）
+export const WEEK_ORDER = [1, 2, 3, 4, 5, 6, 0];
+
 /* ===== シード乱数（/shindan と同じ作法） ===== */
 function hash(str: string): number {
   let h = 5381;
