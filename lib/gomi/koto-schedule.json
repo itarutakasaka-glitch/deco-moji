@@ -1,0 +1,1292 @@
+{
+ "municipality": "江東区",
+ "code": "13108",
+ "source": "東京都オープンデータカタログ 江東区「資源・ごみ収集曜日」（江東区）",
+ "sourceUrl": "https://www.opendata.metro.tokyo.lg.jp/koto/131083_201_kotocity_waste_recycle_collectionday.csv",
+ "license": "CC BY",
+ "fetchedAt": "2026-07-11",
+ "categories": {
+  "burnable": "燃やすごみ",
+  "recyclable": "資源",
+  "plastic": "プラスチック"
+ },
+ "omitNote": "燃やさないごみは隔週収集（基準週が公開データに無く正確な日付を算出できないため）本ツールでは非表示です。区公式でご確認ください。",
+ "areas": [
+  {
+   "chome": "青海",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     5
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     3
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "有明",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     5
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     3
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "石島",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     4
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   }
+  },
+  {
+   "chome": "海辺",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     4
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   }
+  },
+  {
+   "chome": "海の森",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     5
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     3
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "永代",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     6
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "枝川",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     5
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     3
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "越中島",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     6
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "扇橋",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     4
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   }
+  },
+  {
+   "chome": "大島1～2丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     1
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     5
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   }
+  },
+  {
+   "chome": "大島3～7丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     3
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     1
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     2,
+     5
+    ]
+   }
+  },
+  {
+   "chome": "大島8～9丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     3
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     1
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     2,
+     5
+    ]
+   }
+  },
+  {
+   "chome": "亀戸1～3丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     1
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     5
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   }
+  },
+  {
+   "chome": "亀戸4～9丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     1
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     5
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   }
+  },
+  {
+   "chome": "北砂1～5丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     6
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     4
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     2,
+     5
+    ]
+   }
+  },
+  {
+   "chome": "北砂6～7丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     3
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     1
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     2,
+     5
+    ]
+   }
+  },
+  {
+   "chome": "木場",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     6
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "清澄",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     6
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "佐賀",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     6
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "猿江",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     4
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   }
+  },
+  {
+   "chome": "塩浜1丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     5
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     3
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "塩浜2丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     5
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     3
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "潮見",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     5
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     3
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "東雲",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     5
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     3
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "白河1～3丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     4
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   }
+  },
+  {
+   "chome": "白河4丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     4
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   }
+  },
+  {
+   "chome": "新大橋",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     4
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   }
+  },
+  {
+   "chome": "新木場",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     5
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     3
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "新砂",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     6
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     4
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     2,
+     5
+    ]
+   }
+  },
+  {
+   "chome": "住吉",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     1
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     5
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   }
+  },
+  {
+   "chome": "千石",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     4
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   }
+  },
+  {
+   "chome": "千田",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     4
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   }
+  },
+  {
+   "chome": "高橋",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     4
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   }
+  },
+  {
+   "chome": "辰巳",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     5
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     3
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "東陽",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     6
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "常盤",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     4
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   }
+  },
+  {
+   "chome": "富岡",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     6
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "豊洲",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     5
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     3
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "東砂1～5丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     3
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     1
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     2,
+     5
+    ]
+   }
+  },
+  {
+   "chome": "東砂6～8丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     6
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     4
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     2,
+     5
+    ]
+   }
+  },
+  {
+   "chome": "平野1～3丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     4
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   }
+  },
+  {
+   "chome": "平野4丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     4
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   }
+  },
+  {
+   "chome": "深川1丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     6
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "深川2丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     6
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "福住",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     6
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "冬木",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     6
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "古石場",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     6
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "牡丹",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     6
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "南砂1・5丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     6
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     4
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     2,
+     5
+    ]
+   }
+  },
+  {
+   "chome": "南砂2～4・6～7丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     6
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     4
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     2,
+     5
+    ]
+   }
+  },
+  {
+   "chome": "三好1～3丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     4
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   }
+  },
+  {
+   "chome": "三好4丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     4
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   }
+  },
+  {
+   "chome": "毛利",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     1
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     5
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   }
+  },
+  {
+   "chome": "森下1～4丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     4
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   }
+  },
+  {
+   "chome": "森下5丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     4
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   }
+  },
+  {
+   "chome": "門前仲町",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     6
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "夢の島",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     5
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     3
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "若洲",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     5
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     3
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   }
+  }
+ ]
+}

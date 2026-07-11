@@ -6,6 +6,9 @@
 import meguro from "./meguro-schedule.json";
 import shinagawa from "./shinagawa-schedule.json";
 import taito from "./taito-schedule.json";
+import koto from "./koto-schedule.json";
+import bunkyo from "./bunkyo-schedule.json";
+import chuo from "./chuo-schedule.json";
 
 /* ===== 型 ===== */
 export type WeeklyRule = { kind: "weekly"; weekdays: number[] };
@@ -15,6 +18,7 @@ export type Rule = WeeklyRule | NthRule;
 export type GomiKey =
   | "burnable"
   | "recyclable"
+  | "plastic"
   | "paper"
   | "nonBurnable"
   | "mercury";
@@ -24,6 +28,7 @@ type AreaRaw = {
   chome: string[];
   burnable?: Rule;
   recyclable?: Rule;
+  plastic?: Rule;
   paper?: Rule;
   nonBurnable?: Rule;
   mercury?: Rule;
@@ -43,14 +48,15 @@ export type GomiTypeMeta = {
 export const TYPES: Record<GomiKey, GomiTypeMeta> = {
   burnable: { label: "燃やすごみ", em: "🔥", cls: "t-burn", rarity: "R", element: "火" },
   recyclable: { label: "びん・缶・ペットボトル", em: "♻️", cls: "t-recy", rarity: "SR", element: "水" },
+  plastic: { label: "プラスチック", em: "🧴", cls: "t-plas", rarity: "SR", element: "水" },
   paper: { label: "古紙", em: "📰", cls: "t-paper", rarity: "SR", element: "木" },
   nonBurnable: { label: "燃やさないごみ", em: "🔩", cls: "t-non", rarity: "SSR", element: "金" },
   mercury: { label: "水銀を含む製品", em: "🔆", cls: "t-merc", rarity: "UR", element: "光" },
 };
 
 // 画面表示順／テーマ採用優先順（レアな種別ほどその日のテーマに採用）
-export const ORDER: GomiKey[] = ["burnable", "recyclable", "paper", "nonBurnable", "mercury"];
-const PRIORITY: GomiKey[] = ["mercury", "nonBurnable", "paper", "recyclable", "burnable"];
+export const ORDER: GomiKey[] = ["burnable", "recyclable", "plastic", "paper", "nonBurnable", "mercury"];
+const PRIORITY: GomiKey[] = ["mercury", "nonBurnable", "paper", "plastic", "recyclable", "burnable"];
 export const WEEK = ["日", "月", "火", "水", "木", "金", "土"];
 
 /* ===== 対象エリア：複数自治体（区）対応 =====
@@ -68,6 +74,7 @@ export type Municipality = {
   officialUrl: string; // 区公式ごみページ（年末年始バナー等の誘導先）
   officialName: string; // リンク表示名
   labels: MuniLabels; // 種別ラベル上書き（無い種別はTYPESの既定を使う）
+  omitNote?: string; // 本ツールで扱えない区分（隔週・粗大等）の注記
   areas: AreaRaw[];
 };
 
@@ -78,11 +85,14 @@ const MG = meguro as unknown as {
 // 丁目単位（chome:string＋区ごとのcategories）の区データ共通型
 type SingleChomeMuni = {
   municipality: string; code: string; source: string; sourceUrl?: string;
-  license?: string; fetchedAt: string; categories: MuniLabels;
+  license?: string; fetchedAt: string; categories: MuniLabels; omitNote?: string;
   areas: ({ chome: string } & Partial<Record<GomiKey, Rule>>)[];
 };
 const SG = shinagawa as unknown as SingleChomeMuni;
 const TT = taito as unknown as SingleChomeMuni;
+const KO = koto as unknown as SingleChomeMuni;
+const BU = bunkyo as unknown as SingleChomeMuni;
+const CH = chuo as unknown as SingleChomeMuni;
 
 // 丁目単位データ → 内部AreaRaw（chome:string[]）へ正規化して Municipality を作る
 function singleChomeMuni(
@@ -100,6 +110,7 @@ function singleChomeMuni(
     officialUrl,
     officialName,
     labels: d.categories,
+    omitNote: d.omitNote,
     areas: d.areas.map(({ chome, ...rules }) => ({ group: chome, chome: [chome], ...rules })),
   };
 }
@@ -118,9 +129,13 @@ export const MUNICIPALITIES: Municipality[] = [
     labels: {},
     areas: MG.areas,
   },
-  // 品川区・台東区の公式ごみページはURL変動が多いため、確実に生きている区トップへ誘導
+  // 各区の公式ごみページはURL変動が多いため、確実に生きている区トップへ誘導
+  // ★slug後方互換：新しい区は必ず末尾に追加する（既存の丁目indexを動かさない）
   singleChomeMuni(SG, "https://www.city.shinagawa.tokyo.jp/", "品川区公式"),
   singleChomeMuni(TT, "https://www.city.taito.lg.jp/", "台東区公式"),
+  singleChomeMuni(KO, "https://www.city.koto.lg.jp/", "江東区公式"),
+  singleChomeMuni(BU, "https://www.city.bunkyo.lg.jp/", "文京区公式"),
+  singleChomeMuni(CH, "https://www.city.chuo.lg.jp/", "中央区公式"),
 ];
 
 export type ChomeOption = {
@@ -193,6 +208,7 @@ export function sourceOf(chomeIndex: number) {
     license: m.license,
     officialUrl: m.officialUrl,
     officialName: m.officialName,
+    omitNote: m.omitNote,
   };
 }
 

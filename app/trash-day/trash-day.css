@@ -13,15 +13,18 @@ body:has(.gf-root) { overflow-x: hidden; }
 .gf-bunCard { border: 1px solid var(--gf-line); border-radius: 6px; padding: 16px 10px 14px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 8px; background: var(--gf-surface); }
 .gf-bunCard.t-burn { border-top: 3px solid var(--gf-t-burn); }
 .gf-bunCard.t-recy { border-top: 3px solid var(--gf-t-recy); }
+.gf-bunCard.t-plas { border-top: 3px solid var(--gf-t-plas); }
 .gf-bunCard.t-paper { border-top: 3px solid var(--gf-t-paper); }
 .gf-bunCard.t-non { border-top: 3px solid var(--gf-t-non); }
 .gf-bunCard.t-merc { border-top: 3px solid var(--gf-t-merc); }
 .gf-bunIcon { width: 58px; height: 58px; object-fit: contain; }
 .gf-bunLabel { font-weight: 700; font-size: 0.88rem; color: var(--gf-ink); line-height: 1.4; }
+.gf-omitNote { margin: 10px 0 0; font-size: 0.76rem; color: var(--gf-dim); line-height: 1.6; }
 .gf-tico { display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 9px; flex: 0 0 auto; background: #f1f1f3; color: #666; }
 .gf-tico-sm { width: 22px; height: 22px; border-radius: 6px; }
 .t-burn .gf-tico { color: var(--gf-t-burn); background: rgba(176, 87, 141, 0.12); }
 .t-recy .gf-tico { color: var(--gf-t-recy); background: rgba(90, 99, 176, 0.12); }
+.t-plas .gf-tico { color: var(--gf-t-plas); background: rgba(58, 166, 160, 0.12); }
 .t-paper .gf-tico { color: var(--gf-t-paper); background: rgba(78, 143, 95, 0.12); }
 .t-non .gf-tico { color: var(--gf-t-non); background: rgba(138, 138, 138, 0.14); }
 .t-merc .gf-tico { color: var(--gf-t-merc); background: rgba(176, 140, 62, 0.14); }
@@ -36,6 +39,7 @@ body:has(.gf-root) { overflow-x: hidden; }
 .gf-wgDot { display: inline-flex; flex-direction: column; align-items: center; line-height: 1; }
 .gf-wgDot.t-burn { color: var(--gf-t-burn); }
 .gf-wgDot.t-recy { color: var(--gf-t-recy); }
+.gf-wgDot.t-plas { color: var(--gf-t-plas); }
 .gf-wgDot.t-paper { color: var(--gf-t-paper); }
 .gf-wgDot.t-non { color: var(--gf-t-non); }
 .gf-wgDot.t-merc { color: var(--gf-t-merc); }
@@ -64,6 +68,7 @@ body:has(.gf-root) { overflow-x: hidden; }
   /* ごみ種別の識別カラー（紫基調に馴染むトーン） */
   --gf-t-burn: #b0578d;
   --gf-t-recy: #5a63b0;
+  --gf-t-plas: #3aa6a0;
   --gf-t-paper: #4e8f5f;
   --gf-t-non: #8a8a8a;
   --gf-t-merc: #b08c3e;
@@ -148,10 +153,11 @@ body:has(.gf-root) { overflow-x: hidden; }
 .gf-wWhen { font-family: inherit; font-size: 0.92rem; font-weight: 700; color: var(--gf-ink); letter-spacing: 0.02em; text-align: right; padding: 14px 16px; min-width: 132px; background: transparent; border-left: none; }
 .gf-wRow.t-burn .gf-em { background: var(--gf-t-burn); }
 .gf-wRow.t-recy .gf-em { background: var(--gf-t-recy); }
+.gf-wRow.t-plas .gf-em { background: var(--gf-t-plas); }
 .gf-wRow.t-paper .gf-em { background: var(--gf-t-paper); }
 .gf-wRow.t-non .gf-em { background: var(--gf-t-non); }
 .gf-wRow.t-merc .gf-em { background: var(--gf-t-merc); }
-.gf-wRow.t-burn, .gf-wRow.t-recy, .gf-wRow.t-paper, .gf-wRow.t-non, .gf-wRow.t-merc { border-left: 1px solid var(--gf-line); }
+.gf-wRow.t-burn, .gf-wRow.t-recy, .gf-wRow.t-plas, .gf-wRow.t-paper, .gf-wRow.t-non, .gf-wRow.t-merc { border-left: 1px solid var(--gf-line); }
 
 .gf-divider { height: 0; border: none; border-top: 1px solid var(--gf-underline); margin: 30px 0 8px; }
 
@@ -177,10 +183,11 @@ body:has(.gf-root) { overflow-x: hidden; }
 .gf-gBadge .gf-em { width: 13px; height: 13px; border-radius: 3px; overflow: hidden; text-indent: -999px; flex: 0 0 auto; }
 .gf-gBadge.t-burn .gf-em { background: var(--gf-t-burn); }
 .gf-gBadge.t-recy .gf-em { background: var(--gf-t-recy); }
+.gf-gBadge.t-plas .gf-em { background: var(--gf-t-plas); }
 .gf-gBadge.t-paper .gf-em { background: var(--gf-t-paper); }
 .gf-gBadge.t-non .gf-em { background: var(--gf-t-non); }
 .gf-gBadge.t-merc .gf-em { background: var(--gf-t-merc); }
-.gf-gBadge.t-burn, .gf-gBadge.t-recy, .gf-gBadge.t-paper, .gf-gBadge.t-non, .gf-gBadge.t-merc { border-left: 1px solid var(--gf-line); }
+.gf-gBadge.t-burn, .gf-gBadge.t-recy, .gf-gBadge.t-plas, .gf-gBadge.t-paper, .gf-gBadge.t-non, .gf-gBadge.t-merc { border-left: 1px solid var(--gf-line); }
 .gf-noCollect { color: var(--gf-ink); font-size: 0.94rem; font-weight: 500; line-height: 1.9; background: var(--gf-band); border: none; border-radius: 0; padding: 16px 18px; }
 
 /* 次の収集予定（枠線カード列） */

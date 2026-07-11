@@ -358,6 +358,7 @@ export default function GomiFortune() {
                   </div>
                 ))}
               </div>
+              {src.omitNote && <p className="gf-omitNote">※ {src.omitNote}</p>}
 
               <div className="gf-divider" />
 
