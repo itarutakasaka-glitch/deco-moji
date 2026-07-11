@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { redirect } from "next/navigation";
-import { buildFortune, decodeSlug, TYPES } from "@/lib/gomi/core";
+import { buildFortune, decodeSlug, labelFor } from "@/lib/gomi/core";
 import FortuneCard from "@/components/FortuneCard";
 import "../../trash-day.css";
 
@@ -14,10 +14,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!decoded) return { robots: { index: false, follow: true } };
   const f = buildFortune(decoded.chomeIndex, decoded.parts);
   const ts = f.today.length
-    ? f.today.map((k) => TYPES[k].label).join("・")
+    ? f.today.map((k) => labelFor(f.chomeIndex, k)).join("・")
     : "収集なし";
   const title = `${f.dateLong} の運勢は【${f.rank.t}】｜ゴミ出し占い`;
-  const description = `${f.area}・${ts}。${f.rank.s}。今日の開運作法をチェック🗑️✨`;
+  const description = `${f.muni}${f.area}・${ts}。${f.rank.s}。今日の開運作法をチェック🗑️✨`;
   const ogImage = `/trash-day/og/${slug}`;
   return {
     title,

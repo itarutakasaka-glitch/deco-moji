@@ -3,7 +3,7 @@ import {
   buildFortune,
   decodeSlug,
   DEFAULT_CHOME_INDEX,
-  TYPES,
+  labelFor,
   type Rarity,
 } from "@/lib/gomi/core";
 
@@ -54,12 +54,12 @@ export async function GET(
   const st = RARITY_STYLE[f.rarity];
 
   const gomiText = f.today.length
-    ? f.today.map((k) => TYPES[k].label).join("・")
+    ? f.today.map((k) => labelFor(f.chomeIndex, k)).join("・")
     : "今日は収集なし";
 
-  const areaText = `目黒区・${f.area}`;
+  const areaText = `${f.muni}・${f.area}`;
   const allText =
-    "ゴミ出し占い 目黒区 今日のゴミ 運勢 開運作法 収集なし decomoji.xyz/trash-day #年月日()・/0123456789NRSU" +
+    "ゴミ出し占い 目黒区 品川区 東京 今日のゴミ 運勢 開運作法 収集なし ごみ収集日カレンダーのを丁目で検索 decomoji.xyz/trash-day #年月日()・/0123456789NRSU" +
     areaText +
     f.dateLong +
     f.rank.t +
@@ -86,7 +86,7 @@ export async function GET(
         {/* ヘッダー */}
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", borderBottom: "2px solid #c9d3de", paddingBottom: 20 }}>
           <div style={{ display: "flex", fontSize: 30, fontWeight: 700, color: THEME_D }}>
-            目黒区 ごみ収集日カレンダー
+            {f.muni} ごみ収集日カレンダー
           </div>
           <div style={{ display: "flex", fontSize: 24, fontWeight: 700, color: "#fff", background: st.accent, padding: "4px 18px", borderRadius: 4 }}>
             {f.rarity}
@@ -131,7 +131,7 @@ export async function GET(
           }}
         >
           <div style={{ display: "flex" }}>decomoji.xyz/trash-day</div>
-          <div style={{ display: "flex" }}>目黒区のゴミ収集日を丁目で検索</div>
+          <div style={{ display: "flex" }}>{f.muni}のゴミ収集日を丁目で検索</div>
         </div>
       </div>
     ),
