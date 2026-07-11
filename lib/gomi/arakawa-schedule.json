@@ -1,0 +1,1840 @@
+{
+ "municipality": "荒川区",
+ "code": "13118",
+ "source": "荒川区「資源とごみの収集日」（荒川区公式サイト）",
+ "sourceUrl": "https://www.city.arakawa.tokyo.jp/a025/recycle/shuushuubi/syusyubi.html",
+ "license": "荒川区公式サイト掲載情報",
+ "fetchedAt": "2026-07-12",
+ "categories": {
+  "burnable": "燃やすごみ",
+  "nonBurnable": "燃やさないごみ",
+  "plastic": "プラスチック"
+ },
+ "areas": [
+  {
+   "chome": "南千住一・六丁目",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 5,
+    "nths": [
+     1,
+     3
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     3
+    ]
+   }
+  },
+  {
+   "chome": "南千住二・五丁目",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 5,
+    "nths": [
+     2,
+     4
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     3
+    ]
+   }
+  },
+  {
+   "chome": "南千住三・四・七丁目（大規模集合住宅は除く）",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 5,
+    "nths": [
+     2,
+     4
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     3
+    ]
+   }
+  },
+  {
+   "chome": "荒川一丁目1～39番",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 5,
+    "nths": [
+     1,
+     3
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     3
+    ]
+   }
+  },
+  {
+   "chome": "荒川一丁目40～58番",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 2,
+    "nths": [
+     1,
+     3
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     6
+    ]
+   }
+  },
+  {
+   "chome": "荒川二・四丁目",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 2,
+    "nths": [
+     2,
+     4
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     6
+    ]
+   }
+  },
+  {
+   "chome": "荒川三丁目",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 2,
+    "nths": [
+     1,
+     3
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     6
+    ]
+   }
+  },
+  {
+   "chome": "荒川五・六丁目",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 1,
+    "nths": [
+     2,
+     4
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   }
+  },
+  {
+   "chome": "荒川七丁目",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 2,
+    "nths": [
+     2,
+     4
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     6
+    ]
+   }
+  },
+  {
+   "chome": "荒川八丁目",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 5,
+    "nths": [
+     1,
+     3
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     3
+    ]
+   }
+  },
+  {
+   "chome": "町屋一丁目",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 2,
+    "nths": [
+     2,
+     4
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     6
+    ]
+   }
+  },
+  {
+   "chome": "町屋二～四丁目　※注釈",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     2,
+     5
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 6,
+    "nths": [
+     2,
+     4
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     4
+    ]
+   }
+  },
+  {
+   "chome": "町屋五～七丁目",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     2,
+     5
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 6,
+    "nths": [
+     1,
+     3
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     4
+    ]
+   }
+  },
+  {
+   "chome": "町屋八丁目1～19番",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 6,
+    "nths": [
+     1,
+     3
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     6
+    ]
+   }
+  },
+  {
+   "chome": "町屋八丁目20～  22番",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 2,
+    "nths": [
+     2,
+     4
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     6
+    ]
+   }
+  },
+  {
+   "chome": "東尾久一丁目2番・5～37番",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 1,
+    "nths": [
+     1,
+     3
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   }
+  },
+  {
+   "chome": "東尾久一丁目1・3・4番",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 1,
+    "nths": [
+     2,
+     4
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   }
+  },
+  {
+   "chome": "東尾久二丁目1～4番",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 1,
+    "nths": [
+     2,
+     4
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   }
+  },
+  {
+   "chome": "東尾久二丁目5～49番",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 1,
+    "nths": [
+     1,
+     3
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   }
+  },
+  {
+   "chome": "東尾久三丁目1番",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 1,
+    "nths": [
+     2,
+     4
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   }
+  },
+  {
+   "chome": "東尾久三丁目2～37番",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 1,
+    "nths": [
+     1,
+     3
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   }
+  },
+  {
+   "chome": "東尾久四・五丁目",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     2,
+     5
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 3,
+    "nths": [
+     1,
+     3
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     1
+    ]
+   }
+  },
+  {
+   "chome": "東尾久六丁目",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     2,
+     5
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 6,
+    "nths": [
+     2,
+     4
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     4
+    ]
+   }
+  },
+  {
+   "chome": "東尾久七・八丁目",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     2,
+     5
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 6,
+    "nths": [
+     1,
+     3
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     4
+    ]
+   }
+  },
+  {
+   "chome": "西尾久一丁目1～18番",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     2,
+     5
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 3,
+    "nths": [
+     1,
+     3
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     1
+    ]
+   }
+  },
+  {
+   "chome": "西尾久一丁目19～33番",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     2,
+     5
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 3,
+    "nths": [
+     2,
+     4
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     1
+    ]
+   }
+  },
+  {
+   "chome": "西尾久二丁目1～29・35～37番",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     2,
+     5
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 3,
+    "nths": [
+     1,
+     3
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     1
+    ]
+   }
+  },
+  {
+   "chome": "西尾久二丁目30～34・38番",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     2,
+     5
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 3,
+    "nths": [
+     2,
+     4
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     1
+    ]
+   }
+  },
+  {
+   "chome": "西尾久三丁目1～20番",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     2,
+     5
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 6,
+    "nths": [
+     1,
+     3
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     4
+    ]
+   }
+  },
+  {
+   "chome": "西尾久三丁目21～26番",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     2,
+     5
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 6,
+    "nths": [
+     1,
+     3
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     1
+    ]
+   }
+  },
+  {
+   "chome": "西尾久四・五丁目",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     2,
+     5
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 3,
+    "nths": [
+     2,
+     4
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     1
+    ]
+   }
+  },
+  {
+   "chome": "西尾久六丁目",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     2,
+     5
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 6,
+    "nths": [
+     1,
+     3
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     1
+    ]
+   }
+  },
+  {
+   "chome": "西尾久七・八丁目",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     2,
+     5
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 3,
+    "nths": [
+     2,
+     4
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     1
+    ]
+   }
+  },
+  {
+   "chome": "東日暮里一丁目1～18番",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 5,
+    "nths": [
+     1,
+     3
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     3
+    ]
+   }
+  },
+  {
+   "chome": "東日暮里一丁目19～42番",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 4,
+    "nths": [
+     2,
+     4
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     5
+    ]
+   }
+  },
+  {
+   "chome": "東日暮里二～四丁目",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 4,
+    "nths": [
+     2,
+     4
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     5
+    ]
+   }
+  },
+  {
+   "chome": "東日暮里五丁目1～39・42～47番",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 4,
+    "nths": [
+     2,
+     4
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     5
+    ]
+   }
+  },
+  {
+   "chome": "東日暮里五丁目40・41・48～55番",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 4,
+    "nths": [
+     1,
+     3
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     5
+    ]
+   }
+  },
+  {
+   "chome": "東日暮里六丁目",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 4,
+    "nths": [
+     1,
+     3
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     5
+    ]
+   }
+  },
+  {
+   "chome": "西日暮里一丁目",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 2,
+    "nths": [
+     1,
+     3
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     6
+    ]
+   }
+  },
+  {
+   "chome": "西日暮里二丁目1～54番",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 4,
+    "nths": [
+     1,
+     3
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     5
+    ]
+   }
+  },
+  {
+   "chome": "西日暮里二丁目55～58番",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 1,
+    "nths": [
+     2,
+     4
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   }
+  },
+  {
+   "chome": "西日暮里三・四丁目",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 4,
+    "nths": [
+     1,
+     3
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   }
+  },
+  {
+   "chome": "西日暮里五丁目1～13・16・26～28番",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 1,
+    "nths": [
+     2,
+     4
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     5
+    ]
+   }
+  },
+  {
+   "chome": "西日暮里五丁目  14・15・18～  25・29～38番",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 1,
+    "nths": [
+     2,
+     4
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   }
+  },
+  {
+   "chome": "西日暮里6丁目",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 1,
+    "nths": [
+     2,
+     4
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   }
+  },
+  {
+   "chome": "レジディア南千住",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     2,
+     5
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 2,
+    "nths": [
+     2,
+     4
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     3
+    ]
+   }
+  },
+  {
+   "chome": "リバーハープコート1,2号棟",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 2,
+    "nths": [
+     2,
+     4
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     4
+    ]
+   }
+  },
+  {
+   "chome": "リバーハープコート3～5号棟",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     2,
+     5
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 2,
+    "nths": [
+     2,
+     4
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     3
+    ]
+   }
+  },
+  {
+   "chome": "リバーフェイス",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 1,
+    "nths": [
+     2,
+     4
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     3
+    ]
+   }
+  },
+  {
+   "chome": "ロイヤルパークスシーサー南千住",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 2,
+    "nths": [
+     2,
+     4
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     4
+    ]
+   }
+  },
+  {
+   "chome": "都営南千住四丁目アパート",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 1,
+    "nths": [
+     2,
+     4
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   }
+  },
+  {
+   "chome": "トミンタワー南千住四丁目",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 2,
+    "nths": [
+     2,
+     4
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   }
+  },
+  {
+   "chome": "リバーハープタワー1,2号棟",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     2,
+     5
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 2,
+    "nths": [
+     2,
+     4
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     3
+    ]
+   }
+  },
+  {
+   "chome": "ロイヤルパークスタワー",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 1,
+    "nths": [
+     2,
+     4
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   }
+  },
+  {
+   "chome": "エクセレントシティ南千住ブルーム",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 5,
+    "nths": [
+     2,
+     4
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   }
+  },
+  {
+   "chome": "クレヴィア南千住",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 5,
+    "nths": [
+     2,
+     4
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   }
+  },
+  {
+   "chome": "クレヴィア南千住RIVER SIDE TWIN",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 5,
+    "nths": [
+     2,
+     4
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   }
+  },
+  {
+   "chome": "コスモシティ東京イースト",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 5,
+    "nths": [
+     2,
+     4
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   }
+  },
+  {
+   "chome": "ダイナシティ東京リバーゲート",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 5,
+    "nths": [
+     2,
+     4
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   }
+  },
+  {
+   "chome": "南千住スカイハイツ",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 5,
+    "nths": [
+     2,
+     4
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   }
+  },
+  {
+   "chome": "南千住七丁目ハイツ",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 5,
+    "nths": [
+     2,
+     4
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   }
+  },
+  {
+   "chome": "ブランズタワー南千住",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 5,
+    "nths": [
+     2,
+     4
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     3
+    ]
+   }
+  },
+  {
+   "chome": "けやき通り北壱、弐番館",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 2,
+    "nths": [
+     2,
+     4
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     4
+    ]
+   }
+  },
+  {
+   "chome": "けやき通り北参～十一番館",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 2,
+    "nths": [
+     1,
+     3
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     6
+    ]
+   }
+  },
+  {
+   "chome": "けやき通り南壱～四番館",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 2,
+    "nths": [
+     2,
+     4
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     4
+    ]
+   }
+  },
+  {
+   "chome": "さくら堤通り南壱番館",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 2,
+    "nths": [
+     1,
+     3
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     6
+    ]
+   }
+  },
+  {
+   "chome": "東京フロンティアシティアーバンフォート",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     2,
+     5
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 1,
+    "nths": [
+     1,
+     3
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     1
+    ]
+   }
+  },
+  {
+   "chome": "東京フロンティアシティパークアンドパークス",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     2,
+     5
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 1,
+    "nths": [
+     1,
+     3
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     1
+    ]
+   }
+  },
+  {
+   "chome": "トキアス",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 1,
+    "nths": [
+     2,
+     4
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   }
+  },
+  {
+   "chome": "とちのき通り北壱～参番館",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 2,
+    "nths": [
+     2,
+     4
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     4
+    ]
+   }
+  },
+  {
+   "chome": "はなみずき通り北壱～参番館",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 2,
+    "nths": [
+     1,
+     3
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     4
+    ]
+   }
+  },
+  {
+   "chome": "はなみずき通り北五～七番館",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 2,
+    "nths": [
+     1,
+     3
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     6
+    ]
+   }
+  },
+  {
+   "chome": "はなみずき通り南壱、弐番館",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 2,
+    "nths": [
+     1,
+     3
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     4
+    ]
+   }
+  },
+  {
+   "chome": "はなみずき通り南参～六番館",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 2,
+    "nths": [
+     1,
+     3
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     6
+    ]
+   }
+  },
+  {
+   "chome": "BELISTA都立汐入公園",
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 1,
+    "nths": [
+     1,
+     3
+    ]
+   },
+   "plastic": {
+    "kind": "weekly",
+    "weekdays": [
+     6
+    ]
+   }
+  }
+ ],
+ "omitNote": "資源（古紙・びん・缶・ペットボトル等）は町丁目・番地ごとに収集日が細かく分かれるため本ツールでは省略しています。区公式でご確認ください。"
+}

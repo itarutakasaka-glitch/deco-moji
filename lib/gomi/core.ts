@@ -11,6 +11,13 @@ import bunkyo from "./bunkyo-schedule.json";
 import chuo from "./chuo-schedule.json";
 import ota from "./ota-schedule.json";
 import setagaya from "./setagaya-schedule.json";
+import nerima from "./nerima-schedule.json";
+import edogawa from "./edogawa-schedule.json";
+import suginami from "./suginami-schedule.json";
+import itabashi from "./itabashi-schedule.json";
+import shinjuku from "./shinjuku-schedule.json";
+import shibuya from "./shibuya-schedule.json";
+import arakawa from "./arakawa-schedule.json";
 
 /* ===== 型 ===== */
 export type WeeklyRule = { kind: "weekly"; weekdays: number[] };
@@ -97,6 +104,13 @@ const BU = bunkyo as unknown as SingleChomeMuni;
 const CH = chuo as unknown as SingleChomeMuni;
 const OT = ota as unknown as SingleChomeMuni;
 const SE = setagaya as unknown as SingleChomeMuni;
+const NE = nerima as unknown as SingleChomeMuni;
+const ED = edogawa as unknown as SingleChomeMuni;
+const SU = suginami as unknown as SingleChomeMuni;
+const IT = itabashi as unknown as SingleChomeMuni;
+const SJ = shinjuku as unknown as SingleChomeMuni;
+const SB = shibuya as unknown as SingleChomeMuni;
+const AR = arakawa as unknown as SingleChomeMuni;
 
 // 丁目単位データ → 内部AreaRaw（chome:string[]）へ正規化して Municipality を作る
 function singleChomeMuni(
@@ -142,6 +156,13 @@ export const MUNICIPALITIES: Municipality[] = [
   singleChomeMuni(CH, "https://www.city.chuo.lg.jp/", "中央区公式"),
   singleChomeMuni(OT, "https://www.city.ota.tokyo.jp/", "大田区公式"),
   singleChomeMuni(SE, "https://www.city.setagaya.lg.jp/02241/416.html", "世田谷区公式"),
+  singleChomeMuni(NE, "https://www.city.nerima.tokyo.jp/kurashi/gomi/wakekata/ichiran/index.html", "練馬区公式"),
+  singleChomeMuni(ED, "https://www.city.edogawa.tokyo.jp/e025/kurashi/gomi_recycle/kategomi/yobihyo.html", "江戸川区公式"),
+  singleChomeMuni(SU, "https://www.city.suginami.tokyo.jp/kurashi/gomi/seisougomi/index.html", "杉並区公式"),
+  singleChomeMuni(IT, "https://www.city.itabashi.tokyo.jp/tetsuduki/gomi/kaishu/index.html", "板橋区公式"),
+  singleChomeMuni(SJ, "https://www.city.shinjuku.lg.jp/seikatsu/file09_01_00001.html", "新宿区公式"),
+  singleChomeMuni(SB, "https://www.city.shibuya.tokyo.jp/kurashi/gomi/kateigomi/gomid.html", "渋谷区公式"),
+  singleChomeMuni(AR, "https://www.city.arakawa.tokyo.jp/a025/recycle/shuushuubi/syusyubi.html", "荒川区公式"),
 ];
 
 export type ChomeOption = {
@@ -520,7 +541,7 @@ export function encodeSlug(chomeIndex: number, p: DateParts): string {
 }
 export type DecodedSlug = { parts: DateParts; chomeIndex: number };
 export function decodeSlug(slug: string): DecodedSlug | null {
-  const m = /^(\d{4})(\d{2})(\d{2})(?:-(\d{1,3}))?$/.exec(slug);
+  const m = /^(\d{4})(\d{2})(\d{2})(?:-(\d{1,4}))?$/.exec(slug);
   if (!m) return null;
   const p = { y: +m[1], m: +m[2], d: +m[3] };
   if (p.m < 1 || p.m > 12 || p.d < 1 || p.d > 31) return null;
