@@ -152,7 +152,7 @@ export default function FortuneCard({ fortune }: { fortune: Fortune }) {
           </div>
 
           <div className="gf-cFoot">
-            出典：{f.muni}の公式オープンデータ準拠
+            出典：{f.muni}の公式収集日情報に準拠
             <br />
             #ゴミ出し占い #decomoji
           </div>
