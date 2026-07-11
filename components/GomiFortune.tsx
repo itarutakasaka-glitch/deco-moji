@@ -208,7 +208,7 @@ export default function GomiFortune() {
         {!fortune ? (
           /* ① 日程を調べる */
           <section className="gf-screen">
-            <div className="gf-brand">★ 目黒区 ごみ収集日チェッカー ★</div>
+            <div className="gf-brand">目黒区 ごみ収集日チェッカー</div>
             <h1 className="gf-logo">
               <span className="gf-deco">🗑️</span> ゴミの日カレンダー{" "}
               <span className="gf-deco">♻️</span>
@@ -282,7 +282,7 @@ export default function GomiFortune() {
 
               {yearEnd && (
                 <div className="gf-warn">
-                  ⚠ 年末年始（12/29〜1/3）は特別日程です。下の予定は通常ルールの参考表示です。実際の収集日は
+                  年末年始（12/29〜1/3）は特別日程です。下の予定は通常ルールの参考表示です。実際の収集日は
                   <a href={OFFICIAL_URL} target="_blank" rel="noopener noreferrer">
                     目黒区公式
                   </a>
@@ -333,12 +333,13 @@ export default function GomiFortune() {
             </div>
 
             <p className="gf-note">
-              ※ {SCHEDULE_SOURCE.municipality}公式「資源とごみの収集日」準拠（{SCHEDULE_SOURCE.fetchedAt}
-              取得・上目黒四丁目検証済）。最新・正確な情報は
+              ※ 本サービスは有志が運営する非公式ツールで、目黒区が運営する公式サイトではありません。
+              収集日は{SCHEDULE_SOURCE.municipality}公式「資源とごみの収集日」に準拠（{SCHEDULE_SOURCE.fetchedAt}
+              取得・上目黒四丁目で照合済）していますが、最新・正確な情報は
               <a href={OFFICIAL_URL} target="_blank" rel="noopener noreferrer">
-                区公式
+                目黒区公式サイト
               </a>
-              でご確認ください。占いはエンターテインメントです。
+              で必ずご確認ください。「今日のゴミ出し占い」はエンターテインメントです。
             </p>
           </section>
         ) : (

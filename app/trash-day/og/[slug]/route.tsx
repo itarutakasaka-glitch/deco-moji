@@ -30,14 +30,15 @@ async function loadGoogleFont(text: string): Promise<ArrayBuffer> {
   return await (await fetch(match[1])).arrayBuffer();
 }
 
-// JARTAN調：くすみアクセント
+// 官公庁風：識別カラー
 const RARITY_STYLE: Record<Rarity, { accent: string }> = {
-  N: { accent: "#b3a899" },
-  R: { accent: "#7fa3b5" },
-  SR: { accent: "#a98ca6" },
-  SSR: { accent: "#c98aa0" },
-  UR: { accent: "#c2a24e" },
+  N: { accent: "#6b7280" },
+  R: { accent: "#1f6fb2" },
+  SR: { accent: "#6a5acd" },
+  SSR: { accent: "#a34b8a" },
+  UR: { accent: "#b8860b" },
 };
+const NAVY = "#0e3a68";
 
 export async function GET(
   _req: Request,
@@ -74,19 +75,19 @@ export async function GET(
           height: "100%",
           display: "flex",
           flexDirection: "column",
-          background: "#f4f1ea",
-          borderTop: `16px solid ${st.accent}`,
-          padding: "54px 70px 44px",
+          background: "#ffffff",
+          borderTop: `18px solid ${NAVY}`,
+          padding: "48px 70px 40px",
           fontFamily: "ZenKaku",
-          color: "#2b2a27",
+          color: "#1f2937",
         }}
       >
         {/* ヘッダー */}
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-          <div style={{ display: "flex", fontSize: 26, color: "#a39c90", letterSpacing: "0.28em" }}>
-            ゴミ出し占い ・ GOMI FORTUNE
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", borderBottom: "2px solid #c9d3de", paddingBottom: 20 }}>
+          <div style={{ display: "flex", fontSize: 30, fontWeight: 700, color: NAVY }}>
+            目黒区 ごみ収集日カレンダー
           </div>
-          <div style={{ display: "flex", fontSize: 26, fontWeight: 900, color: st.accent }}>
+          <div style={{ display: "flex", fontSize: 24, fontWeight: 700, color: "#fff", background: st.accent, padding: "4px 18px", borderRadius: 4 }}>
             {f.rarity}
           </div>
         </div>
@@ -101,16 +102,17 @@ export async function GET(
             justifyContent: "center",
           }}
         >
-          <div style={{ display: "flex", fontSize: 28, color: "#6f6a61" }}>
+          <div style={{ display: "flex", fontSize: 28, color: "#475569", fontWeight: 700 }}>
             {f.dateLong}　{areaText}
           </div>
-          <div style={{ display: "flex", fontSize: 124, lineHeight: 1.05, fontWeight: 900, color: "#2b2a27", marginTop: 8 }}>
+          <div style={{ display: "flex", fontSize: 30, color: "#6b7280", marginTop: 26 }}>今日のゴミ出し占い</div>
+          <div style={{ display: "flex", fontSize: 112, lineHeight: 1.1, fontWeight: 700, color: NAVY, marginTop: 4 }}>
             {f.rank.t}
           </div>
-          <div style={{ display: "flex", fontSize: 30, color: st.accent, letterSpacing: "0.1em", marginTop: 6 }}>
+          <div style={{ display: "flex", fontSize: 30, color: "#475569", marginTop: 8, fontWeight: 700 }}>
             {f.rank.s}
           </div>
-          <div style={{ display: "flex", fontSize: 28, color: "#2b2a27", marginTop: 30, paddingTop: 22, borderTop: "1px solid #e0d9cc", width: "100%" }}>
+          <div style={{ display: "flex", fontSize: 28, color: "#1f2937", marginTop: 28, padding: "16px 22px", background: "#f4f7fb", border: "1px solid #c9d3de", borderRadius: 4 }}>
             今日のゴミ：{gomiText}
           </div>
         </div>
@@ -121,15 +123,14 @@ export async function GET(
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
-            borderTop: "1px solid #d8d1c4",
-            paddingTop: 22,
+            borderTop: "1px solid #c9d3de",
+            paddingTop: 20,
             fontSize: 24,
-            color: "#a39c90",
-            letterSpacing: "0.12em",
+            color: "#6b7280",
           }}
         >
           <div style={{ display: "flex" }}>decomoji.xyz/trash-day</div>
-          <div style={{ display: "flex" }}>#ゴミ出し占い</div>
+          <div style={{ display: "flex" }}>目黒区のゴミ収集日を丁目で検索</div>
         </div>
       </div>
     ),
