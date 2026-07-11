@@ -88,7 +88,7 @@ function Badges({ list }: { list: GomiKey[] }) {
         return (
           <span className={`gf-gBadge ${t.cls}`} key={k}>
             <span className="gf-tico">
-              <GomiIcon k={k} size={18} />
+              <img src={`/icon-${k}.png`} alt="" className="gf-ticoPng" width={26} height={26} />
             </span>
             {t.label}
           </span>
@@ -258,7 +258,7 @@ export default function GomiFortune() {
                     <div className={`gf-wRow ${t.cls}`} key={k}>
                       <span className="gf-wName">
                         <span className="gf-tico">
-                          <GomiIcon k={k} size={20} />
+                          <img src={`/icon-${k}.png`} alt="" className="gf-ticoPng" width={28} height={28} />
                         </span>
                         {t.label}
                       </span>
@@ -379,7 +379,7 @@ export default function GomiFortune() {
                       <div className={`gf-nextRow ${t.cls}`} key={key}>
                         <span className="gf-nm">
                           <span className="gf-tico">
-                            <GomiIcon k={key} size={18} />
+                            <img src={`/icon-${key}.png`} alt="" className="gf-ticoPng" width={26} height={26} />
                           </span>
                           {t.label}
                         </span>

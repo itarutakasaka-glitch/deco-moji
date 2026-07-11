@@ -6,6 +6,8 @@ body:has(.gf-root) { overflow-x: hidden; }
 /* ===== 自作アイコン枠・イラスト・週間カレンダー ===== */
 .gf-heroArt { display: block; margin: 0 auto 6px; line-height: 0; }
 .gf-heroImg { display: block; width: clamp(130px, 33vw, 190px); height: auto; margin: 0 auto 6px; }
+.gf-ticoPng { width: 26px; height: 26px; object-fit: contain; display: block; }
+.gf-wRow .gf-tico, .gf-gBadge .gf-tico, .gf-nextRow .gf-tico { width: 38px; height: 38px; }
 /* 分別区分ガイド（イラストカード） */
 .gf-bunbetsu { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; }
 .gf-bunCard { border: 1px solid var(--gf-line); border-radius: 6px; padding: 16px 10px 14px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 8px; background: var(--gf-surface); }
