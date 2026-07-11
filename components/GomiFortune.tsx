@@ -7,8 +7,13 @@ import {
   type Fortune,
   type GomiKey,
   TYPES,
-  ORDER,
-  CHOME_LIST,
+  MUNI_OPTIONS,
+  chomesOfMuni,
+  muniIndexOf,
+  muniName,
+  labelFor,
+  keysForChome,
+  sourceOf,
   DEFAULT_CHOME_INDEX,
   chomeLabel,
   describeRule,
@@ -26,13 +31,9 @@ import {
   addDays,
   fmtShort,
   encodeSlug,
-  SCHEDULE_SOURCE,
 } from "@/lib/gomi/core";
 import FortuneCard from "@/components/FortuneCard";
 import { GomiIcon } from "@/components/GomiVisuals";
-
-const OFFICIAL_URL =
-  "https://www.city.meguro.tokyo.jp/seisou/kurashi/gomi/youbiichiran.html";
 
 function Stars() {
   const stars = useMemo(
@@ -71,7 +72,7 @@ function Stars() {
   );
 }
 
-function Badges({ list }: { list: GomiKey[] }) {
+function Badges({ list, chomeIndex }: { list: GomiKey[]; chomeIndex: number }) {
   if (!list.length) {
     return (
       <div className="gf-noCollect">
@@ -90,7 +91,7 @@ function Badges({ list }: { list: GomiKey[] }) {
             <span className="gf-tico">
               <img src={`/icon-${k}.png`} alt="" className="gf-ticoPng" width={26} height={26} />
             </span>
-            {t.label}
+            {labelFor(chomeIndex, k)}
           </span>
         );
       })}
@@ -139,9 +140,23 @@ function Confetti() {
 
 export default function GomiFortune() {
   const [iso, setIso] = useState<string>("");
+  const [muniIndex, setMuniIndex] = useState<number>(
+    muniIndexOf(DEFAULT_CHOME_INDEX)
+  );
   const [chomeIndex, setChomeIndex] = useState<number>(DEFAULT_CHOME_INDEX);
   const [fortune, setFortune] = useState<Fortune | null>(null);
   const [toast, setToast] = useState<string>("");
+
+  // 区を変えたら、その区の先頭の丁目に切り替える
+  function changeMuni(mi: number) {
+    setMuniIndex(mi);
+    const first = chomesOfMuni(mi)[0];
+    if (first) setChomeIndex(first.index);
+  }
+
+  const muni = muniName(chomeIndex);
+  const src = sourceOf(chomeIndex);
+  const keys = keysForChome(chomeIndex); // この丁目に存在する種別のみ
 
   // 初期日付＝今日（クライアントのローカル日付）
   useEffect(() => {
@@ -179,7 +194,7 @@ export default function GomiFortune() {
   }
   function shareText(f: Fortune) {
     const ts = f.today.length
-      ? f.today.map((k) => TYPES[k].em + TYPES[k].label).join("・")
+      ? f.today.map((k) => TYPES[k].em + labelFor(f.chomeIndex, k)).join("・")
       : "収集なし";
     return `【ゴミ出し占い🗑️】${f.dateLong}\n${f.area}／今日のゴミ：${ts}\n運勢：${f.rank.t}「${f.rank.s}」\n${f.neta}`;
   }
@@ -214,7 +229,7 @@ export default function GomiFortune() {
         {!fortune ? (
           /* ① 日程を調べる */
           <section className="gf-screen">
-            <div className="gf-brand">目黒区 ごみ収集日チェッカー</div>
+            <div className="gf-brand">東京23区 ごみ収集日チェッカー</div>
             <div className="gf-hero">
               <img
                 src="/gomi-hero.png"
@@ -224,25 +239,39 @@ export default function GomiFortune() {
                 height={180}
               />
               <h1 className="gf-logo">ゴミの日カレンダー</h1>
-              <span className="gf-logoSub">目黒区版</span>
+              <span className="gf-logoSub">{muni}版</span>
             </div>
             <p className="gf-tagline">
               いつ・何を出す？が<b>ひと目</b>でわかる。
             </p>
             <div className="gf-areaPillWrap">
-              <span className="gf-areaPill">目黒区 ・ {chomeLabel(chomeIndex)}</span>
+              <span className="gf-areaPill">{muni} ・ {chomeLabel(chomeIndex)}</span>
             </div>
 
             <div className="gf-panel">
-              <div className="gf-secLabel">お住まいの丁目を選ぶ</div>
+              <div className="gf-secLabel">お住まいの区を選ぶ</div>
+              <select
+                className="gf-chomeSelect"
+                value={muniIndex}
+                onChange={(e) => changeMuni(Number(e.target.value))}
+                aria-label="区を選択"
+              >
+                {MUNI_OPTIONS.map((m) => (
+                  <option key={m.muniIndex} value={m.muniIndex}>
+                    {m.name}（{m.count}丁目）
+                  </option>
+                ))}
+              </select>
+
+              <div className="gf-secLabel gf-tight">お住まいの丁目を選ぶ</div>
               <select
                 className="gf-chomeSelect"
                 value={chomeIndex}
                 onChange={(e) => setChomeIndex(Number(e.target.value))}
                 aria-label="丁目を選択"
               >
-                {CHOME_LIST.map((c, i) => (
-                  <option key={i} value={i}>
+                {chomesOfMuni(muniIndex).map((c) => (
+                  <option key={c.index} value={c.index}>
                     {c.chome}
                   </option>
                 ))}
@@ -252,7 +281,7 @@ export default function GomiFortune() {
 
               <div className="gf-secLabel">ごみ収集スケジュール</div>
               <div className="gf-weekTable">
-                {ORDER.map((k) => {
+                {keys.map((k) => {
                   const t = TYPES[k];
                   return (
                     <div className={`gf-wRow ${t.cls}`} key={k}>
@@ -260,7 +289,7 @@ export default function GomiFortune() {
                         <span className="gf-tico">
                           <img src={`/icon-${k}.png`} alt="" className="gf-ticoPng" width={28} height={28} />
                         </span>
-                        {t.label}
+                        {labelFor(chomeIndex, k)}
                       </span>
                       <span className="gf-wWhen">
                         {describeRule(ruleFor(chomeIndex, k))}
@@ -302,12 +331,12 @@ export default function GomiFortune() {
                 })}
               </div>
               <div className="gf-wgLegend">
-                {ORDER.map((k) => (
+                {keys.map((k) => (
                   <span className={`gf-wgLg ${TYPES[k].cls}`} key={k}>
                     <span className="gf-tico gf-tico-sm">
                       <GomiIcon k={k} size={13} />
                     </span>
-                    {TYPES[k].label}
+                    {labelFor(chomeIndex, k)}
                   </span>
                 ))}
               </div>
@@ -315,7 +344,7 @@ export default function GomiFortune() {
               {/* ごみの分別区分ガイド（イラストカード） */}
               <div className="gf-secLabel gf-tight">ごみの分別区分</div>
               <div className="gf-bunbetsu">
-                {ORDER.map((k) => (
+                {keys.map((k) => (
                   <div className={`gf-bunCard ${TYPES[k].cls}`} key={k}>
                     <img
                       src={`/icon-${k}.png`}
@@ -325,10 +354,11 @@ export default function GomiFortune() {
                       height={56}
                       loading="lazy"
                     />
-                    <span className="gf-bunLabel">{TYPES[k].label}</span>
+                    <span className="gf-bunLabel">{labelFor(chomeIndex, k)}</span>
                   </div>
                 ))}
               </div>
+              {src.omitNote && <p className="gf-omitNote">※ {src.omitNote}</p>}
 
               <div className="gf-divider" />
 
@@ -356,8 +386,8 @@ export default function GomiFortune() {
               {yearEnd && (
                 <div className="gf-warn">
                   年末年始（12/29〜1/3）は特別日程です。下の予定は通常ルールの参考表示です。実際の収集日は
-                  <a href={OFFICIAL_URL} target="_blank" rel="noopener noreferrer">
-                    目黒区公式
+                  <a href={src.officialUrl} target="_blank" rel="noopener noreferrer">
+                    {src.officialName}
                   </a>
                   で必ずご確認ください。
                 </div>
@@ -367,7 +397,7 @@ export default function GomiFortune() {
                 <div className="gf-secLabel gf-tight">
                   {dateLabel}に出せるゴミ
                 </div>
-                <Badges list={today} />
+                <Badges list={today} chomeIndex={chomeIndex} />
               </div>
               <div className="gf-schedBlock gf-last">
                 <div className="gf-secLabel gf-tight">次の収集予定</div>
@@ -381,7 +411,7 @@ export default function GomiFortune() {
                           <span className="gf-tico">
                             <img src={`/icon-${key}.png`} alt="" className="gf-ticoPng" width={26} height={26} />
                           </span>
-                          {t.label}
+                          {labelFor(chomeIndex, key)}
                         </span>
                         <span className={`gf-dt${soon ? " soon" : ""}`}>
                           {date ? fmtShort(date) : "—"}
@@ -408,11 +438,10 @@ export default function GomiFortune() {
             </div>
 
             <p className="gf-note">
-              ※ 本サービスは有志が運営する非公式ツールで、目黒区が運営する公式サイトではありません。
-              収集日は{SCHEDULE_SOURCE.municipality}公式「資源とごみの収集日」に準拠（{SCHEDULE_SOURCE.fetchedAt}
-              取得・上目黒四丁目で照合済）していますが、最新・正確な情報は
-              <a href={OFFICIAL_URL} target="_blank" rel="noopener noreferrer">
-                目黒区公式サイト
+              ※ 本サービスは有志が運営する非公式ツールで、{muni}が運営する公式サイトではありません。
+              収集日は各区が公開する公式オープンデータ（{muni}）に準拠していますが、最新・正確な情報は
+              <a href={src.officialUrl} target="_blank" rel="noopener noreferrer">
+                {src.officialName}サイト
               </a>
               で必ずご確認ください。「今日のゴミ出し占い」はエンターテインメントです。
             </p>

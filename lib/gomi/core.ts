@@ -3,7 +3,12 @@
 // 占いは「日付＋エリア＋今日のごみ種別」をシードに決定論的に生成（同じ日=同じ結果）。
 // /shindan と同じ hash + mulberry32 方式。draw 順を変えると過去のシェアURLの結果が変わるので注意。
 
-import schedule from "./meguro-schedule.json";
+import meguro from "./meguro-schedule.json";
+import shinagawa from "./shinagawa-schedule.json";
+import taito from "./taito-schedule.json";
+import koto from "./koto-schedule.json";
+import bunkyo from "./bunkyo-schedule.json";
+import chuo from "./chuo-schedule.json";
 
 /* ===== 型 ===== */
 export type WeeklyRule = { kind: "weekly"; weekdays: number[] };
@@ -13,6 +18,7 @@ export type Rule = WeeklyRule | NthRule;
 export type GomiKey =
   | "burnable"
   | "recyclable"
+  | "plastic"
   | "paper"
   | "nonBurnable"
   | "mercury";
@@ -22,6 +28,7 @@ type AreaRaw = {
   chome: string[];
   burnable?: Rule;
   recyclable?: Rule;
+  plastic?: Rule;
   paper?: Rule;
   nonBurnable?: Rule;
   mercury?: Rule;
@@ -41,24 +48,116 @@ export type GomiTypeMeta = {
 export const TYPES: Record<GomiKey, GomiTypeMeta> = {
   burnable: { label: "燃やすごみ", em: "🔥", cls: "t-burn", rarity: "R", element: "火" },
   recyclable: { label: "びん・缶・ペットボトル", em: "♻️", cls: "t-recy", rarity: "SR", element: "水" },
+  plastic: { label: "プラスチック", em: "🧴", cls: "t-plas", rarity: "SR", element: "水" },
   paper: { label: "古紙", em: "📰", cls: "t-paper", rarity: "SR", element: "木" },
   nonBurnable: { label: "燃やさないごみ", em: "🔩", cls: "t-non", rarity: "SSR", element: "金" },
   mercury: { label: "水銀を含む製品", em: "🔆", cls: "t-merc", rarity: "UR", element: "光" },
 };
 
 // 画面表示順／テーマ採用優先順（レアな種別ほどその日のテーマに採用）
-export const ORDER: GomiKey[] = ["burnable", "recyclable", "paper", "nonBurnable", "mercury"];
-const PRIORITY: GomiKey[] = ["mercury", "nonBurnable", "paper", "recyclable", "burnable"];
+export const ORDER: GomiKey[] = ["burnable", "recyclable", "plastic", "paper", "nonBurnable", "mercury"];
+const PRIORITY: GomiKey[] = ["mercury", "nonBurnable", "paper", "plastic", "recyclable", "burnable"];
 export const WEEK = ["日", "月", "火", "水", "木", "金", "土"];
 
-/* ===== 対象エリア：目黒区 全88丁目（丁目ごとに収集ルールを引く） ===== */
-const AREAS = schedule.areas as unknown as AreaRaw[];
+/* ===== 対象エリア：複数自治体（区）対応 =====
+ * 各区のデータ形式差（目黒=group+chome[]／品川=chome単体＋区ごとの種別呼称）を
+ * 内部の共通 AreaRaw（chome:string[]）に正規化し、全丁目をフラットに1本のindexへ展開する。
+ * ★目黒を先頭に固定＝既存シェアURL(slug)の丁目index(0..87)を不変に保つ（後方互換）。 */
+type MuniLabels = Partial<Record<GomiKey, string>>;
+export type Municipality = {
+  name: string;
+  code: string;
+  source: string;
+  sourceUrl?: string;
+  license?: string;
+  fetchedAt: string;
+  officialUrl: string; // 区公式ごみページ（年末年始バナー等の誘導先）
+  officialName: string; // リンク表示名
+  labels: MuniLabels; // 種別ラベル上書き（無い種別はTYPESの既定を使う）
+  omitNote?: string; // 本ツールで扱えない区分（隔週・粗大等）の注記
+  areas: AreaRaw[];
+};
 
-export type ChomeOption = { chome: string; areaIndex: number; group: string };
-// 全丁目をフラットに展開（同一グループ内は同じ収集ルールを共有）
-export const CHOME_LIST: ChomeOption[] = AREAS.flatMap((a, areaIndex) =>
-  a.chome.map((chome) => ({ chome, areaIndex, group: a.group }))
-);
+const MG = meguro as unknown as {
+  municipality: string; code?: string; source: string; sourceUrl?: string;
+  license?: string; fetchedAt: string; areas: AreaRaw[];
+};
+// 丁目単位（chome:string＋区ごとのcategories）の区データ共通型
+type SingleChomeMuni = {
+  municipality: string; code: string; source: string; sourceUrl?: string;
+  license?: string; fetchedAt: string; categories: MuniLabels; omitNote?: string;
+  areas: ({ chome: string } & Partial<Record<GomiKey, Rule>>)[];
+};
+const SG = shinagawa as unknown as SingleChomeMuni;
+const TT = taito as unknown as SingleChomeMuni;
+const KO = koto as unknown as SingleChomeMuni;
+const BU = bunkyo as unknown as SingleChomeMuni;
+const CH = chuo as unknown as SingleChomeMuni;
+
+// 丁目単位データ → 内部AreaRaw（chome:string[]）へ正規化して Municipality を作る
+function singleChomeMuni(
+  d: SingleChomeMuni,
+  officialUrl: string,
+  officialName: string
+): Municipality {
+  return {
+    name: d.municipality,
+    code: d.code,
+    source: d.source,
+    sourceUrl: d.sourceUrl,
+    license: d.license,
+    fetchedAt: d.fetchedAt,
+    officialUrl,
+    officialName,
+    labels: d.categories,
+    omitNote: d.omitNote,
+    areas: d.areas.map(({ chome, ...rules }) => ({ group: chome, chome: [chome], ...rules })),
+  };
+}
+
+export const MUNICIPALITIES: Municipality[] = [
+  {
+    name: MG.municipality,
+    code: MG.code ?? "13110",
+    source: MG.source,
+    sourceUrl: MG.sourceUrl,
+    license: MG.license,
+    fetchedAt: MG.fetchedAt,
+    officialUrl:
+      "https://www.city.meguro.tokyo.jp/seisou/kurashi/gomi/youbiichiran.html",
+    officialName: "目黒区公式",
+    labels: {},
+    areas: MG.areas,
+  },
+  // 各区の公式ごみページはURL変動が多いため、確実に生きている区トップへ誘導
+  // ★slug後方互換：新しい区は必ず末尾に追加する（既存の丁目indexを動かさない）
+  singleChomeMuni(SG, "https://www.city.shinagawa.tokyo.jp/", "品川区公式"),
+  singleChomeMuni(TT, "https://www.city.taito.lg.jp/", "台東区公式"),
+  singleChomeMuni(KO, "https://www.city.koto.lg.jp/", "江東区公式"),
+  singleChomeMuni(BU, "https://www.city.bunkyo.lg.jp/", "文京区公式"),
+  singleChomeMuni(CH, "https://www.city.chuo.lg.jp/", "中央区公式"),
+];
+
+export type ChomeOption = {
+  index: number; // グローバルindex（slug・UI状態の基準）
+  chome: string;
+  muniIndex: number;
+  areaIndex: number; // その区内の area index
+  group: string;
+};
+
+// 目黒→品川の順で全丁目をフラット展開（同一グループ内は同じ収集ルールを共有）
+export const CHOME_LIST: ChomeOption[] = (() => {
+  const list: ChomeOption[] = [];
+  MUNICIPALITIES.forEach((muni, muniIndex) => {
+    muni.areas.forEach((a, areaIndex) => {
+      a.chome.forEach((chome) => {
+        list.push({ index: list.length, chome, muniIndex, areaIndex, group: a.group });
+      });
+    });
+  });
+  return list;
+})();
 
 export const MVP_CHOME = "上目黒四丁目";
 export const DEFAULT_CHOME_INDEX = Math.max(
@@ -71,17 +170,52 @@ function clampChome(i: number): number {
     ? i
     : DEFAULT_CHOME_INDEX;
 }
+function muniOf(chomeIndex: number): Municipality {
+  return MUNICIPALITIES[CHOME_LIST[clampChome(chomeIndex)].muniIndex];
+}
 function rulesOf(chomeIndex: number): AreaRaw {
-  return AREAS[CHOME_LIST[clampChome(chomeIndex)].areaIndex];
+  const e = CHOME_LIST[clampChome(chomeIndex)];
+  return MUNICIPALITIES[e.muniIndex].areas[e.areaIndex];
 }
 export function chomeLabel(chomeIndex: number): string {
   return CHOME_LIST[clampChome(chomeIndex)].chome;
 }
+export function muniName(chomeIndex: number): string {
+  return muniOf(chomeIndex).name;
+}
+export function muniIndexOf(chomeIndex: number): number {
+  return CHOME_LIST[clampChome(chomeIndex)].muniIndex;
+}
+// 種別ラベル：区ごとの呼称を優先、無ければTYPESの既定
+export function labelFor(chomeIndex: number, key: GomiKey): string {
+  return muniOf(chomeIndex).labels[key] ?? TYPES[key].label;
+}
+// 区セレクタ用：区一覧（丁目数つき）と、その区に属する丁目
+export const MUNI_OPTIONS = MUNICIPALITIES.map((m, i) => ({
+  muniIndex: i,
+  name: m.name,
+  count: CHOME_LIST.filter((c) => c.muniIndex === i).length,
+}));
+export function chomesOfMuni(muniIndex: number): ChomeOption[] {
+  return CHOME_LIST.filter((c) => c.muniIndex === muniIndex);
+}
+// 区ごとの出典・公式リンク
+export function sourceOf(chomeIndex: number) {
+  const m = muniOf(chomeIndex);
+  return {
+    name: m.name,
+    source: m.source,
+    license: m.license,
+    officialUrl: m.officialUrl,
+    officialName: m.officialName,
+    omitNote: m.omitNote,
+  };
+}
 
 export const SCHEDULE_SOURCE = {
-  municipality: schedule.municipality as string,
-  source: schedule.source as string,
-  fetchedAt: schedule.fetchedAt as string,
+  municipality: MUNICIPALITIES[0].name,
+  source: MUNICIPALITIES[0].source,
+  fetchedAt: MUNICIPALITIES[0].fetchedAt,
 };
 
 /* ===== 日付パーツ（タイムゾーン非依存） ===== */
@@ -150,9 +284,15 @@ export function isYearEndPeriod(p: DateParts): boolean {
   return (p.m === 12 && p.d >= 29) || (p.m === 1 && p.d <= 3);
 }
 
+// その丁目（区）に存在する収集種別のみ（品川=3種、目黒=5種のように区で異なる）
+export function keysForChome(chomeIndex: number): GomiKey[] {
+  const area = rulesOf(chomeIndex);
+  return ORDER.filter((k) => !!area[k]);
+}
+
 export type NextItem = { key: GomiKey; date: DateParts | null; days: number | null };
 export function nextSchedule(chomeIndex: number, p: DateParts): NextItem[] {
-  return ORDER.map((key) => {
+  return keysForChome(chomeIndex).map((key) => {
     const date = nextOccurrence(chomeIndex, key, p);
     const days = date
       ? Math.round((utc(date) - utc(p)) / 86400000)
@@ -293,6 +433,9 @@ export type Fortune = {
   parts: DateParts;
   dateLong: string;
   area: string;
+  muni: string; // 区名（例：目黒区／品川区）
+  officialUrl: string; // 区公式ごみページ
+  officialName: string; // リンク表示名
   chomeIndex: number;
   today: GomiKey[];
   themeKey: GomiKey | null;
@@ -313,6 +456,7 @@ export type Fortune = {
 
 export function buildFortune(chomeIndex: number, p: DateParts): Fortune {
   const area = chomeLabel(chomeIndex);
+  const src = sourceOf(chomeIndex);
   const today = typesOn(chomeIndex, p);
   const themeKey = PRIORITY.find((k) => today.includes(k)) ?? null;
   const element: Element = themeKey ? TYPES[themeKey].element : "無";
@@ -341,6 +485,9 @@ export function buildFortune(chomeIndex: number, p: DateParts): Fortune {
     parts: p,
     dateLong: fmtLong(p),
     area,
+    muni: src.name,
+    officialUrl: src.officialUrl,
+    officialName: src.officialName,
     chomeIndex: clampChome(chomeIndex),
     today,
     themeKey,

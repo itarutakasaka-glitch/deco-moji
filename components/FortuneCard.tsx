@@ -3,11 +3,12 @@ import {
   type Fortune,
   type GomiKey,
   TYPES,
+  labelFor,
   fmtShort,
   RARITY_LABEL,
 } from "@/lib/gomi/core";
 
-function Badges({ list }: { list: GomiKey[] }) {
+function Badges({ list, chomeIndex }: { list: GomiKey[]; chomeIndex: number }) {
   if (!list.length) {
     return (
       <div className="gf-noCollect">
@@ -26,7 +27,7 @@ function Badges({ list }: { list: GomiKey[] }) {
             <span className="gf-tico">
               <img src={`/icon-${k}.png`} alt="" className="gf-ticoPng" width={26} height={26} />
             </span>
-            {t.label}
+            {labelFor(chomeIndex, k)}
           </span>
         );
       })}
@@ -46,7 +47,7 @@ function NextList({ fortune }: { fortune: Fortune }) {
               <span className="gf-tico">
                 <img src={`/icon-${key}.png`} alt="" className="gf-ticoPng" width={26} height={26} />
               </span>
-              {t.label}
+              {labelFor(fortune.chomeIndex, key)}
             </span>
             <span className={`gf-dt${soon ? " soon" : ""}`}>
               {date ? fmtShort(date) : "—"}
@@ -73,7 +74,7 @@ export default function FortuneCard({ fortune }: { fortune: Fortune }) {
             </span>
           </div>
           <div className="gf-cDate">{f.dateLong}</div>
-          <div className="gf-cArea">目黒区 ・ {f.area}</div>
+          <div className="gf-cArea">{f.muni} ・ {f.area}</div>
 
           <div className="gf-rankBox">
             <div className={`gf-rankT gf-rank-${f.rank.cls}`}>{f.rank.t}</div>
@@ -82,16 +83,12 @@ export default function FortuneCard({ fortune }: { fortune: Fortune }) {
 
           <div className="gf-todayWrap">
             <div className="gf-secLabel">この日 出せるゴミ</div>
-            <Badges list={f.today} />
+            <Badges list={f.today} chomeIndex={f.chomeIndex} />
             {f.yearEnd && (
               <div className="gf-yearEndMini">
                 ⚠ 年末年始は特別日程です。実際の収集日は
-                <a
-                  href="https://www.city.meguro.tokyo.jp/seisou/kurashi/gomi/youbiichiran.html"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  区公式
+                <a href={f.officialUrl} target="_blank" rel="noopener noreferrer">
+                  {f.officialName}
                 </a>
                 でご確認ください。
               </div>
@@ -155,7 +152,7 @@ export default function FortuneCard({ fortune }: { fortune: Fortune }) {
           </div>
 
           <div className="gf-cFoot">
-            出典：目黒区「資源とごみの収集日」公式データ準拠
+            出典：{f.muni}の公式オープンデータ準拠
             <br />
             #ゴミ出し占い #decomoji
           </div>
