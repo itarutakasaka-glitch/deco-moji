@@ -439,7 +439,7 @@ export default function GomiFortune() {
 
             <p className="gf-note">
               ※ 本サービスは有志が運営する非公式ツールで、{muni}が運営する公式サイトではありません。
-              収集日は各区が公開する公式オープンデータ（{muni}）に準拠していますが、最新・正確な情報は
+              収集日は各区が公開する公式の収集日情報（{muni}）に準拠していますが、最新・正確な情報は
               <a href={src.officialUrl} target="_blank" rel="noopener noreferrer">
                 {src.officialName}サイト
               </a>

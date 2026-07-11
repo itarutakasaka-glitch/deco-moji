@@ -9,6 +9,8 @@ import taito from "./taito-schedule.json";
 import koto from "./koto-schedule.json";
 import bunkyo from "./bunkyo-schedule.json";
 import chuo from "./chuo-schedule.json";
+import ota from "./ota-schedule.json";
+import setagaya from "./setagaya-schedule.json";
 
 /* ===== 型 ===== */
 export type WeeklyRule = { kind: "weekly"; weekdays: number[] };
@@ -93,6 +95,8 @@ const TT = taito as unknown as SingleChomeMuni;
 const KO = koto as unknown as SingleChomeMuni;
 const BU = bunkyo as unknown as SingleChomeMuni;
 const CH = chuo as unknown as SingleChomeMuni;
+const OT = ota as unknown as SingleChomeMuni;
+const SE = setagaya as unknown as SingleChomeMuni;
 
 // 丁目単位データ → 内部AreaRaw（chome:string[]）へ正規化して Municipality を作る
 function singleChomeMuni(
@@ -136,6 +140,8 @@ export const MUNICIPALITIES: Municipality[] = [
   singleChomeMuni(KO, "https://www.city.koto.lg.jp/", "江東区公式"),
   singleChomeMuni(BU, "https://www.city.bunkyo.lg.jp/", "文京区公式"),
   singleChomeMuni(CH, "https://www.city.chuo.lg.jp/", "中央区公式"),
+  singleChomeMuni(OT, "https://www.city.ota.tokyo.jp/", "大田区公式"),
+  singleChomeMuni(SE, "https://www.city.setagaya.lg.jp/02241/416.html", "世田谷区公式"),
 ];
 
 export type ChomeOption = {
