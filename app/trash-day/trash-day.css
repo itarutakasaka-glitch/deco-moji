@@ -5,6 +5,17 @@ body:has(.gf-root) { overflow-x: hidden; }
 
 /* ===== 自作アイコン枠・イラスト・週間カレンダー ===== */
 .gf-heroArt { display: block; margin: 0 auto 6px; line-height: 0; }
+.gf-heroImg { display: block; width: clamp(130px, 33vw, 190px); height: auto; margin: 0 auto 6px; }
+/* 分別区分ガイド（イラストカード） */
+.gf-bunbetsu { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; }
+.gf-bunCard { border: 1px solid var(--gf-line); border-radius: 6px; padding: 16px 10px 14px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 8px; background: var(--gf-surface); }
+.gf-bunCard.t-burn { border-top: 3px solid var(--gf-t-burn); }
+.gf-bunCard.t-recy { border-top: 3px solid var(--gf-t-recy); }
+.gf-bunCard.t-paper { border-top: 3px solid var(--gf-t-paper); }
+.gf-bunCard.t-non { border-top: 3px solid var(--gf-t-non); }
+.gf-bunCard.t-merc { border-top: 3px solid var(--gf-t-merc); }
+.gf-bunIcon { width: 58px; height: 58px; object-fit: contain; }
+.gf-bunLabel { font-weight: 700; font-size: 0.88rem; color: var(--gf-ink); line-height: 1.4; }
 .gf-tico { display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 9px; flex: 0 0 auto; background: #f1f1f3; color: #666; }
 .gf-tico-sm { width: 22px; height: 22px; border-radius: 6px; }
 .t-burn .gf-tico { color: var(--gf-t-burn); background: rgba(176, 87, 141, 0.12); }

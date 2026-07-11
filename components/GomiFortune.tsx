@@ -29,7 +29,7 @@ import {
   SCHEDULE_SOURCE,
 } from "@/lib/gomi/core";
 import FortuneCard from "@/components/FortuneCard";
-import { GomiIcon, HeroArt } from "@/components/GomiVisuals";
+import { GomiIcon } from "@/components/GomiVisuals";
 
 const OFFICIAL_URL =
   "https://www.city.meguro.tokyo.jp/seisou/kurashi/gomi/youbiichiran.html";
@@ -216,9 +216,13 @@ export default function GomiFortune() {
           <section className="gf-screen">
             <div className="gf-brand">目黒区 ごみ収集日チェッカー</div>
             <div className="gf-hero">
-              <span className="gf-heroArt">
-                <HeroArt color="#7f4098" />
-              </span>
+              <img
+                src="/gomi-hero.png"
+                alt="ゴミの日カレンダーのイラスト"
+                className="gf-heroImg"
+                width={180}
+                height={180}
+              />
               <h1 className="gf-logo">ゴミの日カレンダー</h1>
               <span className="gf-logoSub">目黒区版</span>
             </div>
@@ -305,6 +309,24 @@ export default function GomiFortune() {
                     </span>
                     {TYPES[k].label}
                   </span>
+                ))}
+              </div>
+
+              {/* ごみの分別区分ガイド（イラストカード） */}
+              <div className="gf-secLabel gf-tight">ごみの分別区分</div>
+              <div className="gf-bunbetsu">
+                {ORDER.map((k) => (
+                  <div className={`gf-bunCard ${TYPES[k].cls}`} key={k}>
+                    <img
+                      src={`/icon-${k}.png`}
+                      alt=""
+                      className="gf-bunIcon"
+                      width={56}
+                      height={56}
+                      loading="lazy"
+                    />
+                    <span className="gf-bunLabel">{TYPES[k].label}</span>
+                  </div>
                 ))}
               </div>
 
