@@ -215,13 +215,13 @@ export default function GomiFortune() {
           /* ① 日程を調べる */
           <section className="gf-screen">
             <div className="gf-brand">目黒区 ごみ収集日チェッカー</div>
-            <h1 className="gf-logo">
+            <div className="gf-hero">
               <span className="gf-heroArt">
                 <HeroArt color="#7f4098" />
               </span>
-              ゴミの日カレンダー
+              <h1 className="gf-logo">ゴミの日カレンダー</h1>
               <span className="gf-logoSub">目黒区版</span>
-            </h1>
+            </div>
             <p className="gf-tagline">
               いつ・何を出す？が<b>ひと目</b>でわかる。
             </p>

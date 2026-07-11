@@ -76,17 +76,20 @@ body:has(.gf-root) { overflow-x: hidden; }
 /* ===== パンくず風の小テキスト ===== */
 .gf-brand { font-family: inherit; color: var(--gf-dim); text-align: left; letter-spacing: 0.02em; font-size: 0.78rem; font-weight: 400; margin: 0 0 14px; }
 
-/* ===== ヒーロー帯（グレー地・中央大見出し） ===== */
+/* ===== ヒーロー帯（グレー地・中央にイラスト＋大見出しを縦積み） ===== */
+.gf-hero {
+  background: var(--gf-band); margin: 0 -24px; padding: 40px 20px 34px;
+  display: flex; flex-direction: column; align-items: center; text-align: center;
+}
+@media (max-width: 640px) { .gf-hero { margin: 0 -16px; padding: 30px 14px 26px; } }
 .gf-logo {
   font-family: inherit; font-weight: 700; text-align: center;
-  font-size: clamp(1.5rem, 4.6vw, 2rem); line-height: 1.4; letter-spacing: 0.04em;
-  color: var(--gf-ink); background: var(--gf-band);
-  -webkit-background-clip: initial; background-clip: initial; -webkit-text-fill-color: currentColor; filter: none;
-  margin: 0 -24px; padding: 44px 20px 40px; border-bottom: none;
+  font-size: clamp(1.5rem, 4.6vw, 2rem); line-height: 1.35; letter-spacing: 0.04em;
+  color: var(--gf-ink); background: none; margin: 0; padding: 0; border: none;
+  -webkit-text-fill-color: currentColor; filter: none;
 }
-@media (max-width: 640px) { .gf-logo { margin: 0 -16px; padding: 32px 14px 30px; } }
 .gf-logo .gf-deco { display: none; }
-.gf-logoSub { display: block; font-size: 0.46em; font-weight: 500; letter-spacing: 0.12em; color: var(--gf-dim); margin-top: 10px; -webkit-text-fill-color: var(--gf-dim); }
+.gf-logoSub { display: block; font-size: 0.95rem; font-weight: 500; letter-spacing: 0.12em; color: var(--gf-dim); margin-top: 8px; -webkit-text-fill-color: var(--gf-dim); }
 .gf-tagline { text-align: center; color: var(--gf-sub); font-size: 0.92rem; margin: 18px 0 0; }
 .gf-tagline b { color: var(--gf-ink); font-weight: 700; }
 .gf-areaPillWrap { text-align: center; margin: 12px 0 0; }
