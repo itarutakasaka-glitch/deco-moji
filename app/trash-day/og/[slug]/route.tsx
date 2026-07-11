@@ -30,15 +30,16 @@ async function loadGoogleFont(text: string): Promise<ArrayBuffer> {
   return await (await fetch(match[1])).arrayBuffer();
 }
 
-// 官公庁風：識別カラー
+// 目黒区公式サイト風：紫基調の識別カラー
 const RARITY_STYLE: Record<Rarity, { accent: string }> = {
-  N: { accent: "#6b7280" },
-  R: { accent: "#1f6fb2" },
-  SR: { accent: "#6a5acd" },
-  SSR: { accent: "#a34b8a" },
-  UR: { accent: "#b8860b" },
+  N: { accent: "#8a8a8a" },
+  R: { accent: "#5a63b0" },
+  SR: { accent: "#7f4098" },
+  SSR: { accent: "#b0578d" },
+  UR: { accent: "#b08c3e" },
 };
-const NAVY = "#0e3a68";
+const THEME = "#7f4098";
+const THEME_D = "#63307a";
 
 export async function GET(
   _req: Request,
@@ -76,7 +77,7 @@ export async function GET(
           display: "flex",
           flexDirection: "column",
           background: "#ffffff",
-          borderTop: `18px solid ${NAVY}`,
+          borderTop: `18px solid ${THEME}`,
           padding: "48px 70px 40px",
           fontFamily: "ZenKaku",
           color: "#1f2937",
@@ -84,7 +85,7 @@ export async function GET(
       >
         {/* ヘッダー */}
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", borderBottom: "2px solid #c9d3de", paddingBottom: 20 }}>
-          <div style={{ display: "flex", fontSize: 30, fontWeight: 700, color: NAVY }}>
+          <div style={{ display: "flex", fontSize: 30, fontWeight: 700, color: THEME_D }}>
             目黒区 ごみ収集日カレンダー
           </div>
           <div style={{ display: "flex", fontSize: 24, fontWeight: 700, color: "#fff", background: st.accent, padding: "4px 18px", borderRadius: 4 }}>
@@ -106,7 +107,7 @@ export async function GET(
             {f.dateLong}　{areaText}
           </div>
           <div style={{ display: "flex", fontSize: 30, color: "#6b7280", marginTop: 26 }}>今日のゴミ出し占い</div>
-          <div style={{ display: "flex", fontSize: 112, lineHeight: 1.1, fontWeight: 700, color: NAVY, marginTop: 4 }}>
+          <div style={{ display: "flex", fontSize: 112, lineHeight: 1.1, fontWeight: 700, color: THEME_D, marginTop: 4 }}>
             {f.rank.t}
           </div>
           <div style={{ display: "flex", fontSize: 30, color: "#475569", marginTop: 8, fontWeight: 700 }}>
