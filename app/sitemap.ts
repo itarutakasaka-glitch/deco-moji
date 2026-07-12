@@ -53,6 +53,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "daily",
     },
     {
+      url: `${base}/subsidy`,
+      lastModified,
+      priority: 0.9,
+      changeFrequency: "daily",
+    },
+    {
       url: `${base}/kabegami`,
       lastModified,
       priority: 0.9,

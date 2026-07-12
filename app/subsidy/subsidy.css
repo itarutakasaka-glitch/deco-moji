@@ -1,0 +1,179 @@
+/* ===== 補助金・助成金 診断 — 白基調＋ゴールド（.sf- プレフィックス） ===== */
+:root {
+  --sf-gold: #d4a017;
+  --sf-gold-d: #a97e10;
+  --sf-gold-pale: #fbf6e9;
+  --sf-ink: #232323;
+  --sf-sub: #4a4a4a;
+  --sf-dim: #7a7a7a;
+  --sf-line: #e6e2d6;
+  --sf-bg: #ffffff;
+  --sf-soft: #faf9f5;
+}
+
+.sf-root {
+  background: var(--sf-bg);
+  color: var(--sf-ink);
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, "Hiragino Sans", "Noto Sans JP", sans-serif;
+}
+.sf-main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 16px 40px;
+}
+
+/* ヒーロー */
+.sf-hero { text-align: center; padding: 20px 0 8px; }
+.sf-brand {
+  display: inline-block;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--sf-gold-d);
+  background: var(--sf-gold-pale);
+  border: 1px solid #eadfbe;
+  border-radius: 999px;
+  padding: 5px 14px;
+}
+.sf-logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin: 14px 0 6px;
+  line-height: 1.4;
+}
+.sf-tagline { color: var(--sf-sub); font-size: 0.98rem; }
+.sf-tagline b { color: var(--sf-gold-d); }
+
+/* パネル */
+.sf-panel {
+  margin-top: 18px;
+  border: 1px solid var(--sf-line);
+  border-radius: 14px;
+  background: var(--sf-soft);
+  padding: 18px 16px 20px;
+}
+.sf-secLabel {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--sf-ink);
+  margin-bottom: 8px;
+  padding-left: 10px;
+  border-left: 3px solid var(--sf-gold);
+}
+.sf-secLabel.sf-tight { margin-top: 18px; }
+.sf-pref {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 1rem;
+  border: 1px solid var(--sf-line);
+  border-radius: 10px;
+  background: #fff;
+  color: var(--sf-ink);
+}
+.sf-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.sf-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 13px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: 1px solid var(--sf-line);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--sf-sub);
+  cursor: pointer;
+  transition: all 0.12s;
+}
+.sf-chip:hover { border-color: var(--sf-gold); }
+.sf-chip.on {
+  background: var(--sf-gold);
+  border-color: var(--sf-gold);
+  color: #fff;
+}
+.sf-chipEm { font-size: 1rem; }
+.sf-go {
+  width: 100%;
+  margin-top: 20px;
+  padding: 15px;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #fff;
+  background: var(--sf-gold);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.12s;
+}
+.sf-go:hover { background: var(--sf-gold-d); }
+.sf-go:disabled { opacity: 0.6; cursor: default; }
+.sf-note0 { margin-top: 10px; font-size: 0.76rem; color: var(--sf-dim); text-align: center; }
+
+/* 結果 */
+.sf-results { margin-top: 24px; scroll-margin-top: 12px; }
+.sf-err {
+  background: #fdecec; border: 1px solid #f3c2c2; color: #a12; border-radius: 8px;
+  padding: 10px 14px; font-size: 0.9rem;
+}
+.sf-resHead { font-size: 0.98rem; margin-bottom: 14px; }
+.sf-resHead b { color: var(--sf-gold-d); }
+.sf-resTags { display: block; font-size: 0.82rem; color: var(--sf-dim); margin-top: 3px; }
+.sf-empty {
+  border: 1px dashed var(--sf-line); border-radius: 12px; padding: 24px 16px;
+  text-align: center; color: var(--sf-sub); font-size: 0.92rem; line-height: 1.7;
+}
+
+.sf-list { display: flex; flex-direction: column; gap: 12px; }
+.sf-card {
+  display: block;
+  border: 1px solid var(--sf-line);
+  border-left: 4px solid var(--sf-gold);
+  border-radius: 10px;
+  background: #fff;
+  padding: 14px 16px;
+  text-decoration: none;
+  color: inherit;
+  transition: box-shadow 0.12s, transform 0.12s;
+}
+.sf-card:hover { box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07); transform: translateY(-1px); }
+.sf-cardTop { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.sf-deadline {
+  font-size: 0.78rem; font-weight: 700; color: var(--sf-gold-d);
+  background: var(--sf-gold-pale); border-radius: 6px; padding: 3px 9px;
+}
+.sf-deadline.soon { color: #fff; background: #d9534f; }
+.sf-area { font-size: 0.78rem; color: var(--sf-dim); }
+.sf-title { font-size: 1.02rem; font-weight: 700; line-height: 1.5; margin: 9px 0 10px; }
+.sf-meta { display: flex; flex-wrap: wrap; gap: 8px 16px; }
+.sf-metaItem { font-size: 0.9rem; font-weight: 700; color: var(--sf-ink); }
+.sf-metaCap {
+  display: inline-block; font-size: 0.68rem; font-weight: 700; color: var(--sf-dim);
+  background: var(--sf-soft); border-radius: 4px; padding: 1px 6px; margin-right: 6px;
+}
+.sf-inst { margin-top: 9px; font-size: 0.8rem; color: var(--sf-dim); }
+.sf-cta { margin-top: 10px; font-size: 0.86rem; font-weight: 700; color: var(--sf-gold-d); }
+
+.sf-advice {
+  margin-top: 20px; border: 1px solid #eadfbe; background: var(--sf-gold-pale);
+  border-radius: 12px; padding: 16px;
+}
+.sf-adviceT { font-weight: 800; font-size: 0.98rem; margin-bottom: 6px; }
+.sf-advice p { font-size: 0.86rem; color: var(--sf-sub); line-height: 1.75; }
+
+.sf-disclaimer {
+  margin-top: 26px; font-size: 0.76rem; color: var(--sf-dim); line-height: 1.7;
+}
+.sf-disclaimer a, .sf-about a { color: var(--sf-gold-d); }
+.sf-siteLink {
+  display: block; text-align: center; margin-top: 24px; font-size: 0.9rem;
+  color: var(--sf-dim); text-decoration: none;
+}
+
+/* SEO説明 */
+.sf-about { max-width: 720px; margin: 0 auto; padding: 8px 16px 48px; }
+.sf-about h2 {
+  font-size: 1.08rem; font-weight: 800; margin: 26px 0 10px;
+  padding-left: 12px; border-left: 4px solid var(--sf-gold);
+}
+.sf-about p { font-size: 0.92rem; color: var(--sf-sub); line-height: 1.9; }
