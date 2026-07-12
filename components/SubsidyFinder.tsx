@@ -2,6 +2,12 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import experts from "@/lib/subsidy/experts.json";
+
+type Sponsor = { name: string; org?: string; desc: string; url: string; tel?: string };
+type Desk = { name: string; org?: string; desc: string; url: string; free?: boolean };
+const SPONSORS = (experts.sponsors ?? []) as Sponsor[];
+const DESKS = (experts.desks ?? []) as Desk[];
 
 const PREFS = [
   "北海道","青森県","岩手県","宮城県","秋田県","山形県","福島県","茨城県","栃木県","群馬県",
@@ -253,6 +259,54 @@ export default function SubsidyFinder() {
                   （本サイトは情報提供のみで、申請の代行は行いません。）
                 </p>
               </div>
+
+              {/* PR枠（有料の固定掲載。掲載時のみ表示・PR明記） */}
+              {SPONSORS.length > 0 && (
+                <div className="sf-block">
+                  <div className="sf-resHead">
+                    <span className="sf-badgeNat">PR</span>
+                    申請サポートの専門家
+                  </div>
+                  <div className="sf-list">
+                    {SPONSORS.map((s) => (
+                      <a className="sf-card sf-sponsor" key={s.name} href={s.url} target="_blank" rel="noopener noreferrer sponsored">
+                        <div className="sf-cardTop">
+                          <span className="sf-pr">PR</span>
+                          {s.org && <span className="sf-area">{s.org}</span>}
+                        </div>
+                        <div className="sf-title">{s.name}</div>
+                        <div className="sf-sum">{s.desc}</div>
+                        {s.tel && <div className="sf-inst">☎ {s.tel}</div>}
+                        <div className="sf-cta">相談してみる →</div>
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* 無料の公的相談窓口 */}
+              {DESKS.length > 0 && (
+                <div className="sf-block">
+                  <div className="sf-resHead">
+                    <span className="sf-badgeNat">無料</span>
+                    まずは無料で相談できる公的窓口
+                    <span className="sf-resTags">国・都の中小企業支援。何度でも無料で相談できます。</span>
+                  </div>
+                  <div className="sf-list">
+                    {DESKS.map((d) => (
+                      <a className="sf-card" key={d.name} href={d.url} target="_blank" rel="noopener noreferrer">
+                        <div className="sf-cardTop">
+                          <span className="sf-deadline">無料</span>
+                          {d.org && <span className="sf-area">{d.org}</span>}
+                        </div>
+                        <div className="sf-title">{d.name}</div>
+                        <div className="sf-sum">{d.desc}</div>
+                        <div className="sf-cta">公式サイトで相談方法を見る →</div>
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              )}
             </>
           )}
         </section>

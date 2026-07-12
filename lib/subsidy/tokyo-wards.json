@@ -438,69 +438,488 @@
       }
     ]
   },
-  "渋谷区": {
-    "indexUrl": "https://www.city.shibuya.tokyo.jp/jigyosha/shoko-rodo-sodan/",
+  "文京区": {
+    "indexUrl": "https://www.city.bunkyo.lg.jp/sangyoushigoto/chuushou/hojokin/index.html",
     "lastChecked": "2026-07-12",
     "subsidies": [
       {
-        "name": "店舗開業支援補助金（渋谷Local Street Project）",
+        "name": "知的財産権取得費補助金",
+        "field": [
+          "rd",
+          "other"
+        ],
+        "summary": "特許・実用新案・意匠・商標（国内出願）の取得経費の一部を補助する制度。",
+        "target": "区内に本店登記があり1年以上事業を営む中小企業者",
+        "maxAmount": "30万円",
+        "rate": "2/3",
+        "deadline": "通年",
+        "url": "https://www.city.bunkyo.lg.jp/b012/p005128.html"
+      },
+      {
+        "name": "中小企業人材強化支援事業補助金（リスキリング）",
+        "field": [
+          "employ",
+          "it"
+        ],
+        "summary": "事業拡大やDX実現に向けた従業員等の講座受講・資格取得費用を補助する制度。",
+        "target": "区内で1年以上事業を営む区内中小企業者（法人・個人事業者）",
+        "maxAmount": "10万円",
+        "rate": "1/2",
+        "deadline": "〜2027/3/31",
+        "url": "https://www.city.bunkyo.lg.jp/b012/p005129.html"
+      },
+      {
+        "name": "持続可能性向上支援補助金（省エネ設備）",
+        "field": [
+          "energy",
+          "equipment"
+        ],
+        "summary": "省エネ診断に基づく空調・照明・換気等の省エネ設備更新費を補助する制度。",
+        "target": "区内に本店等を置き1年以上事業を営む中小企業・個人事業者（エネルギー使用量1,500kl未満）",
+        "maxAmount": "50万円（ISO14001取得企業は100万円）",
+        "rate": "2/3",
+        "deadline": "予算上限まで",
+        "url": "https://www.city.bunkyo.lg.jp/b012/p005130.html"
+      },
+      {
+        "name": "持続可能性向上支援補助金（生産性向上設備）",
+        "field": [
+          "equipment"
+        ],
+        "summary": "先端設備等導入計画に基づく生産性向上設備の導入経費を補助する制度。",
+        "target": "先端設備等導入計画の認定を受け区内で1年以上事業を営む中小企業",
+        "maxAmount": "50万円（賃上げ枠は100万円）",
+        "rate": "2/3",
+        "deadline": "予算上限まで",
+        "url": "https://www.city.bunkyo.lg.jp/b012/p005132.html"
+      },
+      {
+        "name": "各種認証取得費等補助金",
+        "field": [
+          "other"
+        ],
+        "summary": "ISO・Pマーク・CEマーク・FDA認証等の取得・更新費用を補助する制度。",
+        "target": "区内に本店等があり1年以上継続営業する区内中小企業",
+        "maxAmount": "50万円",
+        "rate": "1/3",
+        "deadline": "予算上限まで",
+        "url": "https://www.city.bunkyo.lg.jp/b012/p005133.html"
+      },
+      {
+        "name": "展示会等出展費用補助金",
+        "field": [
+          "sales"
+        ],
+        "summary": "国内外・オンラインの展示会出展にかかる費用の一部を補助する制度。",
+        "target": "区内で1年以上事業を営む中小企業または中小企業者団体",
+        "maxAmount": "国内10万円・国外30万円",
+        "rate": "1/2",
+        "deadline": "予算上限まで",
+        "url": "https://www.city.bunkyo.lg.jp/b012/p005134.html"
+      },
+      {
+        "name": "イノベーション創出支援事業",
+        "field": [
+          "rd"
+        ],
+        "summary": "区内中小企業・大学発ベンチャーの新製品・新技術開発や知財出願を補助する制度。",
+        "target": "区内に本店登記があり1年以上事業を営む中小企業者または大学発ベンチャー企業",
+        "maxAmount": "200万円",
+        "rate": "2/3",
+        "deadline": "〜2026/8/31",
+        "url": "https://www.city.bunkyo.lg.jp/b012/p005135.html"
+      },
+      {
+        "name": "事業承継総合支援事業（小規模企業者事業承継設備投資補助）",
+        "field": [
+          "restructure",
+          "equipment"
+        ],
+        "summary": "事業承継時の設備購入費を補助する制度（利子補給付き融資あっせん等も併設）。",
+        "target": "区内で10年以上同一事業を営み事業継続予定の小規模企業者",
+        "maxAmount": "100万円",
+        "rate": "2/3",
+        "deadline": "〜2027/3/31",
+        "url": "https://www.city.bunkyo.lg.jp/b012/p007798.html"
+      }
+    ]
+  },
+  "台東区": {
+    "indexUrl": "https://taito-sangyo.jp/subsidy/",
+    "lastChecked": "2026-07-12",
+    "subsidies": [
+      {
+        "name": "経営基盤強化支援",
+        "field": [
+          "it",
+          "equipment",
+          "other"
+        ],
+        "summary": "人手不足解消に資する業務効率化・職場環境改善・産業財産取得等に要する経費の一部を助成する制度。",
+        "target": "区内に本店(法人)/事業所(個人)があり創業1年以上の中小企業",
+        "maxAmount": "20万円",
+        "rate": "1/2",
+        "deadline": "〜2027/1/29",
+        "url": "https://taito-sangyo.jp/2026/03/27/keieikiban/"
+      },
+      {
+        "name": "人材確保支援",
+        "field": [
+          "employ"
+        ],
+        "summary": "区内中小企業の採用活動および従業員の資格取得等の人材定着にかかる経費を助成する制度。",
+        "target": "就業規則を策定し中小企業診断士面談を受ける区内中小企業",
+        "maxAmount": "20万円",
+        "rate": "1/2",
+        "deadline": "〜2027/1/29",
+        "url": "https://taito-sangyo.jp/2026/03/27/zinzaikakuho/"
+      },
+      {
+        "name": "小規模事業者事業承継支援",
+        "field": [
+          "restructure",
+          "other"
+        ],
+        "summary": "事業承継計画の策定支援と、計画に基づく店舗改修・設備購入経費の一部を助成する制度。",
+        "target": "区内で10年以上営み概ね5年以内に事業承継予定の小規模企業者",
+        "maxAmount": "100万円",
+        "rate": "1/2（商店街加入者は2/3）",
+        "deadline": "予算上限まで",
+        "url": "https://taito-sangyo.jp/2026/03/27/syoukei-2/"
+      },
+      {
+        "name": "特定補助金専門家活用支援",
+        "field": [
+          "other"
+        ],
+        "summary": "国や東京都の補助金申請時に認定支援機関から受けるアドバイス等の経費を助成する制度。",
+        "target": "区内に本店/事業所を有する中小企業",
+        "maxAmount": "10万円",
+        "rate": "1/2",
+        "deadline": "〜2027/1/29",
+        "url": "https://taito-sangyo.jp/2026/03/27/tokuteihozyokin-2/"
+      },
+      {
+        "name": "試験研究機関の活用支援",
+        "field": [
+          "rd"
+        ],
+        "summary": "新製品・新サービス開発や商品性能向上のため試験研究機関を活用する経費を助成する制度。",
+        "target": "区内に本店/事業所を有する中小企業",
+        "maxAmount": "10万円",
+        "rate": "1/2",
+        "deadline": "〜2027/3/1",
+        "url": "https://taito-sangyo.jp/2026/03/27/shikenkenkyu/"
+      },
+      {
+        "name": "2026専門家派遣事業利用料補助",
+        "field": [
+          "other"
+        ],
+        "summary": "東京都中小企業振興公社の専門家派遣事業の利用料を1回5,800円・最大8回補助する制度。",
+        "target": "区内に営業の本拠を有する中小企業者（2年連続利用者は対象外）",
+        "maxAmount": "46,400円",
+        "rate": null,
+        "deadline": "予算上限まで",
+        "url": "https://taito-sangyo.jp/2024/03/01/2025senmonka-haken/"
+      },
+      {
+        "name": "脱炭素推進助成金（事業所向け）",
+        "field": [
+          "energy",
+          "equipment"
+        ],
+        "summary": "省エネ機器更新・太陽光発電・高反射率塗料等の導入経費を助成する事業所向けの制度。",
+        "target": "区内に事業所を有する中小企業者・医療法人・学校法人・社会福祉法人・宗教法人",
+        "maxAmount": "75万円（省エネ機器更新）",
+        "rate": "1/2（メニューにより異なる）",
+        "deadline": "〜2026/8/24",
+        "url": "https://www.city.taito.lg.jp/kenchiku/kankyo/jyoseiseido/datsutanso.html"
+      },
+      {
+        "name": "CO2排出量算定クラウドサービス利用助成（事業所向け）",
+        "field": [
+          "it",
+          "energy"
+        ],
+        "summary": "CO2排出量を算定するクラウドサービスの導入初期費用・利用料を助成する制度。",
+        "target": "区内に事業所を有し年間エネルギー使用量が原油換算1,500kl未満の中小規模事業者",
+        "maxAmount": "15万円",
+        "rate": "1/2",
+        "deadline": null,
+        "url": "https://www.city.taito.lg.jp/kenchiku/kankyo/jyoseiseido/CO2kashika.html"
+      },
+      {
+        "name": "微細ミスト助成金",
+        "field": [
+          "energy",
+          "other"
+        ],
+        "summary": "公共の場所等で不特定多数へ涼を提供する微細ミスト設備の設置・保守・レンタル経費を助成する制度。",
+        "target": "公共の場所又はそれに準じた場所に微細ミストを設置する事業者等",
+        "maxAmount": "100万円（設置・購入）",
+        "rate": "1/2",
+        "deadline": null,
+        "url": "https://www.city.taito.lg.jp/kenchiku/kankyo/jyoseiseido/mist.html"
+      }
+    ]
+  },
+  "墨田区": {
+    "indexUrl": "https://www.city.sumida.lg.jp/sangyo_jigyosya/sangyo/hojokin_joseikin/index.html",
+    "lastChecked": "2026-07-12",
+    "subsidies": [
+      {
+        "name": "生産性向上等支援補助金（LED照明器具導入支援）",
+        "field": [
+          "equipment",
+          "energy"
+        ],
+        "summary": "区内中小企業のLED照明器具への交換経費の一部を補助する制度。",
+        "target": "区内に1年以上主たる事業所を有する中小企業者",
+        "maxAmount": "150万円",
+        "rate": "4/5",
+        "deadline": "〜2026/12/28",
+        "url": "https://www.city.sumida.lg.jp/sangyo_jigyosya/sangyo/hojokin_joseikin/led.html"
+      },
+      {
+        "name": "デジタル技術活用支援補助金",
+        "field": [
+          "it"
+        ],
+        "summary": "中小企業のデジタル化に向けたソフトウェア・クラウド・ハードウェア導入等の経費を補助する制度。",
+        "target": "区内に1年以上主たる事業所を有する中小企業者",
+        "maxAmount": "50万円",
+        "rate": "3/4",
+        "deadline": "〜2026/11/30",
+        "url": "https://www.city.sumida.lg.jp/sangyo_jigyosya/sangyo/hojokin_joseikin/smddigital.html"
+      },
+      {
+        "name": "人材確保・定着支援補助金",
+        "field": [
+          "employ",
+          "equipment"
+        ],
+        "summary": "従業員5人以上の中小企業の就業規則整備や職場環境整備に係る経費を補助する制度。",
+        "target": "区内に1年以上主たる事業所を有し常時雇用従業員5人以上の中小企業者",
+        "maxAmount": "100万円",
+        "rate": "1/2",
+        "deadline": "〜2026/12/21",
+        "url": "https://www.city.sumida.lg.jp/sangyo_jigyosya/sangyo/koyou_syuurou/hojokin_jinzai.html"
+      },
+      {
+        "name": "就業規則整備補助金",
+        "field": [
+          "employ"
+        ],
+        "summary": "就業規則の作成・改定のため社会保険労務士等へ委託する経費を補助する制度。",
+        "target": "区内に3か月以上主たる事業所を有し常時雇用従業員1人以上の中小企業者",
+        "maxAmount": "10万円",
+        "rate": "1/2",
+        "deadline": "予算上限まで",
+        "url": "https://www.city.sumida.lg.jp/sangyo_jigyosya/sangyo/hojokin_joseikin/syugyokisoku.html"
+      },
+      {
+        "name": "区内生産品等販路拡張事業補助金",
+        "field": [
+          "sales"
+        ],
+        "summary": "区内中小企業の展示会出展等による国内外の販路拡張事業の経費を補助する制度。",
+        "target": "区内に事業所を有する中小企業者（5社以上の団体または個別企業）",
+        "maxAmount": "100万円",
+        "rate": "1/2（創業者は2/3）",
+        "deadline": "〜2027/3/10",
+        "url": "https://www.city.sumida.lg.jp/sangyo_jigyosya/sangyo/hojokin_joseikin/hannkaku.html"
+      },
+      {
+        "name": "ものづくりプロモーション推進補助金",
+        "field": [
+          "sales",
+          "other"
+        ],
+        "summary": "区認定ものづくり事業者等が連携して行うプロモーション・PR事業の経費を補助する制度。",
+        "target": "墨田区認定ものづくり事業者・クリエイター等（2者以上の連携）",
+        "maxAmount": "150万円",
+        "rate": "最大10/10（内容により2/3・1/2）",
+        "deadline": "〜2026/12/28",
+        "url": "https://www.city.sumida.lg.jp/sangyo_jigyosya/sangyo/hojokin_joseikin/monodukuripuromosyon.html"
+      },
+      {
+        "name": "知的財産権取得補助金",
+        "field": [
+          "rd",
+          "other"
+        ],
+        "summary": "特許・実用新案・意匠・商標等の権利取得に係る出願料・審査請求料・弁理士報酬等を補助する制度。",
+        "target": "区内に主たる事業所を有する中小企業者",
+        "maxAmount": "20万円",
+        "rate": "1/2",
+        "deadline": "予算上限まで",
+        "url": "https://www.city.sumida.lg.jp/sangyo_jigyosya/sangyo/kaihatsu_kaitaku/tizaihojokin.html"
+      },
+      {
+        "name": "依頼試験等利用補助金",
+        "field": [
+          "rd"
+        ],
+        "summary": "東京都立産業技術研究センターの依頼試験・機器利用・受託技術支援の利用料金を補助する制度。",
+        "target": "区内で1年以上事業を営む中小企業者",
+        "maxAmount": "20万円",
+        "rate": "2/3",
+        "deadline": "〜2027/3/31",
+        "url": "https://www.city.sumida.lg.jp/sangyo_jigyosya/sangyo/kaihatsu_kaitaku/iraishiken.html"
+      }
+    ]
+  },
+  "江東区": {
+    "indexUrl": "https://www.city.koto.lg.jp/sangyoshigoto/chusho/hojokin/index.html",
+    "lastChecked": "2026-07-12",
+    "subsidies": [
+      {
+        "name": "事業承継設備補助金",
+        "field": [
+          "equipment"
+        ],
+        "summary": "区内中小企業者が事業承継を契機として行う設備の導入・更新に要する経費の一部を補助する制度。",
+        "target": "区内に本店・事業所を有し、5年以内に事業承継予定または承継後5年未満で1年以上営業する中小企業者",
+        "maxAmount": "200万円（製造業）/100万円（その他業種）",
+        "rate": "1/2",
+        "deadline": "〜2027/1/29",
+        "url": "https://www.city.koto.lg.jp/102020/sangyoshigoto/chusho/hojokin/jigyoshokei.html"
+      },
+      {
+        "name": "令和8年度江東区エネルギー価格高騰対策補助金",
+        "field": [
+          "energy"
+        ],
+        "summary": "エネルギー価格高騰の影響を受けた区内中小企業に対し水道光熱費・燃料費の一部を補助する制度。",
+        "target": "本店（個人は主たる事業所）が区内にあり直近事業収入300万円以上・エネルギー関連費5万円以上の中小企業者",
+        "maxAmount": "15万円",
+        "rate": null,
+        "deadline": "〜2026/10/30",
+        "url": "https://www.city.koto.lg.jp/102020/sangyoshigoto/chusho/hojokin/energy.html"
+      },
+      {
+        "name": "ICT等導入支援事業",
+        "field": [
+          "it"
+        ],
+        "summary": "業務効率化等のためITツールを導入する区内中小企業に相談支援と導入経費の一部補助を行う制度。",
+        "target": "区内に本店・事業所を有し税滞納のない中小企業者（創業予定者含む）",
+        "maxAmount": "50万円",
+        "rate": "1/2",
+        "deadline": "通年",
+        "url": "https://www.city.koto.lg.jp/102020/sangyoshigoto/sangyo/itc_shien.html"
+      },
+      {
+        "name": "小規模な産学連携共同研究費補助金",
+        "field": [
+          "rd"
+        ],
+        "summary": "区内中小企業が大学等に委託しまたは共同して行う研究開発に対して補助する制度。",
+        "target": "区内に本店を有し1年以上事業を営み大学等と共同研究契約を締結した中小企業者",
+        "maxAmount": "20万円",
+        "rate": "1/2",
+        "deadline": "通年",
+        "url": "https://www.city.koto.lg.jp/102020/sangyoshigoto/chusho/hojokin/shoukibokyoudoukenkyuu.html"
+      },
+      {
+        "name": "知的財産権取得費補助",
+        "field": [
+          "rd",
+          "other"
+        ],
+        "summary": "区内中小企業が特許権・実用新案権・意匠権・商標権を取得する場合の費用の一部を補助する制度。",
+        "target": "区内に本店を有し1年以上事業を営み前年度の税滞納がない中小企業者",
+        "maxAmount": "30万円（特許権）/10万円（特許権以外）",
+        "rate": "1/2",
+        "deadline": "通年",
+        "url": "https://www.city.koto.lg.jp/102020/sangyoshigoto/chusho/hojokin/25383.html"
+      },
+      {
+        "name": "広告掲載費補助",
+        "field": [
+          "sales"
+        ],
+        "summary": "区内中小企業が市場開拓・販路拡大を目的に自社製品・サービスを広告する場合の掲載料の一部を補助する制度。",
+        "target": "区内に本店を有し前年度の税を滞納していない中小企業者",
+        "maxAmount": "20万円",
+        "rate": "2/3",
+        "deadline": "予算上限まで",
+        "url": "https://www.city.koto.lg.jp/102020/sangyoshigoto/chusho/hojokin/66611.html"
+      },
+      {
+        "name": "中小企業団体活動助成",
+        "field": [
+          "employ",
+          "other"
+        ],
+        "summary": "区内の中小企業団体や地場産業・伝統工芸団体等が行う組織・後継者育成のための研修会等の活動経費の一部を補助する制度。",
+        "target": "江東区中小企業団体名簿に登録されている団体",
+        "maxAmount": null,
+        "rate": null,
+        "deadline": null,
+        "url": "https://www.city.koto.lg.jp/102020/sangyoshigoto/chusho/hojokin/7631.html"
+      },
+      {
+        "name": "環境認証等取得費補助",
+        "field": [
+          "energy"
+        ],
+        "summary": "ISO14001などの環境認証等を新たに取得する区内中小企業に取得経費の一部を補助する制度。",
+        "target": "区内に本社・事業所を有し1年以上継続して事業を営み税滞納のない中小企業者",
+        "maxAmount": "50万円（ISO9001/14001/27001）/20万円（エコアクション21・Pマーク）",
+        "rate": "1/2",
+        "deadline": "通年",
+        "url": "https://www.city.koto.lg.jp/102020/sangyoshigoto/chusho/hojokin/25384.html"
+      },
+      {
+        "name": "展示会等出展費補助",
+        "field": [
+          "sales"
+        ],
+        "summary": "区内産業の優秀な製品・技術を市場に紹介するための展示会等に出展する区内中小企業者に経費の一部を補助する制度。",
+        "target": "区内に本店を有し直近の税を滞納していない中小企業者",
+        "maxAmount": "20万円",
+        "rate": "2/3",
+        "deadline": "予算上限まで",
+        "url": "https://www.city.koto.lg.jp/102020/sangyoshigoto/chusho/hojokin/7610.html"
+      },
+      {
+        "name": "ホームページ作成費補助",
+        "field": [
+          "it",
+          "sales"
+        ],
+        "summary": "区内中小企業や中小企業団体がPR・販路拡大のため初めてホームページを開設する場合の費用の一部を補助する制度。",
+        "target": "区内に本店を有する中小企業者、または江東区中小企業団体名簿に登録された中小企業団体",
+        "maxAmount": "10万円",
+        "rate": "1/2",
+        "deadline": "〜2027/3/31",
+        "url": "https://www.city.koto.lg.jp/102020/sangyoshigoto/chusho/hojokin/4643.html"
+      },
+      {
+        "name": "都立産業技術研究センター利用補助金",
+        "field": [
+          "rd"
+        ],
+        "summary": "新製品・新技術の開発や製品試験等のため都立産業技術研究センターの有償サービスを利用した場合の利用料の一部を補助する制度。",
+        "target": "区内に本店を有し1年以上事業を営み前年度の税を滞納していない中小企業者",
+        "maxAmount": "15万円",
+        "rate": "2/3",
+        "deadline": "通年",
+        "url": "https://www.city.koto.lg.jp/102020/sangyoshigoto/chusho/hojokin/66612.html"
+      },
+      {
+        "name": "創業支援事務所等賃料補助金",
         "field": [
           "startup"
         ],
-        "summary": "区内で新たに店舗を開業する個人・事業者に開業経費を補助（要ハチペイ導入）",
-        "target": "区内で新規開業する個人・事業者（未開業または開業10年未満、対象業種）",
-        "maxAmount": "250万円",
-        "rate": "4/5",
-        "deadline": "〜2026/8/31",
-        "url": "https://www.city.shibuya.tokyo.jp/jigyosha/shoko-rodo-sodan/akitempo-kassei-pj/akitempo.html"
-      },
-      {
-        "name": "渋谷区電気自動車等用充電設備導入助成",
-        "field": [
-          "energy"
-        ],
-        "summary": "EV・PHV用充電設備の導入経費の一部を助成（事業者は最大5基）",
-        "target": "区内に本店登記を有する中小企業者または区内で事業を営む個人事業者",
-        "maxAmount": "50万円",
-        "rate": null,
-        "deadline": "予算上限まで",
-        "url": "https://www.city.shibuya.tokyo.jp/kankyo/kankyo/eco-kurashi/evjuden_josei.html"
-      },
-      {
-        "name": "渋谷区緑化普及推進事業助成",
-        "field": [
-          "energy"
-        ],
-        "summary": "300平方メートル未満敷地の緑化（3.0平米以上）費用の一部を助成",
-        "target": "区内の建築物で事業を営む個人事業者、区民、管理組合など",
-        "maxAmount": "20万円",
-        "rate": "1/2",
-        "deadline": "〜2027/3/15",
-        "url": "https://www.city.shibuya.tokyo.jp/kankyo/kankyo/midori-plan/midori_ryokka_josei.html"
-      },
-      {
-        "name": "商店街活性化事業助成金",
-        "field": [
-          "sales"
-        ],
-        "summary": "商店会の施設整備・IT機能強化（HP作成・街路灯・空き店舗活用等）を助成",
-        "target": "商店会・商店街振興組合",
-        "maxAmount": "1億円",
-        "rate": "2/3",
-        "deadline": null,
-        "url": "https://www.city.shibuya.tokyo.jp/jigyosha/shoko-rodo-sodan/syoutengaishinkoujigyou/kasseika.html"
-      },
-      {
-        "name": "商店会等イベント事業費補助金",
-        "field": [
-          "sales"
-        ],
-        "summary": "区内商店会が実施するイベント事業の経費を助成（年度2回まで）",
-        "target": "渋谷区商店会連合会加盟の商店会・商店街振興組合",
-        "maxAmount": "100万円",
-        "rate": "2/3",
-        "deadline": null,
-        "url": "https://www.city.shibuya.tokyo.jp/jigyosha/shoko-rodo-sodan/syoutengaishinkoujigyou/ibentohojyokin.html"
+        "summary": "江東区内で創業する方が区内で新たに事務所等を借り上げる場合に賃料の一部を補助する制度。",
+        "target": "令和7年に初めて区内で創業した中小企業者（大企業傘下・フランチャイズ・風営法該当を除く）",
+        "maxAmount": "月額5万円（1〜12か月目、13〜24か月目は月額3万円）",
+        "rate": "1/4",
+        "deadline": "〜2026/11/30",
+        "url": "https://www.city.koto.lg.jp/102020/sangyoshigoto/chusho/hojokin/80920.html"
       }
     ]
   },
@@ -747,6 +1166,1488 @@
         "rate": null,
         "deadline": null,
         "url": "https://www.mics.city.shinagawa.tokyo.jp/joseikin/shingijutu_1/2409.html"
+      }
+    ]
+  },
+  "目黒区": {
+    "indexUrl": "https://www.city.meguro.tokyo.jp/shigoto/kigyoushien/enjo/index.html",
+    "lastChecked": "2026-07-12",
+    "subsidies": [
+      {
+        "name": "中小企業専門家活用支援事業",
+        "field": [
+          "other"
+        ],
+        "summary": "事業計画・BCP策定や補助金申請・知的財産保護等で専門家から受けた支援費用の一部を助成する制度。",
+        "target": "区内に本店・主たる事業所を有する中小企業者",
+        "maxAmount": "10万円",
+        "rate": "8/10",
+        "deadline": "〜2027/1/29",
+        "url": "https://www.city.meguro.tokyo.jp/sangyoukeizai/shigoto/kigyoushien/senmonkakatuyou.html"
+      },
+      {
+        "name": "中小企業省力化投資支援",
+        "field": [
+          "equipment",
+          "it"
+        ],
+        "summary": "国の省力化投資補助金カタログ掲載の省力化製品（券売機・清掃ロボット等）本体購入費を補助する制度。",
+        "target": "区内に本店所在地または納税地を有する中小企業者・従業員300人以下の社会福祉法人",
+        "maxAmount": "40万円",
+        "rate": "2/5",
+        "deadline": "〜2027/1/29",
+        "url": "https://www.city.meguro.tokyo.jp/sangyoukeizai/shigoto/kigyoushien/syouryokuka.html"
+      },
+      {
+        "name": "SNS広告宣伝活動費補助金",
+        "field": [
+          "sales",
+          "it"
+        ],
+        "summary": "SNS広告の制作費・出稿費などデジタル広告関連経費を補助する制度。",
+        "target": "区内に本店を有し法人登記または開業届から5年未満の中小企業者・個人事業主",
+        "maxAmount": "10万円",
+        "rate": "8/10",
+        "deadline": "〜2026/12/28",
+        "url": "https://www.city.meguro.tokyo.jp/sangyoukeizai/shigoto/kigyoushien/snshojo.html"
+      },
+      {
+        "name": "ものづくり産業支援（販路拡大・展示会出展支援事業）",
+        "field": [
+          "sales"
+        ],
+        "summary": "展示会出展時の展示料（小間料）を補助する販路拡大支援。オンライン展示会も対象。",
+        "target": "区内に主たる事業所を有する中小企業者・異業種交流グループ・業種組合",
+        "maxAmount": "15万円",
+        "rate": "2/3",
+        "deadline": "通年",
+        "url": "https://www.city.meguro.tokyo.jp/sangyoukeizai/shigoto/kigyoushien/enjomonodukuri.html"
+      },
+      {
+        "name": "ビジネスチャレンジ補助金（創業補助金）",
+        "field": [
+          "startup"
+        ],
+        "summary": "認定特定創業支援を受けた創業者・創業間もない事業者の人件費・賃借料・広告費等を補助する創業支援。",
+        "target": "区の認定特定創業支援を受け区内で創業する個人・創業5年未満の中小企業者",
+        "maxAmount": "50万円",
+        "rate": null,
+        "deadline": null,
+        "url": "https://www.city.meguro.tokyo.jp/sangyoukeizai/shigoto/kigyoushien/bizinesu.html"
+      },
+      {
+        "name": "エコ容器・リユース容器の購入等経費補助",
+        "field": [
+          "energy"
+        ],
+        "summary": "テイクアウト・デリバリー事業者の使い捨てプラ容器からエコ容器・リユース容器への切替経費を全額補助。",
+        "target": "区内に店舗がありテイクアウト・デリバリーで食品を提供する事業者",
+        "maxAmount": "6万円",
+        "rate": "10/10",
+        "deadline": "〜2026/12/25",
+        "url": "https://www.city.meguro.tokyo.jp/recycle/kurashi/gomi/ecotakesankaten.html"
+      },
+      {
+        "name": "ワーク・ライフ・バランス研修講師料助成",
+        "field": [
+          "employ"
+        ],
+        "summary": "ワーク・ライフ・バランス推進研修会の講師謝礼金を助成する区独自制度。",
+        "target": "区内に事業所を置き常時雇用従業員300人以下の企業・団体",
+        "maxAmount": "3万円",
+        "rate": null,
+        "deadline": "〜2027/2/28",
+        "url": "https://www.city.meguro.tokyo.jp/danjobyoudou/kusei/onlineservice/worklifebarancejyosei.html"
+      }
+    ]
+  },
+  "大田区": {
+    "indexUrl": "https://www.city.ota.tokyo.jp/sangyo/kuni_tokyo.html",
+    "lastChecked": "2026-07-12",
+    "subsidies": [
+      {
+        "name": "新製品・新技術開発支援助成事業（トライアル/開発ステップアップ/実用化製品化）",
+        "field": [
+          "rd",
+          "equipment"
+        ],
+        "summary": "区内中小企業の新製品・新技術の研究開発費用を助成する3タイプの制度で、令和8年度募集要領が公開されている。",
+        "target": "大田区内で本社または事業所を1年以上操業する中小企業者（個人事業者含む）",
+        "maxAmount": "500万円（トライアル助成は100万円）",
+        "rate": "2/3（トライアル助成は1/2）",
+        "deadline": "通年",
+        "url": "https://www.pio-ota.jp/subsidy/new-technology-support/"
+      },
+      {
+        "name": "スタートアップ×大田区企業 ユナイト助成事業",
+        "field": [
+          "startup",
+          "rd"
+        ],
+        "summary": "スタートアップが大田区企業へ試作・製造・開発等を発注する費用を助成する制度で、令和8年度は経過年数上限が拡大された。",
+        "target": "登記から6カ月以上15年以内のスタートアップ企業（区内外問わず）",
+        "maxAmount": "100万円（区外登記企業は50万円）",
+        "rate": "1/2（区外登記企業は1/3）",
+        "deadline": "予算上限まで",
+        "url": "https://www.pio-ota.jp/subsidy/unite_subsidy/"
+      },
+      {
+        "name": "大田区企業立地・SDGs促進助成金",
+        "field": [
+          "equipment",
+          "energy"
+        ],
+        "summary": "区内での工場等の新増設・移転や脱炭素化・生産性向上のための設備改修費用を助成する制度。",
+        "target": "事業期間1年以上の製造業・研究開発企業等の中小企業者",
+        "maxAmount": "1,000万円（研究開発企業等は500万円）",
+        "rate": "1/3",
+        "deadline": "〜2026/12/31",
+        "url": "https://www.city.ota.tokyo.jp/sangyo/kogyo/joseikin/ricchisdgsjosei.html"
+      },
+      {
+        "name": "ものづくり企業立地継続補助事業",
+        "field": [
+          "equipment"
+        ],
+        "summary": "操業環境改善のための移転・工場改修・設備更新の費用を補助し区内でのものづくり操業継続を支援する制度。",
+        "target": "都内で1年以上ものづくり企業を営む中小企業者（区内本社・事業所または区内操業希望）",
+        "maxAmount": "375万円",
+        "rate": "3/4",
+        "deadline": "〜2026/12/31",
+        "url": "https://www.city.ota.tokyo.jp/sangyo/kogyo/joseikin/keizokuhojo.html"
+      },
+      {
+        "name": "大田区工場アパート立地助成事業",
+        "field": [
+          "equipment"
+        ],
+        "summary": "貸工場（工場アパート）の集積形成のため建設・整備費用を助成する制度。",
+        "target": "区内で3年以上製造業を営む中小企業者や区内で工場アパート経営を予定する者等",
+        "maxAmount": "5億円",
+        "rate": "1/4",
+        "deadline": null,
+        "url": "https://www.city.ota.tokyo.jp/sangyo/kogyo/joseikin/ricchijosei_kojo-apart.html"
+      },
+      {
+        "name": "国内見本市への出展支援（合同出展）",
+        "field": [
+          "sales"
+        ],
+        "summary": "複数の区内企業による国内大規模展示会への共同出展を支援し、協会が出展経費総額の2/3を負担する制度。",
+        "target": "大田区に本社または事業所を有する中小企業者",
+        "maxAmount": null,
+        "rate": "2/3（協会負担分）",
+        "deadline": null,
+        "url": "https://www.pio-ota.jp/marke_growth/domestic-tradefair/"
+      }
+    ]
+  },
+  "世田谷区": {
+    "indexUrl": "https://www.city.setagaya.lg.jp/03647/5009.html",
+    "lastChecked": "2026-07-12",
+    "subsidies": [
+      {
+        "name": "令和8年度世田谷区中小事業者経営支援補助金",
+        "field": [
+          "it",
+          "sales",
+          "equipment"
+        ],
+        "summary": "IT活用による販路拡大や生産性向上設備の導入経費を補助する制度。",
+        "target": "世田谷区内に事務所または事業所を有する中小事業者・個人事業主等",
+        "maxAmount": "40万円",
+        "rate": "1/2",
+        "deadline": "予算上限まで",
+        "url": "https://www.city.setagaya.lg.jp/03647/11321.html"
+      },
+      {
+        "name": "令和8年度世田谷区ビジネスマッチングイベント出展支援事業補助金",
+        "field": [
+          "sales"
+        ],
+        "summary": "ビジネスマッチングイベントへの出展料を補助し販路開拓を支援する制度。",
+        "target": "区内に実質的な事業所を有する中小企業者(納税良好・重複補助なし等の要件あり)",
+        "maxAmount": "10万円",
+        "rate": "1/2",
+        "deadline": "予算上限まで",
+        "url": "https://www.city.setagaya.lg.jp/03647/10943.html"
+      },
+      {
+        "name": "ISO取得支援事業",
+        "field": [
+          "other"
+        ],
+        "summary": "区内企業がISO認証を取得する際のコンサル委託料・審査費用等を助成する制度。",
+        "target": "区内企業",
+        "maxAmount": "65万円",
+        "rate": "1/2",
+        "deadline": "通年",
+        "url": "https://www.city.setagaya.lg.jp/01004/4968.html"
+      }
+    ]
+  },
+  "渋谷区": {
+    "indexUrl": "https://www.city.shibuya.tokyo.jp/jigyosha/shoko-rodo-sodan/",
+    "lastChecked": "2026-07-12",
+    "subsidies": [
+      {
+        "name": "店舗開業支援補助金（渋谷Local Street Project）",
+        "field": [
+          "startup"
+        ],
+        "summary": "区内で新たに店舗を開業する個人・事業者に開業経費を補助（要ハチペイ導入）",
+        "target": "区内で新規開業する個人・事業者（未開業または開業10年未満、対象業種）",
+        "maxAmount": "250万円",
+        "rate": "4/5",
+        "deadline": "〜2026/8/31",
+        "url": "https://www.city.shibuya.tokyo.jp/jigyosha/shoko-rodo-sodan/akitempo-kassei-pj/akitempo.html"
+      },
+      {
+        "name": "渋谷区電気自動車等用充電設備導入助成",
+        "field": [
+          "energy"
+        ],
+        "summary": "EV・PHV用充電設備の導入経費の一部を助成（事業者は最大5基）",
+        "target": "区内に本店登記を有する中小企業者または区内で事業を営む個人事業者",
+        "maxAmount": "50万円",
+        "rate": null,
+        "deadline": "予算上限まで",
+        "url": "https://www.city.shibuya.tokyo.jp/kankyo/kankyo/eco-kurashi/evjuden_josei.html"
+      },
+      {
+        "name": "渋谷区緑化普及推進事業助成",
+        "field": [
+          "energy"
+        ],
+        "summary": "300平方メートル未満敷地の緑化（3.0平米以上）費用の一部を助成",
+        "target": "区内の建築物で事業を営む個人事業者、区民、管理組合など",
+        "maxAmount": "20万円",
+        "rate": "1/2",
+        "deadline": "〜2027/3/15",
+        "url": "https://www.city.shibuya.tokyo.jp/kankyo/kankyo/midori-plan/midori_ryokka_josei.html"
+      },
+      {
+        "name": "商店街活性化事業助成金",
+        "field": [
+          "sales"
+        ],
+        "summary": "商店会の施設整備・IT機能強化（HP作成・街路灯・空き店舗活用等）を助成",
+        "target": "商店会・商店街振興組合",
+        "maxAmount": "1億円",
+        "rate": "2/3",
+        "deadline": null,
+        "url": "https://www.city.shibuya.tokyo.jp/jigyosha/shoko-rodo-sodan/syoutengaishinkoujigyou/kasseika.html"
+      },
+      {
+        "name": "商店会等イベント事業費補助金",
+        "field": [
+          "sales"
+        ],
+        "summary": "区内商店会が実施するイベント事業の経費を助成（年度2回まで）",
+        "target": "渋谷区商店会連合会加盟の商店会・商店街振興組合",
+        "maxAmount": "100万円",
+        "rate": "2/3",
+        "deadline": null,
+        "url": "https://www.city.shibuya.tokyo.jp/jigyosha/shoko-rodo-sodan/syoutengaishinkoujigyou/ibentohojyokin.html"
+      }
+    ]
+  },
+  "中野区": {
+    "indexUrl": "https://www.city.tokyo-nakano.lg.jp/jigyosha/sangyoshinko/josei/index.html",
+    "lastChecked": "2026-07-12",
+    "subsidies": [
+      {
+        "name": "令和8年度中野区経営力強化支援事業補助金",
+        "field": [
+          "sales",
+          "it",
+          "startup",
+          "other"
+        ],
+        "summary": "経営力強化に取り組む区内中小企業者・個人事業主に、販路開拓・多様性対応・子育て環境整備・創業期広報・IT/DX対応等の事業経費の一部を補助する制度。",
+        "target": "中小企業基本法上の中小企業者・個人事業主で、主たる事業所が中野区内にあり税滞納がない者",
+        "maxAmount": "20万円",
+        "rate": "1/2",
+        "deadline": "〜2027/1/31",
+        "url": "https://www.city.tokyo-nakano.lg.jp/jigyosha/sangyoshinko/josei/chusho_r8keieiryoku.html"
+      },
+      {
+        "name": "令和8年度中野区人材確保総合支援事業補助金",
+        "field": [
+          "employ"
+        ],
+        "summary": "人材確保に取り組む区内中小企業者・個人事業主に、採用・人材確保に係る経費の一部を補助する制度。",
+        "target": "中小企業基本法上の中小企業者・個人事業主で、主たる事業所が中野区内にあり税滞納がない者",
+        "maxAmount": null,
+        "rate": null,
+        "deadline": "〜2027/1/31",
+        "url": "https://www.city.tokyo-nakano.lg.jp/jigyosha/sangyoshinko/josei/chusho_r8jinzaikakuho.html"
+      },
+      {
+        "name": "小規模事業者経営改善資金（マル経融資）に対する利子補給",
+        "field": [
+          "other"
+        ],
+        "summary": "日本政策金融公庫のマル経融資を受けた区内小規模事業者に、支払利子の一部（通常50%、東商中野支部会員は100%）を最長36か月補給する制度。",
+        "target": "マル経融資を受け利子を支払う区内小規模事業者（東京商工会議所中野支部の推薦対象）",
+        "maxAmount": null,
+        "rate": "1/2",
+        "deadline": "通年",
+        "url": "https://www.city.tokyo-nakano.lg.jp/jigyosha/sangyoshinko/josei/marukei-yushi.html"
+      },
+      {
+        "name": "中野区信用保証料補助事業",
+        "field": [
+          "startup",
+          "other"
+        ],
+        "summary": "区の制度融資（創業支援資金・経営改善借換資金・経営安定支援資金・中東情勢対応資金）利用時の信用保証料の一部を補助する制度。",
+        "target": "区の産業経済融資のあっ旋を受け、融資実行後6か月以内の区内事業者",
+        "maxAmount": "30万円",
+        "rate": "1/3〜全額（融資種類による）",
+        "deadline": "通年",
+        "url": "https://www.city.tokyo-nakano.lg.jp/jigyosha/osirase/sougyousiensikin.html"
+      }
+    ]
+  },
+  "杉並区": {
+    "indexUrl": "https://www.city.suginami.tokyo.jp/s121/1754.html",
+    "lastChecked": "2026-07-12",
+    "subsidies": [
+      {
+        "name": "中小企業等デジタル化推進事業助成金",
+        "field": [
+          "it",
+          "equipment"
+        ],
+        "summary": "区内中小企業のデジタル化（ソフト・ハード導入、HP・EC制作、専門家指導等）に要する経費の一部を助成する。",
+        "target": "区内に主たる事業所を有し1年以上事業を営む中小企業者・小規模企業者等（医療法人・NPO等含む）",
+        "maxAmount": "50万円",
+        "rate": "2/3（小規模企業者は3/4）",
+        "deadline": "〜2026/10/30",
+        "url": "https://www.city.suginami.tokyo.jp/s121/news/25089.html"
+      },
+      {
+        "name": "創業スタートアップ助成事業",
+        "field": [
+          "startup"
+        ],
+        "summary": "創業後6か月以内の区内事業者に、事業所家賃およびホームページ作成費の一部を助成する。",
+        "target": "基準日時点で創業後6か月以内、区内に主たる事業所を有する個人・法人（信用保証協会保証対象業種）",
+        "maxAmount": "50万円（事業所家賃30万円＋HP等作成20万円）",
+        "rate": "2/3",
+        "deadline": "〜2026/11/30",
+        "url": "https://www.city.suginami.tokyo.jp/s121/1793.html"
+      },
+      {
+        "name": "研究機関活用支援事業補助金",
+        "field": [
+          "rd"
+        ],
+        "summary": "新製品・新技術・新サービスの研究開発のため研究機関や大学等へ支払う経費の一部を補助する。",
+        "target": "区内に主たる事業所を有する中小企業者（信用保証協会保証対象業種）",
+        "maxAmount": "10万円",
+        "rate": "1/2",
+        "deadline": "通年",
+        "url": "https://www.city.suginami.tokyo.jp/s121/1753.html"
+      },
+      {
+        "name": "小規模事業者経営改善資金（マル経融資）に係る利子補助",
+        "field": [
+          "other"
+        ],
+        "summary": "日本政策金融公庫のマル経融資を受けた区内小規模事業者に、支払利子の30%を補助する利子補給制度。",
+        "target": "東京商工会議所杉並支部の推薦を受けマル経融資を受けた区内小規模事業者",
+        "maxAmount": null,
+        "rate": "支払利子の30%",
+        "deadline": "〜2026/12/31",
+        "url": "https://www.city.suginami.tokyo.jp/s121/19276.html"
+      },
+      {
+        "name": "リユース容器活用支援助成",
+        "field": [
+          "energy",
+          "equipment"
+        ],
+        "summary": "使い捨てプラスチック削減のため、テイクアウト用リユース容器や業務用食器洗浄機等の導入経費の一部を助成する。",
+        "target": "区内に事業所を有する中小企業者・個人事業主・商店街組合等（特例子会社・社会福祉法人含む）",
+        "maxAmount": "50万円（食器洗浄機等）／リユース容器は各20万円",
+        "rate": "1/2",
+        "deadline": "〜2027/1/29",
+        "url": "https://www.city.suginami.tokyo.jp/s103/709.html"
+      }
+    ]
+  },
+  "豊島区": {
+    "indexUrl": "https://www.city.toshima.lg.jp/machizukuri/sangyo/sangyoshinko/hojokin/index.html",
+    "lastChecked": "2026-07-12",
+    "subsidies": [
+      {
+        "name": "としま企業活力支援事業補助金 DX推進コース",
+        "field": [
+          "it",
+          "equipment"
+        ],
+        "summary": "区内中小企業のDX推進として生成AI・RPA等のソフトウェア導入や電子決済レジ端末導入経費を補助する。",
+        "target": "創業後3か月以上の区内中小企業者(個人事業主含む)でビジネスサポートセンターのDX相談を受けた者",
+        "maxAmount": "20万円",
+        "rate": "1/2",
+        "deadline": "〜2026/11/27",
+        "url": "https://www.city.toshima.lg.jp/584/machizukuri/sangyo/kigyo/documents/2604131700.html"
+      },
+      {
+        "name": "としま企業活力支援事業補助金 展示会等出展コース",
+        "field": [
+          "sales"
+        ],
+        "summary": "展示会等の出展小間料と装飾経費の一部を補助し新規顧客獲得・販路開拓を支援する。",
+        "target": "創業後3か月以上の区内中小企業者(個人事業主含む)。医療法人・NPO法人等は対象外",
+        "maxAmount": "20万円",
+        "rate": "1/2",
+        "deadline": "〜2026/11/27",
+        "url": "https://www.city.toshima.lg.jp/584/machizukuri/sangyo/kigyo/2504031539.html"
+      },
+      {
+        "name": "としま企業活力支援事業補助金 開業支援コース",
+        "field": [
+          "startup"
+        ],
+        "summary": "創業初期の企業を対象に事業PR・デジタル環境整備・専門家活用等の経費の一部を補助する。",
+        "target": "創業後3か月以上5年未満の区内中小企業者(個人事業主含む)。医療法人・NPO法人等は対象外",
+        "maxAmount": "20万円",
+        "rate": "2/3",
+        "deadline": "〜2027/1/22",
+        "url": "https://www.city.toshima.lg.jp/584/machizukuri/sangyo/kigyo/019176.html"
+      },
+      {
+        "name": "としま企業活力支援事業補助金 経営安定コース",
+        "field": [
+          "sales",
+          "employ",
+          "other"
+        ],
+        "summary": "事業活動の継続・発展に必要な事業PR・専門家活用・人材育成/リスキリング経費の一部を補助し経営基盤の安定を支援する。",
+        "target": "区内で3か月以上事業を営む区内中小企業者(個人事業主含む)。医療法人・NPO法人等は対象外",
+        "maxAmount": "15万円",
+        "rate": "1/2",
+        "deadline": "〜2026/11/27",
+        "url": "https://www.city.toshima.lg.jp/584/machizukuri/sangyo/kigyo/019174.html"
+      },
+      {
+        "name": "としま企業活力支援事業補助金 コラボチャレンジコース",
+        "field": [
+          "rd",
+          "sales"
+        ],
+        "summary": "区内事業者が共同で行う新商品・サービス開発の企画・開発・販売経費の一部を補助する。",
+        "target": "複数事業者が形成する団体で半数以上が区内中小企業者であること。医療法人・NPO法人等は対象外",
+        "maxAmount": "20万円",
+        "rate": "1/2",
+        "deadline": "〜2026/11/27",
+        "url": "https://www.city.toshima.lg.jp/584/machizukuri/sangyo/kigyo/019175.html"
+      },
+      {
+        "name": "としま賃上げ促進支援金",
+        "field": [
+          "employ"
+        ],
+        "summary": "人手不足・物価高騰に対応し3%以上の賃上げを実施した中小企業に従業員1人あたり5万円を定額支給する。",
+        "target": "区内に本店登記地を有する中小企業および区内に主たる事業所を有する個人事業主",
+        "maxAmount": "50万円",
+        "rate": null,
+        "deadline": "〜2026/12/22",
+        "url": "https://www.city.toshima.lg.jp/584/machizukuri/sangyo/kigyo/2602241505.html"
+      }
+    ]
+  },
+  "北区": {
+    "indexUrl": "https://www.city.kita.lg.jp/business/business-support/1011317/index.html",
+    "lastChecked": "2026-07-12",
+    "subsidies": [
+      {
+        "name": "産学連携研究開発支援事業",
+        "field": [
+          "rd"
+        ],
+        "summary": "区内ものづくり中小企業が大学・公的研究機関と行う共同研究開発・委託研究の経費の一部を助成する。",
+        "target": "区内に本社・主たる事業所を有する（または事業主が区内在住の）製造業・ソフトウェア開発業の中小企業・個人事業者",
+        "maxAmount": "200万円",
+        "rate": "3/4",
+        "deadline": "〜2026/8/28",
+        "url": "https://www.city.kita.lg.jp/business/industry/1011356/1011509/1011514.html"
+      },
+      {
+        "name": "IT・IoT導入チャレンジ支援事業",
+        "field": [
+          "it"
+        ],
+        "summary": "区内中小企業がIT・IoT導入による労働生産性向上に要する費用の一部を補助する。",
+        "target": "区内に本社・主たる事業所を有する（または事業主が区内在住の）継続1年以上の中小企業・個人事業者（業種制限なし）",
+        "maxAmount": "100万円",
+        "rate": "3/4",
+        "deadline": "〜2027/2/26",
+        "url": "https://www.city.kita.lg.jp/business/industry/1011356/1011509/1011519.html"
+      },
+      {
+        "name": "見本市等出展支援事業",
+        "field": [
+          "sales"
+        ],
+        "summary": "区内中小企業が国内外の見本市・フェアに出展する際の費用の一部を補助する。",
+        "target": "区内に本社・主たる事業所を有する（または区内在住の）製造業・ソフトウェア業の中小企業・個人事業者",
+        "maxAmount": "国内25万円・海外30万円",
+        "rate": "1/2",
+        "deadline": "〜2027/2/26",
+        "url": "https://www.city.kita.lg.jp/business/industry/1011356/1011509/1011516.html"
+      },
+      {
+        "name": "依頼試験等補助事業",
+        "field": [
+          "rd"
+        ],
+        "summary": "中小企業が試験研究機関を利用して行う技術・製品開発の課題解決の経費の一部を補助する。",
+        "target": "区内に本社・主たる事業所を有する（または区内在住の）継続1年以上の製造業・ソフトウェア業の中小企業・個人事業者",
+        "maxAmount": "10万円",
+        "rate": "1/2",
+        "deadline": "〜2027/2/26",
+        "url": "https://www.city.kita.lg.jp/business/industry/1011356/1011509/1011517.html"
+      },
+      {
+        "name": "知的所有権活用支援事業",
+        "field": [
+          "rd",
+          "other"
+        ],
+        "summary": "創造力ある中小企業の知的財産の新規取得にかかる費用の一部を補助する。",
+        "target": "区内に本社・主たる事業所を有する（または区内在住の）継続1年以上の製造業・情報通信業（ソフトウェア業）の中小企業・個人事業者",
+        "maxAmount": "10万円",
+        "rate": "1/2",
+        "deadline": "〜2027/2/26",
+        "url": "https://www.city.kita.lg.jp/business/industry/1011356/1011509/1011518.html"
+      },
+      {
+        "name": "中小企業リスキリング支援事業",
+        "field": [
+          "employ"
+        ],
+        "summary": "従業員の育成・事業拡大・生産性向上のための外部研修費用の一部を助成する。",
+        "target": "区内に本社・主たる事業所を有し区内で1年以上継続して営む中小企業者（個人含む）",
+        "maxAmount": "20万円",
+        "rate": "1/2",
+        "deadline": "〜2027/2/26",
+        "url": "https://www.city.kita.lg.jp/business/business-support/1011317/1011326.html"
+      },
+      {
+        "name": "中小企業子連れワーク環境整備支援事業",
+        "field": [
+          "employ",
+          "other"
+        ],
+        "summary": "従業員が0〜12歳の子を連れて出勤し職場で働くための環境整備費用の一部を補助する。",
+        "target": "区内に本社・事業所を有し原則1年以上営む中小企業者（個人事業者含む）",
+        "maxAmount": "50万円",
+        "rate": "1/2",
+        "deadline": "〜2027/2/26",
+        "url": "https://www.city.kita.lg.jp/business/business-support/1011317/1017610.html"
+      },
+      {
+        "name": "マル経融資利子補助",
+        "field": [
+          "other"
+        ],
+        "summary": "マル経融資（小規模事業者経営改善資金）を利用する小規模事業者の支払利息の一部を区が補助する。",
+        "target": "東京商工会議所北支部にマル経融資（通常枠）を申し込む区内の小規模事業者",
+        "maxAmount": null,
+        "rate": "支払利息の3割（3年間）",
+        "deadline": "通年",
+        "url": "https://www.city.kita.lg.jp/business/business-support/1011317/1011322.html"
+      }
+    ]
+  },
+  "荒川区": {
+    "indexUrl": "https://www.city.arakawa.tokyo.jp/jigyousha/jigyouunei/joseikin/index.html",
+    "lastChecked": "2026-07-12",
+    "subsidies": [
+      {
+        "name": "製造業等企業価値向上支援事業補助金",
+        "field": [
+          "equipment",
+          "it",
+          "employ",
+          "other"
+        ],
+        "summary": "製造業等の中小企業の生産性向上・DX・ダイバーシティ・職場安全・BCPに係る設備投資等を補助する。",
+        "target": "区内に本社を有し1年以上継続する製造業等の中小企業者",
+        "maxAmount": "300万円",
+        "rate": "1/2（賃上げ要件達成で2/3）",
+        "deadline": "〜2027/2/15",
+        "url": "https://www.city.arakawa.tokyo.jp/a021/jigyousha/jigyouunei/syoukibohojyo.html"
+      },
+      {
+        "name": "中小企業GX経営推進支援事業補助金",
+        "field": [
+          "energy",
+          "equipment"
+        ],
+        "summary": "GX経営に取り組む中小企業の省エネ・環境配慮型設備投資を補助する。",
+        "target": "区内に本社を1年以上有する中小企業者",
+        "maxAmount": "100万円（環境認証取得の特例200万円）",
+        "rate": "1/2（特例2/3）",
+        "deadline": "〜2027/2/15",
+        "url": "https://www.city.arakawa.tokyo.jp/a021/jigyousha/jigyouunei/gxkeieisuishinshien.html"
+      },
+      {
+        "name": "商業・サービス業事業継続力強化支援事業補助金",
+        "field": [
+          "equipment",
+          "sales",
+          "it"
+        ],
+        "summary": "商業・サービス業の中小企業が行う設備導入・ITツール・マーケティング活動の経費を補助する。",
+        "target": "区内で1年以上継続する商業・サービス業の中小企業者",
+        "maxAmount": "100万円（デジタル化特例200万円）",
+        "rate": "1/4（賃上げ・特例で1/2）",
+        "deadline": "〜2027/2/12",
+        "url": "https://www.city.arakawa.tokyo.jp/a020/jigyousha/jigyouunei/r4hojyo.html"
+      },
+      {
+        "name": "ISO認証等取得補助",
+        "field": [
+          "other"
+        ],
+        "summary": "ISO・エコアクション21・プライバシーマーク等の認証取得経費を補助する。",
+        "target": "区内に本社を有する中小企業者",
+        "maxAmount": "50万円（エコアクション21等は30万円）",
+        "rate": "1/4",
+        "deadline": "通年",
+        "url": "https://www.city.arakawa.tokyo.jp/a021/jigyousha/jigyouunei/iso.html"
+      },
+      {
+        "name": "見本市等出展補助",
+        "field": [
+          "sales"
+        ],
+        "summary": "見本市・展示会への出展料や装飾費等の経費を補助する。",
+        "target": "区内に本社を有する中小企業者または区内本社が2/3以上の団体",
+        "maxAmount": "40万円（海外50万円、特例60万円）",
+        "rate": "1/2（経営革新計画承認企業は2/3）",
+        "deadline": "通年",
+        "url": "https://www.city.arakawa.tokyo.jp/a021/jigyousha/jigyouunei/mihoniti.html"
+      },
+      {
+        "name": "産業財産権取得助成",
+        "field": [
+          "rd",
+          "other"
+        ],
+        "summary": "特許・実用新案等の産業財産権の出願・登録・弁理士費用を助成する。",
+        "target": "区内に本社を有する中小企業者",
+        "maxAmount": "15万円",
+        "rate": "1/2",
+        "deadline": "通年",
+        "url": "https://www.city.arakawa.tokyo.jp/a021/jigyousha/jigyouunei/tizai.html"
+      },
+      {
+        "name": "クラウドファンディング活用支援補助金",
+        "field": [
+          "sales"
+        ],
+        "summary": "新製品開発・販路開拓を目的としたクラウドファンディング利用手数料等を補助する。",
+        "target": "区内に本社・主たる事務所を有する中小企業者",
+        "maxAmount": "20万円（特例30万円）",
+        "rate": "1/2（特例2/3）",
+        "deadline": null,
+        "url": "https://www.city.arakawa.tokyo.jp/a021/jigyousha/jigyouunei/crowdf.html"
+      },
+      {
+        "name": "試験研究機関活用支援事業補助金",
+        "field": [
+          "rd"
+        ],
+        "summary": "公設試験研究機関等での依頼試験・検査・技術指導等の利用費を補助する。",
+        "target": "区内に本社を有する中小企業者",
+        "maxAmount": "5万円",
+        "rate": "1/2",
+        "deadline": "通年",
+        "url": "https://www.city.arakawa.tokyo.jp/a021/jigyousha/jigyouunei/sangyogijutsu.html"
+      },
+      {
+        "name": "魅力発信動画制作補助金",
+        "field": [
+          "sales",
+          "it"
+        ],
+        "summary": "販路開拓・事業連携を目的としたPR動画の制作経費を補助する。",
+        "target": "区内の中小企業者",
+        "maxAmount": "10万円",
+        "rate": "1/2",
+        "deadline": "〜2027/2/26",
+        "url": "https://www.city.arakawa.tokyo.jp/a021/jigyousha/jigyouunei/dogahojyo.html"
+      },
+      {
+        "name": "セミナー・研修受講支援補助事業",
+        "field": [
+          "employ"
+        ],
+        "summary": "公的支援機関等が主催する有料セミナー・研修の受講費を補助する。",
+        "target": "区内に本社を有する中小企業者または区内本社が2/3以上の団体",
+        "maxAmount": "3万円（自社内研修会開催は10万円）",
+        "rate": "1/2",
+        "deadline": "通年",
+        "url": "https://www.city.arakawa.tokyo.jp/a021/jigyousha/jigyouunei/seminer.html"
+      },
+      {
+        "name": "新製品・新技術開発支援事業",
+        "field": [
+          "rd"
+        ],
+        "summary": "製造業中小企業の新製品・新技術開発に必要な直接経費を補助する。",
+        "target": "区内に本社を有する製造業の中小企業者",
+        "maxAmount": "200万円（経営革新計画承認企業300万円）",
+        "rate": "1/2（経営革新計画承認企業2/3）",
+        "deadline": "〜2026/9/30",
+        "url": "https://www.city.arakawa.tokyo.jp/a021/jigyousha/jigyouunei/newproduct.html"
+      },
+      {
+        "name": "特定商店街における出店支援事業補助金",
+        "field": [
+          "startup",
+          "other"
+        ],
+        "summary": "宮前商店会・旭電化通り商光会商店街への新規出店に係る店舗整備・賃借費を補助する。",
+        "target": "特定商店街に出店する小売業・卸売業・サービス業の中小企業者",
+        "maxAmount": "店舗整備100万円・店舗賃借120万円",
+        "rate": "5/6（店舗整備）",
+        "deadline": "予算上限まで",
+        "url": "https://www.city.arakawa.tokyo.jp/a020/jigyousha/jigyouunei/syuttenhojokin.html"
+      },
+      {
+        "name": "ホームページ作成補助金",
+        "field": [
+          "it",
+          "sales"
+        ],
+        "summary": "販路開拓・事業連携を目的としたホームページ制作委託経費を補助する。",
+        "target": "区内の中小企業者（過去に本補助金未受給）",
+        "maxAmount": "20万円",
+        "rate": "1/2",
+        "deadline": "〜2027/2/26",
+        "url": "https://www.city.arakawa.tokyo.jp/a021/jigyousha/jigyouunei/hpsakusei.html"
+      },
+      {
+        "name": "産学連携研究開発支援事業",
+        "field": [
+          "rd"
+        ],
+        "summary": "大学等と連携した新製品・技術開発の研究経費・委託費を補助する。",
+        "target": "区内中小企業者または区内本社が2/3以上の団体",
+        "maxAmount": "300万円",
+        "rate": "2/3",
+        "deadline": "通年",
+        "url": "https://www.city.arakawa.tokyo.jp/a021/jigyousha/jigyouunei/sangaku.html"
+      }
+    ]
+  },
+  "板橋区": {
+    "indexUrl": "https://www.city.itabashi.tokyo.jp/bunka/chusho/yuushi/index.html",
+    "lastChecked": "2026-07-12",
+    "subsidies": [
+      {
+        "name": "令和8年度 製造業設備投資助成金",
+        "field": [
+          "equipment"
+        ],
+        "summary": "区内製造業の中小企業が先端設備等導入計画の認定を受けて行う設備投資費用の一部を助成する。",
+        "target": "区内に本社があり1年以上継続営業する中小製造業者(先端設備等導入計画の認定者)",
+        "maxAmount": "666万円",
+        "rate": "2/3（確認書提出企業。他は1/2）",
+        "deadline": "〜2026/11/30",
+        "url": "https://www.city.itabashi.tokyo.jp/bunka/chusho/yuushi/1056066.html"
+      },
+      {
+        "name": "令和8年度 ものづくり企業地域共生推進助成金",
+        "field": [
+          "equipment",
+          "other"
+        ],
+        "summary": "区内ものづくり企業の操業環境改善・住民受入環境整備・耐震補強にかかる費用の一部を助成する。",
+        "target": "区内で操業する中小のものづくり企業",
+        "maxAmount": "375万円（耐震工事は800万円）",
+        "rate": "3/4（耐震事業は2/3）",
+        "deadline": "〜2026/11/30",
+        "url": "https://www.city.itabashi.tokyo.jp/bunka/chusho/yuushi/1062762/index.html"
+      },
+      {
+        "name": "令和8年度 中小企業魅力向上支援包括補助事業助成金",
+        "field": [
+          "sales",
+          "employ",
+          "other"
+        ],
+        "summary": "人材獲得・魅力発信・展示会出展の3メニューを対象に経費の一部を包括的に助成する。",
+        "target": "区内に本社又は事業所を有し、おおむね1年以上事業を営む中小企業者",
+        "maxAmount": "50万円",
+        "rate": "4/5（メニューにより2/3・1/2）",
+        "deadline": "予算上限まで",
+        "url": "https://itabashi-kohsha.com/subsidies/d3seuwxb5vxzc6ow.html"
+      },
+      {
+        "name": "令和8年度 デジタル化・データ利活用推進助成金",
+        "field": [
+          "it"
+        ],
+        "summary": "バックオフィス効率化・業務管理システム・データ利活用経営の3コースでIT導入経費を助成する。",
+        "target": "区内に本社又は事業所を有し、おおむね1年以上継続して事業を営む中小企業者(個人事業主含む)",
+        "maxAmount": "500万円",
+        "rate": "2/3（コースにより1/2）",
+        "deadline": "予算上限まで",
+        "url": "https://itabashi-kohsha.com/subsidies/hruq3mhmotj1aane.html"
+      },
+      {
+        "name": "産学公連携研究開発支援事業助成金",
+        "field": [
+          "rd"
+        ],
+        "summary": "大学等との共同研究・委託研究による新製品・新技術の研究開発費用の一部を助成する。",
+        "target": "区内中小企業者(大学等と共同研究・委託研究を行う者)",
+        "maxAmount": "150万円",
+        "rate": "2/3",
+        "deadline": "通年",
+        "url": "https://itabashi-kohsha.com/subsidies/nccmv5ex044u7y15.html"
+      },
+      {
+        "name": "令和8年度 イノベーション創出推進事業(実証・実装プログラム)",
+        "field": [
+          "rd",
+          "startup"
+        ],
+        "summary": "区内での実証・実装に取り組む事業者に実証委託金を支給する。採択最大5件。",
+        "target": "区内に事業所を有する区内事業者、又は区内での事業拡大を志向するスタートアップ(中小企業・小規模事業者、個人事業者除く)",
+        "maxAmount": "200万円",
+        "rate": null,
+        "deadline": "〜2026/7/31",
+        "url": "https://www.city.itabashi.tokyo.jp/bunka/chusho/1064138/index.html"
+      },
+      {
+        "name": "ベンチャー企業・起業家支援賃料補助金",
+        "field": [
+          "startup"
+        ],
+        "summary": "新技術・革新的ビジネス等に取り組む区内ベンチャー・起業家の事業所賃料の一部を補助する。",
+        "target": "中小企業基本法上の中小企業者(新技術・革新的ビジネス、又は認定創業支援を受けた事業者等)",
+        "maxAmount": "月20万円（カテゴリB・Cは月10万円）",
+        "rate": "1/2",
+        "deadline": null,
+        "url": "https://www.city.itabashi.tokyo.jp/bunka/chusho/yuushi/1051810.html"
+      },
+      {
+        "name": "小規模事業者経営改善資金(マル経融資)利子補給制度",
+        "field": [
+          "other"
+        ],
+        "summary": "マル経融資を受けた小規模事業者に支払利子の一部(3割)を最長36か月補給する。",
+        "target": "区内の従業員20人以下(商業・サービス業は5人以下)で1年以上事業を営む法人・個人事業主",
+        "maxAmount": null,
+        "rate": "支払利子の3割",
+        "deadline": "通年",
+        "url": "https://www.city.itabashi.tokyo.jp/bunka/chusho/yuushi/1005542.html"
+      }
+    ]
+  },
+  "練馬区": {
+    "indexUrl": "https://www.city.nerima.tokyo.jp/kusei/sangyo/jigyosha/index.html",
+    "lastChecked": "2026-07-12",
+    "subsidies": [
+      {
+        "name": "新規ビジネスチャレンジ補助金",
+        "field": [
+          "startup",
+          "rd",
+          "sales"
+        ],
+        "summary": "新市場への参入や新商品・新サービスの開発等に取り組む区内中小企業者に必要経費の一部を補助する。",
+        "target": "区内の中小企業者等",
+        "maxAmount": "100万円",
+        "rate": "2/3",
+        "deadline": "〜2026/8/31",
+        "url": "https://nerima-idc.or.jp/bsc/yuushi/hojokin.html"
+      },
+      {
+        "name": "見本市等出展費用補助金",
+        "field": [
+          "sales"
+        ],
+        "summary": "区内中小企業者が見本市・展示会等へ出展する際の出展料・会場費の一部を補助する。",
+        "target": "区内の中小企業者（団体含む）",
+        "maxAmount": "10万円（団体は20万円）",
+        "rate": "1/2",
+        "deadline": "予算上限まで",
+        "url": "https://nerima-idc.or.jp/bsc/yuushi/hojokin.html"
+      },
+      {
+        "name": "各種認証等取得支援事業",
+        "field": [
+          "other"
+        ],
+        "summary": "ISO9001・ISO14001等の公的認証取得に要する費用の一部を補助する。",
+        "target": "区内の中小企業者",
+        "maxAmount": "50万円",
+        "rate": "1/3",
+        "deadline": "予算上限まで",
+        "url": "https://nerima-idc.or.jp/bsc/yuushi/hojokin.html"
+      },
+      {
+        "name": "産業財産権取得支援事業",
+        "field": [
+          "rd",
+          "other"
+        ],
+        "summary": "特許権・実用新案権・意匠権・商標権の新規取得に要する費用の一部を補助する。",
+        "target": "区内の中小企業者",
+        "maxAmount": "10万円",
+        "rate": "1/2",
+        "deadline": "予算上限まで",
+        "url": "https://nerima-idc.or.jp/bsc/yuushi/hojokin.html"
+      },
+      {
+        "name": "ホームページ作成費補助事業",
+        "field": [
+          "it",
+          "sales"
+        ],
+        "summary": "ホームページ未開設の区内中小企業者に対し、新規ホームページ作成費用の一部を補助する。",
+        "target": "ホームページ未開設の区内中小企業者",
+        "maxAmount": "5万円",
+        "rate": "1/2",
+        "deadline": "〜2027/3/12",
+        "url": "https://nerima-idc.or.jp/bsc/yuushi/hojokin.html"
+      },
+      {
+        "name": "商店街の空き店舗出店者支援",
+        "field": [
+          "startup"
+        ],
+        "summary": "商店街の空き店舗に出店し商店街活性化に寄与する事業者へ開店経費・店舗改修費・賃借料を補助する。",
+        "target": "商店会活動に参加し活性化に寄与する出店事業者",
+        "maxAmount": "開店経費100万円・店舗改修100万円・賃借料月5万円",
+        "rate": null,
+        "deadline": "〜2026/12/18",
+        "url": "https://www.city.nerima.tokyo.jp/jigyoshamuke/jigyosha/shoko/akitenpo.html"
+      },
+      {
+        "name": "事業者の動画による情報発信支援",
+        "field": [
+          "sales",
+          "it"
+        ],
+        "summary": "日本大学芸術学部と連携し、区内事業者のプロモーション動画制作費の一部を補助する。",
+        "target": "区内の事業者",
+        "maxAmount": "75万円",
+        "rate": "3/4",
+        "deadline": null,
+        "url": "https://www.city.nerima.tokyo.jp/jigyoshamuke/jigyosha/shoko/jyouhouhasshin.html"
+      }
+    ]
+  },
+  "足立区": {
+    "indexUrl": "https://www.city.adachi.tokyo.jp/shigoto/chushokigyo/jose/index.html",
+    "lastChecked": "2026-07-12",
+    "subsidies": [
+      {
+        "name": "小規模事業者等経営改善補助金",
+        "field": [
+          "equipment",
+          "sales"
+        ],
+        "summary": "小規模事業者の機械設備購入・店舗改修・操業環境改善を支援する補助金。",
+        "target": "区内で1年以上継続営業する小規模企業者（製造・建設・運輸業等30人以下、商業・サービス業10人以下）",
+        "maxAmount": "250万円",
+        "rate": "2/3",
+        "deadline": "〜2027/1/29",
+        "url": "https://www.city.adachi.tokyo.jp/s-shinko/shigoto/chushokigyo/yushi-monozukuri.html"
+      },
+      {
+        "name": "技術支援補助金",
+        "field": [
+          "rd"
+        ],
+        "summary": "大学等への技術指導・試験機器利用の受託費を補助する制度。",
+        "target": "区内に本店登記があり1年以上継続営業する中小企業者",
+        "maxAmount": "20万円",
+        "rate": "1/2",
+        "deadline": "予算上限まで",
+        "url": "https://www.city.adachi.tokyo.jp/chusho/gyutuhojyo15.html"
+      },
+      {
+        "name": "IT・IoT導入補助金",
+        "field": [
+          "it"
+        ],
+        "summary": "業務効率化のためのIT・IoT機器/システム導入費を補助（事前相談必須）。",
+        "target": "区内に本店登記等があり1年以上継続営業する中小企業者",
+        "maxAmount": "150万円",
+        "rate": "2/3",
+        "deadline": "〜2027/2/12",
+        "url": "https://www.city.adachi.tokyo.jp/chusho/itiothojyo.html"
+      },
+      {
+        "name": "区内中小企業人材採用支援助成金",
+        "field": [
+          "employ"
+        ],
+        "summary": "求人広告費・動画制作費・人材紹介会社経費など採用活動費を助成。",
+        "target": "区内に本店登記かつ主たる事業所を有する中小企業・個人事業主",
+        "maxAmount": "60万円",
+        "rate": "1/2",
+        "deadline": "〜2027/1/29",
+        "url": "https://www.city.adachi.tokyo.jp/chusho/jinzaisaiyoshien.html"
+      },
+      {
+        "name": "区内中小企業人材定着サポート助成金",
+        "field": [
+          "employ"
+        ],
+        "summary": "職場環境整備・熱中症対策・就業規則作成など人材定着の取組を助成。",
+        "target": "区内に本店登記があり従業員1人以上を雇用する中小企業・個人事業主",
+        "maxAmount": "100万円",
+        "rate": "1/2",
+        "deadline": "〜2027/1/29",
+        "url": "https://www.city.adachi.tokyo.jp/chusho/jinzaiteicyakusapoto.html"
+      },
+      {
+        "name": "中小企業人材育成・資格取得研修費補助金",
+        "field": [
+          "employ"
+        ],
+        "summary": "従業員の研修受講料・資格取得費用を補助する制度。",
+        "target": "区内に本店登記があり主たる事業所を有する中小企業・個人事業主",
+        "maxAmount": "25万円",
+        "rate": "1/2",
+        "deadline": "〜2027/3/12",
+        "url": "https://www.city.adachi.tokyo.jp/chusho/kensyuu.html"
+      },
+      {
+        "name": "事業承継促進支援助成金",
+        "field": [
+          "restructure",
+          "equipment"
+        ],
+        "summary": "事業承継に伴う設備投資・販売促進経費を助成する制度。",
+        "target": "区内で5年以上営業する中小企業者、または承継した親族・従業員",
+        "maxAmount": "200万円",
+        "rate": "1/2",
+        "deadline": "〜2027/1/29",
+        "url": "https://www.city.adachi.tokyo.jp/chusho/jigyousyoukeijoseikin.html"
+      },
+      {
+        "name": "見本市等助成事業補助金",
+        "field": [
+          "sales"
+        ],
+        "summary": "国内外の見本市・展示会への出展費用を補助する制度。",
+        "target": "区内に本社・本店があり活動実態のある中小企業者・団体",
+        "maxAmount": "75万円",
+        "rate": "2/3",
+        "deadline": "予算上限まで",
+        "url": "https://www.city.adachi.tokyo.jp/s-shinko/shigoto/chushokigyo/yushi-shuttenjose.html"
+      },
+      {
+        "name": "ISO認証取得助成金",
+        "field": [
+          "other"
+        ],
+        "summary": "ISO認証取得に係る研修・コンサル・審査登録費を助成。",
+        "target": "区内で1年以上継続営業する中小企業・個人事業主",
+        "maxAmount": "50万円",
+        "rate": "1/2",
+        "deadline": "予算上限まで",
+        "url": "https://www.city.adachi.tokyo.jp/s-shinko/shigoto/chushokigyo/25iso-josei.html"
+      },
+      {
+        "name": "知的財産権認証取得助成金",
+        "field": [
+          "rd",
+          "other"
+        ],
+        "summary": "特許・実用新案等の出願・登録・弁理士費用を助成する制度。",
+        "target": "区内で1年以上継続営業する中小企業・個人事業主",
+        "maxAmount": "30万円",
+        "rate": "1/2",
+        "deadline": "予算上限まで",
+        "url": "https://www.city.adachi.tokyo.jp/s-shinko/shigoto/chushokigyo/25chitekizaisan-josei.html"
+      },
+      {
+        "name": "ホームページ作成・更新補助金",
+        "field": [
+          "it",
+          "sales"
+        ],
+        "summary": "ホームページの新規作成・リニューアルやPR動画制作費を補助（事前相談必須）。",
+        "target": "区内に本店登記等があり主たる事業所を有する中小企業者",
+        "maxAmount": "25万円",
+        "rate": "1/2",
+        "deadline": "〜2027/1/29",
+        "url": "https://www.city.adachi.tokyo.jp/chusho/shigoto/chushokigyo/2022ho-mupe-zisakusei-koushinhozyokin.html"
+      },
+      {
+        "name": "足立区ものづくり企業地域共生推進助成金",
+        "field": [
+          "energy",
+          "other"
+        ],
+        "summary": "ものづくり企業の操業環境改善（騒音・悪臭・振動対策）や住民受入環境整備を助成。",
+        "target": "区内に本社・事業所があり1年以上操業するものづくり企業等",
+        "maxAmount": "375万円",
+        "rate": "3/4",
+        "deadline": "〜2026/11/13",
+        "url": "https://www.city.adachi.tokyo.jp/s-shinko/shigoto/chushokigyo/monodukurikigyourittikeizoku.html"
+      },
+      {
+        "name": "足立区省エネルギー対策工場設備更新補助金",
+        "field": [
+          "energy",
+          "equipment"
+        ],
+        "summary": "省エネ診断と省エネ型の生産機器等への設備更新費を補助（事前相談必須）。",
+        "target": "区内で1年以上営業する製造業（認可工場）の中小企業者",
+        "maxAmount": "800万円",
+        "rate": "2/3",
+        "deadline": "〜2026/11/30",
+        "url": "https://www.city.adachi.tokyo.jp/kankyo-hozen/hojyokin.html"
+      }
+    ]
+  },
+  "葛飾区": {
+    "indexUrl": "https://www.city.katsushika.lg.jp/business/1000011/1034399/index.html",
+    "lastChecked": "2026-07-12",
+    "subsidies": [
+      {
+        "name": "機械設備メンテナンス等助成",
+        "field": [
+          "equipment"
+        ],
+        "summary": "製造から20年以上経過した機械設備のメンテナンス外注費・修理費の一部を助成する制度。",
+        "target": "区内に主たる事業所を有する製造業の中小企業",
+        "maxAmount": "10万円",
+        "rate": "1/2",
+        "deadline": "〜2027/3/15",
+        "url": "https://www.city.katsushika.lg.jp/business/1000011/1034399/1041085.html"
+      },
+      {
+        "name": "葛飾区デジタル化支援事業費補助金",
+        "field": [
+          "it"
+        ],
+        "summary": "生産性向上・業務効率化のためのデジタル技術導入（ソフト・クラウド・ハード）経費の一部を補助する制度。",
+        "target": "区内に主たる事業所を有する中小企業者",
+        "maxAmount": "50万円",
+        "rate": "1/2",
+        "deadline": "〜2027/2/26",
+        "url": "https://www.city.katsushika.lg.jp/business/1000011/1034399/1032622/index.html"
+      },
+      {
+        "name": "人材確保・人材定着支援事業費助成",
+        "field": [
+          "employ"
+        ],
+        "summary": "働きやすい職場環境づくりのための経費の一部を助成し、人材確保・定着を支援する制度。",
+        "target": "区内に事業所を有し従業員1人以上・SDGs宣言済みの中小企業等",
+        "maxAmount": "250万円（WLB推進企業認定は300万円）",
+        "rate": "1/2",
+        "deadline": "〜2027/2/26",
+        "url": "https://www.city.katsushika.lg.jp/business/1000011/1034399/1036547.html"
+      },
+      {
+        "name": "製品性能試験費用補助事業",
+        "field": [
+          "rd",
+          "equipment"
+        ],
+        "summary": "大学・試験研究機関を利用した技術指導・依頼試験・機器利用の経費の一部を補助する制度。",
+        "target": "区内に主たる事業所を有し1年以上営業する製造業の中小企業",
+        "maxAmount": "20万円（区内大学の技術指導は30万円）",
+        "rate": "1/2（区内大学の技術指導は2/3）",
+        "deadline": "〜2027/3/26",
+        "url": "https://www.city.katsushika.lg.jp/business/1000011/1034399/1004956.html"
+      },
+      {
+        "name": "ホームページ作成費補助",
+        "field": [
+          "it",
+          "sales"
+        ],
+        "summary": "区内中小企業のホームページ新規作成・改修、外国語対応、ECサイト・PR動画作成経費の一部を助成する制度。",
+        "target": "区内に主たる事業所を有し1年以上営業する中小企業（HP作成業者等を除く）",
+        "maxAmount": "5万円（外国語対応8万円、ECサイト構築10万円）",
+        "rate": "1/2",
+        "deadline": "〜2027/2/26",
+        "url": "https://www.city.katsushika.lg.jp/business/1000011/1034399/1004957.html"
+      },
+      {
+        "name": "見本市出展費補助事業",
+        "field": [
+          "sales"
+        ],
+        "summary": "見本市の開催・出展（国内・海外・オンライン）に要する会場費・設営費等の一部を補助する制度。",
+        "target": "区内工業団体、または区内に主たる事業所を有し1年以上営業する製造業の中小企業",
+        "maxAmount": "100万円（見本市開催）／30万円（国内出展）",
+        "rate": "1/2",
+        "deadline": "〜2027/2/26",
+        "url": "https://www.city.katsushika.lg.jp/business/1000011/1034399/1004958.html"
+      },
+      {
+        "name": "知的所有権取得費補助事業",
+        "field": [
+          "rd",
+          "other"
+        ],
+        "summary": "特許・実用新案・意匠・商標の取得出願に必要な費用の一部を補助する制度。",
+        "target": "区内に主たる事業所を有し1年以上営業する中小企業",
+        "maxAmount": "10万円",
+        "rate": "1/2",
+        "deadline": "〜2027/3/26",
+        "url": "https://www.city.katsushika.lg.jp/business/1000011/1034399/1004959.html"
+      },
+      {
+        "name": "動力プレス機械自主検査補助金",
+        "field": [
+          "equipment",
+          "other"
+        ],
+        "summary": "労働安全衛生法に基づく動力プレス機械の定期自主検査の委託費用の一部を補助する制度。",
+        "target": "区内に主たる事業所を有し1年以上営業する中小企業者",
+        "maxAmount": "10万円",
+        "rate": "1/2",
+        "deadline": "〜2027/3/26",
+        "url": "https://www.city.katsushika.lg.jp/business/1000011/1034399/1004961.html"
+      },
+      {
+        "name": "産業人材育成支援補助事業（大学・訓練等）",
+        "field": [
+          "employ"
+        ],
+        "summary": "従業員の技術習得のための大学等通学・訓練実施・人材開発支援に要する費用の一部を補助する制度。",
+        "target": "区内に主たる事業所を有し1年以上営業する中小企業",
+        "maxAmount": "50万円（人材開発支援）／30万円（大学・訓練）",
+        "rate": "1/3等",
+        "deadline": "〜2027/3/26",
+        "url": "https://www.city.katsushika.lg.jp/business/1000011/1034399/1004962.html"
+      },
+      {
+        "name": "産業人材育成支援補助事業（物流・建設事業者支援）",
+        "field": [
+          "employ"
+        ],
+        "summary": "従業員の大型等免許取得教習費や有資格者採用時手当の一部を補助する制度。",
+        "target": "区内に主たる事業所を有する貨物・旅客運送または建設業の中小企業",
+        "maxAmount": "60万円（免許取得費）／50万円（入社時手当）",
+        "rate": "1/2",
+        "deadline": "〜2027/3/26",
+        "url": "https://www.city.katsushika.lg.jp/business/1000011/1034399/1038067.html"
+      },
+      {
+        "name": "令和8年度《事業所用》かつしかエコ助成金",
+        "field": [
+          "energy"
+        ],
+        "summary": "事業所への太陽光発電・蓄電池・LED・省エネ空調等の導入費用の一部を補助する制度。",
+        "target": "区内の事業所に対象機器を導入する中小企業等",
+        "maxAmount": "100万円（蓄電池・空調・換気）／太陽光60万円",
+        "rate": "機器により異なる（太陽光6万円/kW、LED 1/2等）",
+        "deadline": "〜2027/3/31",
+        "url": "https://www.city.katsushika.lg.jp/kurashi/1000062/1023018/1035385/1023059.html"
+      },
+      {
+        "name": "葛飾区旅行商品造成事業補助金",
+        "field": [
+          "sales",
+          "other"
+        ],
+        "summary": "区内を回遊する旅行商品の造成を支援し、参加者数に応じた額を補助する制度。",
+        "target": "東京都内に本社・主たる事業所を有する登録旅行業者",
+        "maxAmount": "1商品40万円（同一事業者上限80万円）",
+        "rate": "参加者1人あたり3,000円×人数",
+        "deadline": "〜2026/12/11",
+        "url": "https://www.city.katsushika.lg.jp/business/1000011/1034399/1032239.html"
+      },
+      {
+        "name": "葛飾区正規雇用転換促進奨励金",
+        "field": [
+          "employ"
+        ],
+        "summary": "国のキャリアアップ助成金（正社員化コース）の支給決定を受け区内在住者を正社員転換した事業主に奨励金を支給する制度。",
+        "target": "区内に事業所がある中小企業で国の同助成金の支給決定を受けた者",
+        "maxAmount": "15万円（建設業は25万円）",
+        "rate": null,
+        "deadline": "通年",
+        "url": "https://www.city.katsushika.lg.jp/business/1000011/1034399/1031748/1013959.html"
+      }
+    ]
+  },
+  "江戸川区": {
+    "indexUrl": "https://www.city.edogawa.tokyo.jp/e093/shigotosangyo/jigyosha_oen/sangyo_jigyosya/jyosei/index.html",
+    "lastChecked": "2026-07-12",
+    "subsidies": [
+      {
+        "name": "人材育成支援助成金",
+        "field": [
+          "employ"
+        ],
+        "summary": "従業員の資格取得・研修等の人材育成にかかる経費の一部を助成する制度。",
+        "target": "区内に本社を有し1年以上事業を営む中小企業者、または中小企業者5社以上を含む団体",
+        "maxAmount": "20万円",
+        "rate": "1/2",
+        "deadline": null,
+        "url": "https://www.city.edogawa.tokyo.jp/e093/shigotosangyo/jigyosha_oen/sangyo_jigyosya/jyosei/jinzai/monodukurigijyutukeisyousien.html"
+      },
+      {
+        "name": "人材確保支援助成金",
+        "field": [
+          "employ"
+        ],
+        "summary": "求人広告・採用ブランディング等の人材確保にかかる経費の一部を助成する制度。",
+        "target": "区内に本社を有する中小企業者（前年度の税滞納がないこと）",
+        "maxAmount": "20万円",
+        "rate": "1/2",
+        "deadline": "〜2027/3/5",
+        "url": "https://www.city.edogawa.tokyo.jp/e093/shigotosangyo/jigyosha_oen/sangyo_jigyosya/jyosei/jinzai/sienjigyou.html"
+      },
+      {
+        "name": "労働環境整備助成金",
+        "field": [
+          "employ"
+        ],
+        "summary": "職場環境の整備や就業規則の作成にかかる経費の一部を助成する制度。",
+        "target": "区内に本社（個人事業者は主たる事業所）を有する中小企業者",
+        "maxAmount": "50万円",
+        "rate": "1/2",
+        "deadline": "〜2027/3/5",
+        "url": "https://www.city.edogawa.tokyo.jp/e093/shigotosangyo/jigyosha_oen/sangyo_jigyosya/jyosei/jinzai/roudoukankyou.html"
+      },
+      {
+        "name": "ISO・エコアクション21・プライバシーマークの認定取得助成金",
+        "field": [
+          "other",
+          "energy"
+        ],
+        "summary": "ISO・エコアクション21・プライバシーマーク等の認証取得費用の一部を助成する制度。",
+        "target": "区内に本社を有し前年度の税を完納した中小企業者（保証対象業種）",
+        "maxAmount": "50万円",
+        "rate": "1/2",
+        "deadline": null,
+        "url": "https://www.city.edogawa.tokyo.jp/e093/shigotosangyo/jigyosha_oen/sangyo_jigyosya/jyosei/kakusyuninshoseido/iso_eco_p.html"
+      },
+      {
+        "name": "えるぼし・くるみん・ユースエール・安全衛生優良企業の認定取得助成金",
+        "field": [
+          "employ"
+        ],
+        "summary": "えるぼし・くるみん・ユースエール等の認定取得にかかる経費の一部を助成する制度。",
+        "target": "区内に本社を有し前年度の税を完納した中小企業者",
+        "maxAmount": "10万円",
+        "rate": "1/2",
+        "deadline": null,
+        "url": "https://www.city.edogawa.tokyo.jp/e093/shigotosangyo/jigyosha_oen/sangyo_jigyosya/jyosei/kakusyuninshoseido/korosyoninsyo.html"
+      },
+      {
+        "name": "知的財産権の出願助成金",
+        "field": [
+          "rd",
+          "other"
+        ],
+        "summary": "特許・実用新案・意匠・商標など知的財産権の出願にかかる経費の一部を助成する制度。",
+        "target": "区内に本社を有し前年度の税を完納した中小企業者",
+        "maxAmount": "20万円",
+        "rate": "1/2",
+        "deadline": null,
+        "url": "https://www.city.edogawa.tokyo.jp/e093/shigotosangyo/jigyosha_oen/sangyo_jigyosya/jyosei/kakusyuninshoseido/chitekizaisan.html"
+      },
+      {
+        "name": "デジタル技術活用促進助成事業（DX導入）",
+        "field": [
+          "it"
+        ],
+        "summary": "DX応援隊の伴走支援を受けたうえでのDX導入経費の一部を助成する制度。",
+        "target": "区内に本店・主たる事務所を有する中小企業・NPO法人・医療法人・社会福祉法人等",
+        "maxAmount": "200万円",
+        "rate": "2/3",
+        "deadline": "〜2026/9/4",
+        "url": "https://www.city.edogawa.tokyo.jp/e093/shigotosangyo/jigyosha_oen/sangyo_jigyosya/jyosei/seisanseikojo/dounyu.html"
+      },
+      {
+        "name": "デジタル技術活用促進助成事業（IT導入）",
+        "field": [
+          "it"
+        ],
+        "summary": "生産性向上・業務効率化を目的としたIT導入費用の一部を助成する制度。",
+        "target": "区内に本店・主たる事務所を有する中小企業・NPO法人・医療法人・社会福祉法人等",
+        "maxAmount": "50万円",
+        "rate": "2/3",
+        "deadline": "予算上限まで",
+        "url": "https://www.city.edogawa.tokyo.jp/e093/shigotosangyo/jigyosha_oen/sangyo_jigyosya/jyosei/seisanseikojo/itdounyuu.html"
+      },
+      {
+        "name": "公設試験研究機関等利用促進助成金",
+        "field": [
+          "rd"
+        ],
+        "summary": "公設試験研究機関での依頼試験・機器利用等にかかる経費の一部を助成する制度。",
+        "target": "区内に本社（個人事業者は主たる事業所）を有し税を滞納していない中小企業者",
+        "maxAmount": "10万円",
+        "rate": "1/2",
+        "deadline": null,
+        "url": "https://www.city.edogawa.tokyo.jp/e093/shigotosangyo/jigyosha_oen/sangyo_jigyosya/jyosei/seihinkaihatsu/iraishiken.html"
+      },
+      {
+        "name": "販路拡大支援事業助成金",
+        "field": [
+          "sales",
+          "it"
+        ],
+        "summary": "ホームページ作成・EC化・展示会出展など販路拡大にかかる経費の一部を助成する制度。",
+        "target": "区内に本社を有し前年度の税滞納がない中小企業者",
+        "maxAmount": "30万円",
+        "rate": "1/2",
+        "deadline": "〜2027/3/5",
+        "url": "https://www.city.edogawa.tokyo.jp/e093/shigotosangyo/jigyosha_oen/sangyo_jigyosya/jyosei/hanrokakudai/hanrokakudai.html"
+      },
+      {
+        "name": "商店会空き店舗対策家賃助成事業",
+        "field": [
+          "startup",
+          "other"
+        ],
+        "summary": "区内商店会の空き店舗を活用して新規出店する事業者に店舗家賃の一部を助成する制度。",
+        "target": "区内商店会に加入し3か月以上の空き店舗で新規出店する中小企業者（個人事業主含む）",
+        "maxAmount": "月額5万円",
+        "rate": "1/3",
+        "deadline": null,
+        "url": "https://www.city.edogawa.tokyo.jp/e032/shigotosangyo/jigyosha_oen/sangyo_jigyosya/jyosei/akitenpo_jyosei.html"
+      },
+      {
+        "name": "ものづくり企業地域共生推進助成金",
+        "field": [
+          "energy",
+          "equipment"
+        ],
+        "summary": "工場の操業環境改善（防音・防臭・防塵・防振対策等）にかかる経費の一部を助成する制度。",
+        "target": "区内に本社と対象事業所を有し1年以上操業する製造業等の中小企業者",
+        "maxAmount": "375万円",
+        "rate": "3/4",
+        "deadline": null,
+        "url": "https://www.city.edogawa.tokyo.jp/e093/shigotosangyo/jigyosha_oen/sangyo_jigyosya/jyosei/sonota/monozukurishien.html"
+      },
+      {
+        "name": "事業継続計画（BCP）策定助成金",
+        "field": [
+          "other"
+        ],
+        "summary": "事業継続計画（BCP）の策定にかかる経費の一部を助成する制度。",
+        "target": "区内に本社を有し前年度の税を完納した中小企業者（保証対象業種）",
+        "maxAmount": "20万円",
+        "rate": "1/2",
+        "deadline": null,
+        "url": "https://www.city.edogawa.tokyo.jp/e093/shigotosangyo/jigyosha_oen/sangyo_jigyosya/jyosei/kakusyuninshoseido/bcp.html"
       }
     ]
   }
