@@ -1,0 +1,6 @@
+{"pdfs":[
+ {"index":18,"towns":["海岸2・3丁目","芝浦4丁目","南青山3〜6丁目"],"burnable":["火","金"],"recyclable":["月"],"plastic":["木"],"nonBurnable":["水",[1,3]]},
+ {"index":22,"towns":["六本木5丁目4〜18番","六本木6丁目","新橋1丁目","西新橋1〜3丁目","白金1・3・5丁目"],"burnable":["月","木"],"recyclable":["土"],"plastic":["水"],"nonBurnable":["火",[1,3]]},
+ {"index":23,"towns":["白金2・4・6丁目","白金台2〜5丁目"],"burnable":["水","土"],"recyclable":["火"],"plastic":["金"],"nonBurnable":["木",[1,3]]},
+ {"index":28,"towns":["新橋2丁目6〜9番・15〜17番","新橋3丁目8〜25番","新橋4丁目5〜7番・10番・11番・14番・15番・18〜21番（19番4号を除く）"],"burnable":["火","木","土"],"recyclable":["金"],"plastic":["月"],"nonBurnable_weekly":["水"]}
+]}

@@ -22,6 +22,8 @@ import toshima from "./toshima-schedule.json";
 import adachi from "./adachi-schedule.json";
 import katsushika from "./katsushika-schedule.json";
 import kita from "./kita-schedule.json";
+import sumida from "./sumida-schedule.json";
+import minato from "./minato-schedule.json";
 
 /* ===== 型 ===== */
 export type WeeklyRule = { kind: "weekly"; weekdays: number[] };
@@ -119,6 +121,8 @@ const TS = toshima as unknown as SingleChomeMuni;
 const AD = adachi as unknown as SingleChomeMuni;
 const KS = katsushika as unknown as SingleChomeMuni;
 const KT = kita as unknown as SingleChomeMuni;
+const SM = sumida as unknown as SingleChomeMuni;
+const MN = minato as unknown as SingleChomeMuni;
 
 // 丁目単位データ → 内部AreaRaw（chome:string[]）へ正規化して Municipality を作る
 function singleChomeMuni(
@@ -175,6 +179,8 @@ export const MUNICIPALITIES: Municipality[] = [
   singleChomeMuni(AD, "https://www.city.adachi.tokyo.jp/", "足立区公式"),
   singleChomeMuni(KS, "https://www.city.katsushika.lg.jp/", "葛飾区公式"),
   singleChomeMuni(KT, "https://www.city.kita.lg.jp/", "北区公式"),
+  singleChomeMuni(SM, "https://www.city.sumida.lg.jp/", "墨田区公式"),
+  singleChomeMuni(MN, "https://www.city.minato.tokyo.jp/", "港区公式"),
 ];
 
 export type ChomeOption = {
