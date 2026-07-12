@@ -1,7 +1,8 @@
 import { NextResponse } from "next/server";
+import wards from "@/lib/subsidy/tokyo-wards.json";
 
 // jGrants（デジタル庁）公開API＝国＋都道府県の補助金。認証不要・CC BY（出典明記で商用可）。
-// v0: 目的キーワードで公募中を検索→対象地域で絞り→締切が近い順に返す。
+// 加えて、東京23区は市区町村独自の補助金を自前データ(tokyo-wards.json)で上乗せ（jGrantsが取りこぼす層）。
 const JG = "https://api.jgrants-portal.go.jp/exp/v1/public/subsidies";
 
 // 目的（UIのチップ）→ jGrantsキーワード
@@ -28,16 +29,28 @@ type JgItem = {
   acceptance_end_datetime: string;
 };
 
+type WardSubsidy = {
+  name: string;
+  field: string[];
+  summary?: string;
+  target?: string;
+  maxAmount?: string | null;
+  rate?: string | null;
+  deadline?: string | null;
+  url: string;
+};
+type WardData = { indexUrl?: string; lastChecked?: string; subsidies: WardSubsidy[] };
+const WARDS = wards as Record<string, WardData>;
+
 async function fetchByKeyword(keyword: string): Promise<JgItem[]> {
   const p = new URLSearchParams({
     keyword,
     sort: "acceptance_end_datetime",
     order: "ASC",
-    acceptance: "1", // 受付中のみ＝鮮度
+    acceptance: "1",
   });
   const res = await fetch(`${JG}?${p.toString()}`, {
     headers: { Accept: "application/json" },
-    // 公募は日次で開閉。6時間キャッシュ（鮮度と負荷のバランス）
     next: { revalidate: 60 * 60 * 6 },
   });
   if (!res.ok) return [];
@@ -47,52 +60,77 @@ async function fetchByKeyword(keyword: string): Promise<JgItem[]> {
 
 export async function GET(req: Request) {
   const { searchParams } = new URL(req.url);
-  const pref = (searchParams.get("pref") || "").trim(); // 例「東京都」
+  const pref = (searchParams.get("pref") || "").trim();
+  const ward = (searchParams.get("ward") || "").trim();
   const purposes = (searchParams.get("purposes") || "")
     .split(",")
     .map((s) => s.trim())
     .filter(Boolean);
 
-  // 目的キーワード（未選択なら広めに「補助金」）
   const keywords = purposes.length
     ? purposes.map((p) => PURPOSE_KEYWORDS[p]).filter(Boolean)
     : ["補助金"];
 
-  // 各キーワードで取得→id重複排除
+  // 国＋都道府県（jGrants）
   const byId = new Map<string, JgItem>();
   const settled = await Promise.all(keywords.map((k) => fetchByKeyword(k)));
   for (const list of settled) for (const it of list) byId.set(it.id, it);
-
-  let items = [...byId.values()];
-
-  // 対象地域で絞り込み（全国＋選択した都道府県を残す）
+  let nat = [...byId.values()];
   if (pref) {
-    items = items.filter(
+    nat = nat.filter(
       (it) =>
         it.target_area_search === "全国" ||
         (it.target_area_search || "").includes(pref)
     );
   }
-
-  // 締切が近い順（受付中のみなので、締切逆算で緊急度を出す）
-  items.sort((a, b) =>
+  nat.sort((a, b) =>
     (a.acceptance_end_datetime || "").localeCompare(b.acceptance_end_datetime || "")
   );
-
-  const result = items.slice(0, 40).map((it) => ({
+  const national = nat.slice(0, 40).map((it) => ({
+    source: "national" as const,
     id: it.id,
     title: it.title || it.name,
     institution: it.institution_name || "",
     maxLimit: it.subsidy_max_limit || 0,
     area: it.target_area_search || "",
     employees: it.target_number_of_employees || "",
-    start: it.acceptance_start_datetime || "",
     end: it.acceptance_end_datetime || "",
     url: `https://www.jgrants-portal.go.jp/subsidy/${it.id}`,
   }));
 
+  // 市区町村（東京23区の自前データ）
+  let wardItems: unknown[] = [];
+  let wardMeta: { name: string; lastChecked?: string; indexUrl?: string } | null = null;
+  const wd = ward && pref === "東京都" ? WARDS[ward] : undefined;
+  if (wd) {
+    wardMeta = { name: ward, lastChecked: wd.lastChecked, indexUrl: wd.indexUrl };
+    const list = purposes.length
+      ? wd.subsidies.filter((s) => s.field.some((f) => purposes.includes(f)))
+      : wd.subsidies;
+    wardItems = list.map((s, i) => ({
+      source: "ward" as const,
+      id: `${ward}-${i}`,
+      title: s.name,
+      wardName: ward,
+      summary: s.summary || "",
+      target: s.target || "",
+      maxText: s.maxAmount || "",
+      rateText: s.rate || "",
+      deadlineText: s.deadline || "",
+      lastChecked: wd.lastChecked || "",
+      url: s.url,
+    }));
+  }
+
   return NextResponse.json(
-    { count: result.length, items: result },
+    {
+      pref,
+      ward: wardMeta,
+      wardCount: wardItems.length,
+      nationalCount: national.length,
+      wardItems,
+      items: national,
+    },
     { headers: { "Cache-Control": "public, s-maxage=21600, stale-while-revalidate=86400" } }
   );
 }

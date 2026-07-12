@@ -124,6 +124,15 @@
   text-align: center; color: var(--sf-sub); font-size: 0.92rem; line-height: 1.7;
 }
 
+.sf-block { margin-bottom: 26px; }
+.sf-badgeWard, .sf-badgeNat {
+  display: inline-block; font-size: 0.72rem; font-weight: 800; border-radius: 6px;
+  padding: 2px 8px; margin-right: 8px; vertical-align: middle;
+}
+.sf-badgeWard { color: #fff; background: var(--sf-gold); }
+.sf-badgeNat { color: var(--sf-sub); background: var(--sf-soft); border: 1px solid var(--sf-line); }
+.sf-sum { font-size: 0.86rem; color: var(--sf-sub); line-height: 1.6; margin: -2px 0 10px; }
+
 .sf-list { display: flex; flex-direction: column; gap: 12px; }
 .sf-card {
   display: block;
