@@ -18,6 +18,10 @@ import itabashi from "./itabashi-schedule.json";
 import shinjuku from "./shinjuku-schedule.json";
 import shibuya from "./shibuya-schedule.json";
 import arakawa from "./arakawa-schedule.json";
+import toshima from "./toshima-schedule.json";
+import adachi from "./adachi-schedule.json";
+import katsushika from "./katsushika-schedule.json";
+import kita from "./kita-schedule.json";
 
 /* ===== 型 ===== */
 export type WeeklyRule = { kind: "weekly"; weekdays: number[] };
@@ -111,6 +115,10 @@ const IT = itabashi as unknown as SingleChomeMuni;
 const SJ = shinjuku as unknown as SingleChomeMuni;
 const SB = shibuya as unknown as SingleChomeMuni;
 const AR = arakawa as unknown as SingleChomeMuni;
+const TS = toshima as unknown as SingleChomeMuni;
+const AD = adachi as unknown as SingleChomeMuni;
+const KS = katsushika as unknown as SingleChomeMuni;
+const KT = kita as unknown as SingleChomeMuni;
 
 // 丁目単位データ → 内部AreaRaw（chome:string[]）へ正規化して Municipality を作る
 function singleChomeMuni(
@@ -163,6 +171,10 @@ export const MUNICIPALITIES: Municipality[] = [
   singleChomeMuni(SJ, "https://www.city.shinjuku.lg.jp/seikatsu/file09_01_00001.html", "新宿区公式"),
   singleChomeMuni(SB, "https://www.city.shibuya.tokyo.jp/kurashi/gomi/kateigomi/gomid.html", "渋谷区公式"),
   singleChomeMuni(AR, "https://www.city.arakawa.tokyo.jp/a025/recycle/shuushuubi/syusyubi.html", "荒川区公式"),
+  singleChomeMuni(TS, "https://www.city.toshima.lg.jp/", "豊島区公式"),
+  singleChomeMuni(AD, "https://www.city.adachi.tokyo.jp/", "足立区公式"),
+  singleChomeMuni(KS, "https://www.city.katsushika.lg.jp/", "葛飾区公式"),
+  singleChomeMuni(KT, "https://www.city.kita.lg.jp/", "北区公式"),
 ];
 
 export type ChomeOption = {

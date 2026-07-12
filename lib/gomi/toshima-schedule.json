@@ -1,0 +1,3076 @@
+{
+ "municipality": "豊島区",
+ "code": "13116",
+ "source": "豊島区「資源回収・ごみ収集曜日一覧」（豊島区公式PDFを目視でデータ化）",
+ "sourceUrl": "https://www.city.toshima.lg.jp/documents/1056/syuusyuyoubiitiran.pdf",
+ "license": "豊島区公式サイト掲載情報",
+ "fetchedAt": "2026-07-12",
+ "categories": {
+  "recyclable": "びん・缶・ペットボトル",
+  "paper": "段ボール・古紙・プラ",
+  "burnable": "燃やすごみ",
+  "nonBurnable": "金属・陶器・ガラス"
+ },
+ "areas": [
+  {
+   "chome": "池袋1丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     3
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 5,
+    "nths": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "chome": "池袋4丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     3
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 5,
+    "nths": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "chome": "池袋2丁目14番5号・8号,15番2号〜3号,16番,17番,19番(要町通り沿い以外),20番〜38番,39番〜40番(トキワ通り沿い以外),42番,44番〜45番(トキワ通り沿い以外),46番,47番〜78番",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     3
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 5,
+    "nths": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "chome": "池袋3丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     3
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 5,
+    "nths": [
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "池袋本町1丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     3
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 5,
+    "nths": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "chome": "池袋本町2丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     3
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 5,
+    "nths": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "chome": "池袋本町3丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     3
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 5,
+    "nths": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "chome": "池袋本町4丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     3
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 5,
+    "nths": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "chome": "要町1丁目1番〜8番",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     4
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     5
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 1,
+    "nths": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "chome": "要町1丁目9番〜49番",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     4
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     5
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 1,
+    "nths": [
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "要町2丁目1番〜14番",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     4
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     5
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 1,
+    "nths": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "chome": "要町2丁目15番〜36番",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     4
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     5
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 1,
+    "nths": [
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "要町3丁目1番〜30番",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     4
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     5
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 1,
+    "nths": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "chome": "要町3丁目31番〜59番",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     4
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     5
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 1,
+    "nths": [
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "上池袋1丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     6
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     1
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     2,
+     5
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 3,
+    "nths": [
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "上池袋2丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     6
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     1
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     2,
+     5
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 3,
+    "nths": [
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "上池袋3丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     6
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     1
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     2,
+     5
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 3,
+    "nths": [
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "上池袋4丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     6
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     1
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     2,
+     5
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 3,
+    "nths": [
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "北大塚1丁目1〜10番,15番(16号〜21号),34番(14号〜20号)",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     3
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     4
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     2,
+     5
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 6,
+    "nths": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "chome": "北大塚1丁目11番〜14番,15番(1号〜15号),16番〜33番,34番(1号〜13号)",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     6
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     1
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     2,
+     5
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 3,
+    "nths": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "chome": "北大塚2丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     6
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     1
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     2,
+     5
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 3,
+    "nths": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "chome": "北大塚3丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     6
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     1
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     2,
+     5
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 3,
+    "nths": [
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "駒込1丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     3
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     4
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     2,
+     5
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 6,
+    "nths": [
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "駒込2丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     3
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     4
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     2,
+     5
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 6,
+    "nths": [
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "駒込3丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     3
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     4
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     2,
+     5
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 6,
+    "nths": [
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "駒込4丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     3
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     4
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     2,
+     5
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 6,
+    "nths": [
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "駒込5丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     3
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     4
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     2,
+     5
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 6,
+    "nths": [
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "駒込6丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     3
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     4
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     2,
+     5
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 6,
+    "nths": [
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "駒込7丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     3
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     4
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     2,
+     5
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 6,
+    "nths": [
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "巣鴨1丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     3
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     4
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     2,
+     5
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 6,
+    "nths": [
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "巣鴨2丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     3
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     4
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     2,
+     5
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 6,
+    "nths": [
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "巣鴨5丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     3
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     4
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     2,
+     5
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 6,
+    "nths": [
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "巣鴨3丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     3
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     4
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     2,
+     5
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 6,
+    "nths": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "chome": "巣鴨4丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     3
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     4
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     2,
+     5
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 6,
+    "nths": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "chome": "千川1丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     4
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     5
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 1,
+    "nths": [
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "千川2丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     4
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     5
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 1,
+    "nths": [
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "雑司が谷1丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     5
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     6
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 2,
+    "nths": [
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "雑司が谷2丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     5
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     6
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 2,
+    "nths": [
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "雑司が谷3丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     5
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     6
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 2,
+    "nths": [
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "高田1丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     5
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     6
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 2,
+    "nths": [
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "高田2丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     5
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     6
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 2,
+    "nths": [
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "高田3丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     1
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 4,
+    "nths": [
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "高松1丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     4
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     5
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 1,
+    "nths": [
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "高松2丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     4
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     5
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 1,
+    "nths": [
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "高松3丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     4
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     5
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 1,
+    "nths": [
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "千早1丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     4
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     5
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 1,
+    "nths": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "chome": "千早2丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     4
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     5
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 1,
+    "nths": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "chome": "千早3丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     4
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     5
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 1,
+    "nths": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "chome": "千早4丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     4
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     5
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 1,
+    "nths": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "chome": "長崎1丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     1
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 4,
+    "nths": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "chome": "長崎2丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     1
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 4,
+    "nths": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "chome": "長崎3丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     1
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 4,
+    "nths": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "chome": "長崎4丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     1
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 4,
+    "nths": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "chome": "長崎5丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     1
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 4,
+    "nths": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "chome": "長崎6丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     4
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     5
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 1,
+    "nths": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "chome": "西池袋2丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     3
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 5,
+    "nths": [
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "西池袋4丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     3
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 5,
+    "nths": [
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "西池袋3丁目1番〜19番,21番13号,33番〜36番",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     3
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 5,
+    "nths": [
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "西池袋5丁目2番,3番,4番(要町通り沿い以外),5番,8番(要町通り沿い以外),9番〜28番",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     3
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 5,
+    "nths": [
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "西巣鴨1丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     6
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     1
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     2,
+     5
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 3,
+    "nths": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "chome": "西巣鴨2丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     6
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     1
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     2,
+     5
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 3,
+    "nths": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "chome": "西巣鴨3丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     6
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     1
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     2,
+     5
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 3,
+    "nths": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "chome": "西巣鴨4丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     6
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     1
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     2,
+     5
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 3,
+    "nths": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "chome": "東池袋2丁目1番〜48番,49番6号付近,53番9号",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     5
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     6
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 2,
+    "nths": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "chome": "東池袋3丁目1番,16番〜23番",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     5
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     6
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 2,
+    "nths": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "chome": "東池袋4丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     5
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     6
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 2,
+    "nths": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "chome": "東池袋5丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     5
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     6
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 2,
+    "nths": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "chome": "南池袋1丁目1番〜16番",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     3
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 5,
+    "nths": [
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "南池袋2丁目1番〜21番,24番1号(シアターグリーン通り沿い),28番〜49番",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     5
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     6
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 2,
+    "nths": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "chome": "南池袋3丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     5
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     6
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 2,
+    "nths": [
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "南池袋4丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     5
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     6
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 2,
+    "nths": [
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "南大塚1丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     3
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     4
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     2,
+     5
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 6,
+    "nths": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "chome": "南大塚2丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     3
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     4
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     2,
+     5
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 6,
+    "nths": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "chome": "南大塚3丁目1番〜24番",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     3
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     4
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     2,
+     5
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 6,
+    "nths": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "chome": "南大塚3丁目25番〜37番",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     5
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     6
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 2,
+    "nths": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "chome": "南大塚3丁目38番〜55番",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     3
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     4
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     2,
+     5
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 6,
+    "nths": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "chome": "南長崎1丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     1
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 4,
+    "nths": [
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "南長崎2丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     1
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 4,
+    "nths": [
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "南長崎3丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     1
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 4,
+    "nths": [
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "南長崎4丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     1
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 4,
+    "nths": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "chome": "南長崎5丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     1
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 4,
+    "nths": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "chome": "南長崎6丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     1
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 4,
+    "nths": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "chome": "目白1丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     1
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 4,
+    "nths": [
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "目白2丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     1
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 4,
+    "nths": [
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "目白3丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     1
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 4,
+    "nths": [
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "目白4丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     1
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 4,
+    "nths": [
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "目白5丁目",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     1
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 4,
+    "nths": [
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "池袋2丁目1番〜13番,14番(5号,8号以外),15番1号,6号,18番,19番(要町通り沿い)【池袋駅周辺繁華街地域】",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     3
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 5,
+    "nths": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "chome": "池袋2丁目39番〜41番,43番〜45番(すべてトキワ通り沿い)【池袋駅周辺繁華街地域】",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     3
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 5,
+    "nths": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "chome": "西池袋1丁目1番〜17番【池袋駅周辺繁華街地域】",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     5
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 4,
+    "nths": [
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "西池袋1丁目18番〜20番,26番〜30番,43番,44番【池袋駅周辺繁華街地域】",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     5
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 1,
+    "nths": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "chome": "西池袋1丁目21番〜25番,31番〜42番【池袋駅周辺繁華街地域】",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     5
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 1,
+    "nths": [
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "西池袋3丁目20番〜32番(21番13号以外)【池袋駅周辺繁華街地域】",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     3
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 5,
+    "nths": [
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "西池袋5丁目1番,4番(要町通り沿い),8番(要町通り沿い)【池袋駅周辺繁華街地域】",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     3
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 5,
+    "nths": [
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "東池袋1丁目1番〜7番【池袋駅周辺繁華街地域】",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     4
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     1
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     2,
+     5
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 3,
+    "nths": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "chome": "東池袋1丁目8番〜11番,14番〜21番,29番〜33番【池袋駅周辺繁華街地域】",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     4
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     1
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     2,
+     5
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 6,
+    "nths": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "chome": "東池袋1丁目12番,13番,22番〜28番【池袋駅周辺繁華街地域】",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     4
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     1
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     2,
+     5
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 6,
+    "nths": [
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "東池袋1丁目34番〜50番【池袋駅周辺繁華街地域】",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     4
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     1
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     2,
+     5
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 3,
+    "nths": [
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "東池袋2丁目49番〜63番(49番6号付近,53番9号は除く)【池袋駅周辺繁華街地域】",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     5
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     6
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 2,
+    "nths": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "chome": "東池袋3丁目2番〜15番【池袋駅周辺繁華街地域】",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     5
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     6
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     1,
+     4
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 2,
+    "nths": [
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "chome": "南池袋1丁目17番〜29番【池袋駅周辺繁華街地域】",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     5
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 4,
+    "nths": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "chome": "南池袋2丁目22番〜27番,24番1号(シアターグリーン通り沿いは除く)【池袋駅周辺繁華街地域】",
+   "recyclable": {
+    "kind": "weekly",
+    "weekdays": [
+     5
+    ]
+   },
+   "paper": {
+    "kind": "weekly",
+    "weekdays": [
+     2
+    ]
+   },
+   "burnable": {
+    "kind": "weekly",
+    "weekdays": [
+     3,
+     6
+    ]
+   },
+   "nonBurnable": {
+    "kind": "nthWeekday",
+    "weekday": 4,
+    "nths": [
+     1,
+     3
+    ]
+   }
+  }
+ ]
+}
