@@ -42,6 +42,33 @@ type WardSubsidy = {
 type WardData = { indexUrl?: string; lastChecked?: string; subsidies: WardSubsidy[] };
 const WARDS = wards as Record<string, WardData>;
 
+// 締切テキスト → ISO日付（YYYY-MM-DD）。実日付が無い表現(通年/予算上限まで/null)は null。
+function parseDeadlineIso(text?: string | null): string | null {
+  if (!text) return null;
+  // "〜2027/2/26" / "2027/2/26" / "2026-12-28"
+  const m =
+    /(\d{4})[/-](\d{1,2})[/-](\d{1,2})/.exec(text) ||
+    /(\d{4})年(\d{1,2})月(\d{1,2})日/.exec(text);
+  if (!m) return null;
+  const y = +m[1],
+    mo = +m[2],
+    d = +m[3];
+  if (mo < 1 || mo > 12 || d < 1 || d > 31) return null;
+  return `${y}-${String(mo).padStart(2, "0")}-${String(d).padStart(2, "0")}`;
+}
+// iso(締切) が today から何日後か（負なら過去）。どちらも JST の暦日で比較。
+function daysUntil(iso: string, today: string): number {
+  const a = Date.parse(iso + "T00:00:00Z");
+  const b = Date.parse(today + "T00:00:00Z");
+  return Math.round((a - b) / 86400000);
+}
+function jstToday(): string {
+  const j = new Date(Date.now() + 9 * 3600 * 1000);
+  return `${j.getUTCFullYear()}-${String(j.getUTCMonth() + 1).padStart(2, "0")}-${String(
+    j.getUTCDate()
+  ).padStart(2, "0")}`;
+}
+
 async function fetchByKeyword(keyword: string): Promise<JgItem[]> {
   const p = new URLSearchParams({
     keyword,
@@ -71,6 +98,8 @@ export async function GET(req: Request) {
     ? purposes.map((p) => PURPOSE_KEYWORDS[p]).filter(Boolean)
     : ["補助金"];
 
+  const todayJst = jstToday();
+
   // 国＋都道府県（jGrants）
   const byId = new Map<string, JgItem>();
   const settled = await Promise.all(keywords.map((k) => fetchByKeyword(k)));
@@ -98,28 +127,60 @@ export async function GET(req: Request) {
     url: `https://www.jgrants-portal.go.jp/subsidy/${it.id}`,
   }));
 
-  // 市区町村（東京23区の自前データ）
+  // 市区町村（東京23区の自前データ）＝実行時オートフレッシュ
+  // 締切テキスト（"〜2027/2/26" / "2026-12-28" 等）から実日付を復元し、
+  // 過ぎた締切の制度は「募集中」から自動除外（誤情報ゼロを無メンテで維持）。
   let wardItems: unknown[] = [];
-  let wardMeta: { name: string; lastChecked?: string; indexUrl?: string } | null = null;
+  let wardMeta:
+    | { name: string; lastChecked?: string; indexUrl?: string; expiredHidden?: number }
+    | null = null;
   const wd = ward && pref === "東京都" ? WARDS[ward] : undefined;
   if (wd) {
-    wardMeta = { name: ward, lastChecked: wd.lastChecked, indexUrl: wd.indexUrl };
     const list = purposes.length
       ? wd.subsidies.filter((s) => s.field.some((f) => purposes.includes(f)))
       : wd.subsidies;
-    wardItems = list.map((s, i) => ({
-      source: "ward" as const,
-      id: `${ward}-${i}`,
-      title: s.name,
-      wardName: ward,
-      summary: s.summary || "",
-      target: s.target || "",
-      maxText: s.maxAmount || "",
-      rateText: s.rate || "",
-      deadlineText: s.deadline || "",
-      lastChecked: wd.lastChecked || "",
-      url: s.url,
-    }));
+    let expiredHidden = 0;
+    const mapped = list
+      .map((s, i) => {
+        const iso = parseDeadlineIso(s.deadline);
+        const dLeft = iso ? daysUntil(iso, todayJst) : null;
+        return {
+          source: "ward" as const,
+          id: `${ward}-${i}`,
+          title: s.name,
+          wardName: ward,
+          summary: s.summary || "",
+          target: s.target || "",
+          maxText: s.maxAmount || "",
+          rateText: s.rate || "",
+          deadlineText: s.deadline || "",
+          deadlineIso: iso,
+          daysLeft: dLeft,
+          lastChecked: wd.lastChecked || "",
+          url: s.url,
+        };
+      })
+      // 締切が実日付で「過去」のものは非表示（通年・予算上限まで・締切未定は残す）
+      .filter((it) => {
+        if (it.daysLeft !== null && it.daysLeft < 0) {
+          expiredHidden++;
+          return false;
+        }
+        return true;
+      })
+      // 締切が近い順（実日付なし=後ろ）
+      .sort((a, b) => {
+        const av = a.daysLeft ?? 99999;
+        const bv = b.daysLeft ?? 99999;
+        return av - bv;
+      });
+    wardItems = mapped;
+    wardMeta = {
+      name: ward,
+      lastChecked: wd.lastChecked,
+      indexUrl: wd.indexUrl,
+      expiredHidden,
+    };
   }
 
   return NextResponse.json(

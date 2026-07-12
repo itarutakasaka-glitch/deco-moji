@@ -11,3 +11,6 @@ next-env.d.ts
 
 # local preview/agent config
 .claude/
+
+# 鮮度監査の一時生成物
+freshness-issue.md
