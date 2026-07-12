@@ -55,12 +55,19 @@ type WardItem = {
   maxText: string;
   rateText: string;
   deadlineText: string;
+  deadlineIso: string | null;
+  daysLeft: number | null;
   lastChecked: string;
   url: string;
 };
 type ApiResp = {
   pref: string;
-  ward: { name: string; lastChecked?: string; indexUrl?: string } | null;
+  ward: {
+    name: string;
+    lastChecked?: string;
+    indexUrl?: string;
+    expiredHidden?: number;
+  } | null;
   wardItems: WardItem[];
   items: NatItem[];
 };
@@ -171,9 +178,12 @@ export default function SubsidyFinder() {
                   <div className="sf-resHead">
                     <span className="sf-badgeWard">区の制度</span>
                     <b>{data.ward.name}</b> 独自：<b>{data.wardItems.length}</b> 件
-                    {data.ward.lastChecked && (
-                      <span className="sf-resTags">最終確認日 {data.ward.lastChecked}</span>
-                    )}
+                    <span className="sf-resTags">
+                      {data.ward.lastChecked && <>最終確認日 {data.ward.lastChecked}</>}
+                      {!!data.ward.expiredHidden && data.ward.expiredHidden > 0 && (
+                        <> ・締切切れ {data.ward.expiredHidden} 件を自動で非表示</>
+                      )}
+                    </span>
                   </div>
                   {data.wardItems.length === 0 ? (
                     <div className="sf-empty">
@@ -185,7 +195,13 @@ export default function SubsidyFinder() {
                         <a className="sf-card ward" key={it.id} href={it.url} target="_blank" rel="noopener noreferrer">
                           <div className="sf-cardTop">
                             <span className="sf-area">{it.wardName}</span>
-                            {it.deadlineText && <span className="sf-deadline">{it.deadlineText}</span>}
+                            {it.daysLeft !== null ? (
+                              <span className={`sf-deadline${it.daysLeft <= 14 ? " soon" : ""}`}>
+                                {it.daysLeft === 0 ? "本日締切" : `締切まで${it.daysLeft}日`}
+                              </span>
+                            ) : (
+                              it.deadlineText && <span className="sf-deadline">{it.deadlineText}</span>
+                            )}
                           </div>
                           <div className="sf-title">{it.title}</div>
                           {it.summary && <div className="sf-sum">{it.summary}</div>}

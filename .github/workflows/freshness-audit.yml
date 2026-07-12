@@ -1,0 +1,43 @@
+name: 補助金データ鮮度監査
+
+# 毎週火曜 06:10 JST（＝月曜 21:10 UTC）に自動実行。手動実行も可。
+on:
+  schedule:
+    - cron: "10 21 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: 鮮度監査を実行（締切・リンク切れ）
+        run: node scripts/audit-freshness.mjs --http --issue
+
+      - name: 鮮度アラートIssueを upsert
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -e
+          TITLE="🕒 補助金データ 鮮度監査アラート"
+          BODY_FILE="freshness-issue.md"
+          # 期限切れ / リンク切れ が無ければ Issue は作らない（締切間近のみは通知しない運用）
+          if ! grep -qE "期限切れ \*\*[1-9]|到達できないURL" "$BODY_FILE"; then
+            echo "要対応なし。Issueは作成しません。"
+            exit 0
+          fi
+          NUM=$(gh issue list --state open --search "in:title $TITLE" --json number --jq '.[0].number' || true)
+          if [ -n "$NUM" ]; then
+            gh issue edit "$NUM" --body-file "$BODY_FILE"
+            gh issue comment "$NUM" --body "🔄 $(date -u -d '+9 hours' '+%Y-%m-%d %H:%M JST') に再監査しました（本文を更新）。"
+          else
+            gh issue create --title "$TITLE" --body-file "$BODY_FILE" --label "freshness" || \
+            gh issue create --title "$TITLE" --body-file "$BODY_FILE"
+          fi
