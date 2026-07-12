@@ -163,6 +163,12 @@
 .sf-inst { margin-top: 9px; font-size: 0.8rem; color: var(--sf-dim); }
 .sf-cta { margin-top: 10px; font-size: 0.86rem; font-weight: 700; color: var(--sf-gold-d); }
 
+.sf-sponsor { border-left-color: var(--sf-gold-d); background: var(--sf-gold-pale); }
+.sf-pr {
+  display: inline-block; font-size: 0.68rem; font-weight: 800; color: var(--sf-gold-d);
+  background: #fff; border: 1px solid #eadfbe; border-radius: 4px; padding: 1px 7px;
+}
+
 .sf-advice {
   margin-top: 20px; border: 1px solid #eadfbe; background: var(--sf-gold-pale);
   border-radius: 12px; padding: 16px;

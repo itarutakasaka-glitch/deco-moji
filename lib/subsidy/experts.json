@@ -1,0 +1,33 @@
+{
+  "sponsors": [],
+  "desks": [
+    {
+      "name": "東京都よろず支援拠点",
+      "org": "中小企業基盤整備機構",
+      "desc": "国が全国に設置する無料の経営相談所。補助金の探し方・申請書の書き方まで何度でも無料で相談できます。",
+      "url": "https://yorozu.tokyo/",
+      "free": true
+    },
+    {
+      "name": "東京都中小企業振興公社",
+      "org": "公益財団法人",
+      "desc": "専門家派遣・経営相談・助成金など、東京都の中小企業支援のワンストップ窓口。",
+      "url": "https://www.tokyo-kosha.or.jp/",
+      "free": true
+    },
+    {
+      "name": "ミラサポplus",
+      "org": "中小企業庁",
+      "desc": "国の補助金・支援制度の検索と申請サポート情報がまとまった公式ポータル。",
+      "url": "https://mirasapo-plus.go.jp/",
+      "free": true
+    },
+    {
+      "name": "J-Net21",
+      "org": "中小企業基盤整備機構",
+      "desc": "補助金・助成金の全国データベースと、創業・経営のノウハウ記事が読める公式サイト。",
+      "url": "https://j-net21.smrj.go.jp/",
+      "free": true
+    }
+  ]
+}
