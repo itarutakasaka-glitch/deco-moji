@@ -26,6 +26,13 @@ import sumida from "./sumida-schedule.json";
 import minato from "./minato-schedule.json";
 import nakano from "./nakano-schedule.json";
 import chiyoda from "./chiyoda-schedule.json";
+// 大都市展開・第1弾＝千葉市（6区）。町丁別収集日一覧（HTML表）由来。
+import chibaChuo from "./chiba-chuo-schedule.json";
+import chibaHanamigawa from "./chiba-hanamigawa-schedule.json";
+import chibaInage from "./chiba-inage-schedule.json";
+import chibaWakaba from "./chiba-wakaba-schedule.json";
+import chibaMidori from "./chiba-midori-schedule.json";
+import chibaMihama from "./chiba-mihama-schedule.json";
 
 /* ===== 型 ===== */
 export type WeeklyRule = { kind: "weekly"; weekdays: number[] };
@@ -127,6 +134,12 @@ const SM = sumida as unknown as SingleChomeMuni;
 const MN = minato as unknown as SingleChomeMuni;
 const NK = nakano as unknown as SingleChomeMuni;
 const CY = chiyoda as unknown as SingleChomeMuni;
+const CBC = chibaChuo as unknown as SingleChomeMuni;
+const CBH = chibaHanamigawa as unknown as SingleChomeMuni;
+const CBI = chibaInage as unknown as SingleChomeMuni;
+const CBW = chibaWakaba as unknown as SingleChomeMuni;
+const CBM = chibaMidori as unknown as SingleChomeMuni;
+const CBP = chibaMihama as unknown as SingleChomeMuni;
 
 // 丁目単位データ → 内部AreaRaw（chome:string[]）へ正規化して Municipality を作る
 function singleChomeMuni(
@@ -187,6 +200,13 @@ export const MUNICIPALITIES: Municipality[] = [
   singleChomeMuni(MN, "https://www.city.minato.tokyo.jp/", "港区公式"),
   singleChomeMuni(NK, "https://www.city.tokyo-nakano.lg.jp/kurashi/gomi/syusyuyobi/index.html", "中野区公式"),
   singleChomeMuni(CY, "https://www.city.chiyoda.lg.jp/koho/kurashi/gomi/wakekata/index.html", "千代田区公式"),
+  // ★大都市展開・第1弾＝千葉市（末尾追加でslug後方互換）
+  singleChomeMuni(CBC, "https://www.city.chiba.jp/kankyo/junkan/shushugyomu/shushubi.html", "千葉市公式"),
+  singleChomeMuni(CBH, "https://www.city.chiba.jp/kankyo/junkan/shushugyomu/shushubi.html", "千葉市公式"),
+  singleChomeMuni(CBI, "https://www.city.chiba.jp/kankyo/junkan/shushugyomu/shushubi.html", "千葉市公式"),
+  singleChomeMuni(CBW, "https://www.city.chiba.jp/kankyo/junkan/shushugyomu/shushubi.html", "千葉市公式"),
+  singleChomeMuni(CBM, "https://www.city.chiba.jp/kankyo/junkan/shushugyomu/shushubi.html", "千葉市公式"),
+  singleChomeMuni(CBP, "https://www.city.chiba.jp/kankyo/junkan/shushugyomu/shushubi.html", "千葉市公式"),
 ];
 
 export type ChomeOption = {
