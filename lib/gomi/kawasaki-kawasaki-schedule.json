@@ -1,0 +1,2718 @@
+{
+  "municipality": "川崎市川崎区",
+  "code": "14131",
+  "source": "川崎市公式「収集日一覧」",
+  "sourceUrl": "https://www.city.kawasaki.jp/300/page/0000012570.html",
+  "license": "川崎市（出典明記）",
+  "fetchedAt": "2026-07-15",
+  "categories": {
+    "burnable": "普通ごみ",
+    "recyclable": "空き缶・ペットボトル・空きびん・使用済み乾電池",
+    "paper": "ミックスペーパー",
+    "plastic": "プラスチック資源",
+    "nonBurnable": "小物金属"
+  },
+  "omitNote": "表の「小物金属」は申込不要（この日の朝8時までに資源物集積所へ）。粗大ごみ（大型のもの）は別途「粗大ごみ受付センター」への事前申込が必要です（本ツールには収集希望日の反映は未対応）。詳細は市公式をご確認ください。",
+  "areas": [
+    {
+      "chome": "浅田",
+      "burnable": {
+        "kind": "weekly",
+        "weekdays": [
+          1,
+          4
+        ]
+      },
+      "recyclable": {
+        "kind": "weekly",
+        "weekdays": [
+          5
+        ]
+      },
+      "paper": {
+        "kind": "weekly",
+        "weekdays": [
+          2
+        ]
+      },
+      "plastic": {
+        "kind": "weekly",
+        "weekdays": [
+          6
+        ]
+      },
+      "nonBurnable": {
+        "kind": "nthWeekday",
+        "weekday": 2,
+        "nths": [
+          2,
+          4
+        ]
+      }
+    },
+    {
+      "chome": "浅野町",
+      "burnable": {
+        "kind": "weekly",
+        "weekdays": [
+          2,
+          5
+        ]
+      },
+      "recyclable": {
+        "kind": "weekly",
+        "weekdays": [
+          4
+        ]
+      },
+      "paper": {
+        "kind": "weekly",
+        "weekdays": [
+          1
+        ]
+      },
+      "plastic": {
+        "kind": "weekly",
+        "weekdays": [
+          3
+        ]
+      },
+      "nonBurnable": {
+        "kind": "nthWeekday",
+        "weekday": 1,
+        "nths": [
+          1,
+          3
+        ]
+      }
+    },
+    {
+      "chome": "旭町",
+      "burnable": {
+        "kind": "weekly",
+        "weekdays": [
+          3,
+          6
+        ]
+      },
+      "recyclable": {
+        "kind": "weekly",
+        "weekdays": [
+          2
+        ]
+      },
+      "paper": {
+        "kind": "weekly",
+        "weekdays": [
+          4
+        ]
+      },
+      "plastic": {
+        "kind": "weekly",
+        "weekdays": [
+          1
+        ]
+      },
+      "nonBurnable": {
+        "kind": "nthWeekday",
+        "weekday": 5,
+        "nths": [
+          1,
+          3
+        ]
+      }
+    },
+    {
+      "chome": "池上町",
+      "burnable": {
+        "kind": "weekly",
+        "weekdays": [
+          2,
+          5
+        ]
+      },
+      "recyclable": {
+        "kind": "weekly",
+        "weekdays": [
+          3
+        ]
+      },
+      "paper": {
+        "kind": "weekly",
+        "weekdays": [
+          6
+        ]
+      },
+      "plastic": {
+        "kind": "weekly",
+        "weekdays": [
+          4
+        ]
+      },
+      "nonBurnable": {
+        "kind": "nthWeekday",
+        "weekday": 4,
+        "nths": [
+          1,
+          3
+        ]
+      }
+    },
+    {
+      "chome": "池上新町",
+      "burnable": {
+        "kind": "weekly",
+        "weekdays": [
+          2,
+          5
+        ]
+      },
+      "recyclable": {
+        "kind": "weekly",
+        "weekdays": [
+          3
+        ]
+      },
+      "paper": {
+        "kind": "weekly",
+        "weekdays": [
+          6
+        ]
+      },
+      "plastic": {
+        "kind": "weekly",
+        "weekdays": [
+          4
+        ]
+      },
+      "nonBurnable": {
+        "kind": "nthWeekday",
+        "weekday": 4,
+        "nths": [
+          1,
+          3
+        ]
+      }
+    },
+    {
+      "chome": "池田",
+      "burnable": {
+        "kind": "weekly",
+        "weekdays": [
+          1,
+          4
+        ]
+      },
+      "recyclable": {
+        "kind": "weekly",
+        "weekdays": [
+          6
+        ]
+      },
+      "paper": {
+        "kind": "weekly",
+        "weekdays": [
+          3
+        ]
+      },
+      "plastic": {
+        "kind": "weekly",
+        "weekdays": [
+          5
+        ]
+      },
+      "nonBurnable": {
+        "kind": "nthWeekday",
+        "weekday": 3,
+        "nths": [
+          1,
+          3
+        ]
+      }
+    },
+    {
+      "chome": "砂子",
+      "burnable": {
+        "kind": "weekly",
+        "weekdays": [
+          1,
+          4
+        ]
+      },
+      "recyclable": {
+        "kind": "weekly",
+        "weekdays": [
+          6
+        ]
+      },
+      "paper": {
+        "kind": "weekly",
+        "weekdays": [
+          3
+        ]
+      },
+      "plastic": {
+        "kind": "weekly",
+        "weekdays": [
+          5
+        ]
+      },
+      "nonBurnable": {
+        "kind": "nthWeekday",
+        "weekday": 2,
+        "nths": [
+          1,
+          3
+        ]
+      }
+    },
+    {
+      "chome": "伊勢町",
+      "burnable": {
+        "kind": "weekly",
+        "weekdays": [
+          3,
+          6
+        ]
+      },
+      "recyclable": {
+        "kind": "weekly",
+        "weekdays": [
+          2
+        ]
+      },
+      "paper": {
+        "kind": "weekly",
+        "weekdays": [
+          4
+        ]
+      },
+      "plastic": {
+        "kind": "weekly",
+        "weekdays": [
+          1
+        ]
+      },
+      "nonBurnable": {
+        "kind": "nthWeekday",
+        "weekday": 5,
+        "nths": [
+          1,
+          3
+        ]
+      }
+    },
+    {
+      "chome": "浮島町",
+      "burnable": {
+        "kind": "weekly",
+        "weekdays": [
+          3,
+          6
+        ]
+      },
+      "recyclable": {
+        "kind": "weekly",
+        "weekdays": [
+          1
+        ]
+      },
+      "paper": {
+        "kind": "weekly",
+        "weekdays": [
+          5
+        ]
+      },
+      "plastic": {
+        "kind": "weekly",
+        "weekdays": [
+          2
+        ]
+      },
+      "nonBurnable": {
+        "kind": "nthWeekday",
+        "weekday": 4,
+        "nths": [
+          2,
+          4
+        ]
+      }
+    },
+    {
+      "chome": "江川",
+      "burnable": {
+        "kind": "weekly",
+        "weekdays": [
+          3,
+          6
+        ]
+      },
+      "recyclable": {
+        "kind": "weekly",
+        "weekdays": [
+          1
+        ]
+      },
+      "paper": {
+        "kind": "weekly",
+        "weekdays": [
+          5
+        ]
+      },
+      "plastic": {
+        "kind": "weekly",
+        "weekdays": [
+          2
+        ]
+      },
+      "nonBurnable": {
+        "kind": "nthWeekday",
+        "weekday": 4,
+        "nths": [
+          2,
+          4
+        ]
+      }
+    },
+    {
+      "chome": "駅前本町",
+      "burnable": {
+        "kind": "weekly",
+        "weekdays": [
+          1,
+          4
+        ]
+      },
+      "recyclable": {
+        "kind": "weekly",
+        "weekdays": [
+          6
+        ]
+      },
+      "paper": {
+        "kind": "weekly",
+        "weekdays": [
+          3
+        ]
+      },
+      "plastic": {
+        "kind": "weekly",
+        "weekdays": [
+          5
+        ]
+      },
+      "nonBurnable": {
+        "kind": "nthWeekday",
+        "weekday": 2,
+        "nths": [
+          1,
+          3
+        ]
+      }
+    },
+    {
+      "chome": "榎町",
+      "burnable": {
+        "kind": "weekly",
+        "weekdays": [
+          2,
+          5
+        ]
+      },
+      "recyclable": {
+        "kind": "weekly",
+        "weekdays": [
+          3
+        ]
+      },
+      "paper": {
+        "kind": "weekly",
+        "weekdays": [
+          6
+        ]
+      },
+      "plastic": {
+        "kind": "weekly",
+        "weekdays": [
+          4
+        ]
+      },
+      "nonBurnable": {
+        "kind": "nthWeekday",
+        "weekday": 1,
+        "nths": [
+          2,
+          4
+        ]
+      }
+    },
+    {
+      "chome": "追分町",
+      "burnable": {
+        "kind": "weekly",
+        "weekdays": [
+          2,
+          5
+        ]
+      },
+      "recyclable": {
+        "kind": "weekly",
+        "weekdays": [
+          4
+        ]
+      },
+      "paper": {
+        "kind": "weekly",
+        "weekdays": [
+          1
+        ]
+      },
+      "plastic": {
+        "kind": "weekly",
+        "weekdays": [
+          3
+        ]
+      },
+      "nonBurnable": {
+        "kind": "nthWeekday",
+        "weekday": 1,
+        "nths": [
+          1,
+          3
+        ]
+      }
+    },
+    {
+      "chome": "扇島",
+      "burnable": {
+        "kind": "weekly",
+        "weekdays": [
+          3,
+          6
+        ]
+      },
+      "recyclable": {
+        "kind": "weekly",
+        "weekdays": [
+          1
+        ]
+      },
+      "paper": {
+        "kind": "weekly",
+        "weekdays": [
+          5
+        ]
+      },
+      "plastic": {
+        "kind": "weekly",
+        "weekdays": [
+          2
+        ]
+      },
+      "nonBurnable": {
+        "kind": "nthWeekday",
+        "weekday": 4,
+        "nths": [
+          2,
+          4
+        ]
+      }
+    },
+    {
+      "chome": "扇町",
+      "burnable": {
+        "kind": "weekly",
+        "weekdays": [
+          2,
+          5
+        ]
+      },
+      "recyclable": {
+        "kind": "weekly",
+        "weekdays": [
+          4
+        ]
+      },
+      "paper": {
+        "kind": "weekly",
+        "weekdays": [
+          1
+        ]
+      },
+      "plastic": {
+        "kind": "weekly",
+        "weekdays": [
+          3
+        ]
+      },
+      "nonBurnable": {
+        "kind": "nthWeekday",
+        "weekday": 1,
+        "nths": [
+          1,
+          3
+        ]
+      }
+    },
+    {
+      "chome": "大川町",
+      "burnable": {
+        "kind": "weekly",
+        "weekdays": [
+          1,
+          4
+        ]
+      },
+      "recyclable": {
+        "kind": "weekly",
+        "weekdays": [
+          5
+        ]
+      },
+      "paper": {
+        "kind": "weekly",
+        "weekdays": [
+          2
+        ]
+      },
+      "plastic": {
+        "kind": "weekly",
+        "weekdays": [
+          6
+        ]
+      },
+      "nonBurnable": {
+        "kind": "nthWeekday",
+        "weekday": 2,
+        "nths": [
+          2,
+          4
+        ]
+      }
+    },
+    {
+      "chome": "大島",
+      "burnable": {
+        "kind": "weekly",
+        "weekdays": [
+          2,
+          5
+        ]
+      },
+      "recyclable": {
+        "kind": "weekly",
+        "weekdays": [
+          3
+        ]
+      },
+      "paper": {
+        "kind": "weekly",
+        "weekdays": [
+          6
+        ]
+      },
+      "plastic": {
+        "kind": "weekly",
+        "weekdays": [
+          4
+        ]
+      },
+      "nonBurnable": {
+        "kind": "nthWeekday",
+        "weekday": 1,
+        "nths": [
+          2,
+          4
+        ]
+      }
+    },
+    {
+      "chome": "大島上町",
+      "burnable": {
+        "kind": "weekly",
+        "weekdays": [
+          2,
+          5
+        ]
+      },
+      "recyclable": {
+        "kind": "weekly",
+        "weekdays": [
+          4
+        ]
+      },
+      "paper": {
+        "kind": "weekly",
+        "weekdays": [
+          1
+        ]
+      },
+      "plastic": {
+        "kind": "weekly",
+        "weekdays": [
+          3
+        ]
+      },
+      "nonBurnable": {
+        "kind": "nthWeekday",
+        "weekday": 3,
+        "nths": [
+          2,
+          4
+        ]
+      }
+    },
+    {
+      "chome": "小川町",
+      "burnable": {
+        "kind": "weekly",
+        "weekdays": [
+          1,
+          4
+        ]
+      },
+      "recyclable": {
+        "kind": "weekly",
+        "weekdays": [
+          6
+        ]
+      },
+      "paper": {
+        "kind": "weekly",
+        "weekdays": [
+          3
+        ]
+      },
+      "plastic": {
+        "kind": "weekly",
+        "weekdays": [
+          5
+        ]
+      },
+      "nonBurnable": {
+        "kind": "nthWeekday",
+        "weekday": 2,
+        "nths": [
+          1,
+          3
+        ]
+      }
+    },
+    {
+      "chome": "小田",
+      "burnable": {
+        "kind": "weekly",
+        "weekdays": [
+          1,
+          4
+        ]
+      },
+      "recyclable": {
+        "kind": "weekly",
+        "weekdays": [
+          5
+        ]
+      },
+      "paper": {
+        "kind": "weekly",
+        "weekdays": [
+          2
+        ]
+      },
+      "plastic": {
+        "kind": "weekly",
+        "weekdays": [
+          6
+        ]
+      },
+      "nonBurnable": {
+        "kind": "nthWeekday",
+        "weekday": 2,
+        "nths": [
+          2,
+          4
+        ]
+      }
+    },
+    {
+      "chome": "小田栄",
+      "burnable": {
+        "kind": "weekly",
+        "weekdays": [
+          2,
+          5
+        ]
+      },
+      "recyclable": {
+        "kind": "weekly",
+        "weekdays": [
+          4
+        ]
+      },
+      "paper": {
+        "kind": "weekly",
+        "weekdays": [
+          1
+        ]
+      },
+      "plastic": {
+        "kind": "weekly",
+        "weekdays": [
+          3
+        ]
+      },
+      "nonBurnable": {
+        "kind": "nthWeekday",
+        "weekday": 1,
+        "nths": [
+          1,
+          3
+        ]
+      }
+    },
+    {
+      "chome": "貝塚",
+      "burnable": {
+        "kind": "weekly",
+        "weekdays": [
+          2,
+          5
+        ]
+      },
+      "recyclable": {
+        "kind": "weekly",
+        "weekdays": [
+          4
+        ]
+      },
+      "paper": {
+        "kind": "weekly",
+        "weekdays": [
+          1
+        ]
+      },
+      "plastic": {
+        "kind": "weekly",
+        "weekdays": [
+          3
+        ]
+      },
+      "nonBurnable": {
+        "kind": "nthWeekday",
+        "weekday": 3,
+        "nths": [
+          2,
+          4
+        ]
+      }
+    },
+    {
+      "chome": "川中島",
+      "burnable": {
+        "kind": "weekly",
+        "weekdays": [
+          3,
+          6
+        ]
+      },
+      "recyclable": {
+        "kind": "weekly",
+        "weekdays": [
+          2
+        ]
+      },
+      "paper": {
+        "kind": "weekly",
+        "weekdays": [
+          4
+        ]
+      },
+      "plastic": {
+        "kind": "weekly",
+        "weekdays": [
+          1
+        ]
+      },
+      "nonBurnable": {
+        "kind": "nthWeekday",
+        "weekday": 5,
+        "nths": [
+          2,
+          4
+        ]
+      }
+    },
+    {
+      "chome": "観音",
+      "burnable": {
+        "kind": "weekly",
+        "weekdays": [
+          3,
+          6
+        ]
+      },
+      "recyclable": {
+        "kind": "weekly",
+        "weekdays": [
+          2
+        ]
+      },
+      "paper": {
+        "kind": "weekly",
+        "weekdays": [
+          4
+        ]
+      },
+      "plastic": {
+        "kind": "weekly",
+        "weekdays": [
+          1
+        ]
+      },
+      "nonBurnable": {
+        "kind": "nthWeekday",
+        "weekday": 4,
+        "nths": [
+          1,
+          3
+        ]
+      }
+    },
+    {
+      "chome": "京町",
+      "burnable": {
+        "kind": "weekly",
+        "weekdays": [
+          1,
+          4
+        ]
+      },
+      "recyclable": {
+        "kind": "weekly",
+        "weekdays": [
+          5
+        ]
+      },
+      "paper": {
+        "kind": "weekly",
+        "weekdays": [
+          2
+        ]
+      },
+      "plastic": {
+        "kind": "weekly",
+        "weekdays": [
+          6
+        ]
+      },
+      "nonBurnable": {
+        "kind": "nthWeekday",
+        "weekday": 3,
+        "nths": [
+          1,
+          3
+        ]
+      }
+    },
+    {
+      "chome": "鋼管通",
+      "burnable": {
+        "kind": "weekly",
+        "weekdays": [
+          2,
+          5
+        ]
+      },
+      "recyclable": {
+        "kind": "weekly",
+        "weekdays": [
+          4
+        ]
+      },
+      "paper": {
+        "kind": "weekly",
+        "weekdays": [
+          1
+        ]
+      },
+      "plastic": {
+        "kind": "weekly",
+        "weekdays": [
+          3
+        ]
+      },
+      "nonBurnable": {
+        "kind": "nthWeekday",
+        "weekday": 1,
+        "nths": [
+          1,
+          3
+        ]
+      }
+    },
+    {
+      "chome": "小島町",
+      "burnable": {
+        "kind": "weekly",
+        "weekdays": [
+          3,
+          6
+        ]
+      },
+      "recyclable": {
+        "kind": "weekly",
+        "weekdays": [
+          1
+        ]
+      },
+      "paper": {
+        "kind": "weekly",
+        "weekdays": [
+          5
+        ]
+      },
+      "plastic": {
+        "kind": "weekly",
+        "weekdays": [
+          2
+        ]
+      },
+      "nonBurnable": {
+        "kind": "nthWeekday",
+        "weekday": 4,
+        "nths": [
+          2,
+          4
+        ]
+      }
+    },
+    {
+      "chome": "境町",
+      "burnable": {
+        "kind": "weekly",
+        "weekdays": [
+          2,
+          5
+        ]
+      },
+      "recyclable": {
+        "kind": "weekly",
+        "weekdays": [
+          3
+        ]
+      },
+      "paper": {
+        "kind": "weekly",
+        "weekdays": [
+          6
+        ]
+      },
+      "plastic": {
+        "kind": "weekly",
+        "weekdays": [
+          4
+        ]
+      },
+      "nonBurnable": {
+        "kind": "nthWeekday",
+        "weekday": 1,
+        "nths": [
+          2,
+          4
+        ]
+      }
+    },
+    {
+      "chome": "桜本",
+      "burnable": {
+        "kind": "weekly",
+        "weekdays": [
+          2,
+          5
+        ]
+      },
+      "recyclable": {
+        "kind": "weekly",
+        "weekdays": [
+          3
+        ]
+      },
+      "paper": {
+        "kind": "weekly",
+        "weekdays": [
+          6
+        ]
+      },
+      "plastic": {
+        "kind": "weekly",
+        "weekdays": [
+          4
+        ]
+      },
+      "nonBurnable": {
+        "kind": "nthWeekday",
+        "weekday": 4,
+        "nths": [
+          1,
+          3
+        ]
+      }
+    },
+    {
+      "chome": "塩浜",
+      "burnable": {
+        "kind": "weekly",
+        "weekdays": [
+          3,
+          6
+        ]
+      },
+      "recyclable": {
+        "kind": "weekly",
+        "weekdays": [
+          1
+        ]
+      },
+      "paper": {
+        "kind": "weekly",
+        "weekdays": [
+          5
+        ]
+      },
+      "plastic": {
+        "kind": "weekly",
+        "weekdays": [
+          2
+        ]
+      },
+      "nonBurnable": {
+        "kind": "nthWeekday",
+        "weekday": 4,
+        "nths": [
+          2,
+          4
+        ]
+      }
+    },
+    {
+      "chome": "下並木",
+      "burnable": {
+        "kind": "weekly",
+        "weekdays": [
+          1,
+          4
+        ]
+      },
+      "recyclable": {
+        "kind": "weekly",
+        "weekdays": [
+          6
+        ]
+      },
+      "paper": {
+        "kind": "weekly",
+        "weekdays": [
+          3
+        ]
+      },
+      "plastic": {
+        "kind": "weekly",
+        "weekdays": [
+          5
+        ]
+      },
+      "nonBurnable": {
+        "kind": "nthWeekday",
+        "weekday": 3,
+        "nths": [
+          1,
+          3
+        ]
+      }
+    },
+    {
+      "chome": "昭和",
+      "burnable": {
+        "kind": "weekly",
+        "weekdays": [
+          3,
+          6
+        ]
+      },
+      "recyclable": {
+        "kind": "weekly",
+        "weekdays": [
+          1
+        ]
+      },
+      "paper": {
+        "kind": "weekly",
+        "weekdays": [
+          5
+        ]
+      },
+      "plastic": {
+        "kind": "weekly",
+        "weekdays": [
+          2
+        ]
+      },
+      "nonBurnable": {
+        "kind": "nthWeekday",
+        "weekday": 5,
+        "nths": [
+          2,
+          4
+        ]
+      }
+    },
+    {
+      "chome": "白石町",
+      "burnable": {
+        "kind": "weekly",
+        "weekdays": [
+          1,
+          4
+        ]
+      },
+      "recyclable": {
+        "kind": "weekly",
+        "weekdays": [
+          5
+        ]
+      },
+      "paper": {
+        "kind": "weekly",
+        "weekdays": [
+          2
+        ]
+      },
+      "plastic": {
+        "kind": "weekly",
+        "weekdays": [
+          6
+        ]
+      },
+      "nonBurnable": {
+        "kind": "nthWeekday",
+        "weekday": 2,
+        "nths": [
+          2,
+          4
+        ]
+      }
+    },
+    {
+      "chome": "新川通",
+      "burnable": {
+        "kind": "weekly",
+        "weekdays": [
+          2,
+          5
+        ]
+      },
+      "recyclable": {
+        "kind": "weekly",
+        "weekdays": [
+          3
+        ]
+      },
+      "paper": {
+        "kind": "weekly",
+        "weekdays": [
+          6
+        ]
+      },
+      "plastic": {
+        "kind": "weekly",
+        "weekdays": [
+          4
+        ]
+      },
+      "nonBurnable": {
+        "kind": "nthWeekday",
+        "weekday": 1,
+        "nths": [
+          2,
+          4
+        ]
+      }
+    },
+    {
+      "chome": "鈴木町",
+      "burnable": {
+        "kind": "weekly",
+        "weekdays": [
+          3,
+          6
+        ]
+      },
+      "recyclable": {
+        "kind": "weekly",
+        "weekdays": [
+          2
+        ]
+      },
+      "paper": {
+        "kind": "weekly",
+        "weekdays": [
+          4
+        ]
+      },
+      "plastic": {
+        "kind": "weekly",
+        "weekdays": [
+          1
+        ]
+      },
+      "nonBurnable": {
+        "kind": "nthWeekday",
+        "weekday": 5,
+        "nths": [
+          1,
+          3
+        ]
+      }
+    },
+    {
+      "chome": "大師町",
+      "burnable": {
+        "kind": "weekly",
+        "weekdays": [
+          3,
+          6
+        ]
+      },
+      "recyclable": {
+        "kind": "weekly",
+        "weekdays": [
+          1
+        ]
+      },
+      "paper": {
+        "kind": "weekly",
+        "weekdays": [
+          5
+        ]
+      },
+      "plastic": {
+        "kind": "weekly",
+        "weekdays": [
+          2
+        ]
+      },
+      "nonBurnable": {
+        "kind": "nthWeekday",
+        "weekday": 5,
+        "nths": [
+          2,
+          4
+        ]
+      }
+    },
+    {
+      "chome": "大師駅前",
+      "burnable": {
+        "kind": "weekly",
+        "weekdays": [
+          3,
+          6
+        ]
+      },
+      "recyclable": {
+        "kind": "weekly",
+        "weekdays": [
+          1
+        ]
+      },
+      "paper": {
+        "kind": "weekly",
+        "weekdays": [
+          5
+        ]
+      },
+      "plastic": {
+        "kind": "weekly",
+        "weekdays": [
+          2
+        ]
+      },
+      "nonBurnable": {
+        "kind": "nthWeekday",
+        "weekday": 5,
+        "nths": [
+          2,
+          4
+        ]
+      }
+    },
+    {
+      "chome": "大師河原",
+      "burnable": {
+        "kind": "weekly",
+        "weekdays": [
+          3,
+          6
+        ]
+      },
+      "recyclable": {
+        "kind": "weekly",
+        "weekdays": [
+          1
+        ]
+      },
+      "paper": {
+        "kind": "weekly",
+        "weekdays": [
+          5
+        ]
+      },
+      "plastic": {
+        "kind": "weekly",
+        "weekdays": [
+          2
+        ]
+      },
+      "nonBurnable": {
+        "kind": "nthWeekday",
+        "weekday": 4,
+        "nths": [
+          2,
+          4
+        ]
+      }
+    },
+    {
+      "chome": "大師公園",
+      "burnable": {
+        "kind": "weekly",
+        "weekdays": [
+          3,
+          6
+        ]
+      },
+      "recyclable": {
+        "kind": "weekly",
+        "weekdays": [
+          2
+        ]
+      },
+      "paper": {
+        "kind": "weekly",
+        "weekdays": [
+          4
+        ]
+      },
+      "plastic": {
+        "kind": "weekly",
+        "weekdays": [
+          1
+        ]
+      },
+      "nonBurnable": {
+        "kind": "nthWeekday",
+        "weekday": 5,
+        "nths": [
+          2,
+          4
+        ]
+      }
+    },
+    {
+      "chome": "大師本町",
+      "burnable": {
+        "kind": "weekly",
+        "weekdays": [
+          3,
+          6
+        ]
+      },
+      "recyclable": {
+        "kind": "weekly",
+        "weekdays": [
+          1
+        ]
+      },
+      "paper": {
+        "kind": "weekly",
+        "weekdays": [
+          5
+        ]
+      },
+      "plastic": {
+        "kind": "weekly",
+        "weekdays": [
+          2
+        ]
+      },
+      "nonBurnable": {
+        "kind": "nthWeekday",
+        "weekday": 5,
+        "nths": [
+          2,
+          4
+        ]
+      }
+    },
+    {
+      "chome": "台町",
+      "burnable": {
+        "kind": "weekly",
+        "weekdays": [
+          3,
+          6
+        ]
+      },
+      "recyclable": {
+        "kind": "weekly",
+        "weekdays": [
+          1
+        ]
+      },
+      "paper": {
+        "kind": "weekly",
+        "weekdays": [
+          5
+        ]
+      },
+      "plastic": {
+        "kind": "weekly",
+        "weekdays": [
+          2
+        ]
+      },
+      "nonBurnable": {
+        "kind": "nthWeekday",
+        "weekday": 5,
+        "nths": [
+          2,
+          4
+        ]
+      }
+    },
+    {
+      "chome": "田島町",
+      "burnable": {
+        "kind": "weekly",
+        "weekdays": [
+          2,
+          5
+        ]
+      },
+      "recyclable": {
+        "kind": "weekly",
+        "weekdays": [
+          4
+        ]
+      },
+      "paper": {
+        "kind": "weekly",
+        "weekdays": [
+          1
+        ]
+      },
+      "plastic": {
+        "kind": "weekly",
+        "weekdays": [
+          3
+        ]
+      },
+      "nonBurnable": {
+        "kind": "nthWeekday",
+        "weekday": 1,
+        "nths": [
+          1,
+          3
+        ]
+      }
+    },
+    {
+      "chome": "田辺新田",
+      "burnable": {
+        "kind": "weekly",
+        "weekdays": [
+          1,
+          4
+        ]
+      },
+      "recyclable": {
+        "kind": "weekly",
+        "weekdays": [
+          5
+        ]
+      },
+      "paper": {
+        "kind": "weekly",
+        "weekdays": [
+          2
+        ]
+      },
+      "plastic": {
+        "kind": "weekly",
+        "weekdays": [
+          6
+        ]
+      },
+      "nonBurnable": {
+        "kind": "nthWeekday",
+        "weekday": 2,
+        "nths": [
+          2,
+          4
+        ]
+      }
+    },
+    {
+      "chome": "田町",
+      "burnable": {
+        "kind": "weekly",
+        "weekdays": [
+          3,
+          6
+        ]
+      },
+      "recyclable": {
+        "kind": "weekly",
+        "weekdays": [
+          1
+        ]
+      },
+      "paper": {
+        "kind": "weekly",
+        "weekdays": [
+          5
+        ]
+      },
+      "plastic": {
+        "kind": "weekly",
+        "weekdays": [
+          2
+        ]
+      },
+      "nonBurnable": {
+        "kind": "nthWeekday",
+        "weekday": 4,
+        "nths": [
+          2,
+          4
+        ]
+      }
+    },
+    {
+      "chome": "千鳥町",
+      "burnable": {
+        "kind": "weekly",
+        "weekdays": [
+          3,
+          6
+        ]
+      },
+      "recyclable": {
+        "kind": "weekly",
+        "weekdays": [
+          1
+        ]
+      },
+      "paper": {
+        "kind": "weekly",
+        "weekdays": [
+          5
+        ]
+      },
+      "plastic": {
+        "kind": "weekly",
+        "weekdays": [
+          2
+        ]
+      },
+      "nonBurnable": {
+        "kind": "nthWeekday",
+        "weekday": 4,
+        "nths": [
+          2,
+          4
+        ]
+      }
+    },
+    {
+      "chome": "堤根",
+      "burnable": {
+        "kind": "weekly",
+        "weekdays": [
+          1,
+          4
+        ]
+      },
+      "recyclable": {
+        "kind": "weekly",
+        "weekdays": [
+          6
+        ]
+      },
+      "paper": {
+        "kind": "weekly",
+        "weekdays": [
+          3
+        ]
+      },
+      "plastic": {
+        "kind": "weekly",
+        "weekdays": [
+          5
+        ]
+      },
+      "nonBurnable": {
+        "kind": "nthWeekday",
+        "weekday": 3,
+        "nths": [
+          1,
+          3
+        ]
+      }
+    },
+    {
+      "chome": "出来野",
+      "burnable": {
+        "kind": "weekly",
+        "weekdays": [
+          3,
+          6
+        ]
+      },
+      "recyclable": {
+        "kind": "weekly",
+        "weekdays": [
+          1
+        ]
+      },
+      "paper": {
+        "kind": "weekly",
+        "weekdays": [
+          5
+        ]
+      },
+      "plastic": {
+        "kind": "weekly",
+        "weekdays": [
+          2
+        ]
+      },
+      "nonBurnable": {
+        "kind": "nthWeekday",
+        "weekday": 5,
+        "nths": [
+          2,
+          4
+        ]
+      }
+    },
+    {
+      "chome": "殿町",
+      "burnable": {
+        "kind": "weekly",
+        "weekdays": [
+          3,
+          6
+        ]
+      },
+      "recyclable": {
+        "kind": "weekly",
+        "weekdays": [
+          1
+        ]
+      },
+      "paper": {
+        "kind": "weekly",
+        "weekdays": [
+          5
+        ]
+      },
+      "plastic": {
+        "kind": "weekly",
+        "weekdays": [
+          2
+        ]
+      },
+      "nonBurnable": {
+        "kind": "nthWeekday",
+        "weekday": 4,
+        "nths": [
+          2,
+          4
+        ]
+      }
+    },
+    {
+      "chome": "中島",
+      "burnable": {
+        "kind": "weekly",
+        "weekdays": [
+          3,
+          6
+        ]
+      },
+      "recyclable": {
+        "kind": "weekly",
+        "weekdays": [
+          2
+        ]
+      },
+      "paper": {
+        "kind": "weekly",
+        "weekdays": [
+          4
+        ]
+      },
+      "plastic": {
+        "kind": "weekly",
+        "weekdays": [
+          1
+        ]
+      },
+      "nonBurnable": {
+        "kind": "nthWeekday",
+        "weekday": 5,
+        "nths": [
+          1,
+          3
+        ]
+      }
+    },
+    {
+      "chome": "中瀬",
+      "burnable": {
+        "kind": "weekly",
+        "weekdays": [
+          3,
+          6
+        ]
+      },
+      "recyclable": {
+        "kind": "weekly",
+        "weekdays": [
+          1
+        ]
+      },
+      "paper": {
+        "kind": "weekly",
+        "weekdays": [
+          5
+        ]
+      },
+      "plastic": {
+        "kind": "weekly",
+        "weekdays": [
+          2
+        ]
+      },
+      "nonBurnable": {
+        "kind": "nthWeekday",
+        "weekday": 4,
+        "nths": [
+          2,
+          4
+        ]
+      }
+    },
+    {
+      "chome": "日進町",
+      "burnable": {
+        "kind": "weekly",
+        "weekdays": [
+          1,
+          4
+        ]
+      },
+      "recyclable": {
+        "kind": "weekly",
+        "weekdays": [
+          6
+        ]
+      },
+      "paper": {
+        "kind": "weekly",
+        "weekdays": [
+          3
+        ]
+      },
+      "plastic": {
+        "kind": "weekly",
+        "weekdays": [
+          5
+        ]
+      },
+      "nonBurnable": {
+        "kind": "nthWeekday",
+        "weekday": 2,
+        "nths": [
+          1,
+          3
+        ]
+      }
+    },
+    {
+      "chome": "浜町",
+      "burnable": {
+        "kind": "weekly",
+        "weekdays": [
+          2,
+          5
+        ]
+      },
+      "recyclable": {
+        "kind": "weekly",
+        "weekdays": [
+          4
+        ]
+      },
+      "paper": {
+        "kind": "weekly",
+        "weekdays": [
+          1
+        ]
+      },
+      "plastic": {
+        "kind": "weekly",
+        "weekdays": [
+          3
+        ]
+      },
+      "nonBurnable": {
+        "kind": "nthWeekday",
+        "weekday": 1,
+        "nths": [
+          1,
+          3
+        ]
+      }
+    },
+    {
+      "chome": "東扇島",
+      "burnable": {
+        "kind": "weekly",
+        "weekdays": [
+          3,
+          6
+        ]
+      },
+      "recyclable": {
+        "kind": "weekly",
+        "weekdays": [
+          1
+        ]
+      },
+      "paper": {
+        "kind": "weekly",
+        "weekdays": [
+          5
+        ]
+      },
+      "plastic": {
+        "kind": "weekly",
+        "weekdays": [
+          2
+        ]
+      },
+      "nonBurnable": {
+        "kind": "nthWeekday",
+        "weekday": 4,
+        "nths": [
+          2,
+          4
+        ]
+      }
+    },
+    {
+      "chome": "東田町",
+      "burnable": {
+        "kind": "weekly",
+        "weekdays": [
+          1,
+          4
+        ]
+      },
+      "recyclable": {
+        "kind": "weekly",
+        "weekdays": [
+          6
+        ]
+      },
+      "paper": {
+        "kind": "weekly",
+        "weekdays": [
+          3
+        ]
+      },
+      "plastic": {
+        "kind": "weekly",
+        "weekdays": [
+          5
+        ]
+      },
+      "nonBurnable": {
+        "kind": "nthWeekday",
+        "weekday": 2,
+        "nths": [
+          1,
+          3
+        ]
+      }
+    },
+    {
+      "chome": "東門前",
+      "burnable": {
+        "kind": "weekly",
+        "weekdays": [
+          3,
+          6
+        ]
+      },
+      "recyclable": {
+        "kind": "weekly",
+        "weekdays": [
+          1
+        ]
+      },
+      "paper": {
+        "kind": "weekly",
+        "weekdays": [
+          5
+        ]
+      },
+      "plastic": {
+        "kind": "weekly",
+        "weekdays": [
+          2
+        ]
+      },
+      "nonBurnable": {
+        "kind": "nthWeekday",
+        "weekday": 5,
+        "nths": [
+          2,
+          4
+        ]
+      }
+    },
+    {
+      "chome": "日ノ出",
+      "burnable": {
+        "kind": "weekly",
+        "weekdays": [
+          3,
+          6
+        ]
+      },
+      "recyclable": {
+        "kind": "weekly",
+        "weekdays": [
+          1
+        ]
+      },
+      "paper": {
+        "kind": "weekly",
+        "weekdays": [
+          5
+        ]
+      },
+      "plastic": {
+        "kind": "weekly",
+        "weekdays": [
+          2
+        ]
+      },
+      "nonBurnable": {
+        "kind": "nthWeekday",
+        "weekday": 4,
+        "nths": [
+          2,
+          4
+        ]
+      }
+    },
+    {
+      "chome": "藤崎",
+      "burnable": {
+        "kind": "weekly",
+        "weekdays": [
+          3,
+          6
+        ]
+      },
+      "recyclable": {
+        "kind": "weekly",
+        "weekdays": [
+          2
+        ]
+      },
+      "paper": {
+        "kind": "weekly",
+        "weekdays": [
+          4
+        ]
+      },
+      "plastic": {
+        "kind": "weekly",
+        "weekdays": [
+          1
+        ]
+      },
+      "nonBurnable": {
+        "kind": "nthWeekday",
+        "weekday": 5,
+        "nths": [
+          1,
+          3
+        ]
+      }
+    },
+    {
+      "chome": "富士見",
+      "burnable": {
+        "kind": "weekly",
+        "weekdays": [
+          2,
+          5
+        ]
+      },
+      "recyclable": {
+        "kind": "weekly",
+        "weekdays": [
+          3
+        ]
+      },
+      "paper": {
+        "kind": "weekly",
+        "weekdays": [
+          6
+        ]
+      },
+      "plastic": {
+        "kind": "weekly",
+        "weekdays": [
+          4
+        ]
+      },
+      "nonBurnable": {
+        "kind": "nthWeekday",
+        "weekday": 1,
+        "nths": [
+          2,
+          4
+        ]
+      }
+    },
+    {
+      "chome": "堀之内町",
+      "burnable": {
+        "kind": "weekly",
+        "weekdays": [
+          1,
+          4
+        ]
+      },
+      "recyclable": {
+        "kind": "weekly",
+        "weekdays": [
+          6
+        ]
+      },
+      "paper": {
+        "kind": "weekly",
+        "weekdays": [
+          3
+        ]
+      },
+      "plastic": {
+        "kind": "weekly",
+        "weekdays": [
+          5
+        ]
+      },
+      "nonBurnable": {
+        "kind": "nthWeekday",
+        "weekday": 2,
+        "nths": [
+          1,
+          3
+        ]
+      }
+    },
+    {
+      "chome": "本町",
+      "burnable": {
+        "kind": "weekly",
+        "weekdays": [
+          1,
+          4
+        ]
+      },
+      "recyclable": {
+        "kind": "weekly",
+        "weekdays": [
+          6
+        ]
+      },
+      "paper": {
+        "kind": "weekly",
+        "weekdays": [
+          3
+        ]
+      },
+      "plastic": {
+        "kind": "weekly",
+        "weekdays": [
+          5
+        ]
+      },
+      "nonBurnable": {
+        "kind": "nthWeekday",
+        "weekday": 2,
+        "nths": [
+          1,
+          3
+        ]
+      }
+    },
+    {
+      "chome": "水江町",
+      "burnable": {
+        "kind": "weekly",
+        "weekdays": [
+          3,
+          6
+        ]
+      },
+      "recyclable": {
+        "kind": "weekly",
+        "weekdays": [
+          1
+        ]
+      },
+      "paper": {
+        "kind": "weekly",
+        "weekdays": [
+          5
+        ]
+      },
+      "plastic": {
+        "kind": "weekly",
+        "weekdays": [
+          2
+        ]
+      },
+      "nonBurnable": {
+        "kind": "nthWeekday",
+        "weekday": 4,
+        "nths": [
+          2,
+          4
+        ]
+      }
+    },
+    {
+      "chome": "港町",
+      "burnable": {
+        "kind": "weekly",
+        "weekdays": [
+          3,
+          6
+        ]
+      },
+      "recyclable": {
+        "kind": "weekly",
+        "weekdays": [
+          2
+        ]
+      },
+      "paper": {
+        "kind": "weekly",
+        "weekdays": [
+          4
+        ]
+      },
+      "plastic": {
+        "kind": "weekly",
+        "weekdays": [
+          1
+        ]
+      },
+      "nonBurnable": {
+        "kind": "nthWeekday",
+        "weekday": 5,
+        "nths": [
+          1,
+          3
+        ]
+      }
+    },
+    {
+      "chome": "南町",
+      "burnable": {
+        "kind": "weekly",
+        "weekdays": [
+          1,
+          4
+        ]
+      },
+      "recyclable": {
+        "kind": "weekly",
+        "weekdays": [
+          6
+        ]
+      },
+      "paper": {
+        "kind": "weekly",
+        "weekdays": [
+          3
+        ]
+      },
+      "plastic": {
+        "kind": "weekly",
+        "weekdays": [
+          5
+        ]
+      },
+      "nonBurnable": {
+        "kind": "nthWeekday",
+        "weekday": 2,
+        "nths": [
+          1,
+          3
+        ]
+      }
+    },
+    {
+      "chome": "南渡田町",
+      "burnable": {
+        "kind": "weekly",
+        "weekdays": [
+          2,
+          5
+        ]
+      },
+      "recyclable": {
+        "kind": "weekly",
+        "weekdays": [
+          4
+        ]
+      },
+      "paper": {
+        "kind": "weekly",
+        "weekdays": [
+          1
+        ]
+      },
+      "plastic": {
+        "kind": "weekly",
+        "weekdays": [
+          3
+        ]
+      },
+      "nonBurnable": {
+        "kind": "nthWeekday",
+        "weekday": 1,
+        "nths": [
+          1,
+          3
+        ]
+      }
+    },
+    {
+      "chome": "宮前町",
+      "burnable": {
+        "kind": "weekly",
+        "weekdays": [
+          2,
+          5
+        ]
+      },
+      "recyclable": {
+        "kind": "weekly",
+        "weekdays": [
+          3
+        ]
+      },
+      "paper": {
+        "kind": "weekly",
+        "weekdays": [
+          6
+        ]
+      },
+      "plastic": {
+        "kind": "weekly",
+        "weekdays": [
+          4
+        ]
+      },
+      "nonBurnable": {
+        "kind": "nthWeekday",
+        "weekday": 1,
+        "nths": [
+          2,
+          4
+        ]
+      }
+    },
+    {
+      "chome": "宮本町",
+      "burnable": {
+        "kind": "weekly",
+        "weekdays": [
+          1,
+          4
+        ]
+      },
+      "recyclable": {
+        "kind": "weekly",
+        "weekdays": [
+          6
+        ]
+      },
+      "paper": {
+        "kind": "weekly",
+        "weekdays": [
+          3
+        ]
+      },
+      "plastic": {
+        "kind": "weekly",
+        "weekdays": [
+          5
+        ]
+      },
+      "nonBurnable": {
+        "kind": "nthWeekday",
+        "weekday": 2,
+        "nths": [
+          1,
+          3
+        ]
+      }
+    },
+    {
+      "chome": "元木",
+      "burnable": {
+        "kind": "weekly",
+        "weekdays": [
+          1,
+          4
+        ]
+      },
+      "recyclable": {
+        "kind": "weekly",
+        "weekdays": [
+          6
+        ]
+      },
+      "paper": {
+        "kind": "weekly",
+        "weekdays": [
+          3
+        ]
+      },
+      "plastic": {
+        "kind": "weekly",
+        "weekdays": [
+          5
+        ]
+      },
+      "nonBurnable": {
+        "kind": "nthWeekday",
+        "weekday": 3,
+        "nths": [
+          2,
+          4
+        ]
+      }
+    },
+    {
+      "chome": "夜光",
+      "burnable": {
+        "kind": "weekly",
+        "weekdays": [
+          3,
+          6
+        ]
+      },
+      "recyclable": {
+        "kind": "weekly",
+        "weekdays": [
+          1
+        ]
+      },
+      "paper": {
+        "kind": "weekly",
+        "weekdays": [
+          5
+        ]
+      },
+      "plastic": {
+        "kind": "weekly",
+        "weekdays": [
+          2
+        ]
+      },
+      "nonBurnable": {
+        "kind": "nthWeekday",
+        "weekday": 4,
+        "nths": [
+          2,
+          4
+        ]
+      }
+    },
+    {
+      "chome": "四谷上町",
+      "burnable": {
+        "kind": "weekly",
+        "weekdays": [
+          3,
+          6
+        ]
+      },
+      "recyclable": {
+        "kind": "weekly",
+        "weekdays": [
+          2
+        ]
+      },
+      "paper": {
+        "kind": "weekly",
+        "weekdays": [
+          4
+        ]
+      },
+      "plastic": {
+        "kind": "weekly",
+        "weekdays": [
+          1
+        ]
+      },
+      "nonBurnable": {
+        "kind": "nthWeekday",
+        "weekday": 4,
+        "nths": [
+          1,
+          3
+        ]
+      }
+    },
+    {
+      "chome": "四谷下町",
+      "burnable": {
+        "kind": "weekly",
+        "weekdays": [
+          3,
+          6
+        ]
+      },
+      "recyclable": {
+        "kind": "weekly",
+        "weekdays": [
+          2
+        ]
+      },
+      "paper": {
+        "kind": "weekly",
+        "weekdays": [
+          4
+        ]
+      },
+      "plastic": {
+        "kind": "weekly",
+        "weekdays": [
+          1
+        ]
+      },
+      "nonBurnable": {
+        "kind": "nthWeekday",
+        "weekday": 4,
+        "nths": [
+          1,
+          3
+        ]
+      }
+    },
+    {
+      "chome": "渡田",
+      "burnable": {
+        "kind": "weekly",
+        "weekdays": [
+          2,
+          5
+        ]
+      },
+      "recyclable": {
+        "kind": "weekly",
+        "weekdays": [
+          4
+        ]
+      },
+      "paper": {
+        "kind": "weekly",
+        "weekdays": [
+          1
+        ]
+      },
+      "plastic": {
+        "kind": "weekly",
+        "weekdays": [
+          3
+        ]
+      },
+      "nonBurnable": {
+        "kind": "nthWeekday",
+        "weekday": 3,
+        "nths": [
+          2,
+          4
+        ]
+      }
+    },
+    {
+      "chome": "渡田山王町",
+      "burnable": {
+        "kind": "weekly",
+        "weekdays": [
+          1,
+          4
+        ]
+      },
+      "recyclable": {
+        "kind": "weekly",
+        "weekdays": [
+          5
+        ]
+      },
+      "paper": {
+        "kind": "weekly",
+        "weekdays": [
+          2
+        ]
+      },
+      "plastic": {
+        "kind": "weekly",
+        "weekdays": [
+          6
+        ]
+      },
+      "nonBurnable": {
+        "kind": "nthWeekday",
+        "weekday": 3,
+        "nths": [
+          1,
+          3
+        ]
+      }
+    },
+    {
+      "chome": "渡田新町",
+      "burnable": {
+        "kind": "weekly",
+        "weekdays": [
+          1,
+          4
+        ]
+      },
+      "recyclable": {
+        "kind": "weekly",
+        "weekdays": [
+          5
+        ]
+      },
+      "paper": {
+        "kind": "weekly",
+        "weekdays": [
+          2
+        ]
+      },
+      "plastic": {
+        "kind": "weekly",
+        "weekdays": [
+          6
+        ]
+      },
+      "nonBurnable": {
+        "kind": "nthWeekday",
+        "weekday": 3,
+        "nths": [
+          1,
+          3
+        ]
+      }
+    },
+    {
+      "chome": "渡田東町",
+      "burnable": {
+        "kind": "weekly",
+        "weekdays": [
+          2,
+          5
+        ]
+      },
+      "recyclable": {
+        "kind": "weekly",
+        "weekdays": [
+          4
+        ]
+      },
+      "paper": {
+        "kind": "weekly",
+        "weekdays": [
+          1
+        ]
+      },
+      "plastic": {
+        "kind": "weekly",
+        "weekdays": [
+          3
+        ]
+      },
+      "nonBurnable": {
+        "kind": "nthWeekday",
+        "weekday": 3,
+        "nths": [
+          2,
+          4
+        ]
+      }
+    },
+    {
+      "chome": "渡田向町",
+      "burnable": {
+        "kind": "weekly",
+        "weekdays": [
+          1,
+          4
+        ]
+      },
+      "recyclable": {
+        "kind": "weekly",
+        "weekdays": [
+          5
+        ]
+      },
+      "paper": {
+        "kind": "weekly",
+        "weekdays": [
+          2
+        ]
+      },
+      "plastic": {
+        "kind": "weekly",
+        "weekdays": [
+          6
+        ]
+      },
+      "nonBurnable": {
+        "kind": "nthWeekday",
+        "weekday": 3,
+        "nths": [
+          2,
+          4
+        ]
+      }
+    }
+  ]
+}

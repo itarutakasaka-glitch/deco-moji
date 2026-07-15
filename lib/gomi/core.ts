@@ -33,6 +33,14 @@ import chibaInage from "./chiba-inage-schedule.json";
 import chibaWakaba from "./chiba-wakaba-schedule.json";
 import chibaMidori from "./chiba-midori-schedule.json";
 import chibaMihama from "./chiba-mihama-schedule.json";
+// 大都市展開・第2弾＝川崎市（7区）。収集日一覧(HTML表・4ページ)由来。
+import kawasakiKawasaki from "./kawasaki-kawasaki-schedule.json";
+import kawasakiSaiwai from "./kawasaki-saiwai-schedule.json";
+import kawasakiNakahara from "./kawasaki-nakahara-schedule.json";
+import kawasakiTakatsu from "./kawasaki-takatsu-schedule.json";
+import kawasakiMiyamae from "./kawasaki-miyamae-schedule.json";
+import kawasakiTama from "./kawasaki-tama-schedule.json";
+import kawasakiAsao from "./kawasaki-asao-schedule.json";
 
 /* ===== 型 ===== */
 export type WeeklyRule = { kind: "weekly"; weekdays: number[] };
@@ -140,6 +148,13 @@ const CBI = chibaInage as unknown as SingleChomeMuni;
 const CBW = chibaWakaba as unknown as SingleChomeMuni;
 const CBM = chibaMidori as unknown as SingleChomeMuni;
 const CBP = chibaMihama as unknown as SingleChomeMuni;
+const KWK = kawasakiKawasaki as unknown as SingleChomeMuni;
+const KWS = kawasakiSaiwai as unknown as SingleChomeMuni;
+const KWN = kawasakiNakahara as unknown as SingleChomeMuni;
+const KWT = kawasakiTakatsu as unknown as SingleChomeMuni;
+const KWM = kawasakiMiyamae as unknown as SingleChomeMuni;
+const KWA = kawasakiTama as unknown as SingleChomeMuni;
+const KWO = kawasakiAsao as unknown as SingleChomeMuni;
 
 // 丁目単位データ → 内部AreaRaw（chome:string[]）へ正規化して Municipality を作る
 function singleChomeMuni(
@@ -207,6 +222,14 @@ export const MUNICIPALITIES: Municipality[] = [
   singleChomeMuni(CBW, "https://www.city.chiba.jp/kankyo/junkan/shushugyomu/shushubi.html", "千葉市公式"),
   singleChomeMuni(CBM, "https://www.city.chiba.jp/kankyo/junkan/shushugyomu/shushubi.html", "千葉市公式"),
   singleChomeMuni(CBP, "https://www.city.chiba.jp/kankyo/junkan/shushugyomu/shushubi.html", "千葉市公式"),
+  // ★大都市展開・第2弾＝川崎市（末尾追加でslug後方互換）
+  singleChomeMuni(KWK, "https://www.city.kawasaki.jp/300/page/0000012570.html", "川崎市公式"),
+  singleChomeMuni(KWS, "https://www.city.kawasaki.jp/300/page/0000012568.html", "川崎市公式"),
+  singleChomeMuni(KWN, "https://www.city.kawasaki.jp/300/page/0000012568.html", "川崎市公式"),
+  singleChomeMuni(KWT, "https://www.city.kawasaki.jp/300/page/0000012561.html", "川崎市公式"),
+  singleChomeMuni(KWM, "https://www.city.kawasaki.jp/300/page/0000012561.html", "川崎市公式"),
+  singleChomeMuni(KWA, "https://www.city.kawasaki.jp/300/page/0000012577.html", "川崎市公式"),
+  singleChomeMuni(KWO, "https://www.city.kawasaki.jp/300/page/0000012577.html", "川崎市公式"),
 ];
 
 export type ChomeOption = {
