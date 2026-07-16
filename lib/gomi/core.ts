@@ -41,6 +41,31 @@ import kawasakiTakatsu from "./kawasaki-takatsu-schedule.json";
 import kawasakiMiyamae from "./kawasaki-miyamae-schedule.json";
 import kawasakiTama from "./kawasaki-tama-schedule.json";
 import kawasakiAsao from "./kawasaki-asao-schedule.json";
+// 大都市展開・第3弾＝大阪市（24区）。ごみ収集マップの町丁目別CSV(番地単位→丁目集約)由来。
+import osakaMiyakojima from "./osaka-miyakojima-schedule.json";
+import osakaFukushima from "./osaka-fukushima-schedule.json";
+import osakaKonohana from "./osaka-konohana-schedule.json";
+import osakaNishi from "./osaka-nishi-schedule.json";
+import osakaMinato from "./osaka-minato-schedule.json";
+import osakaTaisho from "./osaka-taisho-schedule.json";
+import osakaTennoji from "./osaka-tennoji-schedule.json";
+import osakaNaniwa from "./osaka-naniwa-schedule.json";
+import osakaNishiyodogawa from "./osaka-nishiyodogawa-schedule.json";
+import osakaHigashiyodogawa from "./osaka-higashiyodogawa-schedule.json";
+import osakaHigashinari from "./osaka-higashinari-schedule.json";
+import osakaIkuno from "./osaka-ikuno-schedule.json";
+import osakaAsahi from "./osaka-asahi-schedule.json";
+import osakaJoto from "./osaka-joto-schedule.json";
+import osakaAbeno from "./osaka-abeno-schedule.json";
+import osakaSumiyoshi from "./osaka-sumiyoshi-schedule.json";
+import osakaHigashisumiyoshi from "./osaka-higashisumiyoshi-schedule.json";
+import osakaNishinari from "./osaka-nishinari-schedule.json";
+import osakaYodogawa from "./osaka-yodogawa-schedule.json";
+import osakaTsurumi from "./osaka-tsurumi-schedule.json";
+import osakaSuminoe from "./osaka-suminoe-schedule.json";
+import osakaHirano from "./osaka-hirano-schedule.json";
+import osakaKita from "./osaka-kita-schedule.json";
+import osakaChuo from "./osaka-chuo-schedule.json";
 
 /* ===== 型 ===== */
 export type WeeklyRule = { kind: "weekly"; weekdays: number[] };
@@ -155,6 +180,30 @@ const KWT = kawasakiTakatsu as unknown as SingleChomeMuni;
 const KWM = kawasakiMiyamae as unknown as SingleChomeMuni;
 const KWA = kawasakiTama as unknown as SingleChomeMuni;
 const KWO = kawasakiAsao as unknown as SingleChomeMuni;
+const MyOsaka = osakaMiyakojima as unknown as SingleChomeMuni;
+const FkOsaka = osakaFukushima as unknown as SingleChomeMuni;
+const KnOsaka = osakaKonohana as unknown as SingleChomeMuni;
+const NsOsaka = osakaNishi as unknown as SingleChomeMuni;
+const MtOsaka = osakaMinato as unknown as SingleChomeMuni;
+const TsOsaka = osakaTaisho as unknown as SingleChomeMuni;
+const TnOsaka = osakaTennoji as unknown as SingleChomeMuni;
+const NwOsaka = osakaNaniwa as unknown as SingleChomeMuni;
+const NyOsaka = osakaNishiyodogawa as unknown as SingleChomeMuni;
+const HyOsaka = osakaHigashiyodogawa as unknown as SingleChomeMuni;
+const HnOsaka = osakaHigashinari as unknown as SingleChomeMuni;
+const IkOsaka = osakaIkuno as unknown as SingleChomeMuni;
+const AsOsaka = osakaAsahi as unknown as SingleChomeMuni;
+const JtOsaka = osakaJoto as unknown as SingleChomeMuni;
+const AbOsaka = osakaAbeno as unknown as SingleChomeMuni;
+const SmOsaka = osakaSumiyoshi as unknown as SingleChomeMuni;
+const HsOsaka = osakaHigashisumiyoshi as unknown as SingleChomeMuni;
+const NrOsaka = osakaNishinari as unknown as SingleChomeMuni;
+const YdOsaka = osakaYodogawa as unknown as SingleChomeMuni;
+const TrOsaka = osakaTsurumi as unknown as SingleChomeMuni;
+const SeOsaka = osakaSuminoe as unknown as SingleChomeMuni;
+const HrOsaka = osakaHirano as unknown as SingleChomeMuni;
+const KtOsaka = osakaKita as unknown as SingleChomeMuni;
+const ChOsaka = osakaChuo as unknown as SingleChomeMuni;
 
 // 丁目単位データ → 内部AreaRaw（chome:string[]）へ正規化して Municipality を作る
 function singleChomeMuni(
@@ -230,6 +279,31 @@ export const MUNICIPALITIES: Municipality[] = [
   singleChomeMuni(KWM, "https://www.city.kawasaki.jp/300/page/0000012561.html", "川崎市公式"),
   singleChomeMuni(KWA, "https://www.city.kawasaki.jp/300/page/0000012577.html", "川崎市公式"),
   singleChomeMuni(KWO, "https://www.city.kawasaki.jp/300/page/0000012577.html", "川崎市公式"),
+  // ★大都市展開・第3弾＝大阪市24区（末尾追加でslug後方互換）
+  singleChomeMuni(MyOsaka, "https://www.city.osaka.lg.jp/contents/wdu150/trashmap/index.html", "大阪市公式"),
+  singleChomeMuni(FkOsaka, "https://www.city.osaka.lg.jp/contents/wdu150/trashmap/index.html", "大阪市公式"),
+  singleChomeMuni(KnOsaka, "https://www.city.osaka.lg.jp/contents/wdu150/trashmap/index.html", "大阪市公式"),
+  singleChomeMuni(NsOsaka, "https://www.city.osaka.lg.jp/contents/wdu150/trashmap/index.html", "大阪市公式"),
+  singleChomeMuni(MtOsaka, "https://www.city.osaka.lg.jp/contents/wdu150/trashmap/index.html", "大阪市公式"),
+  singleChomeMuni(TsOsaka, "https://www.city.osaka.lg.jp/contents/wdu150/trashmap/index.html", "大阪市公式"),
+  singleChomeMuni(TnOsaka, "https://www.city.osaka.lg.jp/contents/wdu150/trashmap/index.html", "大阪市公式"),
+  singleChomeMuni(NwOsaka, "https://www.city.osaka.lg.jp/contents/wdu150/trashmap/index.html", "大阪市公式"),
+  singleChomeMuni(NyOsaka, "https://www.city.osaka.lg.jp/contents/wdu150/trashmap/index.html", "大阪市公式"),
+  singleChomeMuni(HyOsaka, "https://www.city.osaka.lg.jp/contents/wdu150/trashmap/index.html", "大阪市公式"),
+  singleChomeMuni(HnOsaka, "https://www.city.osaka.lg.jp/contents/wdu150/trashmap/index.html", "大阪市公式"),
+  singleChomeMuni(IkOsaka, "https://www.city.osaka.lg.jp/contents/wdu150/trashmap/index.html", "大阪市公式"),
+  singleChomeMuni(AsOsaka, "https://www.city.osaka.lg.jp/contents/wdu150/trashmap/index.html", "大阪市公式"),
+  singleChomeMuni(JtOsaka, "https://www.city.osaka.lg.jp/contents/wdu150/trashmap/index.html", "大阪市公式"),
+  singleChomeMuni(AbOsaka, "https://www.city.osaka.lg.jp/contents/wdu150/trashmap/index.html", "大阪市公式"),
+  singleChomeMuni(SmOsaka, "https://www.city.osaka.lg.jp/contents/wdu150/trashmap/index.html", "大阪市公式"),
+  singleChomeMuni(HsOsaka, "https://www.city.osaka.lg.jp/contents/wdu150/trashmap/index.html", "大阪市公式"),
+  singleChomeMuni(NrOsaka, "https://www.city.osaka.lg.jp/contents/wdu150/trashmap/index.html", "大阪市公式"),
+  singleChomeMuni(YdOsaka, "https://www.city.osaka.lg.jp/contents/wdu150/trashmap/index.html", "大阪市公式"),
+  singleChomeMuni(TrOsaka, "https://www.city.osaka.lg.jp/contents/wdu150/trashmap/index.html", "大阪市公式"),
+  singleChomeMuni(SeOsaka, "https://www.city.osaka.lg.jp/contents/wdu150/trashmap/index.html", "大阪市公式"),
+  singleChomeMuni(HrOsaka, "https://www.city.osaka.lg.jp/contents/wdu150/trashmap/index.html", "大阪市公式"),
+  singleChomeMuni(KtOsaka, "https://www.city.osaka.lg.jp/contents/wdu150/trashmap/index.html", "大阪市公式"),
+  singleChomeMuni(ChOsaka, "https://www.city.osaka.lg.jp/contents/wdu150/trashmap/index.html", "大阪市公式"),
 ];
 
 export type ChomeOption = {
