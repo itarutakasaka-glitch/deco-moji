@@ -66,6 +66,25 @@ import osakaSuminoe from "./osaka-suminoe-schedule.json";
 import osakaHirano from "./osaka-hirano-schedule.json";
 import osakaKita from "./osaka-kita-schedule.json";
 import osakaChuo from "./osaka-chuo-schedule.json";
+// 大都市展開・第4弾＝横浜市（18区）。町丁目別収集曜日一覧(HTML表・五十音別サブページ)由来。
+import yokohamaTsurumi from "./yokohama-tsurumi-schedule.json";
+import yokohamaKanagawa from "./yokohama-kanagawa-schedule.json";
+import yokohamaNishi from "./yokohama-nishi-schedule.json";
+import yokohamaNaka from "./yokohama-naka-schedule.json";
+import yokohamaMinami from "./yokohama-minami-schedule.json";
+import yokohamaHodogaya from "./yokohama-hodogaya-schedule.json";
+import yokohamaIsogo from "./yokohama-isogo-schedule.json";
+import yokohamaKanazawa from "./yokohama-kanazawa-schedule.json";
+import yokohamaKohoku from "./yokohama-kohoku-schedule.json";
+import yokohamaTotsuka from "./yokohama-totsuka-schedule.json";
+import yokohamaKonan from "./yokohama-konan-schedule.json";
+import yokohamaAsahi from "./yokohama-asahi-schedule.json";
+import yokohamaMidori from "./yokohama-midori-schedule.json";
+import yokohamaSeya from "./yokohama-seya-schedule.json";
+import yokohamaSakae from "./yokohama-sakae-schedule.json";
+import yokohamaIzumi from "./yokohama-izumi-schedule.json";
+import yokohamaAoba from "./yokohama-aoba-schedule.json";
+import yokohamaTsuzuki from "./yokohama-tsuzuki-schedule.json";
 
 /* ===== 型 ===== */
 export type WeeklyRule = { kind: "weekly"; weekdays: number[] };
@@ -204,6 +223,24 @@ const SeOsaka = osakaSuminoe as unknown as SingleChomeMuni;
 const HrOsaka = osakaHirano as unknown as SingleChomeMuni;
 const KtOsaka = osakaKita as unknown as SingleChomeMuni;
 const ChOsaka = osakaChuo as unknown as SingleChomeMuni;
+const TrYoko = yokohamaTsurumi as unknown as SingleChomeMuni;
+const KgYoko = yokohamaKanagawa as unknown as SingleChomeMuni;
+const NsYoko = yokohamaNishi as unknown as SingleChomeMuni;
+const NkYoko = yokohamaNaka as unknown as SingleChomeMuni;
+const MnYoko = yokohamaMinami as unknown as SingleChomeMuni;
+const HdYoko = yokohamaHodogaya as unknown as SingleChomeMuni;
+const IgYoko = yokohamaIsogo as unknown as SingleChomeMuni;
+const KzYoko = yokohamaKanazawa as unknown as SingleChomeMuni;
+const KhYoko = yokohamaKohoku as unknown as SingleChomeMuni;
+const TtYoko = yokohamaTotsuka as unknown as SingleChomeMuni;
+const KnYoko = yokohamaKonan as unknown as SingleChomeMuni;
+const AsYoko = yokohamaAsahi as unknown as SingleChomeMuni;
+const MdYoko = yokohamaMidori as unknown as SingleChomeMuni;
+const SyYoko = yokohamaSeya as unknown as SingleChomeMuni;
+const SkYoko = yokohamaSakae as unknown as SingleChomeMuni;
+const IzYoko = yokohamaIzumi as unknown as SingleChomeMuni;
+const AbYoko = yokohamaAoba as unknown as SingleChomeMuni;
+const TzYoko = yokohamaTsuzuki as unknown as SingleChomeMuni;
 
 // 丁目単位データ → 内部AreaRaw（chome:string[]）へ正規化して Municipality を作る
 function singleChomeMuni(
@@ -304,6 +341,25 @@ export const MUNICIPALITIES: Municipality[] = [
   singleChomeMuni(HrOsaka, "https://www.city.osaka.lg.jp/contents/wdu150/trashmap/index.html", "大阪市公式"),
   singleChomeMuni(KtOsaka, "https://www.city.osaka.lg.jp/contents/wdu150/trashmap/index.html", "大阪市公式"),
   singleChomeMuni(ChOsaka, "https://www.city.osaka.lg.jp/contents/wdu150/trashmap/index.html", "大阪市公式"),
+  // ★大都市展開・第4弾＝横浜市18区（末尾追加でslug後方互換）
+  singleChomeMuni(TrYoko, "https://www.city.yokohama.lg.jp/kurashi/sumai-kurashi/gomi-recycle/gomi/shushuyobi/tsurumi/", "横浜市公式"),
+  singleChomeMuni(KgYoko, "https://www.city.yokohama.lg.jp/kurashi/sumai-kurashi/gomi-recycle/gomi/shushuyobi/kanagawa/", "横浜市公式"),
+  singleChomeMuni(NsYoko, "https://www.city.yokohama.lg.jp/kurashi/sumai-kurashi/gomi-recycle/gomi/shushuyobi/nishi/", "横浜市公式"),
+  singleChomeMuni(NkYoko, "https://www.city.yokohama.lg.jp/kurashi/sumai-kurashi/gomi-recycle/gomi/shushuyobi/naka/", "横浜市公式"),
+  singleChomeMuni(MnYoko, "https://www.city.yokohama.lg.jp/kurashi/sumai-kurashi/gomi-recycle/gomi/shushuyobi/minami/", "横浜市公式"),
+  singleChomeMuni(HdYoko, "https://www.city.yokohama.lg.jp/kurashi/sumai-kurashi/gomi-recycle/gomi/shushuyobi/hodogaya/", "横浜市公式"),
+  singleChomeMuni(IgYoko, "https://www.city.yokohama.lg.jp/kurashi/sumai-kurashi/gomi-recycle/gomi/shushuyobi/isogo/", "横浜市公式"),
+  singleChomeMuni(KzYoko, "https://www.city.yokohama.lg.jp/kurashi/sumai-kurashi/gomi-recycle/gomi/shushuyobi/kanazawa/", "横浜市公式"),
+  singleChomeMuni(KhYoko, "https://www.city.yokohama.lg.jp/kurashi/sumai-kurashi/gomi-recycle/gomi/shushuyobi/kohoku/", "横浜市公式"),
+  singleChomeMuni(TtYoko, "https://www.city.yokohama.lg.jp/kurashi/sumai-kurashi/gomi-recycle/gomi/shushuyobi/totsuka/", "横浜市公式"),
+  singleChomeMuni(KnYoko, "https://www.city.yokohama.lg.jp/kurashi/sumai-kurashi/gomi-recycle/gomi/shushuyobi/konan/", "横浜市公式"),
+  singleChomeMuni(AsYoko, "https://www.city.yokohama.lg.jp/kurashi/sumai-kurashi/gomi-recycle/gomi/shushuyobi/asahi/", "横浜市公式"),
+  singleChomeMuni(MdYoko, "https://www.city.yokohama.lg.jp/kurashi/sumai-kurashi/gomi-recycle/gomi/shushuyobi/midori/", "横浜市公式"),
+  singleChomeMuni(SyYoko, "https://www.city.yokohama.lg.jp/kurashi/sumai-kurashi/gomi-recycle/gomi/shushuyobi/seya/", "横浜市公式"),
+  singleChomeMuni(SkYoko, "https://www.city.yokohama.lg.jp/kurashi/sumai-kurashi/gomi-recycle/gomi/shushuyobi/sakae/", "横浜市公式"),
+  singleChomeMuni(IzYoko, "https://www.city.yokohama.lg.jp/kurashi/sumai-kurashi/gomi-recycle/gomi/shushuyobi/izumi/", "横浜市公式"),
+  singleChomeMuni(AbYoko, "https://www.city.yokohama.lg.jp/kurashi/sumai-kurashi/gomi-recycle/gomi/shushuyobi/aoba/", "横浜市公式"),
+  singleChomeMuni(TzYoko, "https://www.city.yokohama.lg.jp/kurashi/sumai-kurashi/gomi-recycle/gomi/shushuyobi/tsuzuki/", "横浜市公式"),
 ];
 
 export type ChomeOption = {
