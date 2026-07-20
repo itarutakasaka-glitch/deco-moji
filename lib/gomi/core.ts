@@ -85,6 +85,25 @@ import yokohamaSakae from "./yokohama-sakae-schedule.json";
 import yokohamaIzumi from "./yokohama-izumi-schedule.json";
 import yokohamaAoba from "./yokohama-aoba-schedule.json";
 import yokohamaTsuzuki from "./yokohama-tsuzuki-schedule.json";
+// 大都市展開・第5弾＝名古屋市（16区+3特別地区）。ごみ収集日検索(埋め込み全件テーブル)由来。
+import nagoyaChikusa from "./nagoya-chikusa-schedule.json";
+import nagoyaHigashi from "./nagoya-higashi-schedule.json";
+import nagoyaKita from "./nagoya-kita-schedule.json";
+import nagoyaNishi from "./nagoya-nishi-schedule.json";
+import nagoyaNakamura from "./nagoya-nakamura-schedule.json";
+import nagoyaNaka from "./nagoya-naka-schedule.json";
+import nagoyaShowa from "./nagoya-showa-schedule.json";
+import nagoyaMizuho from "./nagoya-mizuho-schedule.json";
+import nagoyaAtsuta from "./nagoya-atsuta-schedule.json";
+import nagoyaNakagawa from "./nagoya-nakagawa-schedule.json";
+import nagoyaMinato from "./nagoya-minato-schedule.json";
+import nagoyaMinami from "./nagoya-minami-schedule.json";
+import nagoyaMoriyama from "./nagoya-moriyama-schedule.json";
+import nagoyaMidori from "./nagoya-midori-schedule.json";
+import nagoyaMidoriOdaka from "./nagoya-midori-odaka-schedule.json";
+import nagoyaMidoriNarumi from "./nagoya-midori-narumi-schedule.json";
+import nagoyaMeito from "./nagoya-meito-schedule.json";
+import nagoyaTempaku from "./nagoya-tempaku-schedule.json";
 
 /* ===== 型 ===== */
 export type WeeklyRule = { kind: "weekly"; weekdays: number[] };
@@ -241,6 +260,24 @@ const SkYoko = yokohamaSakae as unknown as SingleChomeMuni;
 const IzYoko = yokohamaIzumi as unknown as SingleChomeMuni;
 const AbYoko = yokohamaAoba as unknown as SingleChomeMuni;
 const TzYoko = yokohamaTsuzuki as unknown as SingleChomeMuni;
+const ChNgy = nagoyaChikusa as unknown as SingleChomeMuni;
+const HgNgy = nagoyaHigashi as unknown as SingleChomeMuni;
+const KtNgy = nagoyaKita as unknown as SingleChomeMuni;
+const NsNgy = nagoyaNishi as unknown as SingleChomeMuni;
+const NmNgy = nagoyaNakamura as unknown as SingleChomeMuni;
+const NkNgy = nagoyaNaka as unknown as SingleChomeMuni;
+const SwNgy = nagoyaShowa as unknown as SingleChomeMuni;
+const MzNgy = nagoyaMizuho as unknown as SingleChomeMuni;
+const AtNgy = nagoyaAtsuta as unknown as SingleChomeMuni;
+const NgNgy = nagoyaNakagawa as unknown as SingleChomeMuni;
+const MtNgy = nagoyaMinato as unknown as SingleChomeMuni;
+const MnNgy = nagoyaMinami as unknown as SingleChomeMuni;
+const MrNgy = nagoyaMoriyama as unknown as SingleChomeMuni;
+const MdNgy = nagoyaMidori as unknown as SingleChomeMuni;
+const MoNgy = nagoyaMidoriOdaka as unknown as SingleChomeMuni;
+const MaNgy = nagoyaMidoriNarumi as unknown as SingleChomeMuni;
+const MeNgy = nagoyaMeito as unknown as SingleChomeMuni;
+const TpNgy = nagoyaTempaku as unknown as SingleChomeMuni;
 
 // 丁目単位データ → 内部AreaRaw（chome:string[]）へ正規化して Municipality を作る
 function singleChomeMuni(
@@ -360,6 +397,25 @@ export const MUNICIPALITIES: Municipality[] = [
   singleChomeMuni(IzYoko, "https://www.city.yokohama.lg.jp/kurashi/sumai-kurashi/gomi-recycle/gomi/shushuyobi/izumi/", "横浜市公式"),
   singleChomeMuni(AbYoko, "https://www.city.yokohama.lg.jp/kurashi/sumai-kurashi/gomi-recycle/gomi/shushuyobi/aoba/", "横浜市公式"),
   singleChomeMuni(TzYoko, "https://www.city.yokohama.lg.jp/kurashi/sumai-kurashi/gomi-recycle/gomi/shushuyobi/tsuzuki/", "横浜市公式"),
+  // ★大都市展開・第5弾＝名古屋市（テスト:N=10）
+  singleChomeMuni(ChNgy, "https://www.city.nagoya.jp/kurashi/gomi/1012183/1037098.html", "名古屋市公式"),
+  singleChomeMuni(HgNgy, "https://www.city.nagoya.jp/kurashi/gomi/1012183/1037098.html", "名古屋市公式"),
+  singleChomeMuni(KtNgy, "https://www.city.nagoya.jp/kurashi/gomi/1012183/1037098.html", "名古屋市公式"),
+  singleChomeMuni(NsNgy, "https://www.city.nagoya.jp/kurashi/gomi/1012183/1037098.html", "名古屋市公式"),
+  singleChomeMuni(NmNgy, "https://www.city.nagoya.jp/kurashi/gomi/1012183/1037098.html", "名古屋市公式"),
+  singleChomeMuni(NkNgy, "https://www.city.nagoya.jp/kurashi/gomi/1012183/1037098.html", "名古屋市公式"),
+  singleChomeMuni(SwNgy, "https://www.city.nagoya.jp/kurashi/gomi/1012183/1037098.html", "名古屋市公式"),
+  singleChomeMuni(MzNgy, "https://www.city.nagoya.jp/kurashi/gomi/1012183/1037098.html", "名古屋市公式"),
+  singleChomeMuni(AtNgy, "https://www.city.nagoya.jp/kurashi/gomi/1012183/1037098.html", "名古屋市公式"),
+  singleChomeMuni(NgNgy, "https://www.city.nagoya.jp/kurashi/gomi/1012183/1037098.html", "名古屋市公式"),
+  singleChomeMuni(MtNgy, "https://www.city.nagoya.jp/kurashi/gomi/1012183/1037098.html", "名古屋市公式"),
+  singleChomeMuni(MnNgy, "https://www.city.nagoya.jp/kurashi/gomi/1012183/1037098.html", "名古屋市公式"),
+  singleChomeMuni(MrNgy, "https://www.city.nagoya.jp/kurashi/gomi/1012183/1037098.html", "名古屋市公式"),
+  singleChomeMuni(MdNgy, "https://www.city.nagoya.jp/kurashi/gomi/1012183/1037098.html", "名古屋市公式"),
+  singleChomeMuni(MoNgy, "https://www.city.nagoya.jp/kurashi/gomi/1012183/1037098.html", "名古屋市公式"),
+  singleChomeMuni(MaNgy, "https://www.city.nagoya.jp/kurashi/gomi/1012183/1037098.html", "名古屋市公式"),
+  singleChomeMuni(MeNgy, "https://www.city.nagoya.jp/kurashi/gomi/1012183/1037098.html", "名古屋市公式"),
+  singleChomeMuni(TpNgy, "https://www.city.nagoya.jp/kurashi/gomi/1012183/1037098.html", "名古屋市公式"),
 ];
 
 export type ChomeOption = {
@@ -738,7 +794,8 @@ export function encodeSlug(chomeIndex: number, p: DateParts): string {
 }
 export type DecodedSlug = { parts: DateParts; chomeIndex: number };
 export function decodeSlug(slug: string): DecodedSlug | null {
-  const m = /^(\d{4})(\d{2})(\d{2})(?:-(\d{1,4}))?$/.exec(slug);
+  // 丁目indexは4桁(9999)上限だったが総数が1万を超えたため5桁に拡張（既存の4桁slugは互換のまま解釈可能）
+  const m = /^(\d{4})(\d{2})(\d{2})(?:-(\d{1,5}))?$/.exec(slug);
   if (!m) return null;
   const p = { y: +m[1], m: +m[2], d: +m[3] };
   if (p.m < 1 || p.m > 12 || p.d < 1 || p.d > 31) return null;
