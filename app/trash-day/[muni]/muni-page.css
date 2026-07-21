@@ -1,0 +1,71 @@
+/* 区別ごみ収集日ページ（.gw- プレフィックス）。gf-root配下で使う前提で、
+   紫×白の既存パレット(--gf-*)をそのまま流用する。 */
+.gw-main { padding-top: 22px; }
+.gw-breadcrumb { font-size: 0.8rem; color: var(--gf-dim); margin-bottom: 14px; }
+.gw-breadcrumb a { color: var(--gf-primary); text-decoration: none; }
+.gw-breadcrumb a:hover { text-decoration: underline; }
+
+.gw-h1 {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--gf-ink);
+  margin: 0 0 12px;
+  line-height: 1.5;
+}
+.gw-h2 {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--gf-ink);
+  margin: 30px 0 12px;
+  padding-left: 10px;
+  border-left: 4px solid var(--gf-primary);
+}
+.gw-lead { font-size: 0.92rem; color: var(--gf-sub); line-height: 1.85; margin-bottom: 10px; }
+.gw-lead a { color: var(--gf-primary); }
+
+.gw-omitNote {
+  font-size: 0.8rem;
+  color: var(--gf-primary-d);
+  background: var(--gf-primary-pale);
+  border: 1px solid var(--gf-primary);
+  border-radius: 8px;
+  padding: 10px 12px;
+  line-height: 1.7;
+  margin: 14px 0;
+}
+
+.gw-tablewrap { overflow-x: auto; margin: 18px 0; border: 1px solid var(--gf-line); border-radius: 8px; }
+.gw-table { width: 100%; border-collapse: collapse; font-size: 0.86rem; }
+.gw-table th, .gw-table td { padding: 9px 12px; text-align: left; border-bottom: 1px solid var(--gf-line); white-space: nowrap; }
+.gw-table thead th {
+  background: var(--gf-primary);
+  color: #fff;
+  font-weight: 700;
+  position: sticky;
+  top: 0;
+}
+.gw-table tbody tr:nth-child(even) { background: #faf7fb; }
+.gw-chomeCell { font-weight: 700; color: var(--gf-ink); }
+
+.gw-faq { margin: 0; }
+.gw-faqItem { margin-bottom: 16px; }
+.gw-faqItem dt { font-weight: 700; color: var(--gf-ink); margin-bottom: 4px; }
+.gw-faqItem dd { margin: 0; color: var(--gf-sub); font-size: 0.9rem; line-height: 1.8; }
+
+.gw-toolLink {
+  margin: 24px 0;
+  padding: 14px 16px;
+  background: var(--gf-primary-pale);
+  border-radius: 8px;
+  font-size: 0.92rem;
+  text-align: center;
+}
+.gw-toolLink a { color: var(--gf-primary-d); font-weight: 700; text-decoration: underline; }
+
+.gw-linklist { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.gw-linklist li { border-bottom: 1px dashed var(--gf-line); padding-bottom: 6px; }
+.gw-linklist a { color: var(--gf-primary); text-decoration: none; font-size: 0.9rem; }
+.gw-linklist a:hover { text-decoration: underline; }
+
+.gw-cityIndex { margin: 0 0 20px; }
+.gw-cityIndex h3 { font-size: 0.94rem; font-weight: 700; color: var(--gf-ink); margin: 18px 0 8px; }

@@ -2,6 +2,8 @@ import type { MetadataRoute } from "next";
 import { siteConfig } from "@/lib/site-config";
 import { blogPosts } from "@/lib/blog-posts";
 import { COPY_CATEGORIES } from "@/lib/copy-data";
+import { MUNI_REGISTRY } from "@/lib/gomi/registry";
+import { WARD_SLUGS } from "@/lib/subsidy/ward-slugs";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = siteConfig.url;
@@ -126,5 +128,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: "monthly" as const,
   }));
 
-  return [...staticPages, ...copyPages, ...blogPages];
+  // ごみ収集日カレンダー（自治体別ページ）
+  const trashDayPages: MetadataRoute.Sitemap = MUNI_REGISTRY.map((m) => ({
+    url: `${base}/trash-day/${m.slug}`,
+    lastModified,
+    priority: 0.8,
+    changeFrequency: "weekly" as const,
+  }));
+
+  // 補助金・助成金診断（区別ページ）
+  const subsidyWardPages: MetadataRoute.Sitemap = WARD_SLUGS.map((w) => ({
+    url: `${base}/subsidy/${w.slug}`,
+    lastModified,
+    priority: 0.8,
+    changeFrequency: "weekly" as const,
+  }));
+
+  return [...staticPages, ...copyPages, ...blogPages, ...trashDayPages, ...subsidyWardPages];
 }

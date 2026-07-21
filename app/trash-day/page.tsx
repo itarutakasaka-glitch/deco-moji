@@ -7,29 +7,29 @@ import {
   TYPES,
   ORDER,
   CHOME_LIST,
-  MUNI_OPTIONS,
   DEFAULT_CHOME_INDEX,
 } from "@/lib/gomi/core";
+import { MUNI_REGISTRY } from "@/lib/gomi/registry";
 import "./trash-day.css";
+import "./[muni]/muni-page.css";
 
-const WARDS = MUNI_OPTIONS.map((m) => m.name).join("・");
+// 96区名を全部連結すると長大化しSEO/LLMO両面で有害なため、対応都市名のみ短く列挙する
+const CITIES = "東京23区・横浜市・川崎市・千葉市・大阪市・名古屋市";
+const CITY_ORDER = ["東京23区", "千葉市", "川崎市", "大阪市", "横浜市", "名古屋市"];
 
 export const metadata: Metadata = {
-  title: `東京 ごみ収集日カレンダー🗑️${WARDS}｜ゴミの日が一目でわかる`,
-  description:
-    `東京の各区（${WARDS}）のごみ収集日を、区と丁目を選ぶだけで曜日と次回予定で一目チェック。燃やすごみ・資源・古紙・燃やさないごみなど区ごとの分別区分に対応。調べたあとは「今日のゴミ出し占い」で開運作法も占えます。`,
+  title: `ごみ収集日カレンダー🗑️${CITIES}対応｜ゴミの日が一目でわかる`,
+  description: `${CITIES}の約1万丁目のごみ収集日を、区と丁目を選ぶだけで曜日と次回予定で一目チェック。燃やすごみ・資源・古紙・燃やさないごみなど区ごとの分別区分に対応。調べたあとは「今日のゴミ出し占い」で開運作法も占えます。`,
   alternates: { canonical: "/trash-day" },
   openGraph: {
-    title: `東京 ごみ収集日カレンダー🗑️${WARDS}`,
-    description:
-      `東京の各区（${WARDS}）のゴミの日を、区と丁目を選んで一目チェック。おまけに今日のゴミ出し占いも。`,
+    title: `ごみ収集日カレンダー🗑️${CITIES}対応`,
+    description: `${CITIES}のゴミの日を、区と丁目を選んで一目チェック。おまけに今日のゴミ出し占いも。`,
     url: "/trash-day",
   },
   twitter: {
     card: "summary_large_image",
-    title: `東京 ごみ収集日カレンダー🗑️${WARDS}`,
-    description:
-      `東京の各区（${WARDS}）のゴミの日を、区と丁目を選んで一目チェック。おまけに今日のゴミ出し占いも。`,
+    title: `ごみ収集日カレンダー🗑️${CITIES}対応`,
+    description: `${CITIES}のゴミの日を、区と丁目を選んで一目チェック。おまけに今日のゴミ出し占いも。`,
   },
 };
 
@@ -39,14 +39,14 @@ export default function TrashDayPage() {
       <GomiFortune />
       <div className="gf-root" style={{ minHeight: "auto" }}>
         <section className="gf-about">
-          <h2>東京のごみ収集日（{WARDS} 対応）</h2>
+          <h2>ごみ収集日カレンダー（{CITIES} 対応）</h2>
           <p>
-            このページは、東京の各区（{WARDS}）のごみ収集日（ゴミの日）を
+            このページは、{CITIES}のごみ収集日（ゴミの日）を
             ひと目で確認できる無料カレンダーです。お住まいの区と丁目を選んで日付を指定すると、
             その日に出せるゴミの種別と、燃やすごみ・資源・古紙・燃やさないごみなど
             区ごとの分別区分に応じた次の収集予定がわかります。「今日は何ゴミの日？」
             「次の資源回収はいつ？」を朝サッと確認するのにどうぞ。現在の対応エリアは
-            {WARDS}の全域（合計{CHOME_LIST.length}丁目）で、順次拡大していきます。
+            {CITIES}の全域（合計{CHOME_LIST.length}丁目）で、順次拡大していきます。
           </p>
           <h2>ごみ収集スケジュールの例（目黒区 上目黒四丁目）</h2>
           <ul className="gf-about-list">
@@ -80,6 +80,25 @@ export default function TrashDayPage() {
             <Link href="/">デコ文字メーカー</Link>
             でプロフィールを盛る素材にして遊んでください。
           </p>
+          <h2>区・市別のごみ収集日一覧ページ</h2>
+          {CITY_ORDER.map((city) => {
+            const list = MUNI_REGISTRY.filter((m) => m.city === city);
+            if (list.length === 0) return null;
+            return (
+              <div key={city} className="gw-cityIndex">
+                <h3>{city}</h3>
+                <ul className="gw-linklist">
+                  {list.map((m) => (
+                    <li key={m.slug}>
+                      <Link href={`/trash-day/${m.slug}`}>
+                        {m.name}（{m.areaCount}丁目）
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            );
+          })}
         </section>
       </div>
     </>

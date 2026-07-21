@@ -6,7 +6,7 @@
 ## 0. これは何か・なぜやるか
 
 ChatGPT/Claude/Perplexity/Google AI Overviews に**引用される**サイトになるための第一弾。
-現状、ごみ収集日10,677丁目・補助金203制度という一次データを持っているのに、
+現状、ごみ収集日10,721丁目・補助金203制度という一次データを持っているのに、
 **すべてセレクタUIの1ページに閉じ込められていてクローラ/LLMから中身が見えない**。
 URLが存在しない情報はAIに引用されない。よって：
 
@@ -211,12 +211,12 @@ const ORDERED_SLUGS = [
 `{ slug, file, name(=municipality), city, areaCount(=areas展開後の丁目数) }` を持つ
 `export const MUNI_REGISTRY = [...] as const;` を `lib/gomi/registry.ts` に書き出す。
 先頭コメントに「生成物。scripts/generate-muni-registry.mjs で再生成」と記す。
-**期待値検証をスクリプト内に入れる: エントリ数===96、丁目総数===10677。違ったらthrow。**
+**期待値検証をスクリプト内に入れる: エントリ数===96、丁目総数===10721。違ったらthrow。**
 
 ### A1完了条件
 - `npm run build` が通る（devを止めてから）
 - `grep -c "^import " lib/gomi/core.ts` → 96
-- `node scripts/generate-muni-registry.mjs` が96件/10677丁目でthrowせず registry.ts を生成
+- `node scripts/generate-muni-registry.mjs` が96件/10721丁目でthrowせず registry.ts を生成
 
 ---
 
@@ -434,7 +434,7 @@ grep -c "^import " lib/gomi/core.ts   # 96 のまま
 
 ## 8. 実装順序まとめ（チェックリスト）
 
-- [ ] A1: shared.ts / load-muni.ts / generate-muni-registry.mjs → registry.ts 生成（96件・10677丁目でthrowなし）→ ビルド緑 → commit
+- [ ] A1: shared.ts / load-muni.ts / generate-muni-registry.mjs → registry.ts 生成（96件・10721丁目でthrowなし）→ ビルド緑 → commit
 - [ ] A2: /trash-day/[muni] 96ページ＋親ページ索引＋title短縮 → 検証1,2 → commit
 - [ ] A3: deadline.ts抽出 → /subsidy/[ward] 23ページ＋親ページ索引 → 検証3 → commit
 - [ ] A4: llms.txt / robots.ts / sitemap.ts → 検証4,5,6 → commit
