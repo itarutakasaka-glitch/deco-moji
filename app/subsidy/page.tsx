@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import SubsidyFinder from "@/components/SubsidyFinder";
+import { WARD_SLUGS } from "@/lib/subsidy/ward-slugs";
 import "./subsidy.css";
 
 export const metadata: Metadata = {
@@ -59,6 +60,14 @@ export default function SubsidyPage() {
             {" ・ "}
             <Link href="/">⊹ デコ文字メーカー</Link>
           </p>
+          <h2>区別の補助金一覧ページ</h2>
+          <ul className="sw-linklist">
+            {WARD_SLUGS.map((w) => (
+              <li key={w.slug}>
+                <Link href={`/subsidy/${w.slug}`}>{w.name}</Link>
+              </li>
+            ))}
+          </ul>
         </section>
       </div>
     </>

@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import wards from "@/lib/subsidy/tokyo-wards.json";
+import { parseDeadlineIso, daysUntil, jstToday } from "@/lib/subsidy/deadline";
 
 // jGrants（デジタル庁）公開API＝国＋都道府県の補助金。認証不要・CC BY（出典明記で商用可）。
 // 加えて、東京23区は市区町村独自の補助金を自前データ(tokyo-wards.json)で上乗せ（jGrantsが取りこぼす層）。
@@ -41,33 +42,6 @@ type WardSubsidy = {
 };
 type WardData = { indexUrl?: string; lastChecked?: string; subsidies: WardSubsidy[] };
 const WARDS = wards as Record<string, WardData>;
-
-// 締切テキスト → ISO日付（YYYY-MM-DD）。実日付が無い表現(通年/予算上限まで/null)は null。
-function parseDeadlineIso(text?: string | null): string | null {
-  if (!text) return null;
-  // "〜2027/2/26" / "2027/2/26" / "2026-12-28"
-  const m =
-    /(\d{4})[/-](\d{1,2})[/-](\d{1,2})/.exec(text) ||
-    /(\d{4})年(\d{1,2})月(\d{1,2})日/.exec(text);
-  if (!m) return null;
-  const y = +m[1],
-    mo = +m[2],
-    d = +m[3];
-  if (mo < 1 || mo > 12 || d < 1 || d > 31) return null;
-  return `${y}-${String(mo).padStart(2, "0")}-${String(d).padStart(2, "0")}`;
-}
-// iso(締切) が today から何日後か（負なら過去）。どちらも JST の暦日で比較。
-function daysUntil(iso: string, today: string): number {
-  const a = Date.parse(iso + "T00:00:00Z");
-  const b = Date.parse(today + "T00:00:00Z");
-  return Math.round((a - b) / 86400000);
-}
-function jstToday(): string {
-  const j = new Date(Date.now() + 9 * 3600 * 1000);
-  return `${j.getUTCFullYear()}-${String(j.getUTCMonth() + 1).padStart(2, "0")}-${String(
-    j.getUTCDate()
-  ).padStart(2, "0")}`;
-}
 
 async function fetchByKeyword(keyword: string): Promise<JgItem[]> {
   const p = new URLSearchParams({
